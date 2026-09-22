@@ -32,4 +32,4 @@ This module primarily collects the content related to the research group meeting
 
 !!! quote "Nature and Disclaimer of this Section"
     1. **Selective Disclosure**: Out of consideration for protecting academic intellectual property (IP), the above content has undergone a certain degree of redaction/desensitization.
-    2. **Discussions & Errata**: The notes here were mostly written based on my level of understanding at the time, so typographical errors or omissions in proof details are inevitable. If you find any flaws during your reading, or are interested in a specific topic, you are more than welcome to engage in in-depth academic discussions with me via [GitHub Issue](https://github.com/jhao1122/Notes/issues) or email.
+    2. **Discussions & Errata**: The notes here were mostly written based on my level of understanding at the time, so typographical errors or omissions in proof details are inevitable. If you find any flaws during your reading, or are interested in a specific topic, you are more than welcome to engage in in-depth academic discussions with me via [GitHub Issue](https://github.com/jiahaotian-stat/Notes/issues) or email.
