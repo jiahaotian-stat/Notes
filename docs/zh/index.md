@@ -108,7 +108,7 @@
 数学推导难免存在 typo 或是思维盲区。如果你在阅读笔记时发现了任何错误，或者对统计推断、共形预测、概率论与随机过程有共同的探讨兴趣，非常欢迎与我交流！
 
 * **Email**: jiahaot1122@gmail.com
-* **GitHub**: [@jhao1122](https://github.com/jhao1122)
+* **GitHub**: [@jiahaotian-stat](https://github.com/jiahaotian-stat)
 
 ## 🌍 走出数学 (Beyond Math)
 

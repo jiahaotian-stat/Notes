@@ -78,7 +78,7 @@ To improve efficiency, the Markdown formatting, LaTeX typesetting, and the trans
 Mathematical derivations inevitably contain typos or blind spots. If you find any errors while reading, or if you share a mutual interest in statistical inference, conformal prediction, probability theory, or stochastic processes, I would be more than happy to connect!
 
 * **Email**: jiahaot1122@gmail.com
-* **GitHub**: [@jhao1122](https://github.com/jhao1122)
+* **GitHub**: [@jiahaotian-stat](https://github.com/jiahaotian-stat)
 
 ## 🌍 Beyond Math
 
