@@ -9,40 +9,40 @@ Welcome to my personal academic space. This is a **Personal Notes Base** built w
 
 ## 🗺️ Site Map
 
-Currently, [the site](https://jhao1122.github.io/Notes/) is divided into **five** core sections:
+Currently, [the site](https://jiahaotian-stat.github.io/Notes/) is divided into **five** core sections:
 
 ### 📚 Notes Base
 
-* **[Completed] [Stochastic Differential Equations](https://jhao1122.github.io/Notes/Stochastic-Differential-Equation/0Intro/)**
+* **[Completed] [Stochastic Differential Equations](https://jiahaotian-stat.github.io/Notes/Stochastic-Differential-Equation/0Intro/)**
   * Covers core theories including Brownian Motion, Itô Calculus, SDE solutions, Black-Scholes pricing, and the Feynman-Kac formula.
   * Includes detailed solutions to exercises.
 
-* **[Completed] [Asymptotic Statistics](https://jhao1122.github.io/Notes/Asymptotic-statistics/0Intro/)**
+* **[Completed] [Asymptotic Statistics](https://jiahaotian-stat.github.io/Notes/Asymptotic-statistics/0Intro/)**
   * Covers advanced statistical theories such as weak convergence, CLT for dependent data, and asymptotic inference methods.
 
-* **[Completed] [Functional Analysis](https://jhao1122.github.io/Notes/Functional_Analysis/0Intro/)**
+* **[Completed] [Functional Analysis](https://jiahaotian-stat.github.io/Notes/Functional_Analysis/0Intro/)**
 
   * Covers metric spaces, completeness, linear operators on Banach and Hilbert spaces, and the "Big Four" theorems (Hahn-Banach, Open Mapping, Closed Graph, and Uniform Boundedness).
 
-* **[Completed] [Real Analysis](https://jhao1122.github.io/Notes/Real_analysis/0Intro/)**
+* **[Completed] [Real Analysis](https://jiahaotian-stat.github.io/Notes/Real_analysis/0Intro/)**
 
   * Covers core theories including $\sigma$-algebras, Carathéodory Extension, Lebesgue integration (MCT, DCT), Radon-Nikodym derivatives, and $L^p$ spaces.
 
-* **[Completed] [General Topology](https://jhao1122.github.io/Notes/Topology/0Intro/)**
+* **[Completed] [General Topology](https://jiahaotian-stat.github.io/Notes/Topology/0Intro/)**
   * Based on Munkres' classic *Topology*, covering foundational topology, continuity & homeomorphisms, and core topological properties (connectedness, compactness, separation & countability axioms).
 
-* **[Completed] [Statistical Learning](https://jhao1122.github.io/Notes/Statistical_Learning/0Intro/)**
+* **[Completed] [Statistical Learning](https://jiahaotian-stat.github.io/Notes/Statistical_Learning/0Intro/)**
   * Covers core topics in statistical learning, including KNN, linear regression, penalized regression, classification, support vector machines, RKHS and kernel regression, kernel density estimation, tree-based models, and causal inference.
 
-### 🛠️ [Quick Reference](https://jhao1122.github.io/Notes/reference/)
+### 🛠️ [Quick Reference](https://jiahaotian-stat.github.io/Notes/reference/)
 
 A personal repository of foundational concepts in Mathematics and Statistics that are often elusive or easily forgotten. This section also records my personal interpretations and intuitive grasp of core theorems.
 
-### 🛰️ [Research Frontier](https://jhao1122.github.io/Notes/research/arxiv_papers/)
+### 🛰️ [Research Frontier](https://jiahaotian-stat.github.io/Notes/research/arxiv_papers/)
 
 An automated gateway to the latest academic breakthroughs. Updated daily at 08:00 (UTC+8) via GitHub Actions, this section tracks the pulse of Knockoff Filters and Conformal Prediction within the stat.* domain, ensuring I stay synchronized with the frontier of high-dimensional inference.
 
-### 🎤 [Lectures & Talks](https://jhao1122.github.io/Notes/Lectures/)
+### 🎤 [Lectures & Talks](https://jiahaotian-stat.github.io/Notes/Lectures/)
 
 "If you can't explain it simply, you don't understand it well enough." This section archives my presentation notes and slides from seminars and group meetings since my undergraduate years.
 
@@ -66,6 +66,6 @@ Currently an undergraduate student at the School of Mathematical Sciences, Zheji
 Deeply interested in High-dimensional Inference, Conformal Prediction, and Probability & Stochastic Processes.
 
 * **Email**: jiahaot1122@gmail.com
-* **GitHub**: [@JHAO1122](https://github.com/JHAO1122)
+* **GitHub**: [@jiahaotian-stat](https://github.com/jiahaotian-stat)
 
 ---

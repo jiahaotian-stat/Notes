@@ -1,7 +1,7 @@
 site_name: Jiahao's Academic Space
-site_url: https://jhao1122.github.io/Notes/ 
-repo_url: https://github.com/jhao1122/Notes   
-repo_name: jhao1122/Notes
+site_url: https://jiahaotian-stat.github.io/Notes/ 
+repo_url: https://github.com/jiahaotian-stat/Notes   
+repo_name: jiahaotian-stat/Notes
 
 # ================= 主题配置 =================
 theme:
