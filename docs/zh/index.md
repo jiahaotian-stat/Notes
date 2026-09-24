@@ -61,8 +61,6 @@
 
 * 广义函数论 (Distribution Theory)
 
-* 微分流形与黎曼几何 (Differentiable Mandifolds and Riemannian Geometry)
-
 * 点集拓扑 (Point-Set Topology)
 
 * 常微分方程 (Ordinary Differential Equations) 
