@@ -1,0 +1,7171 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/3completeness/">
+      
+      
+        <link rel="prev" href="../2Sufficiency/">
+      
+      
+        <link rel="next" href="../4Ustatistics/">
+      
+      
+        
+          <link rel="alternate" href="../../../Advanced_Stat/3completeness/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Ch 3: Completeness and UMVU - Jiahao's Academic Space</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-MPD6ZGWYW1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-MPD6ZGWYW1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-MPD6ZGWYW1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-3-completeness-sufficiency-and-optimal-unbiased-estimation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jiahao's Academic Space
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ch 3: Completeness and UMVU
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="grey"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../Advanced_Stat/3completeness/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jiahaotian-stat/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jiahaotian-stat/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
+          
+  
+  
+  📚 Course Notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  🛠️ Quick Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../research/arxiv_papers/" class="md-tabs__link">
+          
+  
+  
+  🛰️ Research Updates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Lectures/" class="md-tabs__link">
+          
+  
+  
+  🎙️ Lectures & Talks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jiahao's Academic Space
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jiahaotian-stat/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jiahaotian-stat/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Course Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Course Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 Stochastic Differential Equations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📈 Stochastic Differential Equations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Conditional Expectation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Brownian Motion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Stochastic Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Itô Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/5SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Multivariate Itô Calculus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/6SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Existence & Uniqueness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/7Option_Pricing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Option Pricing and Stopping Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap1_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap3_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap5_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Asymptotic Statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📊 Asymptotic Statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymptotic Statistics Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Stochastic Convergence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Characteristic Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/3CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Central Limit Theorem I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/4CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Central Limit Theorem II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Weakly Dependent Data I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Weakly Dependent Data II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Delta Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/12ME/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Method of Moments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/8MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Maximum Likelihood Estimation I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/9MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Maximum Likelihood Estimation II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/10M%26Z1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: M-Estimation and Z-Estimation I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/11M%26Z2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: M-Estimation and Z-Estimation II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/13U/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 13: U-Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/14Bootstrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 14: Bootstrap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌌 Functional Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌌 Functional Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Analysis Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/1distance_space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Distance Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/2completeness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Topology and Completeness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/3compactness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Compactness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/4CMT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Contraction Mapping Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/5Linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Normed Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/6Banach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Banach Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/7Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Hilbert Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/8Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Hilbert Space Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/9Linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Linear Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/10Open_Closed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Open Mapping and Closed Graph Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/11dual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: Dual Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/12Hahn-Banach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: Extension of Bounded Linear Functionals and Hahn-Banach Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🍩 Point Set Topology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🍩 Point Set Topology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Point Set Topology Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Set Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Functions and Relations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Countable Sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Open Sets and Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Induced Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Continuity and Homeomorphisms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Connectedness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Compactness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Compactness in Euclidean Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Sequential Compactness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: One-Point Compactification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: Countability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 13: Separation Axioms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_56/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_789/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 7-9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧱 Real Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧱 Real Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real Analysis Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/1_sigma_algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Sigma-Algebras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/2_outer_measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Outer Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/3_ls_measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Lebesgue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/4_measurable_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Measurable Functions I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/5_limits_decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Measurable Functions II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/6_integration_construction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Construction of the Integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/7_convergence_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Convergence Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/8_fubini_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Fubini's Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/9_hahn_jordan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Hahn-Jordan Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/10_radon_nikodym/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Radon-Nikodym Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/11_differentiation_ir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: Fundamental Theorem of Calculus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/12_lp_spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: L^p Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 Advanced Probability Theory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎯 Advanced Probability Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Probability Theory Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/1Random_var/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Probability Spaces and Random Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/2Moments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Numerical Characteristics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⏳ Advanced Mathematical Statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⏳ Advanced Mathematical Statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Mathematical Statistics Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_2" id="__nav_2_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_Gaussian_Geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Gaussian Geometry and Classical Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2Sufficiency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Sufficiency and Exponential Families
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Completeness and UMVU
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Completeness and UMVU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-study-unbiased-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Why Study Unbiased Estimators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Why Study Unbiased Estimators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-why-an-unconstrained-uniformly-optimal-estimator-usually-does-not-exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Why an Unconstrained Uniformly Optimal Estimator Usually Does Not Exist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-unbiased-estimators-mru-and-umvu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Unbiased Estimators, MRU, and UMVU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-does-an-unbiased-estimator-exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Does an Unbiased Estimator Exist?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-completeness-uniqueness-from-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Completeness: Uniqueness from Expectations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Completeness: Uniqueness from Expectations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-complete-and-boundedly-complete-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Complete and Boundedly Complete Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-completeness-of-the-binomial-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Completeness of the Binomial Family
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-completeness-of-the-poisson-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Completeness of the Poisson Family
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-complete-sufficiency-of-full-exponential-families" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Complete Sufficiency of Full Exponential Families
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Complete Sufficiency of Full Exponential Families">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-complete-sufficiency-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Complete Sufficiency Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-why-the-open-set-condition-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Why the “Open Set” Condition Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-full-normal-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Full Normal Family
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-rao-blackwell-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Rao-Blackwell Improvement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Rao-Blackwell Improvement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-rao-blackwell-theorem-under-convex-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Rao-Blackwell Theorem under Convex Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-exact-improvement-under-squared-error-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Exact Improvement under Squared Error Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-rao-blackwellization-of-bernoulli-power-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Rao-Blackwellization of Bernoulli Power Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lehmann-scheffe-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Lehmann-Scheffé Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-four-representative-umvu-constructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Four Representative UMVU Constructions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Four Representative UMVU Constructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-bernoulli-power-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Bernoulli Power Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-poisson-point-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Poisson Point Probability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-mean-and-variance-of-a-normal-population" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Mean and Variance of a Normal Population
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-uniform-one-endpoint-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Uniform One-Endpoint Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-basus-theorem-completeness-and-ancillary-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Basu's Theorem: Completeness and Ancillary Statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Basu&#39;s Theorem: Completeness and Ancillary Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-ancillary-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Ancillary Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-basus-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Basu's Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-why-overline-x-and-s2-are-independent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Why \(\overline X\) and \(S^2\) Are Independent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-functional-target-estimating-the-normal-distribution-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Functional Target: Estimating the Normal Distribution Function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-uniform-two-endpoint-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Uniform Two-Endpoint Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Uniform Two-Endpoint Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-complete-sufficiency-of-extreme-order-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Complete Sufficiency of Extreme Order Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-umvu-estimates-of-the-two-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 UMVU Estimates of the Two Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-no-randomization-is-needed-under-convex-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. No Randomization Is Needed under Convex Loss
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-proof-checklist-for-this-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Proof Checklist for This Chapter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-summary-of-this-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Summary of This Chapter
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4Ustatistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: U-Statistics and Information Lower Bounds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_3" id="__nav_2_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sol_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔲 Matrix Computation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔲 Matrix Computation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Matrix_Comp/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matrix Computation Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_2" id="__nav_2_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Matrix_Comp/1Matrix_norm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Matrix Norms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Matrix_Comp/2SVD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Singular Value Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 Statistical Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤖 Statistical Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistical Learning Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_2" id="__nav_2_9_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/1KNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: K-Nearest Neighbors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/2Linear_Regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Linear Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/3Penalized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Penalized Linear Regression I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/4Penalized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Penalized Linear Regression II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/5Classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Classification Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/6SVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Support Vector Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/7RKHS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: RKHS and Kernel Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/8Kernel_Density/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Kernel Density Estimation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/9Tree_Model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Tree Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/10Causal_Inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Causal Inference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ Quick Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ Quick Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Mathematical Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/prob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎲 Probability Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📏 Measure Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/linalg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔢 Linear Algebra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stochastic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 Convex Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 Regression Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ♾️ Mathematical Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛰️ Research Updates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛰️ Research Updates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/arxiv_papers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Latest Papers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎙️ Lectures & Talks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎙️ Lectures & Talks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏛️ Fundamental Theory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🏛️ Fundamental Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 Fall Advanced Probability Seminar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025 Fall Advanced Probability Seminar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Course_Lectures/LDP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Deviation Principle (LDP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📑 Paper Discussions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📑 Paper Discussions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 Fall Group Meetings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025 Fall Group Meetings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Group_Seminars/derandomized_knockoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derandomized Knockoffs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-study-unbiased-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Why Study Unbiased Estimators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Why Study Unbiased Estimators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-why-an-unconstrained-uniformly-optimal-estimator-usually-does-not-exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Why an Unconstrained Uniformly Optimal Estimator Usually Does Not Exist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-unbiased-estimators-mru-and-umvu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Unbiased Estimators, MRU, and UMVU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-does-an-unbiased-estimator-exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Does an Unbiased Estimator Exist?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-completeness-uniqueness-from-expectations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Completeness: Uniqueness from Expectations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Completeness: Uniqueness from Expectations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-complete-and-boundedly-complete-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Complete and Boundedly Complete Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-completeness-of-the-binomial-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Completeness of the Binomial Family
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-completeness-of-the-poisson-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Completeness of the Poisson Family
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-complete-sufficiency-of-full-exponential-families" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Complete Sufficiency of Full Exponential Families
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Complete Sufficiency of Full Exponential Families">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-complete-sufficiency-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Complete Sufficiency Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-why-the-open-set-condition-is-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Why the “Open Set” Condition Is Needed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-full-normal-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Full Normal Family
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-rao-blackwell-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Rao-Blackwell Improvement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Rao-Blackwell Improvement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-rao-blackwell-theorem-under-convex-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Rao-Blackwell Theorem under Convex Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-exact-improvement-under-squared-error-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Exact Improvement under Squared Error Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-rao-blackwellization-of-bernoulli-power-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Rao-Blackwellization of Bernoulli Power Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lehmann-scheffe-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Lehmann-Scheffé Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-four-representative-umvu-constructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Four Representative UMVU Constructions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Four Representative UMVU Constructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-bernoulli-power-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Bernoulli Power Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-poisson-point-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Poisson Point Probability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-mean-and-variance-of-a-normal-population" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Mean and Variance of a Normal Population
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-uniform-one-endpoint-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Uniform One-Endpoint Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-basus-theorem-completeness-and-ancillary-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Basu's Theorem: Completeness and Ancillary Statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Basu&#39;s Theorem: Completeness and Ancillary Statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-ancillary-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Ancillary Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-basus-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Basu's Theorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-why-overline-x-and-s2-are-independent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Why \(\overline X\) and \(S^2\) Are Independent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-functional-target-estimating-the-normal-distribution-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Functional Target: Estimating the Normal Distribution Function
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-uniform-two-endpoint-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Uniform Two-Endpoint Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Uniform Two-Endpoint Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-complete-sufficiency-of-extreme-order-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Complete Sufficiency of Extreme Order Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-umvu-estimates-of-the-two-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 UMVU Estimates of the Two Endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-no-randomization-is-needed-under-convex-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. No Randomization Is Needed under Convex Loss
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-proof-checklist-for-this-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Proof Checklist for This Chapter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-summary-of-this-chapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Summary of This Chapter
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-3-completeness-sufficiency-and-optimal-unbiased-estimation">Chapter 3: Completeness, Sufficiency, and Optimal Unbiased Estimation</h1>
+<p>This chapter studies how to find optimal estimators within the restricted class of unbiased estimators. The core tools are <strong>completeness</strong>, the <strong>Rao-Blackwell theorem</strong>, and the <strong>Lehmann-Scheffé theorem</strong>. Finally, we introduce Basu's theorem and illustrate the concrete applications of these results through Bernoulli, Poisson, Normal, and Uniform models.</p>
+<hr />
+<h2 id="1-why-study-unbiased-estimators">1. Why Study Unbiased Estimators</h2>
+<p>Let the target parameter be <span class="arithmatex">\(g(\theta)\)</span>, the estimator be <span class="arithmatex">\(\delta(X)\)</span>, and the loss function be <span class="arithmatex">\(L\{g(\theta),a\}\)</span>. The risk of the estimator is defined as</p>
+<div class="arithmatex">\[
+R(\theta,\delta)
+=E_\theta L\{g(\theta),\delta(X)\}.
+\]</div>
+<p>Under squared error loss, the risk can be decomposed as</p>
+<div class="arithmatex">\[
+R(\theta,\delta)
+=\operatorname{Var}_\theta\{\delta(X)\}
++\operatorname{Bias}_\theta(\delta)^2,
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+\operatorname{Bias}_\theta(\delta)
+=E_\theta\delta(X)-g(\theta).
+\]</div>
+<h3 id="11-why-an-unconstrained-uniformly-optimal-estimator-usually-does-not-exist">1.1 Why an Unconstrained Uniformly Optimal Estimator Usually Does Not Exist</h3>
+<div class="admonition success">
+<p class="admonition-title">Proposition 1.1 (An Unconstrained Uniformly Optimal Estimator Usually Does Not Exist)</p>
+<p>Suppose the family of probability measures <span class="arithmatex">\(\{P_\theta:\theta\in\Theta\}\)</span> is pairwise mutually absolutely continuous, and <span class="arithmatex">\(g(\theta)\)</span> is not constant. Under squared error loss, there is no estimator <span class="arithmatex">\(\delta_0\)</span> whose risk is no greater than that of every other estimator at every parameter point.</p>
+</div>
+<details class="proof">
+<summary>Proof of Proposition 1.1 (click to expand)</summary>
+<p>Fix <span class="arithmatex">\(\theta_0\)</span>, and compare <span class="arithmatex">\(\delta_0\)</span> with the constant estimator</p>
+<div class="arithmatex">\[
+\delta(X)\equiv g(\theta_0).
+\]</div>
+<p>The latter has zero risk at <span class="arithmatex">\(\theta_0\)</span>. If <span class="arithmatex">\(\delta_0\)</span> is uniformly optimal among all estimators, then</p>
+<div class="arithmatex">\[
+0\leq R(\theta_0,\delta_0)\leq0.
+\]</div>
+<p>Hence</p>
+<div class="arithmatex">\[
+\delta_0=g(\theta_0),
+\qquad P_{\theta_0}\text{-a.s.}
+\]</div>
+<p>Since the <span class="arithmatex">\(P_\theta\)</span> are mutually absolutely continuous, the above holds almost everywhere under every <span class="arithmatex">\(P_\theta\)</span>. Choosing another parameter value <span class="arithmatex">\(\theta_1\)</span>, the same argument gives</p>
+<div class="arithmatex">\[
+\delta_0=g(\theta_1),
+\qquad P_{\theta_1}\text{-a.s.}
+\]</div>
+<p>This contradicts the fact that <span class="arithmatex">\(g\)</span> is not constant. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>To obtain meaningful comparisons, one may restrict the class of estimators, for example by considering invariant estimators, Bayes estimators, minimax estimators, or unbiased estimators. This chapter studies the last option.</p>
+<h3 id="12-unbiased-estimators-mru-and-umvu">1.2 Unbiased Estimators, MRU, and UMVU</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.2 (Unbiased Estimator)</p>
+<p>If an estimator <span class="arithmatex">\(\delta(X)\)</span> satisfies</p>
+<div class="arithmatex">\[
+E_\theta\delta(X)=g(\theta),
+\qquad \forall\theta\in\Theta,
+\]</div>
+<p>then <span class="arithmatex">\(\delta\)</span> is called an unbiased estimator of <span class="arithmatex">\(g(\theta)\)</span>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.3 (MRU and UMVU)</p>
+<p>If an unbiased estimator <span class="arithmatex">\(\delta_0\)</span> has risk no greater than that of any other unbiased estimator at every parameter point, then <span class="arithmatex">\(\delta_0\)</span> is called a <strong>minimum-risk unbiased estimator (MRU)</strong>.</p>
+<p>Under squared error loss, an MRU is called a <strong>uniformly minimum-variance unbiased estimator (UMVU)</strong>.</p>
+</div>
+<p>For unbiased estimators, the bias term is zero, so</p>
+<div class="arithmatex">\[
+R(\theta,\delta)=\operatorname{Var}_\theta(\delta).
+\]</div>
+<p>The optimality here is restricted optimality: a UMVU estimator is optimal only within the class of unbiased estimators; after enlarging the comparison class, it may still be dominated by some biased estimator.</p>
+<h3 id="13-does-an-unbiased-estimator-exist">1.3 Does an Unbiased Estimator Exist?</h3>
+<p>Unbiased estimation is essentially an inverse problem: find a function <span class="arithmatex">\(\delta\)</span> such that</p>
+<div class="arithmatex">\[
+g(\theta)
+=\int\delta(x)p_\theta(x)\,d\mu(x),
+\qquad \forall\theta\in\Theta.
+\]</div>
+<p>Not every target function <span class="arithmatex">\(g\)</span> belongs to the range of this expectation operator.</p>
+<div class="admonition success">
+<p class="admonition-title">Proposition 1.4 (Estimable Targets in Bernoulli Samples)</p>
+<p>Let</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n\overset{\mathrm{iid}}{\sim}\operatorname{Bernoulli}(p),
+\qquad 0&lt;p&lt;1.
+\]</div>
+<p>A real-valued function <span class="arithmatex">\(g(p)\)</span> has an unbiased estimator based on this sample if and only if <span class="arithmatex">\(g\)</span> is a polynomial in <span class="arithmatex">\(p\)</span> of degree at most <span class="arithmatex">\(n\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof of Proposition 1.4 (click to expand)</summary>
+<p>Let</p>
+<div class="arithmatex">\[
+T=\sum_{i=1}^nX_i.
+\]</div>
+<p>For any statistic <span class="arithmatex">\(D(X)\)</span>, let</p>
+<div class="arithmatex">\[
+d_t=E\{D(X)\mid T=t\}.
+\]</div>
+<p>Grouping sample points according to the value of <span class="arithmatex">\(T\)</span>, we obtain</p>
+<div class="arithmatex">\[
+E_pD(X)
+=\sum_{t=0}^nd_t\binom ntp^t(1-p)^{n-t}.
+\]</div>
+<p>The right-hand side is a polynomial of degree at most <span class="arithmatex">\(n\)</span>, so necessity holds.</p>
+<p>Conversely, the Bernstein polynomials</p>
+<div class="arithmatex">\[
+\binom ntp^t(1-p)^{n-t},
+\qquad t=0,\ldots,n,
+\]</div>
+<p>form a basis of the space of polynomials of degree at most <span class="arithmatex">\(n\)</span>. Expanding <span class="arithmatex">\(g\)</span> in this basis and defining the corresponding coefficients as <span class="arithmatex">\(d_t\)</span>, then taking <span class="arithmatex">\(D=d_T\)</span>, yields an unbiased estimator of <span class="arithmatex">\(g(p)\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>Therefore, when <span class="arithmatex">\(r\leq n\)</span>, <span class="arithmatex">\(p^r\)</span> can be estimated unbiasedly; whereas <span class="arithmatex">\(1/p\)</span>, <span class="arithmatex">\(\log p\)</span>, and most nonlinear standardized shape parameters cannot be estimated unbiasedly from a Bernoulli sample of fixed size <span class="arithmatex">\(n\)</span>.</p>
+<hr />
+<h2 id="2-completeness-uniqueness-from-expectations">2. Completeness: Uniqueness from Expectations</h2>
+<h3 id="21-complete-and-boundedly-complete-statistics">2.1 Complete and Boundedly Complete Statistics</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 2.1 (Complete Statistic)</p>
+<p>A statistic <span class="arithmatex">\(T\)</span> is called <strong>complete</strong> with respect to the model family <span class="arithmatex">\(\mathcal{P}\)</span> if for any function <span class="arithmatex">\(a(T)\)</span> satisfying integrability, whenever</p>
+<div class="arithmatex">\[
+E_\theta a(T)=0,
+\qquad \forall\theta\in\Theta,
+\]</div>
+<p>it follows that</p>
+<div class="arithmatex">\[
+a(T)=0,
+\qquad P_\theta\text{-a.s.},\quad \forall\theta\in\Theta.
+\]</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 2.2 (Boundedly Complete Statistic)</p>
+<p>If the above conclusion is required only for bounded functions <span class="arithmatex">\(a\)</span>, then <span class="arithmatex">\(T\)</span> is called <strong>boundedly complete</strong>.</p>
+</div>
+<p>Completeness implies bounded completeness. It and sufficiency describe different properties: sufficiency means that outside <span class="arithmatex">\(T\)</span> there is no longer any parameter information; completeness means that expectations under the model family can uniquely identify functions of <span class="arithmatex">\(T\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Lemma 2.3 (Uniqueness of Unbiased Functions)</p>
+<p>If <span class="arithmatex">\(T\)</span> is complete, and <span class="arithmatex">\(a_1(T)\)</span> and <span class="arithmatex">\(a_2(T)\)</span> are both unbiased estimators of the same target function <span class="arithmatex">\(g(\theta)\)</span>, then</p>
+<div class="arithmatex">\[
+a_1(T)=a_2(T),
+\qquad P_\theta\text{-a.s.},\quad \forall\theta\in\Theta.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Lemma 2.3 (click to expand)</summary>
+<p>The difference <span class="arithmatex">\(a_1(T)-a_2(T)\)</span> is integrable, and for all <span class="arithmatex">\(\theta\)</span>,</p>
+<div class="arithmatex">\[
+E_\theta\{a_1(T)-a_2(T)\}=0.
+\]</div>
+<p>By the definition of completeness, the difference is almost everywhere zero. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="22-completeness-of-the-binomial-family">2.2 Completeness of the Binomial Family</h3>
+<div class="admonition example">
+<p class="admonition-title">Example 2.4 (Binomial Completeness)</p>
+<p>Let</p>
+<div class="arithmatex">\[
+T\sim\operatorname{Binomial}(n,p),
+\qquad 0&lt;p&lt;1.
+\]</div>
+<p>If <span class="arithmatex">\(E_pa(T)=0\)</span> for all <span class="arithmatex">\(p\)</span>, then</p>
+<div class="arithmatex">\[
+0=\sum_{t=0}^na(t)\binom ntp^t(1-p)^{n-t}.
+\]</div>
+<p>Dividing both sides by <span class="arithmatex">\((1-p)^n\)</span> and letting</p>
+<div class="arithmatex">\[
+z=\frac{p}{1-p}&gt;0,
+\]</div>
+<p>we obtain</p>
+<div class="arithmatex">\[
+0=\sum_{t=0}^na(t)\binom ntz^t,
+\qquad \forall z&gt;0.
+\]</div>
+<p>If a polynomial is identically zero on an interval, then all its coefficients are zero. Hence <span class="arithmatex">\(a(t)=0\)</span> for <span class="arithmatex">\(t=0,\ldots,n\)</span>, so the Binomial family is complete.</p>
+</div>
+<h3 id="23-completeness-of-the-poisson-family">2.3 Completeness of the Poisson Family</h3>
+<div class="admonition example">
+<p class="admonition-title">Example 2.5 (Poisson Completeness)</p>
+<p>Let</p>
+<div class="arithmatex">\[
+T\sim\operatorname{Poisson}(n\lambda),
+\qquad \lambda&gt;0.
+\]</div>
+<p>If <span class="arithmatex">\(E_\lambda a(T)=0\)</span>, then</p>
+<div class="arithmatex">\[
+0=e^{n\lambda}E_\lambda a(T)
+=\sum_{t=0}^{\infty}a(t)\frac{(n\lambda)^t}{t!}.
+\]</div>
+<p>Integrability guarantees that this power series converges absolutely for every <span class="arithmatex">\(\lambda&gt;0\)</span>. Since it is identically zero on an interval, all coefficients are zero, that is, <span class="arithmatex">\(a(t)=0\)</span> for all <span class="arithmatex">\(t\)</span>. Hence the Poisson family is complete.</p>
+</div>
+<hr />
+<h2 id="3-complete-sufficiency-of-full-exponential-families">3. Complete Sufficiency of Full Exponential Families</h2>
+<h3 id="31-complete-sufficiency-theorem">3.1 Complete Sufficiency Theorem</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.1 (Complete Sufficient Statistic in a Full Exponential Family)</p>
+<p>Suppose the model has the exponential family form</p>
+<div class="arithmatex">\[
+p_\eta(x)
+=\exp\{\eta^TT(x)-A(\eta)\}h(x),
+\qquad \eta\in H\subseteq\mathbb{R}^k,
+\]</div>
+<p>and the natural parameter space <span class="arithmatex">\(H\)</span> contains a nonempty open subset of <span class="arithmatex">\(\mathbb{R}^k\)</span>. Then <span class="arithmatex">\(T\)</span> is sufficient and complete for the model family indexed by this open set. Therefore, for any larger model family that contains this subfamily, <span class="arithmatex">\(T\)</span> remains complete.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 3.1 (click to expand)</summary>
+<p>By the factorization theorem, <span class="arithmatex">\(T\)</span> is a sufficient statistic.</p>
+<p>Let <span class="arithmatex">\(\nu\)</span> be the image measure of the base measure <span class="arithmatex">\(h(x)\mu(dx)\)</span> under the mapping <span class="arithmatex">\(x\mapsto T(x)\)</span>. Then the induced distribution of <span class="arithmatex">\(T\)</span> is</p>
+<div class="arithmatex">\[
+P_\eta^T(dt)
+=e^{\eta^Tt-A(\eta)}\nu(dt).
+\]</div>
+<p>Suppose <span class="arithmatex">\(a(T)\)</span> is integrable and its expectation is identically zero on an open set. Choose an interior point <span class="arithmatex">\(\eta_0\)</span> of this open set. For any <span class="arithmatex">\(u\)</span> near the origin,</p>
+<div class="arithmatex">\[
+\int a(t)e^{(\eta_0+u)^Tt}\nu(dt)=0.
+\]</div>
+<p>Define the finite signed measure</p>
+<div class="arithmatex">\[
+M(dt)=a(t)e^{\eta_0^Tt}\nu(dt).
+\]</div>
+<p>Then the two-sided Laplace transform of <span class="arithmatex">\(M\)</span> satisfies</p>
+<div class="arithmatex">\[
+L_M(u)=\int e^{u^Tt}M(dt)=0
+\]</div>
+<p>for all <span class="arithmatex">\(u\)</span> in some neighborhood of the origin. By the local uniqueness lemma for the Laplace transform below, <span class="arithmatex">\(M=0\)</span>. Since <span class="arithmatex">\(e^{\eta_0^Tt}&gt;0\)</span>, we obtain</p>
+<div class="arithmatex">\[
+a(t)=0,
+\qquad \nu\text{-a.e.}
+\]</div>
+<p>Every <span class="arithmatex">\(P_\eta^T\)</span> has a strictly positive density with respect to <span class="arithmatex">\(\nu\)</span>, so <span class="arithmatex">\(a(T)=0\)</span> almost surely under every <span class="arithmatex">\(P_\eta\)</span>. Hence <span class="arithmatex">\(T\)</span> is complete. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">Lemma 3.2 (Local Uniqueness of the Laplace Transform)</p>
+<p>Let <span class="arithmatex">\(M\)</span> be a finite signed measure on <span class="arithmatex">\(\mathbb{R}^k\)</span> whose exponential moments are finite in some neighborhood of the origin. If</p>
+<div class="arithmatex">\[
+\int e^{u^Tt}M(dt)=0
+\]</div>
+<p>in this neighborhood, then <span class="arithmatex">\(M=0\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof of Lemma 3.2 (click to expand)</summary>
+<p>For a complex vector <span class="arithmatex">\(z\)</span> whose real part lies in the neighborhood where the exponential moments exist, define</p>
+<div class="arithmatex">\[
+L_M(z)=\int e^{z^Tt}M(dt).
+\]</div>
+<p>By dominating the integrand with slightly larger real exponential moments, one can show that <span class="arithmatex">\(L_M\)</span> is analytic and that differentiation under the integral sign is permitted.</p>
+<p>Starting from <span class="arithmatex">\(L_M\)</span> being identically zero on a real open set, applying the identity theorem for one complex variable coordinate by coordinate extends the zero identity to a connected complex tube domain containing the imaginary axis. Therefore, for every <span class="arithmatex">\(s\in\mathbb{R}^k\)</span>,</p>
+<div class="arithmatex">\[
+\widehat M(s)
+=L_M(is)
+=\int e^{is^Tt}M(dt)
+=0.
+\]</div>
+<p>By uniqueness of the Fourier transform of a finite signed measure, <span class="arithmatex">\(M=0\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="32-why-the-open-set-condition-is-needed">3.2 Why the “Open Set” Condition Is Needed</h3>
+<p>A natural parameter space with full affine span is enough to guarantee minimal sufficiency, because finitely many likelihood ratios can recover the natural statistic. However, completeness requires that the Laplace transforms agree on a neighborhood. A curved parameter space may have full affine span but contain no open set. Therefore, minimal sufficiency alone does not imply completeness.</p>
+<h3 id="33-full-normal-family">3.3 Full Normal Family</h3>
+<div class="admonition example">
+<p class="admonition-title">Example 3.3 (Full Normal Family)</p>
+<p>Let</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\mathrm{iid}}{\sim}N(\mu,\sigma^2).
+\]</div>
+<p>The natural parameters are</p>
+<div class="arithmatex">\[
+\eta_1=\frac{\mu}{\sigma^2},
+\qquad
+\eta_2=-\frac{1}{2\sigma^2},
+\]</div>
+<p>and the natural parameter space is</p>
+<div class="arithmatex">\[
+H=\mathbb{R}\times(-\infty,0),
+\]</div>
+<p>which is an open set. Therefore</p>
+<div class="arithmatex">\[
+\left(\sum_{i=1}^nX_i,\sum_{i=1}^nX_i^2\right)
+\]</div>
+<p>is a complete sufficient statistic for <span class="arithmatex">\((\mu,\sigma^2)\)</span>.</p>
+<p>When <span class="arithmatex">\(n\geq2\)</span>, it is in one-to-one correspondence with</p>
+<div class="arithmatex">\[
+(\overline X,S^2),
+\qquad
+S^2=\frac{1}{n-1}\sum_{i=1}^n(X_i-\overline X)^2.
+\]</div>
+<p>Hence <span class="arithmatex">\((\overline X,S^2)\)</span> is also a complete sufficient statistic.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">A Common Misunderstanding</p>
+<p>When both <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\sigma^2\)</span> are unknown, <span class="arithmatex">\((\overline X,S^2)\)</span> remains complete for the full normal family. What may lose completeness is a curved normal submodel whose natural parameter space contains no open set. “Multiple parameters” does not mean “not complete”.</p>
+</div>
+<hr />
+<h2 id="4-rao-blackwell-improvement">4. Rao-Blackwell Improvement</h2>
+<h3 id="41-rao-blackwell-theorem-under-convex-loss">4.1 Rao-Blackwell Theorem under Convex Loss</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.1 (Rao-Blackwell Theorem under Convex Loss)</p>
+<p>Let <span class="arithmatex">\(T\)</span> be a sufficient statistic, let <span class="arithmatex">\(\delta(X)\)</span> be an integrable estimator, and define</p>
+<div class="arithmatex">\[
+\delta_T(T)=E_\theta\{\delta(X)\mid T\}.
+\]</div>
+<p>Sufficiency guarantees that the right-hand side can be chosen as a function of <span class="arithmatex">\(T\)</span> that does not depend on the unknown parameter <span class="arithmatex">\(\theta\)</span>. If <span class="arithmatex">\(a\mapsto L\{g(\theta),a\}\)</span> is convex, then</p>
+<div class="arithmatex">\[
+R(\theta,\delta_T)
+\leq R(\theta,\delta),
+\qquad \forall\theta\in\Theta.
+\]</div>
+<p>If <span class="arithmatex">\(\delta\)</span> is an unbiased estimator of <span class="arithmatex">\(g(\theta)\)</span>, then <span class="arithmatex">\(\delta_T\)</span> remains unbiased.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 4.1 (click to expand)</summary>
+<p>Sufficiency provides a conditional distribution kernel independent of <span class="arithmatex">\(\theta\)</span>, so the conditional expectation can be regarded as a measurable function of the same <span class="arithmatex">\(T\)</span>. By the conditional Jensen inequality,</p>
+<div class="arithmatex">\[
+L\{g(\theta),\delta_T(T)\}
+\leq E_\theta\left[L\{g(\theta),\delta(X)\}\mid T\right].
+\]</div>
+<p>Taking expectations of both sides gives the risk inequality.</p>
+<p>In addition, by the tower property,</p>
+<div class="arithmatex">\[
+E_\theta\delta_T
+=E_\theta\{E_\theta(\delta\mid T)\}
+=E_\theta\delta.
+\]</div>
+<p>Hence unbiasedness is preserved. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="42-exact-improvement-under-squared-error-loss">4.2 Exact Improvement under Squared Error Loss</h3>
+<div class="admonition success">
+<p class="admonition-title">Corollary 4.2 (Exact Risk Improvement under Squared Error Loss)</p>
+<p>Under squared error loss,</p>
+<div class="arithmatex">\[
+R(\theta,\delta)-R(\theta,\delta_T)
+=E_\theta\{\operatorname{Var}_\theta(\delta\mid T)\}
+\geq0.
+\]</div>
+<p>Unless <span class="arithmatex">\(\delta\)</span> is already a function of <span class="arithmatex">\(T\)</span> (ignoring <span class="arithmatex">\(P_\theta\)</span>-null sets), the improvement is strict.</p>
+</div>
+<details class="proof">
+<summary>Proof of Corollary 4.2 (click to expand)</summary>
+<p>Write</p>
+<div class="arithmatex">\[
+\delta-g(\theta)
+=(\delta-\delta_T)+(\delta_T-g(\theta)).
+\]</div>
+<p>The first term has conditional expectation zero given <span class="arithmatex">\(T\)</span>, so after expanding the square, the expectation of the cross term is zero. Hence</p>
+<div class="arithmatex">\[
+E_\theta(\delta-g(\theta))^2
+=E_\theta(\delta-\delta_T)^2
++E_\theta(\delta_T-g(\theta))^2.
+\]</div>
+<p>Here</p>
+<div class="arithmatex">\[
+E_\theta(\delta-\delta_T)^2
+=E_\theta\{\operatorname{Var}_\theta(\delta\mid T)\}.
+\]</div>
+<p>Rearranging gives the result. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>This equality is exactly the conditional variance decomposition, and it also explains the connection between Rao-Blackwellization, conditional Monte Carlo, and modern variance reduction methods: it averages out extra randomness that does not affect the inferential target.</p>
+<h3 id="43-rao-blackwellization-of-bernoulli-power-functions">4.3 Rao-Blackwellization of Bernoulli Power Functions</h3>
+<div class="admonition example">
+<p class="admonition-title">Example 4.3 (Bernoulli Power Functions)</p>
+<p>Let</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\mathrm{iid}}{\sim}\operatorname{Bernoulli}(p),
+\qquad
+T=\sum_{i=1}^nX_i.
+\]</div>
+<p>When <span class="arithmatex">\(r\leq n\)</span>, <span class="arithmatex">\(X_1\cdots X_r\)</span> is an unbiased estimator of <span class="arithmatex">\(p^r\)</span>. Given <span class="arithmatex">\(T=t\)</span>, all permutations containing <span class="arithmatex">\(t\)</span> ones are equally likely, so</p>
+<div class="arithmatex">\[
+E(X_1\cdots X_r\mid T=t)
+=\frac{(t)_r}{(n)_r},
+\]</div>
+<p>where the falling factorial is defined as</p>
+<div class="arithmatex">\[
+(x)_r=x(x-1)\cdots(x-r+1).
+\]</div>
+<p>Therefore <span class="arithmatex">\((T)_r/(n)_r\)</span> remains unbiased, and its variance is no greater than that of the original product estimator.</p>
+</div>
+<hr />
+<h2 id="5-lehmann-scheffe-theorem">5. Lehmann-Scheffé Theorem</h2>
+<div class="admonition success">
+<p class="admonition-title">Theorem 5.1 (Lehmann-Scheffé Theorem under Convex Loss)</p>
+<p>Let <span class="arithmatex">\(T\)</span> be a complete sufficient statistic. If <span class="arithmatex">\(\delta_0(T)\)</span> is an unbiased estimator of <span class="arithmatex">\(g(\theta)\)</span> with finite risk, then <span class="arithmatex">\(\delta_0\)</span> is an MRU estimator under any loss that is convex in the action <span class="arithmatex">\(a\)</span>.</p>
+<p>Under squared error loss, <span class="arithmatex">\(\delta_0\)</span> is the unique UMVU estimator. More generally, under strictly convex loss, <span class="arithmatex">\(\delta_0\)</span> is the unique MRU estimator, where uniqueness ignores sets that are null for all models.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 5.1 (click to expand)</summary>
+<p>Take any unbiased estimator <span class="arithmatex">\(D(X)\)</span> of <span class="arithmatex">\(g(\theta)\)</span>. Rao-Blackwellize it:</p>
+<div class="arithmatex">\[
+D_T(T)=E(D\mid T).
+\]</div>
+<p>Then <span class="arithmatex">\(D_T\)</span> remains unbiased, and its risk is no greater than that of <span class="arithmatex">\(D\)</span>. Since <span class="arithmatex">\(D_T(T)\)</span> and <span class="arithmatex">\(\delta_0(T)\)</span> are both unbiased functions of the complete statistic <span class="arithmatex">\(T\)</span>, Lemma 2.3 gives</p>
+<div class="arithmatex">\[
+D_T(T)=\delta_0(T),
+\qquad P_\theta\text{-a.s.},\quad \forall\theta.
+\]</div>
+<p>Therefore</p>
+<div class="arithmatex">\[
+R(\theta,\delta_0)
+=R(\theta,D_T)
+\leq R(\theta,D),
+\]</div>
+<p>which proves MRU optimality.</p>
+<p>Under squared error loss, Corollary 4.2 shows that equality can occur only when <span class="arithmatex">\(D=D_T=\delta_0\)</span> almost everywhere. Under strictly convex loss, the equality condition in Jensen's inequality gives the same conclusion. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Standard Construction Steps for UMVU</p>
+<p>(i) Find a complete sufficient statistic <span class="arithmatex">\(T\)</span>;</p>
+<p>(ii) Find any unbiased estimator <span class="arithmatex">\(D(X)\)</span> of the target function;</p>
+<p>(iii) Compute <span class="arithmatex">\(E(D\mid T)\)</span>, or directly find an unbiased function of <span class="arithmatex">\(T\)</span>;</p>
+<p>(iv) Use the Lehmann-Scheffé theorem to obtain uniqueness and UMVU optimality.</p>
+</div>
+<hr />
+<h2 id="6-four-representative-umvu-constructions">6. Four Representative UMVU Constructions</h2>
+<h3 id="61-bernoulli-power-functions">6.1 Bernoulli Power Functions</h3>
+<p>The statistic</p>
+<div class="arithmatex">\[
+T=\sum_{i=1}^nX_i\sim\operatorname{Binomial}(n,p)
+\]</div>
+<p>is sufficient by the factorization theorem and complete by Example 2.4. Therefore</p>
+<div class="arithmatex">\[
+\widehat{p^r}_{\mathrm{UMVU}}
+=\frac{(T)_r}{(n)_r},
+\qquad r=1,\ldots,n.
+\]</div>
+<h3 id="62-poisson-point-probability">6.2 Poisson Point Probability</h3>
+<p>Let</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\mathrm{iid}}{\sim}\operatorname{Poisson}(\lambda),
+\qquad
+T=\sum_{i=1}^nX_i.
+\]</div>
+<p>For fixed <span class="arithmatex">\(k\geq0\)</span>, the indicator function <span class="arithmatex">\(\mathbf{1}\{X_1=k\}\)</span> unbiasedly estimates</p>
+<div class="arithmatex">\[
+g_k(\lambda)
+=P_\lambda(X_1=k)
+=e^{-\lambda}\frac{\lambda^k}{k!}.
+\]</div>
+<p>Given <span class="arithmatex">\(T=t\)</span>, <span class="arithmatex">\((X_1,\ldots,X_n)\)</span> follows a multinomial distribution with total <span class="arithmatex">\(t\)</span> and cell probabilities <span class="arithmatex">\(1/n\)</span>. Therefore</p>
+<div class="arithmatex">\[
+\widehat g_k(T)
+=\binom Tk
+\left(\frac1n\right)^k
+\left(1-\frac1n\right)^{T-k}
+\mathbf{1}\{T\geq k\}.
+\]</div>
+<p>By Poisson completeness and the Lehmann-Scheffé theorem, <span class="arithmatex">\(\widehat g_k(T)\)</span> is the UMVU estimator of <span class="arithmatex">\(g_k(\lambda)\)</span>.</p>
+<h3 id="63-mean-and-variance-of-a-normal-population">6.3 Mean and Variance of a Normal Population</h3>
+<p>Let</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\mathrm{iid}}{\sim}N(\mu,\sigma^2).
+\]</div>
+<p>By Example 3.3, <span class="arithmatex">\((\overline X,S^2)\)</span> is a complete sufficient statistic for the full normal family. Also,</p>
+<div class="arithmatex">\[
+E_{\mu,\sigma^2}\overline X=\mu,
+\qquad
+E_{\mu,\sigma^2}S^2=\sigma^2,
+\]</div>
+<p>so <span class="arithmatex">\(\overline X\)</span> and <span class="arithmatex">\(S^2\)</span> are the UMVU estimators of <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\sigma^2\)</span>, respectively.</p>
+<p>Moreover,</p>
+<div class="arithmatex">\[
+E\overline X^2
+=\mu^2+\frac{\sigma^2}{n},
+\]</div>
+<p>so</p>
+<div class="arithmatex">\[
+\overline X^2-\frac{S^2}{n}
+\]</div>
+<p>is an unbiased estimator of <span class="arithmatex">\(\mu^2\)</span>. It is a function of the complete sufficient statistic, so it is also the UMVU estimator of <span class="arithmatex">\(\mu^2\)</span>.</p>
+<h3 id="64-uniform-one-endpoint-model">6.4 Uniform One-Endpoint Model</h3>
+<p>Let</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\mathrm{iid}}{\sim}\operatorname{Uniform}(0,\theta),
+\qquad
+M=X_{(n)}.
+\]</div>
+<p>By the factorization theorem, <span class="arithmatex">\(M\)</span> is a sufficient statistic. If <span class="arithmatex">\(E_\theta a(M)=0\)</span> for every <span class="arithmatex">\(\theta&gt;0\)</span>, then</p>
+<div class="arithmatex">\[
+0=\frac{n}{\theta^n}
+\int_0^\theta a(m)m^{n-1}\,dm.
+\]</div>
+<p>Therefore, for each <span class="arithmatex">\(\theta\)</span>, the indefinite integral in the above expression is zero. By differentiation in the Lebesgue sense,</p>
+<div class="arithmatex">\[
+a(\theta)\theta^{n-1}=0
+\]</div>
+<p>almost everywhere, so <span class="arithmatex">\(M\)</span> is complete.</p>
+<p>On the other hand, when <span class="arithmatex">\(r&gt;-n\)</span>,</p>
+<div class="arithmatex">\[
+E_\theta M^r
+=\frac{n}{n+r}\theta^r.
+\]</div>
+<p>Therefore, as long as the target function is defined,</p>
+<div class="arithmatex">\[
+\widehat{\theta^r}_{\mathrm{UMVU}}
+=\frac{n+r}{n}M^r.
+\]</div>
+<p>This nonregular example shows that complete sufficiency is not limited to exponential families with fixed support.</p>
+<hr />
+<h2 id="7-basus-theorem-completeness-and-ancillary-statistics">7. Basu's Theorem: Completeness and Ancillary Statistics</h2>
+<h3 id="71-ancillary-statistics">7.1 Ancillary Statistics</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 7.1 (Ancillary Statistic)</p>
+<p>If the distribution of a statistic <span class="arithmatex">\(A(X)\)</span> does not depend on the parameter, then <span class="arithmatex">\(A\)</span> is called an <strong>ancillary statistic</strong>.</p>
+</div>
+<p>Ancillary statistics can still reflect estimation precision, design imbalance, or sampling geometry. “Distribution independent of the parameter” does not mean “useless”.</p>
+<h3 id="72-basus-theorem">7.2 Basu's Theorem</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 7.2 (Basu's Theorem)</p>
+<p>If <span class="arithmatex">\(T\)</span> is a sufficient and boundedly complete statistic and <span class="arithmatex">\(A\)</span> is an ancillary statistic, then under every <span class="arithmatex">\(P_\theta\)</span>, <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(A\)</span> are independent.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 7.2 (click to expand)</summary>
+<p>Fix a measurable set <span class="arithmatex">\(B\)</span> in the range of <span class="arithmatex">\(A\)</span>. By sufficiency, one can choose a version</p>
+<div class="arithmatex">\[
+q_B(T)=P_\theta(A\in B\mid T)
+\]</div>
+<p>that is independent of <span class="arithmatex">\(\theta\)</span>.</p>
+<p>By ancillarity,</p>
+<div class="arithmatex">\[
+P_\theta(A\in B)=c_B
+\]</div>
+<p>is also independent of <span class="arithmatex">\(\theta\)</span>. Therefore</p>
+<div class="arithmatex">\[
+E_\theta\{q_B(T)-c_B\}=0,
+\qquad \forall\theta.
+\]</div>
+<p>The function <span class="arithmatex">\(q_B-c_B\)</span> is bounded. By bounded completeness,</p>
+<div class="arithmatex">\[
+q_B(T)=c_B,
+\qquad P_\theta\text{-a.s.}
+\]</div>
+<p>For any measurable set <span class="arithmatex">\(C\)</span> in the range of <span class="arithmatex">\(T\)</span>,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+P_\theta(A\in B,T\in C)
+&amp;=E_\theta\left[\mathbf{1}\{T\in C\}q_B(T)\right]\\
+&amp;=c_BP_\theta(T\in C)\\
+&amp;=P_\theta(A\in B)P_\theta(T\in C).
+\end{aligned}
+\]</div>
+<p>Hence <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(A\)</span> are independent. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="73-why-overline-x-and-s2-are-independent">7.3 Why <span class="arithmatex">\(\overline X\)</span> and <span class="arithmatex">\(S^2\)</span> Are Independent</h3>
+<div class="admonition example">
+<p class="admonition-title">Example 7.3 (Independence of the Normal Sample Mean and Sample Variance)</p>
+<p>Fix <span class="arithmatex">\(\sigma^2\)</span>, and consider the submodel indexed only by <span class="arithmatex">\(\mu\)</span>:</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\mathrm{iid}}{\sim}N(\mu,\sigma^2).
+\]</div>
+<p>In this case, <span class="arithmatex">\(\overline X\)</span> is a complete sufficient statistic for <span class="arithmatex">\(\mu\)</span>, while</p>
+<div class="arithmatex">\[
+\frac{(n-1)S^2}{\sigma^2}
+\sim\chi_{n-1}^2
+\]</div>
+<p>has a distribution independent of <span class="arithmatex">\(\mu\)</span>, so <span class="arithmatex">\(S^2\)</span> is an ancillary statistic in this submodel. By Basu's theorem,</p>
+<div class="arithmatex">\[
+\overline X\perp S^2.
+\]</div>
+<p>Since this conclusion holds for each fixed <span class="arithmatex">\(\sigma^2\)</span>, it holds in the full normal family.</p>
+</div>
+<hr />
+<h2 id="8-functional-target-estimating-the-normal-distribution-function">8. Functional Target: Estimating the Normal Distribution Function</h2>
+<p>Let</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\mathrm{iid}}{\sim}N(\mu,\sigma^2),
+\]</div>
+<p>where <span class="arithmatex">\(\sigma^2\)</span> is known, <span class="arithmatex">\(n\geq2\)</span>, and <span class="arithmatex">\(y\in\mathbb{R}\)</span> is fixed. The indicator function</p>
+<div class="arithmatex">\[
+D=\mathbf{1}\{X_1\leq y\}
+\]</div>
+<p>unbiasedly estimates</p>
+<div class="arithmatex">\[
+F_\mu(y)
+=\Phi\left(\frac{y-\mu}{\sigma}\right).
+\]</div>
+<p>Here the complete sufficient statistic is <span class="arithmatex">\(\overline X\)</span>. By the conditional distribution formula for the joint normal distribution,</p>
+<div class="arithmatex">\[
+X_1\mid\overline X=x
+\sim N\left(x,\sigma^2\left(1-\frac1n\right)\right).
+\]</div>
+<p>Therefore, Rao-Blackwellization gives</p>
+<div class="arithmatex">\[
+\widehat F_{\mathrm{UMVU}}(y)
+=\Phi\left(
+\frac{y-\overline X}
+{\sigma\sqrt{1-1/n}}
+\right).
+\]</div>
+<p>A similar Gaussian convolution identity gives the UMVU estimator of the population density at <span class="arithmatex">\(y\)</span>:</p>
+<div class="arithmatex">\[
+\widehat f_{\mathrm{UMVU}}(y)
+=\frac{1}{\sigma\sqrt{1-1/n}}
+\phi\left(
+\frac{y-\overline X}
+{\sigma\sqrt{1-1/n}}
+\right).
+\]</div>
+<p>Taking the expectation of the above expression is equivalent to convolving the density of <span class="arithmatex">\(N(\mu,\sigma^2/n)\)</span> with the density of <span class="arithmatex">\(N(0,\sigma^2(1-1/n))\)</span>, and the result is exactly the density of <span class="arithmatex">\(N(\mu,\sigma^2)\)</span> at <span class="arithmatex">\(y\)</span>. Completeness further guarantees that this estimator is the unique UMVU estimator.</p>
+<hr />
+<h2 id="9-uniform-two-endpoint-model">9. Uniform Two-Endpoint Model</h2>
+<p>Let</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\mathrm{iid}}{\sim}\operatorname{Uniform}(a,b),
+\qquad a&lt;b,\quad n\geq2,
+\]</div>
+<p>and denote</p>
+<div class="arithmatex">\[
+U=X_{(1)},
+\qquad
+V=X_{(n)}.
+\]</div>
+<h3 id="91-complete-sufficiency-of-extreme-order-statistics">9.1 Complete Sufficiency of Extreme Order Statistics</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 9.1 (Complete Sufficiency of Extreme Order Statistics)</p>
+<p>The statistic <span class="arithmatex">\((U,V)\)</span> is a complete sufficient statistic for the parameters <span class="arithmatex">\((a,b)\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 9.1 (click to expand)</summary>
+<p>The joint density of the sample is</p>
+<div class="arithmatex">\[
+(b-a)^{-n}\mathbf{1}\{a&lt;U&lt;V&lt;b\},
+\]</div>
+<p>so by the factorization theorem, <span class="arithmatex">\((U,V)\)</span> is sufficient.</p>
+<p>The joint density of <span class="arithmatex">\((U,V)\)</span> is</p>
+<div class="arithmatex">\[
+f_{a,b}(u,v)
+=\frac{n(n-1)(v-u)^{n-2}}{(b-a)^n}
+\mathbf{1}\{a&lt;u&lt;v&lt;b\}.
+\]</div>
+<p>Suppose that for all <span class="arithmatex">\(a&lt;b\)</span>,</p>
+<div class="arithmatex">\[
+E_{a,b}c(U,V)=0.
+\]</div>
+<p>Multiplying both sides by <span class="arithmatex">\((b-a)^n\)</span>, we obtain</p>
+<div class="arithmatex">\[
+G(a,b)
+=\int_a^b\int_u^b
+c(u,v)n(n-1)(v-u)^{n-2}\,dv\,du
+=0.
+\]</div>
+<p>Let</p>
+<div class="arithmatex">\[
+q(u,v)=c(u,v)n(n-1)(v-u)^{n-2}.
+\]</div>
+<p>Absolute integrability permits differentiation in the Lebesgue sense. For almost every <span class="arithmatex">\(a&lt;b\)</span>,</p>
+<div class="arithmatex">\[
+\frac{\partial G}{\partial a}(a,b)
+=-\int_a^bq(a,v)\,dv,
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\frac{\partial^2G}{\partial b\,\partial a}(a,b)
+=-q(a,b).
+\]</div>
+<p>Since <span class="arithmatex">\(G\equiv0\)</span>, we have <span class="arithmatex">\(q(a,b)=0\)</span> almost everywhere. The weight <span class="arithmatex">\(n(n-1)(b-a)^{n-2}\)</span> is positive when <span class="arithmatex">\(a&lt;b\)</span>, so <span class="arithmatex">\(c(a,b)=0\)</span> almost everywhere. From the joint density of <span class="arithmatex">\((U,V)\)</span>, it follows that</p>
+<div class="arithmatex">\[
+c(U,V)=0,
+\qquad P_{a,b}\text{-a.s.},
+\]</div>
+<p>for every parameter pair <span class="arithmatex">\((a,b)\)</span>. Hence <span class="arithmatex">\((U,V)\)</span> is complete. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="92-umvu-estimates-of-the-two-endpoints">9.2 UMVU Estimates of the Two Endpoints</h3>
+<p>For a standard Uniform<span class="arithmatex">\((0,1)\)</span> sample,</p>
+<div class="arithmatex">\[
+EU=\frac{1}{n+1},
+\qquad
+EV=\frac{n}{n+1}.
+\]</div>
+<p>By a linear transformation, we obtain</p>
+<div class="arithmatex">\[
+E_{a,b}U=\frac{na+b}{n+1},
+\qquad
+E_{a,b}V=\frac{a+nb}{n+1}.
+\]</div>
+<p>Solving these two linear equations gives</p>
+<div class="arithmatex">\[
+\widehat a_{\mathrm{UMVU}}
+=\frac{nU-V}{n-1},
+\qquad
+\widehat b_{\mathrm{UMVU}}
+=\frac{nV-U}{n-1}.
+\]</div>
+<p>By Theorem 9.1 and the Lehmann-Scheffé theorem, they are the UMVU estimators of <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>, respectively.</p>
+<hr />
+<h2 id="10-no-randomization-is-needed-under-convex-loss">10. No Randomization Is Needed under Convex Loss</h2>
+<p>Suppose a randomized estimator selects an action according to the distribution <span class="arithmatex">\(Q_x(da)\)</span> after observing <span class="arithmatex">\(X=x\)</span>. Define the barycenter of this randomized action as</p>
+<div class="arithmatex">\[
+\overline\delta(x)=\int a\,Q_x(da).
+\]</div>
+<p>If the randomized estimator is unbiased, then</p>
+<div class="arithmatex">\[
+E_\theta\overline\delta(X)
+=E_\theta\int a\,Q_X(da)
+=g(\theta),
+\]</div>
+<p>so <span class="arithmatex">\(\overline\delta\)</span> is an ordinary nonrandomized unbiased estimator.</p>
+<p>By convexity and Jensen's inequality, for each <span class="arithmatex">\(x\)</span>,</p>
+<div class="arithmatex">\[
+L\{g(\theta),\overline\delta(x)\}
+\leq\int L\{g(\theta),a\}\,Q_x(da).
+\]</div>
+<p>Integrating over <span class="arithmatex">\(X\)</span> then shows that the risk of the nonrandomized barycenter estimator is no greater than that of the original randomized estimator. Therefore, under convex loss, randomization provides no additional benefit for unbiased estimation.</p>
+<p>This differs from discrete hypothesis testing: in discrete tests, the action space and constraint structure are different, and randomization may still be very important.</p>
+<hr />
+<h2 id="11-proof-checklist-for-this-chapter">11. Proof Checklist for This Chapter</h2>
+<p>Before asserting that an estimator is UMVU, or using an independence theorem, one should check the following questions:</p>
+<ol>
+<li>Does an unbiased estimator of the target function exist over the entire parameter space?</li>
+<li>Is the statistic used for conditioning sufficient, so that <span class="arithmatex">\(E_\theta(\delta\mid T)\)</span> can be chosen as the same statistic independent of the parameter?</li>
+<li>Is the statistic complete, or merely minimal sufficient?</li>
+<li>When using completeness of exponential families, does the natural parameter space contain an open set, rather than merely having full affine span?</li>
+<li>Do the integrability conditions required for expectations, power series, or Laplace transforms hold?</li>
+<li>Is the loss function used in the Rao-Blackwell theorem convex? Only after excluding the equality case can one claim that the improvement is strict.</li>
+<li>Before invoking the Lehmann-Scheffé theorem, is the candidate estimator both unbiased and a function of a complete sufficient statistic?</li>
+<li>When using Basu's theorem, is the second statistic truly ancillary for the same parameter family, and is <span class="arithmatex">\(T\)</span> boundedly complete for that parameter family?</li>
+<li>Is the final conclusion only optimality within the class of unbiased estimators, or does it incorrectly claim admissibility among all estimators?</li>
+</ol>
+<hr />
+<h2 id="12-summary-of-this-chapter">12. Summary of This Chapter</h2>
+<p>The logic of this chapter can be summarized as:</p>
+<div class="arithmatex">\[
+\text{Sufficiency}
++\text{Rao-Blackwell improvement}
++\text{uniqueness guaranteed by completeness}
+\Longrightarrow
+\text{Lehmann-Scheffé optimality}.
+\]</div>
+<p>A complete sufficient statistic provides both a dimension-reduction structure and uniqueness of unbiased functions. The Rao-Blackwell theorem improves any unbiased estimator into a function of a sufficient statistic, and the Lehmann-Scheffé theorem further identifies this function as the unique UMVU estimator. Basu's theorem reveals the independence relationship between a complete sufficient statistic and an ancillary statistic.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+
+  <h2 id="__comments">💬 Comments</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="jiahaotian-stat/Notes"
+        data-repo-id="R_kgDORuXyyw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORuXyy84C6uAS"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/security.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../../javascripts/starry_map.js"></script>
+      
+    
+  </body>
+</html>

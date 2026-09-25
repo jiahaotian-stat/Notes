@@ -22,6 +22,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Prob/1Random_var/"/>
     </url>
     <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/Advanced_Prob/2Moments/</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Prob/2Moments/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Prob/2Moments/"/>
+    </url>
+    <url>
         <loc>https://jiahaotian-stat.github.io/Notes/Advanced_Stat/0Intro/</loc>
         <lastmod>2026-09-25</lastmod>
         <changefreq>daily</changefreq>
@@ -41,6 +48,27 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/2Sufficiency/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/2Sufficiency/"/>
+    </url>
+    <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/Advanced_Stat/3completeness/</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/3completeness/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/3completeness/"/>
+    </url>
+    <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/Advanced_Stat/4Ustatistics/</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/4Ustatistics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/4Ustatistics/"/>
+    </url>
+    <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/Advanced_Stat/sol_1/</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/sol_1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/sol_1/"/>
     </url>
     <url>
         <loc>https://jiahaotian-stat.github.io/Notes/Asymptotic-statistics/0Intro/</loc>
@@ -778,6 +806,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Prob/1Random_var/"/>
     </url>
     <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/en/Advanced_Prob/2Moments/</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Prob/2Moments/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Prob/2Moments/"/>
+    </url>
+    <url>
         <loc>https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/0Intro/</loc>
         <lastmod>2026-09-25</lastmod>
         <changefreq>daily</changefreq>
@@ -797,6 +832,27 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/2Sufficiency/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/2Sufficiency/"/>
+    </url>
+    <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/3completeness/</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/3completeness/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/3completeness/"/>
+    </url>
+    <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/4Ustatistics/</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/4Ustatistics/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/4Ustatistics/"/>
+    </url>
+    <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/sol_1/</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/sol_1/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/sol_1/"/>
     </url>
     <url>
         <loc>https://jiahaotian-stat.github.io/Notes/en/Asymptotic-statistics/0Intro/</loc>
@@ -1056,6 +1112,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/1Matrix_norm/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Matrix_Comp/1Matrix_norm/"/>
+    </url>
+    <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/2SVD/</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/2SVD/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Matrix_Comp/2SVD/"/>
     </url>
     <url>
         <loc>https://jiahaotian-stat.github.io/Notes/en/Real_analysis/0Intro/</loc>
@@ -1497,13 +1560,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/reference/stochastic/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/reference/stochastic/"/>
-    </url>
-    <url>
-        <loc>https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/2SVD/</loc>
-        <lastmod>2026-09-25</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/2SVD/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Matrix_Comp/2SVD/"/>
     </url>
     <url>
         <loc>https://jiahaotian-stat.github.io/Notes/en/research/arxiv_papers/</loc>

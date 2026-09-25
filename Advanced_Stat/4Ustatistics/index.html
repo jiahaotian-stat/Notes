@@ -1,0 +1,7256 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/4Ustatistics/">
+      
+      
+        <link rel="prev" href="../3completeness/">
+      
+      
+        <link rel="next" href="../sol_1/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+          <link rel="alternate" href="../../en/Advanced_Stat/4Ustatistics/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>第四章：U统计量与信息下界 - Jiahao's Academic Space</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-MPD6ZGWYW1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-MPD6ZGWYW1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-MPD6ZGWYW1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mvueu-" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jiahao's Academic Space
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第四章：U统计量与信息下界
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="grey"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/Advanced_Stat/4Ustatistics/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jiahaotian-stat/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jiahaotian-stat/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
+          
+  
+  
+  📚 笔记库
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  🛠️ 知识速查
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../research/arxiv_papers/" class="md-tabs__link">
+          
+  
+  
+  🛰️ 前沿追踪
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Lectures/" class="md-tabs__link">
+          
+  
+  
+  🎙️ 讲座与报告
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jiahao's Academic Space
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jiahaotian-stat/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jiahaotian-stat/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 笔记库
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 笔记库
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 随机微分方程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📈 随机微分方程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    随机微分方程课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：条件期望
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：布朗运动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：随机积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：Itô 积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/5SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：多元 Itô 积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/6SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：解的存在唯一性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/7Option_Pricing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章：期权定价与停时
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 习题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 习题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap1_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap3_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap5_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 渐近统计
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📊 渐近统计
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    渐近统计课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：随机收敛
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：特征函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/3CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：中心极限定理（一）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/4CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：中心极限定理（二）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：弱相依数据（一）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：弱相依数据（二）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章： Delta 方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/12ME/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：矩估计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/8MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第九章：极大似然估计（一）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/9MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十章：极大似然估计（二）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/10M%26Z1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十一章： M估计和Z估计 (一)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/11M%26Z2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十二章： M估计和Z估计 (二)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/13U/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十三章： U统计量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/14Bootstrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十四章： Bootstrap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 习题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 习题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌌 泛函分析
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌌 泛函分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    泛函分析课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/1distance_space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：度量空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/2completeness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：拓扑与完备性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/3compactness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：紧性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/4CMT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：压缩映射定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/5Linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：赋范线性空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/6Banach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：巴拿赫空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/7Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章：希尔伯特空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/8Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：希尔伯特空间理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/9Linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第九章：线性算子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/10Open_Closed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十章：开映射与闭图定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/11dual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十一章：对偶空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/12Hahn-Banach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十二章：有界线性泛函的延拓与共鸣定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🍩 点集拓扑
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🍩 点集拓扑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    点集拓扑课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：集合论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：函数与关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：可数集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：开集与拓扑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：诱导拓扑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：连续与同胚
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章：连通性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：紧性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第九章：欧式空间的紧性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十章：序列紧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十一章：单点紧化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十二章：可数性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十三章：分离公理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 习题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 习题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_56/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_789/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 7-9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧱 实分析
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧱 实分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实分析课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/1_sigma_algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：sigma-代数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/2_outer_measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：外测度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/3_ls_measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：Lebesgue测度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/4_measurable_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：可测函数（一）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/5_limits_decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：可测函数（二）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/6_integration_construction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：积分构造
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/7_convergence_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章：收敛定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/8_fubini_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：Fubini定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/9_hahn_jordan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第九章：Hahn-Jordan分解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/10_radon_nikodym/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十章：Radon-Nikodym定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/11_differentiation_ir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十一章：微积分基本定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/12_lp_spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十二章：L^p空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 高等概率论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎯 高等概率论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高等概率论课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/1Random_var/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：概率空间与随机变量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/2Moments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：数字特征
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⏳ 高等数理统计
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⏳ 高等数理统计
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高等数理统计课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_2" id="__nav_2_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_Gaussian_Geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：高斯几何与经典分布
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2Sufficiency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：充分性与指数族
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3completeness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：完备性与UMVU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：U统计量与信息下界
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：U统计量与信息下界
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-mrumvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. MRU、MVUE 与比较类
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. MVUE 的正交刻画
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. MVUE 的正交刻画">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 完备充分统计量与正交性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 向量目标与多参数模型
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-u-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. U-统计量：无偏估计量的系统构造
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. U-统计量：无偏估计量的系统构造">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 核函数的对称化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-u-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 U-统计量的定义与无偏性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-u-rao-blackwell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 U-统计量的 Rao-Blackwell 表示
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 典型例子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cramer-rao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 标量 Cramér-Rao 不等式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 标量 Cramér-Rao 不等式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 得分恒等式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-cramer-rao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Cramér-Rao 下界
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 标量下界的等号条件与可达性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 标量下界的等号条件与可达性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 全局可达性与指数族
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cramer-rao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 多参数 Cramér-Rao 不等式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 多参数 Cramér-Rao 不等式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 含干扰参数时的标量目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 自然指数族
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-mvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 正态均值与方差：MVUE 但未完全有效
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-hammersley-chapman-robbins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 非正则模型：Hammersley-Chapman-Robbins 界
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录 A：完全非参数模型中的完备次序统计量
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录 B：非参数无偏估计中的次数与不存在性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 信息下界的证明核查清单
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 本章小结
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_3" id="__nav_2_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 习题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 习题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sol_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔲 矩阵计算
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔲 矩阵计算
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Matrix_Comp/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    矩阵计算课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_2" id="__nav_2_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Matrix_Comp/1Matrix_norm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：矩阵范数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Matrix_Comp/2SVD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：奇异值分解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 统计学习
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤖 统计学习
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    统计学习课程概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_2" id="__nav_2_9_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/1KNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第一章：KNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/2Linear_Regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第二章：线性回归
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/3Penalized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：惩罚线性回归（一）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/4Penalized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第四章：惩罚线性回归（二）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/5Classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第五章：分类问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/6SVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第六章：支持向量机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/7RKHS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第七章：RKHS与核回归
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/8Kernel_Density/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第八章：核密度估计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/9Tree_Model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第九章：树模型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/10Causal_Inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第十章：因果推断
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ 知识速查
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ 知识速查
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ 速查
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ 速查
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 数理统计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/prob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎲 概率论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📏 测度论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/linalg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔢 线性代数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stochastic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 随机过程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 凸优化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 回归分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ♾️ 数学分析
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛰️ 前沿追踪
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛰️ 前沿追踪
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/arxiv_papers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 最新论文
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎙️ 讲座与报告
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎙️ 讲座与报告
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏛️ 基础理论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🏛️ 基础理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025秋季高等概率论讨论班
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025秋季高等概率论讨论班
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Course_Lectures/LDP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大偏差原理 (LDP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📑 文献研讨
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📑 文献研讨
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025秋季组会
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025秋季组会
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Group_Seminars/derandomized_knockoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derandomized Knockoffs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-mrumvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. MRU、MVUE 与比较类
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-mvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. MVUE 的正交刻画
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. MVUE 的正交刻画">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 完备充分统计量与正交性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 向量目标与多参数模型
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-u-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. U-统计量：无偏估计量的系统构造
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. U-统计量：无偏估计量的系统构造">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 核函数的对称化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-u-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 U-统计量的定义与无偏性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-u-rao-blackwell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 U-统计量的 Rao-Blackwell 表示
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 典型例子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cramer-rao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 标量 Cramér-Rao 不等式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 标量 Cramér-Rao 不等式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 得分恒等式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-cramer-rao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Cramér-Rao 下界
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 标量下界的等号条件与可达性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 标量下界的等号条件与可达性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 全局可达性与指数族
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cramer-rao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 多参数 Cramér-Rao 不等式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 多参数 Cramér-Rao 不等式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 含干扰参数时的标量目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 自然指数族
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-mvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 正态均值与方差：MVUE 但未完全有效
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-hammersley-chapman-robbins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 非正则模型：Hammersley-Chapman-Robbins 界
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录 A：完全非参数模型中的完备次序统计量
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录 B：非参数无偏估计中的次数与不存在性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 信息下界的证明核查清单
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 本章小结
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="mvueu-">第四章：MVUE、U-统计量与信息下界</h1>
+<p>本章首先讨论最小风险无偏估计与最小方差无偏估计，并给出 MVUE 的协方差正交刻画。随后将结论推广至向量目标，介绍 U-统计量这一系统构造无偏估计量的方法。在此基础上，我们推导标量与多参数 Cramér-Rao 下界，研究下界的等号条件与可达性，最后介绍适用于非正则模型的 Hammersley-Chapman-Robbins 界。</p>
+<hr />
+<h2 id="1-mrumvue">1. MRU、MVUE 与比较类</h2>
+<p>设参数为 <span class="arithmatex">\(\theta\in\Theta\)</span>，其中可能有 <span class="arithmatex">\(\Theta\subseteq\mathbb{R}^k\)</span>，需要估计的标量目标为 <span class="arithmatex">\(g(\theta)\)</span>。在平方误差损失下，</p>
+<div class="arithmatex">\[
+L\{g(\theta),a\}=\{a-g(\theta)\}^2.
+\]</div>
+<p>估计量 <span class="arithmatex">\(\delta\)</span> 的风险可以分解为</p>
+<div class="arithmatex">\[
+R(\theta,\delta)
+=\operatorname{Var}_\theta(\delta)
++\operatorname{Bias}_\theta(\delta)^2.
+\]</div>
+<p>因此，在无偏估计量类中，</p>
+<div class="arithmatex">\[
+R(\theta,\delta)=\operatorname{Var}_\theta(\delta).
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">定义 1.1（MRU 与 MVUE）</p>
+<p>若无偏估计量 <span class="arithmatex">\(\widehat g\)</span> 在给定损失函数下，对任意其他无偏估计量和任意 <span class="arithmatex">\(\theta\in\Theta\)</span>，其风险均不更大，则称 <span class="arithmatex">\(\widehat g\)</span> 为<strong>最小风险无偏估计量</strong>，简称 MRU。</p>
+<p>在平方误差损失下，MRU 称为<strong>最小方差无偏估计量</strong>，简称 MVUE，也常称 UMVU 估计量。</p>
+</div>
+<p>平方损失下，MRU 与 MVUE 完全等价。需要注意的是，参数 <span class="arithmatex">\(\theta\)</span> 的维数并不影响这一结论：即使参数属于多参数模型，只要目标 <span class="arithmatex">\(g(\theta)\)</span> 是标量，仍然可以用标量方差比较无偏估计量。</p>
+<hr />
+<h2 id="2-mvue">2. MVUE 的正交刻画</h2>
+<p>令</p>
+<div class="arithmatex">\[
+\mathcal{Z}
+=\left\{Z:E_\theta Z=0,\ \forall\theta\in\Theta\right\}
+\]</div>
+<p>表示在整个参数空间上均为零均值的估计量所构成的线性空间。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 2.1（协方差刻画）</p>
+<p>设 <span class="arithmatex">\(\widehat g\)</span> 是 <span class="arithmatex">\(g(\theta)\)</span> 的无偏估计量，并且对每个 <span class="arithmatex">\(\theta\)</span> 都具有有限方差。则 <span class="arithmatex">\(\widehat g\)</span> 是 MVUE，当且仅当对任意 <span class="arithmatex">\(Z\in\mathcal{Z}\)</span> 以及 <span class="arithmatex">\(Z\)</span> 具有有限方差的任意 <span class="arithmatex">\(\theta_0\)</span>，均有</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_{\theta_0}(\widehat g,Z)=0.
+\]</div>
+</div>
+<details class="proof">
+<summary>定理 2.1 的证明（点击展开）</summary>
+<p>首先假设 <span class="arithmatex">\(\widehat g\)</span> 是 MVUE。对任意 <span class="arithmatex">\(Z\in\mathcal{Z}\)</span> 和任意 <span class="arithmatex">\(a\in\mathbb{R}\)</span>，扰动估计量</p>
+<div class="arithmatex">\[
+\widehat g+aZ
+\]</div>
+<p>仍然是 <span class="arithmatex">\(g(\theta)\)</span> 的无偏估计量。在固定的 <span class="arithmatex">\(\theta_0\)</span> 处，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;\operatorname{Var}_{\theta_0}(\widehat g+aZ)
+-\operatorname{Var}_{\theta_0}(\widehat g)\\
+&amp;\qquad
+=a^2\operatorname{Var}_{\theta_0}(Z)
++2a\operatorname{Cov}_{\theta_0}(\widehat g,Z).
+\end{aligned}
+\]</div>
+<p>由 MVUE 的最优性，上式对所有 <span class="arithmatex">\(a\in\mathbb{R}\)</span> 都非负。如果协方差不为零，取符号相反且绝对值充分小的 <span class="arithmatex">\(a\)</span>，右端将为负，产生矛盾。因此</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_{\theta_0}(\widehat g,Z)=0.
+\]</div>
+<p>反之，假设上述正交条件成立。令 <span class="arithmatex">\(D\)</span> 是 <span class="arithmatex">\(g(\theta)\)</span> 的任意其他有限方差无偏估计量，并令</p>
+<div class="arithmatex">\[
+Z=D-\widehat g.
+\]</div>
+<p>则 <span class="arithmatex">\(Z\in\mathcal{Z}\)</span>，故</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\operatorname{Var}_\theta(D)
+&amp;=\operatorname{Var}_\theta(\widehat g+Z)\\
+&amp;=\operatorname{Var}_\theta(\widehat g)
+  +\operatorname{Var}_\theta(Z)
+  +2\operatorname{Cov}_\theta(\widehat g,Z)\\
+&amp;=\operatorname{Var}_\theta(\widehat g)
+  +\operatorname{Var}_\theta(Z)\\
+&amp;\geq\operatorname{Var}_\theta(\widehat g).
+\end{aligned}
+\]</div>
+<p>因此 <span class="arithmatex">\(\widehat g\)</span> 是 MVUE。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">几何解释</p>
+<p>在每个固定的参数值处，平方可积统计量构成一个 Hilbert 空间。MVUE 与所有在整个模型上期望为零的允许扰动正交。</p>
+<p>这里“在整个模型上”非常重要：如果某个统计量只在单个参数值处均值为零，将它加到原估计量上通常不能保持全局无偏性。</p>
+</div>
+<h3 id="21">2.1 完备充分统计量与正交性</h3>
+<div class="admonition success">
+<p class="admonition-title">推论 2.2（完备充分性蕴含正交性）</p>
+<p>设 <span class="arithmatex">\(T\)</span> 是完备充分统计量。若 <span class="arithmatex">\(\widehat g=a(T)\)</span> 是 <span class="arithmatex">\(g(\theta)\)</span> 的无偏估计量，则 <span class="arithmatex">\(\widehat g\)</span> 满足定理 2.1 的正交条件，因而是 MVUE。</p>
+</div>
+<details class="proof">
+<summary>推论 2.2 的证明（点击展开）</summary>
+<p>对任意 <span class="arithmatex">\(Z\in\mathcal{Z}\)</span>，由充分性，可以选择一个不依赖于 <span class="arithmatex">\(\theta\)</span> 的共同版本</p>
+<div class="arithmatex">\[
+q(T)=E_\theta(Z\mid T).
+\]</div>
+<p>由重期望公式，</p>
+<div class="arithmatex">\[
+E_\theta q(T)=E_\theta Z=0,
+\qquad \forall\theta\in\Theta.
+\]</div>
+<p>由完备性，<span class="arithmatex">\(q(T)=0\)</span> 几乎处处。因此</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\operatorname{Cov}_\theta\{a(T),Z\}
+&amp;=E_\theta\{a(T)Z\}\\
+&amp;=E_\theta\left[a(T)E_\theta(Z\mid T)\right]\\
+&amp;=E_\theta\{a(T)q(T)\}=0.
+\end{aligned}
+\]</div>
+<p>再由定理 2.1，<span class="arithmatex">\(a(T)\)</span> 是 MVUE。这正是 Lehmann-Scheffé 定理的正交形式。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<hr />
+<h2 id="3">3. 向量目标与多参数模型</h2>
+<p>需要区分参数的维数与目标的维数：</p>
+<div class="arithmatex">\[
+\theta\in\mathbb{R}^k,
+\qquad
+g(\theta)\in\mathbb{R}^r.
+\]</div>
+<p>上一节的协方差刻画已经适用于任意 <span class="arithmatex">\(k\)</span> 下的标量目标。现在考虑</p>
+<div class="arithmatex">\[
+\widehat g
+=(\widehat g_1,\ldots,\widehat g_r)^\mathsf{T}
+\]</div>
+<p>是</p>
+<div class="arithmatex">\[
+g=(g_1,\ldots,g_r)^\mathsf{T}
+\]</div>
+<p>的无偏估计量。</p>
+<div class="admonition info">
+<p class="admonition-title">定义 3.1（向量 MVUE）</p>
+<p>若每个分量 <span class="arithmatex">\(\widehat g_j\)</span> 都是 <span class="arithmatex">\(g_j\)</span> 的标量 MVUE，则称 <span class="arithmatex">\(\widehat g\)</span> 为向量 MVUE。</p>
+</div>
+<p>对于对称矩阵，记</p>
+<div class="arithmatex">\[
+A\preceq B
+\]</div>
+<p>表示 <span class="arithmatex">\(B-A\)</span> 为半正定矩阵。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.2（向量 MVUE 的等价刻画）</p>
+<p>假设所有相关的二阶矩均有限，则下列命题等价：</p>
+<ol>
+<li>每个 <span class="arithmatex">\(\widehat g_j\)</span> 都是 <span class="arithmatex">\(g_j\)</span> 的 MVUE；</li>
+<li>对每个 <span class="arithmatex">\(c\in\mathbb{R}^r\)</span>，<span class="arithmatex">\(c^\mathsf{T}\widehat g\)</span> 都是 <span class="arithmatex">\(c^\mathsf{T}g(\theta)\)</span> 的 MVUE；</li>
+<li>对 <span class="arithmatex">\(g\)</span> 的任意无偏向量估计量 <span class="arithmatex">\(D\)</span>，均有</li>
+</ol>
+<div class="arithmatex">\[
+\operatorname{Cov}_\theta(\widehat g)
+\preceq
+\operatorname{Cov}_\theta(D),
+\qquad \forall\theta.
+\]</div>
+</div>
+<details class="proof">
+<summary>定理 3.2 的证明（点击展开）</summary>
+<p>假设条件 1 成立。对任意 <span class="arithmatex">\(Z\in\mathcal{Z}\)</span>，由定理 2.1，</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_\theta(\widehat g_j,Z)=0,
+\qquad j=1,\ldots,r.
+\]</div>
+<p>因而对任意 <span class="arithmatex">\(c\in\mathbb{R}^r\)</span>，</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_\theta(c^\mathsf{T}\widehat g,Z)
+=\sum_{j=1}^r c_j
+\operatorname{Cov}_\theta(\widehat g_j,Z)
+=0.
+\]</div>
+<p>再用定理 2.1，得到条件 2。</p>
+<p>若条件 2 成立，<span class="arithmatex">\(D\)</span> 是任意无偏向量估计量，则对每个 <span class="arithmatex">\(c\)</span>，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+c^\mathsf{T}\operatorname{Cov}_\theta(\widehat g)c
+&amp;=\operatorname{Var}_\theta(c^\mathsf{T}\widehat g)\\
+&amp;\leq\operatorname{Var}_\theta(c^\mathsf{T}D)\\
+&amp;=c^\mathsf{T}\operatorname{Cov}_\theta(D)c.
+\end{aligned}
+\]</div>
+<p>这正是半正定序意义下的协方差矩阵不等式，因此条件 3 成立。</p>
+<p>最后假设条件 3 成立。固定 <span class="arithmatex">\(j\)</span>，令 <span class="arithmatex">\(d\)</span> 是 <span class="arithmatex">\(g_j\)</span> 的任意标量无偏估计量。只将 <span class="arithmatex">\(\widehat g\)</span> 的第 <span class="arithmatex">\(j\)</span> 个分量替换为 <span class="arithmatex">\(d\)</span>，得到无偏向量估计量 <span class="arithmatex">\(D\)</span>。在协方差矩阵不等式两侧取关于第 <span class="arithmatex">\(j\)</span> 个坐标向量 <span class="arithmatex">\(e_j\)</span> 的二次型，得到</p>
+<div class="arithmatex">\[
+\operatorname{Var}_\theta(\widehat g_j)
+\leq\operatorname{Var}_\theta(d).
+\]</div>
+<p>故每个分量都是 MVUE，即条件 1 成立。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">推论 3.3（向量正交性）</p>
+<p>向量估计量 <span class="arithmatex">\(\widehat g\)</span> 是向量 MVUE，当且仅当对每个具有有限方差的标量 <span class="arithmatex">\(Z\in\mathcal{Z}\)</span>，均有</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_\theta(\widehat g,Z)
+=0\in\mathbb{R}^r.
+\]</div>
+</div>
+<p>对于 Euclidean 平方损失，在无偏估计量类中，</p>
+<div class="arithmatex">\[
+E_\theta\|\widehat g-g(\theta)\|_2^2
+=\operatorname{tr}\left\{
+\operatorname{Cov}_\theta(\widehat g)
+\right\}.
+\]</div>
+<p>但半正定序下的协方差矩阵比较比迹的比较更强，因为它控制了每个线性组合 <span class="arithmatex">\(c^\mathsf{T}\widehat g\)</span> 的方差。</p>
+<div class="admonition example">
+<p class="admonition-title">例 3.4（正态总体的均值与方差）</p>
+<p>设</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n\overset{\mathrm{iid}}{\sim}
+N(\mu,\sigma^2).
+\]</div>
+<p>由上一章可知，<span class="arithmatex">\((\overline X,S^2)\)</span> 是 <span class="arithmatex">\((\mu,\sigma^2)\)</span> 的完备充分统计量。因此它是向量 MVUE，并且</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_{\mu,\sigma^2}
+\begin{pmatrix}
+\overline X\\
+S^2
+\end{pmatrix}
+=
+\begin{pmatrix}
+\sigma^2/n &amp; 0\\
+0 &amp; 2\sigma^4/(n-1)
+\end{pmatrix}.
+\]</div>
+<p>非对角元为零，是因为</p>
+<div class="arithmatex">\[
+\overline X\perp S^2.
+\]</div>
+<p>但向量 MVUE 并不意味着多参数 Cramér-Rao 下界一定可达，后文将再次讨论这个例子。</p>
+</div>
+<hr />
+<h2 id="4-u-">4. U-统计量：无偏估计量的系统构造</h2>
+<p>设</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n\overset{\mathrm{iid}}{\sim}F.
+\]</div>
+<p>若目标泛函可以写成</p>
+<div class="arithmatex">\[
+q(F)=E_Fh(X_1,\ldots,X_m),
+\qquad m\leq n,
+\]</div>
+<p>其中核函数 <span class="arithmatex">\(h\)</span> 可积，则可以利用 <span class="arithmatex">\(h\)</span> 构造无偏估计量。</p>
+<h3 id="41">4.1 核函数的对称化</h3>
+<div class="admonition success">
+<p class="admonition-title">命题 4.1（对称化不会增加方差）</p>
+<p>定义对称化核函数</p>
+<div class="arithmatex">\[
+h_s(x_1,\ldots,x_m)
+=\frac{1}{m!}\sum_\pi
+h(x_{\pi(1)},\ldots,x_{\pi(m)}),
+\]</div>
+<p>其中求和遍历所有排列 <span class="arithmatex">\(\pi\)</span>。则</p>
+<div class="arithmatex">\[
+E_Fh_s=E_Fh.
+\]</div>
+<p>当二阶矩存在时，还有</p>
+<div class="arithmatex">\[
+\operatorname{Var}_F\{h_s(X_1,\ldots,X_m)\}
+\leq
+\operatorname{Var}_F\{h(X_1,\ldots,X_m)\}.
+\]</div>
+</div>
+<details class="proof">
+<summary>命题 4.1 的证明（点击展开）</summary>
+<p>令 <span class="arithmatex">\(\Pi\)</span> 是独立于样本的均匀随机排列。由可交换性，</p>
+<div class="arithmatex">\[
+h(X_{\Pi(1)},\ldots,X_{\Pi(m)})
+\]</div>
+<p>与 <span class="arithmatex">\(h(X_1,\ldots,X_m)\)</span> 同分布。给定样本后，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+h_s(X_1,\ldots,X_m)
+=E\bigl[&amp;h(X_{\Pi(1)},\ldots,X_{\Pi(m)})\\
+&amp;\mid X_1,\ldots,X_m\bigr].
+\end{aligned}
+\]</div>
+<p>重期望公式给出期望相等，条件方差分解给出方差不增。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>因此，下文不妨假设核函数 <span class="arithmatex">\(h\)</span> 是对称的。</p>
+<h3 id="42-u-">4.2 U-统计量的定义与无偏性</h3>
+<div class="admonition info">
+<p class="admonition-title">定义 4.2（U-统计量）</p>
+<p>由 <span class="arithmatex">\(m\)</span> 阶对称核 <span class="arithmatex">\(h\)</span> 生成的 U-统计量定义为</p>
+<div class="arithmatex">\[
+U_n
+=\binom{n}{m}^{-1}
+\sum_{1\leq i_1&lt;\cdots&lt;i_m\leq n}
+h(X_{i_1},\ldots,X_{i_m}).
+\]</div>
+</div>
+<div class="admonition success">
+<p class="admonition-title">命题 4.3（U-统计量的无偏性）</p>
+<p>若 <span class="arithmatex">\(q(F)=E_Fh(X_1,\ldots,X_m)\)</span> 有限，则</p>
+<div class="arithmatex">\[
+E_FU_n=q(F).
+\]</div>
+</div>
+<p>每个求和项与 <span class="arithmatex">\(h(X_1,\ldots,X_m)\)</span> 具有相同的期望，而求和共有 <span class="arithmatex">\(\binom{n}{m}\)</span> 项，因此结论立即成立。</p>
+<h3 id="43-u-rao-blackwell">4.3 U-统计量的 Rao-Blackwell 表示</h3>
+<div class="admonition success">
+<p class="admonition-title">定理 4.4（U-统计量作为 Rao-Blackwell 估计量）</p>
+<p>假设 <span class="arithmatex">\(F\)</span> 遍历所有关于某个固定非原子测度具有密度的分布，并且 <span class="arithmatex">\(h\)</span> 具有有限二阶矩。则</p>
+<div class="arithmatex">\[
+U_n
+=E_F\left\{
+h(X_1,\ldots,X_m)
+\mid X_{(1)},\ldots,X_{(n)}
+\right\}.
+\]</div>
+<p>因此 <span class="arithmatex">\(U_n\)</span> 的方差不大于粗糙估计量 <span class="arithmatex">\(h(X_1,\ldots,X_m)\)</span> 的方差。在这个完全非参数模型中，<span class="arithmatex">\(U_n\)</span> 是 <span class="arithmatex">\(q(F)\)</span> 的唯一 MVUE。</p>
+</div>
+<details class="proof">
+<summary>定理 4.4 的证明（点击展开）</summary>
+<p>给定次序统计量后，将观测值分配给原始标签的 <span class="arithmatex">\(n!\)</span> 种方式等可能。对这些分配求 <span class="arithmatex">\(h\)</span> 的条件平均，等价于对所有 <span class="arithmatex">\(m\)</span> 元子集等权平均。由于 <span class="arithmatex">\(h\)</span> 对称，所得结果恰好是 <span class="arithmatex">\(U_n\)</span>。</p>
+<p>因而 <span class="arithmatex">\(U_n\)</span> 是 <span class="arithmatex">\(h(X_1,\ldots,X_m)\)</span> 关于次序统计量的条件期望。Rao-Blackwell 定理给出方差不增。</p>
+<p>附录 A 证明了次序统计量向量在这一完全非参数模型中是完备充分统计量。<span class="arithmatex">\(U_n\)</span> 是它的对称函数且无偏，因此由 Lehmann-Scheffé 定理，<span class="arithmatex">\(U_n\)</span> 是唯一 MVUE。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="44">4.4 典型例子</h3>
+<div class="admonition example">
+<p class="admonition-title">例 4.5（估计 <span class="arithmatex">\(\mu^2\)</span>）</p>
+<p>设</p>
+<div class="arithmatex">\[
+\mu=E_FX,
+\qquad E_FX^2&lt;\infty.
+\]</div>
+<p>因为</p>
+<div class="arithmatex">\[
+E_F(X_1X_2)=\mu^2,
+\]</div>
+<p>所以取二阶核 <span class="arithmatex">\(h(x_1,x_2)=x_1x_2\)</span>。相应的 U-统计量为</p>
+<div class="arithmatex">\[
+\begin{aligned}
+U_n
+&amp;=\binom{n}{2}^{-1}\sum_{i&lt;j}X_iX_j\\
+&amp;=\frac{\left(\sum_{i=1}^nX_i\right)^2
+-\sum_{i=1}^nX_i^2}{n(n-1)}.
+\end{aligned}
+\]</div>
+<p>它是 <span class="arithmatex">\(\mu^2\)</span> 的非参数 MVUE。</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">例 4.6（估计方差）</p>
+<p>取对称核</p>
+<div class="arithmatex">\[
+h(x_1,x_2)=\frac{(x_1-x_2)^2}{2}.
+\]</div>
+<p>则</p>
+<div class="arithmatex">\[
+E_Fh(X_1,X_2)=\operatorname{Var}_F(X).
+\]</div>
+<p>利用恒等式</p>
+<div class="arithmatex">\[
+\sum_{i&lt;j}(X_i-X_j)^2
+=n\sum_{i=1}^n(X_i-\overline X)^2,
+\]</div>
+<p>得到</p>
+<div class="arithmatex">\[
+\begin{aligned}
+U_n
+&amp;=\binom{n}{2}^{-1}
+\sum_{i&lt;j}\frac{(X_i-X_j)^2}{2}\\
+&amp;=\frac{1}{n-1}
+\sum_{i=1}^n(X_i-\overline X)^2.
+\end{aligned}
+\]</div>
+<p>因此通常的无偏样本方差是二阶 U-统计量。方差泛函的次数为 <span class="arithmatex">\(2\)</span>；附录 B 将说明，在完全非参数模型中不存在只使用一个观测的方差无偏估计量。</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">例 4.7（估计分布函数）</p>
+<p>对固定的 <span class="arithmatex">\(t\)</span>，取一阶核</p>
+<div class="arithmatex">\[
+h_t(x)=\mathbf{1}_{\{x\leq t\}}.
+\]</div>
+<p>相应的一阶 U-统计量为</p>
+<div class="arithmatex">\[
+F_n(t)=\frac{1}{n}\sum_{i=1}^n
+\mathbf{1}_{\{X_i\leq t\}},
+\]</div>
+<p>即经验分布函数在 <span class="arithmatex">\(t\)</span> 处的取值。</p>
+</div>
+<p>U-统计量还广泛用于秩检验、Kendall's tau、核两样本统计量以及各种现代成对估计量。</p>
+<hr />
+<h2 id="5-cramer-rao">5. 标量 Cramér-Rao 不等式</h2>
+<p>设 <span class="arithmatex">\(p_\theta\)</span> 是关于共同控制测度的密度，参数 <span class="arithmatex">\(\theta\)</span> 位于某个开区间内。考虑以下正则条件：</p>
+<div class="admonition note">
+<p class="admonition-title">正则条件</p>
+<p><strong>(R1)</strong> 分布的支撑集不依赖于 <span class="arithmatex">\(\theta\)</span>，并且在该支撑集上 <span class="arithmatex">\(p_\theta&gt;0\)</span>。</p>
+<p><strong>(R2)</strong> <span class="arithmatex">\(p_\theta(x)\)</span> 关于 <span class="arithmatex">\(\theta\)</span> 可微，并且对 <span class="arithmatex">\(p_\theta\)</span> 和 <span class="arithmatex">\(\delta p_\theta\)</span> 的积分均允许交换微分与积分次序。</p>
+<p><strong>(R3)</strong> 得分函数</p>
+<div class="arithmatex">\[
+S_\theta(X)
+=\frac{\partial}{\partial\theta}
+\log p_\theta(X)
+\]</div>
+<p>平方可积，且 Fisher 信息满足</p>
+<div class="arithmatex">\[
+0&lt;I(\theta)
+=E_\theta S_\theta^2&lt;\infty.
+\]</div>
+</div>
+<h3 id="51">5.1 得分恒等式</h3>
+<div class="admonition success">
+<p class="admonition-title">引理 5.1（得分恒等式）</p>
+<p>在条件 (R1)-(R3) 下，</p>
+<div class="arithmatex">\[
+E_\theta S_\theta=0.
+\]</div>
+<p>若 <span class="arithmatex">\(\delta\)</span> 是可微目标 <span class="arithmatex">\(g(\theta)\)</span> 的无偏估计量，并且条件 (R2) 也适用于 <span class="arithmatex">\(\delta\)</span>，则</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_\theta(\delta,S_\theta)
+=g'(\theta).
+\]</div>
+</div>
+<details class="proof">
+<summary>引理 5.1 的证明（点击展开）</summary>
+<p>因为</p>
+<div class="arithmatex">\[
+S_\theta
+=\frac{\partial p_\theta/\partial\theta}{p_\theta},
+\]</div>
+<p>所以</p>
+<div class="arithmatex">\[
+\begin{aligned}
+E_\theta S_\theta
+&amp;=\int\frac{\partial p_\theta(x)}{\partial\theta}
+\,d\mu(x)\\
+&amp;=\frac{d}{d\theta}\int p_\theta(x)\,d\mu(x)=0.
+\end{aligned}
+\]</div>
+<p>类似地，由 <span class="arithmatex">\(E_\theta\delta=g(\theta)\)</span>，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+g'(\theta)
+&amp;=\frac{d}{d\theta}
+\int\delta(x)p_\theta(x)\,d\mu(x)\\
+&amp;=\int\delta(x)S_\theta(x)p_\theta(x)\,d\mu(x)\\
+&amp;=E_\theta(\delta S_\theta).
+\end{aligned}
+\]</div>
+<p>又因为 <span class="arithmatex">\(E_\theta S_\theta=0\)</span>，最后一个式子正是 <span class="arithmatex">\(\operatorname{Cov}_\theta(\delta,S_\theta)\)</span>。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="52-cramer-rao">5.2 Cramér-Rao 下界</h3>
+<div class="admonition success">
+<p class="admonition-title">定理 5.2（标量 Cramér-Rao 下界）</p>
+<p>在引理 5.1 的条件下，<span class="arithmatex">\(g(\theta)\)</span> 的任意无偏估计量 <span class="arithmatex">\(\delta\)</span> 都满足</p>
+<div class="arithmatex">\[
+\operatorname{Var}_\theta(\delta)
+\geq
+\frac{\{g'(\theta)\}^2}{I(\theta)}.
+\]</div>
+<p>对大小为 <span class="arithmatex">\(n\)</span> 的独立同分布样本，</p>
+<div class="arithmatex">\[
+I_n(\theta)=nI_1(\theta).
+\]</div>
+</div>
+<details class="proof">
+<summary>定理 5.2 的证明（点击展开）</summary>
+<p>由 Cauchy-Schwarz 不等式和得分恒等式，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\{g'(\theta)\}^2
+&amp;=\operatorname{Cov}_\theta(\delta,S_\theta)^2\\
+&amp;\leq\operatorname{Var}_\theta(\delta)
+\operatorname{Var}_\theta(S_\theta)\\
+&amp;=\operatorname{Var}_\theta(\delta)I(\theta).
+\end{aligned}
+\]</div>
+<p>移项即得结论。对于独立样本，样本得分是各观测得分之和。各项独立且均值为零，所以总得分的方差为 <span class="arithmatex">\(nI_1(\theta)\)</span>。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition success">
+<p class="admonition-title">引理 5.3（期望 Hessian 恒等式）</p>
+<p>若 <span class="arithmatex">\(p_\theta\)</span> 二阶可微，并且二阶导数也可以与积分交换，则</p>
+<div class="arithmatex">\[
+I(\theta)
+=-E_\theta\left\{
+\frac{\partial^2}{\partial\theta^2}
+\log p_\theta(X)
+\right\}.
+\]</div>
+</div>
+<details class="proof">
+<summary>引理 5.3 的证明（点击展开）</summary>
+<p>直接求导可得</p>
+<div class="arithmatex">\[
+\frac{\partial^2}{\partial\theta^2}\log p_\theta
+=\frac{p_\theta''}{p_\theta}
+-\left(\frac{p_\theta'}{p_\theta}\right)^2.
+\]</div>
+<p>取期望后，第一项为</p>
+<div class="arithmatex">\[
+\int p_\theta''\,d\mu
+=\frac{d^2}{d\theta^2}1=0,
+\]</div>
+<p>第二项为 <span class="arithmatex">\(-I(\theta)\)</span>，故结论成立。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition info">
+<p class="admonition-title">定义 5.4（有限样本有效性）</p>
+<p>若无偏估计量在参数值 <span class="arithmatex">\(\theta\)</span> 处使 Cramér-Rao 不等式取等号，则称它在 <span class="arithmatex">\(\theta\)</span> 处是<strong>有效的</strong>。若它在模型中每个 <span class="arithmatex">\(\theta\)</span> 处都取到等号，则称其为<strong>全局有效的</strong>。</p>
+</div>
+<p>每个全局有效的无偏估计量都是 MVUE，因为 Cramér-Rao 下界适用于所有无偏竞争者。但反过来不成立：MVUE 不一定达到 Cramér-Rao 下界。</p>
+<hr />
+<h2 id="6">6. 标量下界的等号条件与可达性</h2>
+<div class="admonition success">
+<p class="admonition-title">定理 6.1（Cramér-Rao 下界的等号条件）</p>
+<p>在标量 Cramér-Rao 正则条件下，不等式在 <span class="arithmatex">\(\theta\)</span> 处取等号，当且仅当</p>
+<div class="arithmatex">\[
+\delta(X)-g(\theta)
+=\frac{g'(\theta)}{I(\theta)}S_\theta(X),
+\qquad P_\theta\text{-a.s.}
+\]</div>
+</div>
+<details class="proof">
+<summary>定理 6.1 的证明（点击展开）</summary>
+<p>Cauchy-Schwarz 不等式取等号，当且仅当两个中心化随机变量线性相关。因此</p>
+<div class="arithmatex">\[
+\delta-g(\theta)=a(\theta)S_\theta
+\]</div>
+<p>几乎处处成立。两侧与得分函数取协方差，并使用得分恒等式，得到</p>
+<div class="arithmatex">\[
+g'(\theta)=a(\theta)I(\theta).
+\]</div>
+<p>因此</p>
+<div class="arithmatex">\[
+a(\theta)=\frac{g'(\theta)}{I(\theta)}.
+\]</div>
+<p>反之，若等号条件成立，则</p>
+<div class="arithmatex">\[
+\operatorname{Var}_\theta(\delta)
+=\frac{\{g'(\theta)\}^2}{I(\theta)^2}
+\operatorname{Var}_\theta(S_\theta)
+=\frac{\{g'(\theta)\}^2}{I(\theta)}.
+\]</div>
+<p>故 Cramér-Rao 下界取到等号。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">可达性条件非常严格</p>
+<p>等号条件左侧必须是一个不依赖未知参数的统计量，而右侧包含依赖参数的得分函数。因此，满足无偏性并不足以保证下界可达。</p>
+</div>
+<h3 id="61">6.1 全局可达性与指数族</h3>
+<div class="admonition success">
+<p class="admonition-title">定理 6.2（全局取等号蕴含指数族结构）</p>
+<p>假设正则条件在某个区间上成立，<span class="arithmatex">\(I(\theta)&gt;0\)</span> 且 <span class="arithmatex">\(g'(\theta)\neq0\)</span>。若存在同一个估计量 <span class="arithmatex">\(\delta\)</span> 在每个 <span class="arithmatex">\(\theta\)</span> 处都达到 Cramér-Rao 下界，则模型必具有形式</p>
+<div class="arithmatex">\[
+p_\theta(x)
+=\exp\{q(\theta)\delta(x)+r(\theta)+c(x)\}.
+\]</div>
+<p>因此，全局可达性要求模型是以有效估计量为自然统计量的一参数指数族。</p>
+</div>
+<details class="proof">
+<summary>定理 6.2 的证明（点击展开）</summary>
+<p>将等号条件改写为</p>
+<div class="arithmatex">\[
+\frac{\partial}{\partial\theta}
+\log p_\theta(x)
+=\frac{I(\theta)}{g'(\theta)}\delta(x)
+-\frac{I(\theta)g(\theta)}{g'(\theta)}.
+\]</div>
+<p>令右侧两个只依赖参数的系数分别为 <span class="arithmatex">\(q'(\theta)\)</span> 与 <span class="arithmatex">\(r'(\theta)\)</span>，再关于 <span class="arithmatex">\(\theta\)</span> 积分，即得</p>
+<div class="arithmatex">\[
+\log p_\theta(x)
+=q(\theta)\delta(x)+r(\theta)+c(x).
+\]</div>
+<p>指数化后得到结论。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>上述定理只是必要性结论。对于正则指数族，可以进一步精确刻画哪些目标可达到下界。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 6.3（一参数指数族中的有效仿射统计量）</p>
+<p>设正则一参数指数族为</p>
+<div class="arithmatex">\[
+p_\theta(x)
+=C(\theta)\exp\{Q(\theta)T(x)\}h(x),
+\qquad Q'(\theta)\neq0,
+\]</div>
+<p>且</p>
+<div class="arithmatex">\[
+0&lt;\operatorname{Var}_\theta(T)&lt;\infty.
+\]</div>
+<p>对任意常数 <span class="arithmatex">\(a,b\)</span>，估计量</p>
+<div class="arithmatex">\[
+\delta=aT+b
+\]</div>
+<p>对目标</p>
+<div class="arithmatex">\[
+g(\theta)=E_\theta(aT+b)
+\]</div>
+<p>是全局有效的。反之，在 <span class="arithmatex">\(T\)</span> 非退化的条件下，任何在整个族中均有效的同一个估计量都必须具有仿射形式 <span class="arithmatex">\(aT+b\)</span>。</p>
+</div>
+<details class="proof">
+<summary>定理 6.3 的证明（点击展开）</summary>
+<p>记</p>
+<div class="arithmatex">\[
+m(\theta)=E_\theta T.
+\]</div>
+<p>对归一化恒等式求导，得到</p>
+<div class="arithmatex">\[
+\frac{C'(\theta)}{C(\theta)}
+=-Q'(\theta)m(\theta).
+\]</div>
+<p>因此</p>
+<div class="arithmatex">\[
+S_\theta
+=Q'(\theta)\{T-m(\theta)\},
+\]</div>
+<p>且</p>
+<div class="arithmatex">\[
+I(\theta)
+=Q'(\theta)^2\operatorname{Var}_\theta(T).
+\]</div>
+<p>将得分恒等式用于 <span class="arithmatex">\(T\)</span>，得到</p>
+<div class="arithmatex">\[
+m'(\theta)
+=Q'(\theta)\operatorname{Var}_\theta(T).
+\]</div>
+<p>对 <span class="arithmatex">\(g(\theta)=am(\theta)+b\)</span>，有</p>
+<div class="arithmatex">\[
+g'(\theta)
+=aQ'(\theta)\operatorname{Var}_\theta(T).
+\]</div>
+<p>因而</p>
+<div class="arithmatex">\[
+\frac{g'(\theta)}{I(\theta)}S_\theta
+=a\{T-m(\theta)\}
+=\delta-g(\theta).
+\]</div>
+<p>由定理 6.1，<span class="arithmatex">\(\delta\)</span> 全局有效。</p>
+<p>反之，由等号条件，</p>
+<div class="arithmatex">\[
+\delta(x)-g(\theta)
+=\frac{g'(\theta)Q'(\theta)}{I(\theta)}
+\{T(x)-m(\theta)\}.
+\]</div>
+<p>因此对于每个 <span class="arithmatex">\(\theta\)</span>，<span class="arithmatex">\(\delta\)</span> 都是 <span class="arithmatex">\(T\)</span> 的仿射函数。比较两个不同参数值处的表达式，并利用 <span class="arithmatex">\(T\)</span> 非退化，可知斜率和截距必须是不依赖参数的常数。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">指数族结构仍不足以保证任意目标有效</p>
+<p>即使在指数族中，非线性目标也未必存在有效无偏估计量。指数族结构只使等号成为可能；目标与自然统计量之间的仿射相容性才决定下界是否真正可达。</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">例 6.4（UMVU 但不有效）</p>
+<p>设</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n\overset{\mathrm{iid}}{\sim}
+N(\mu,\sigma^2),
+\]</div>
+<p>其中 <span class="arithmatex">\(\sigma^2\)</span> 已知，并记</p>
+<div class="arithmatex">\[
+v=\frac{\sigma^2}{n}.
+\]</div>
+<p>统计量</p>
+<div class="arithmatex">\[
+\delta=\overline X^2-v
+\]</div>
+<p>是 <span class="arithmatex">\(\mu^2\)</span> 的 UMVU 估计量。因为 <span class="arithmatex">\(\overline X\sim N(\mu,v)\)</span>，</p>
+<div class="arithmatex">\[
+\operatorname{Var}_\mu(\delta)
+=4\mu^2v+2v^2.
+\]</div>
+<p>相应的 Cramér-Rao 下界为</p>
+<div class="arithmatex">\[
+\frac{\{(\mu^2)'\}^2}{n/\sigma^2}
+=4\mu^2v.
+\]</div>
+<p>两者存在严格为正的差 <span class="arithmatex">\(2v^2\)</span>，所以该目标的下界不可达。这个例子说明：MVUE 并不蕴含有效性。</p>
+</div>
+<hr />
+<h2 id="7-cramer-rao">7. 多参数 Cramér-Rao 不等式</h2>
+<p>设</p>
+<div class="arithmatex">\[
+\theta=(\theta_1,\ldots,\theta_k)^\mathsf{T}
+\]</div>
+<p>属于 <span class="arithmatex">\(\mathbb{R}^k\)</span> 的一个开集。定义得分向量和 Fisher 信息矩阵为</p>
+<div class="arithmatex">\[
+S_\theta=\nabla_\theta\log p_\theta(X),
+\qquad
+I(\theta)=E_\theta(S_\theta S_\theta^\mathsf{T}),
+\]</div>
+<p>并假设 <span class="arithmatex">\(I(\theta)\)</span> 正定。对于可微目标 <span class="arithmatex">\(g:\mathbb{R}^k\to\mathbb{R}^r\)</span>，将其 Jacobian 矩阵记为</p>
+<div class="arithmatex">\[
+G(\theta)
+=\frac{\partial g(\theta)}{\partial\theta^\mathsf{T}}
+\in\mathbb{R}^{r\times k}.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">定理 7.1（多参数 Cramér-Rao 下界）</p>
+<p>在 (R1)-(R3) 的向量版本成立时，<span class="arithmatex">\(g(\theta)\)</span> 的任意无偏向量估计量 <span class="arithmatex">\(\delta\in\mathbb{R}^r\)</span> 都满足</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_\theta(\delta)
+\succeq
+G(\theta)I(\theta)^{-1}G(\theta)^\mathsf{T}.
+\]</div>
+<p>等号成立，当且仅当</p>
+<div class="arithmatex">\[
+\delta-g(\theta)
+=G(\theta)I(\theta)^{-1}S_\theta,
+\qquad P_\theta\text{-a.s.}
+\]</div>
+</div>
+<details class="proof">
+<summary>定理 7.1 的证明（点击展开）</summary>
+<p>对每个无偏性恒等式求导，得到矩阵形式的得分恒等式</p>
+<div class="arithmatex">\[
+E_\theta S_\theta=0,
+\qquad
+\operatorname{Cov}_\theta(\delta,S_\theta)=G(\theta).
+\]</div>
+<p>定义残差</p>
+<div class="arithmatex">\[
+R
+=\delta-g(\theta)-G(\theta)I(\theta)^{-1}S_\theta.
+\]</div>
+<p>直接展开其协方差矩阵，得到</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\operatorname{Cov}_\theta(R)
+&amp;=\operatorname{Cov}_\theta(\delta)
+-GI^{-1}\operatorname{Cov}_\theta(S_\theta,\delta)\\
+&amp;\quad
+-\operatorname{Cov}_\theta(\delta,S_\theta)I^{-1}G^\mathsf{T}
++GI^{-1}II^{-1}G^\mathsf{T}\\
+&amp;=\operatorname{Cov}_\theta(\delta)
+-GI^{-1}G^\mathsf{T}.
+\end{aligned}
+\]</div>
+<p>任意协方差矩阵均为半正定矩阵，故得到下界。取等号当且仅当 <span class="arithmatex">\(\operatorname{Cov}_\theta(R)=0\)</span>，又因为 <span class="arithmatex">\(ER=0\)</span>，这等价于 <span class="arithmatex">\(R=0\)</span> 几乎处处。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="71">7.1 含干扰参数时的标量目标</h3>
+<p>若目标为标量，即 <span class="arithmatex">\(r=1\)</span>，则</p>
+<div class="arithmatex">\[
+G(\theta)=\nabla g(\theta)^\mathsf{T},
+\]</div>
+<p>从而</p>
+<div class="arithmatex">\[
+\operatorname{Var}_\theta(\delta)
+\geq
+\nabla g(\theta)^\mathsf{T}
+I(\theta)^{-1}
+\nabla g(\theta).
+\]</div>
+<p>这里必须使用包含所有参数，尤其是干扰参数的完整 Fisher 信息矩阵。</p>
+<h3 id="72">7.2 自然指数族</h3>
+<div class="admonition success">
+<p class="admonition-title">推论 7.2（自然指数族中的有效估计量）</p>
+<p>设正则自然指数族为</p>
+<div class="arithmatex">\[
+p_\eta(x)
+=\exp\{\eta^\mathsf{T}T(x)-A(\eta)\}h(x),
+\qquad \eta\in\mathcal{H}\subseteq\mathbb{R}^k,
+\]</div>
+<p>且</p>
+<div class="arithmatex">\[
+I(\eta)=\nabla^2A(\eta)
+\]</div>
+<p>正定。对常矩阵 <span class="arithmatex">\(C\in\mathbb{R}^{r\times k}\)</span> 和常向量 <span class="arithmatex">\(b\in\mathbb{R}^r\)</span>，估计量</p>
+<div class="arithmatex">\[
+\delta=CT+b
+\]</div>
+<p>对目标</p>
+<div class="arithmatex">\[
+g(\eta)
+=CE_\eta T+b
+=C\nabla A(\eta)+b
+\]</div>
+<p>是有效的。若 <span class="arithmatex">\(T\)</span> 的仿射支撑为 <span class="arithmatex">\(\mathbb{R}^k\)</span>，则这些恰好是具有全局有效无偏估计量的目标。</p>
+</div>
+<details class="proof">
+<summary>推论 7.2 的证明（点击展开）</summary>
+<p>在自然指数族中，</p>
+<div class="arithmatex">\[
+S_\eta=T-\nabla A(\eta),
+\]</div>
+<p>并且</p>
+<div class="arithmatex">\[
+I(\eta)
+=\operatorname{Cov}_\eta(T)
+=\nabla^2A(\eta).
+\]</div>
+<p>对目标 <span class="arithmatex">\(g(\eta)=C\nabla A(\eta)+b\)</span>，有</p>
+<div class="arithmatex">\[
+G= C\nabla^2A=CI.
+\]</div>
+<p>因此</p>
+<div class="arithmatex">\[
+GI^{-1}S_\eta
+=C\{T-E_\eta T\}
+=\delta-g(\eta),
+\]</div>
+<p>满足多参数下界的等号条件。</p>
+<p>反之，等号条件说明对每个 <span class="arithmatex">\(\eta\)</span>，同一个估计量都是 <span class="arithmatex">\(T\)</span> 的仿射函数，其系数为 <span class="arithmatex">\(G(\eta)I(\eta)^{-1}\)</span>。比较两个参数值下的仿射表示，并使用 <span class="arithmatex">\(T\)</span> 的全仿射支撑，可知系数和截距必须为常数。因此 <span class="arithmatex">\(\delta=CT+b\)</span>，取期望便得到相应目标。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="73-mvue">7.3 正态均值与方差：MVUE 但未完全有效</h3>
+<p>设</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\mathrm{iid}}{\sim}N(\mu,\tau),
+\qquad \tau=\sigma^2,
+\]</div>
+<p>其中 <span class="arithmatex">\(\mu\)</span> 与 <span class="arithmatex">\(\tau\)</span> 均未知。得分函数的两个分量为</p>
+<div class="arithmatex">\[
+S_\mu
+=\frac{1}{\tau}\sum_{i=1}^n(X_i-\mu)
+\]</div>
+<p>以及</p>
+<div class="arithmatex">\[
+S_\tau
+=-\frac{n}{2\tau}
++\frac{1}{2\tau^2}
+\sum_{i=1}^n(X_i-\mu)^2.
+\]</div>
+<p>中心正态分布的三阶矩为零，所以两个得分分量不相关。又因为</p>
+<div class="arithmatex">\[
+\operatorname{Var}\{(X_i-\mu)^2\}=2\tau^2,
+\]</div>
+<p>故 Fisher 信息矩阵为</p>
+<div class="arithmatex">\[
+I(\mu,\tau)
+=
+\begin{pmatrix}
+n/\tau &amp; 0\\
+0 &amp; n/(2\tau^2)
+\end{pmatrix}.
+\]</div>
+<p>对恒等目标</p>
+<div class="arithmatex">\[
+g(\mu,\tau)=(\mu,\tau)^\mathsf{T},
+\]</div>
+<p>矩阵下界为</p>
+<div class="arithmatex">\[
+I(\mu,\tau)^{-1}
+=
+\begin{pmatrix}
+\tau/n &amp; 0\\
+0 &amp; 2\tau^2/n
+\end{pmatrix}.
+\]</div>
+<p>而向量 MVUE <span class="arithmatex">\((\overline X,S^2)^\mathsf{T}\)</span> 的协方差矩阵为</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_{\mu,\tau}
+\begin{pmatrix}
+\overline X\\
+S^2
+\end{pmatrix}
+=
+\begin{pmatrix}
+\tau/n &amp; 0\\
+0 &amp; 2\tau^2/(n-1)
+\end{pmatrix}.
+\]</div>
+<p>因此 <span class="arithmatex">\(\overline X\)</span> 达到了均值分量的下界，但 <span class="arithmatex">\(S^2\)</span> 没有达到方差分量的下界。事实上，估计 <span class="arithmatex">\(\tau\)</span> 时的等号条件要求</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\delta_\tau
+&amp;=\tau+\frac{2\tau^2}{n}S_\tau\\
+&amp;=\frac{1}{n}\sum_{i=1}^n(X_i-\mu)^2.
+\end{aligned}
+\]</div>
+<p>右端依赖未知的干扰参数 <span class="arithmatex">\(\mu\)</span>，因此它不是一个统计量。不存在同一个无偏估计量能对所有 <span class="arithmatex">\((\mu,\tau)\)</span> 满足该等号条件。</p>
+<p>若 <span class="arithmatex">\(\mu\)</span> 已知，则上式确实是合法的估计量，并能达到下界。这个例子清楚地区分了 MVUE 与 Cramér-Rao 下界的可达性。</p>
+<hr />
+<h2 id="8-hammersley-chapman-robbins">8. 非正则模型：Hammersley-Chapman-Robbins 界</h2>
+<p>Cramér-Rao 下界的证明需要对模型求导。当模型不可微，或者支撑集随参数变化时，可以使用有限差分形式的下界。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 8.1（Hammersley-Chapman-Robbins 界）</p>
+<p>假设</p>
+<div class="arithmatex">\[
+P_{\theta+\Delta}\ll P_\theta,
+\]</div>
+<p>并定义似然比</p>
+<div class="arithmatex">\[
+L_\Delta(X)
+=\frac{p_{\theta+\Delta}(X)}{p_\theta(X)}.
+\]</div>
+<p>若 <span class="arithmatex">\(L_\Delta\)</span> 在 <span class="arithmatex">\(P_\theta\)</span> 下具有有限二阶矩，且 <span class="arithmatex">\(\delta\)</span> 是 <span class="arithmatex">\(g(\theta)\)</span> 的无偏估计量，则</p>
+<div class="arithmatex">\[
+\operatorname{Var}_\theta(\delta)
+\geq
+\frac{\{g(\theta+\Delta)-g(\theta)\}^2}
+{E_\theta\{L_\Delta(X)-1\}^2}.
+\]</div>
+<p>对所有允许的 <span class="arithmatex">\(\Delta\)</span> 取上确界，可得到这一形式下最强的下界。</p>
+</div>
+<details class="proof">
+<summary>定理 8.1 的证明（点击展开）</summary>
+<p>由换测度公式，</p>
+<div class="arithmatex">\[
+E_\theta L_\Delta=1,
+\]</div>
+<p>且</p>
+<div class="arithmatex">\[
+E_\theta(\delta L_\Delta)
+=E_{\theta+\Delta}\delta
+=g(\theta+\Delta).
+\]</div>
+<p>令</p>
+<div class="arithmatex">\[
+Z=L_\Delta-1.
+\]</div>
+<p>则</p>
+<div class="arithmatex">\[
+E_\theta Z=0,
+\]</div>
+<p>并且</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_\theta(\delta,Z)
+=g(\theta+\Delta)-g(\theta).
+\]</div>
+<p>应用 Cauchy-Schwarz 不等式，</p>
+<div class="arithmatex">\[
+\operatorname{Cov}_\theta(\delta,Z)^2
+\leq
+\operatorname{Var}_\theta(\delta)
+\operatorname{Var}_\theta(Z),
+\]</div>
+<p>即得所需下界。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>在二次均值可微条件下，将分子与分母同时除以 <span class="arithmatex">\(\Delta^2\)</span>，再令 <span class="arithmatex">\(\Delta\to0\)</span>，即可恢复标量 Cramér-Rao 下界。</p>
+<div class="admonition warning">
+<p class="admonition-title">支撑集随参数变化的模型</p>
+<p>对 <span class="arithmatex">\(\operatorname{Unif}(0,\theta)\)</span>，支撑集随 <span class="arithmatex">\(\theta\)</span> 改变，条件 (R1)-(R2) 失效，因此不应直接使用通常的得分计算。此时最大次序统计量和有限差分型信息下界更合适。</p>
+</div>
+<hr />
+<h2 id="a">附录 A：完全非参数模型中的完备次序统计量</h2>
+<p>设 <span class="arithmatex">\(\mu\)</span> 是非原子 <span class="arithmatex">\(\sigma\)</span>-有限测度，<span class="arithmatex">\(\mathcal{F}_\mu\)</span> 是所有关于 <span class="arithmatex">\(\mu\)</span> 的概率密度构成的族。若</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n\overset{\mathrm{iid}}{\sim}f,
+\]</div>
+<p>记次序统计量向量为</p>
+<div class="arithmatex">\[
+O=(X_{(1)},\ldots,X_{(n)}).
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">定理 A.1（次序统计量的完备充分性）</p>
+<p>在完全非参数族</p>
+<div class="arithmatex">\[
+\left\{f^n:f\in\mathcal{F}_\mu\right\}
+\]</div>
+<p>中，次序统计量向量 <span class="arithmatex">\(O\)</span> 是完备充分统计量。</p>
+</div>
+<details class="proof">
+<summary>定理 A.1 的证明（点击展开）</summary>
+<p>联合密度</p>
+<div class="arithmatex">\[
+\prod_{i=1}^n f(x_i)
+\]</div>
+<p>是样本的对称函数，因此可以写成次序统计量的函数。由因子分解定理，<span class="arithmatex">\(O\)</span> 充分。</p>
+<p>为证明完备性，假设 <span class="arithmatex">\(a(O)\)</span> 可积，并且对所有 <span class="arithmatex">\(f\in\mathcal{F}_\mu\)</span> 都有</p>
+<div class="arithmatex">\[
+E_fa(O)=0.
+\]</div>
+<p>定义对称函数</p>
+<div class="arithmatex">\[
+H(x_1,\ldots,x_n)
+=a\{x_{(1)},\ldots,x_{(n)}\}.
+\]</div>
+<p>则对每个概率密度 <span class="arithmatex">\(f\)</span>，</p>
+<div class="arithmatex">\[
+\int H(x_1,\ldots,x_n)
+\prod_{i=1}^nf(x_i)
+\,d\mu(x_1)\cdots d\mu(x_n)=0.
+\]</div>
+<p>任取基准密度 <span class="arithmatex">\(f_0\)</span> 和密度 <span class="arithmatex">\(f_1,\ldots,f_n\)</span>。对 <span class="arithmatex">\(\alpha_j&gt;0\)</span>，定义归一化正混合</p>
+<div class="arithmatex">\[
+f_\alpha
+=\frac{f_0+\sum_{j=1}^n\alpha_jf_j}
+{1+\sum_{j=1}^n\alpha_j}.
+\]</div>
+<p>将 <span class="arithmatex">\(f_\alpha\)</span> 代入前式，并乘以</p>
+<div class="arithmatex">\[
+\left(1+\sum_{j=1}^n\alpha_j\right)^n,
+\]</div>
+<p>得到关于自由正变量 <span class="arithmatex">\(\alpha_1,\ldots,\alpha_n\)</span> 的多项式。该多项式在 <span class="arithmatex">\(\mathbb{R}^n\)</span> 的一个开集上恒为零，所以每个系数都为零。</p>
+<p>其中 <span class="arithmatex">\(\alpha_1\cdots\alpha_n\)</span> 的系数为所有排列对应积分之和。由于 <span class="arithmatex">\(H\)</span> 对称，这些积分全部相等，故</p>
+<div class="arithmatex">\[
+\int H(x_1,\ldots,x_n)
+\prod_{i=1}^nf_i(x_i)
+\,d\mu^n(x)=0
+\]</div>
+<p>对任意密度 <span class="arithmatex">\(f_1,\ldots,f_n\)</span> 成立。</p>
+<p>令每个 <span class="arithmatex">\(f_i\)</span> 为任意有限测度集合 <span class="arithmatex">\(A_i\)</span> 上的归一化示性函数，可知 <span class="arithmatex">\(H\)</span> 在每个有限测度矩形</p>
+<div class="arithmatex">\[
+A_1\times\cdots\times A_n
+\]</div>
+<p>上的积分都为零。由单调类定理，相应的有符号测度在每个有限测度可测集上均为零；再由 <span class="arithmatex">\(\sigma\)</span>-有限性，</p>
+<div class="arithmatex">\[
+H=0,
+\qquad \mu^n\text{-a.e.}
+\]</div>
+<p>因而对每个 <span class="arithmatex">\(f\)</span>，<span class="arithmatex">\(a(O)=0\)</span> 几乎处处，完备性得证。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">为什么需要非原子性？</p>
+<p>非原子性保证样本中出现并列值的概率为零，从而给定次序统计量后，标签排列的条件分布是均匀的，这正是 U-统计量条件期望表示所使用的事实。</p>
+<p>若分布含有原子，则需要根据重复观测值修正排列轨道的计数，但对称化思想仍然成立。</p>
+</div>
+<hr />
+<h2 id="b">附录 B：非参数无偏估计中的次数与不存在性</h2>
+<p>若 <span class="arithmatex">\(m\)</span> 是满足下式的最小正整数，</p>
+<div class="arithmatex">\[
+q(F)=E_Fh(X_1,\ldots,X_m),
+\]</div>
+<p>则称无偏可估泛函 <span class="arithmatex">\(q(F)\)</span> 的<strong>次数</strong>为 <span class="arithmatex">\(m\)</span>。</p>
+<div class="admonition success">
+<p class="admonition-title">命题 B.1（必要的混合多项式条件）</p>
+<p>若 <span class="arithmatex">\(q\)</span> 的次数至多为 <span class="arithmatex">\(m\)</span>，则对凸模型中的任意两个分布 <span class="arithmatex">\(F,G\)</span>，映射</p>
+<div class="arithmatex">\[
+\alpha
+\longmapsto
+q\{\alpha F+(1-\alpha)G\}
+\]</div>
+<p>必须是关于 <span class="arithmatex">\(\alpha\)</span> 的次数不超过 <span class="arithmatex">\(m\)</span> 的多项式。</p>
+</div>
+<details class="proof">
+<summary>命题 B.1 的证明（点击展开）</summary>
+<p>令</p>
+<div class="arithmatex">\[
+H_\alpha=\alpha F+(1-\alpha)G.
+\]</div>
+<p>则</p>
+<div class="arithmatex">\[
+q(H_\alpha)
+=\int h(x_1,\ldots,x_m)
+\prod_{j=1}^m
+\{\alpha\,dF(x_j)+(1-\alpha)\,dG(x_j)\}.
+\]</div>
+<p>展开乘积后即得到一个次数不超过 <span class="arithmatex">\(m\)</span> 的多项式。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>对方差泛函，有</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\operatorname{Var}_{\alpha F+(1-\alpha)G}(X)
+&amp;=\alpha E_FX^2+(1-\alpha)E_GX^2\\
+&amp;\quad
+-\{\alpha E_FX+(1-\alpha)E_GX\}^2.
+\end{aligned}
+\]</div>
+<p>当 <span class="arithmatex">\(F\)</span> 与 <span class="arithmatex">\(G\)</span> 的均值不同时，它是 <span class="arithmatex">\(\alpha\)</span> 的真正二次多项式。因此，方差不可能具有次数 <span class="arithmatex">\(1\)</span>；而例 4.6 的二阶核说明方差的次数恰为 <span class="arithmatex">\(2\)</span>。</p>
+<p>标准差通常不具有有限次数，因为上述二次多项式的平方根一般不是多项式。这说明 U-统计量只能为具有有限阶期望表示的泛函构造无偏估计量。</p>
+<hr />
+<h2 id="9">9. 信息下界的证明核查清单</h2>
+<p>在声称某个估计量达到 Cramér-Rao 下界前，应逐项检查：</p>
+<ol>
+<li>估计量是否在整个参数空间上无偏？</li>
+<li>支撑集是否与参数无关？所需的导数与积分换序是否合法？</li>
+<li>是否使用了整个样本的正确得分函数？</li>
+<li>在多参数问题中，是否使用了包含干扰参数的完整 Fisher 信息矩阵？</li>
+<li>当前结果是否只是一个下界？估计量是否真正满足标量或向量等号条件？</li>
+<li>等号公式是否定义了一个不依赖未知参数的统一统计量？</li>
+<li>是否清楚地区分了“有效”“MVUE”与“可容许”这三个概念？</li>
+</ol>
+<hr />
+<h2 id="10">10. 本章小结</h2>
+<ul>
+<li>在平方损失下，无偏估计量的风险就是方差，因此 MRU 与 MVUE 等价。</li>
+<li>MVUE 的核心刻画是：它与每个全局零均值无偏扰动在协方差意义下正交。</li>
+<li>向量 MVUE 等价于每个线性组合均为标量 MVUE，也等价于协方差矩阵在 Loewner 序下最小。</li>
+<li>U-统计量通过对核函数在所有子样本上平均，系统地构造无偏估计量；在完全非参数模型中，它还是相应泛函的唯一 MVUE。</li>
+<li>Cramér-Rao 不等式由得分恒等式与 Cauchy-Schwarz 不等式导出，但达到下界还必须满足严格的等号条件。</li>
+<li>全局有效性与指数族结构密切相关；即便是 MVUE，也未必能达到信息下界。</li>
+<li>多参数模型中必须使用完整信息矩阵，不能忽略干扰参数。</li>
+<li>当正则条件失效时，Hammersley-Chapman-Robbins 界提供了有限差分型的替代下界。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+
+  <h2 id="__comments">💬 Comments</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="jiahaotian-stat/Notes"
+        data-repo-id="R_kgDORuXyyw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORuXyy84C6uAS"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../javascripts/security.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../javascripts/starry_map.js"></script>
+      
+    
+  </body>
+</html>
