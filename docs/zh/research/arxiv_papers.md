@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-18
+> 更新于: 2026-09-27
 
 ---
+### Rolling Conformal Prediction in Sequential Model Training 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-22
+- **链接**: [PDF](http://arxiv.org/abs/2609.26951v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出滚动保形预测（rolling-CP），在序贯模型训练中无需数据划分，通过对每个新观测相对于当前预测器进行校准并滚动纳入后续训练，构造了可随训练过程动态更新的非一致性评分函数。理论上，在可交换数据下无需任何稳定性假设或训练过程限制，即证明了边际覆盖的通用二倍因子保证（最坏情况下覆盖率为1−2α），并在i.i.d.数据流下进一步建立了随时间一致的高概率训练条件有效性，且在稳定性条件下覆盖率可收敛至目标水平1−α。
+
+### PICPIs: Prediction-Interval-Conditional Prediction Intervals 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-21
+- **链接**: [PDF](http://arxiv.org/abs/2609.25388v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出基于预测值分层的自洽条件 E[Y | p(X)∈I]∈I，并构造出数据自适应区间，使区间同时定义预测值层并保证该层结果均值落入同一区间。理论上证明在预测分布正则条件下，所构区间覆盖除任意小比例外的预测值，宽度以 n^{-1/3} 速率收缩（至多对数因子与预测误差）。
+
+### Beyond Point Prediction: Artificial Representative Trees with Uncertainty 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-21
+- **链接**: [PDF](http://arxiv.org/abs/2609.24528v1)
+
+!!! note "AI 核心解读"
+
+    该论文将人工代表树（ARTs）与叶级Mondrian保形预测系统（CPS）相结合，构造出能同时输出连续预测、预测区间及超阈值概率的单一可解释树模型，其核心统计推导在于通过保形校准保证有限样本下的边际覆盖率。理论性质上，ARTs-CPS在跨数据集与模拟场景中展现出显著优于普通决策树的分裂变量选择可复现性与结构稳定性，并在Brier评分上较分离式回归与概率树多模型策略更低且更稳定。
+
+### Retrieving predictive densities from conformal predictive distributions 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-20
+- **链接**: [PDF](http://arxiv.org/abs/2609.23350v1)
+
+!!! note "AI 核心解读"
+
+    该论文在理论上证明了尾部校正版共形预测分布的渐近边际有效性，并构造了分位数匹配评分函数，使其在边际PIT偏离均匀分布上保持上界且在校准集大小等于分位数数时等价于crisp共形预测分布。针对密度恢复，作者提出保真度约束的核平滑带宽优化，在保持渐近边际有效性的同时获得闭式解。
+
+### Gaussian Process Decorrelation for Spatiotemporal Deep Learning-Based Snow Water Equivalent Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-08-27
+- **链接**: [PDF](http://arxiv.org/abs/2609.22182v1)
+
+!!! note "AI 核心解读"
+
+    该论文利用基于高斯过程的线性变换对SNOTEL网络SWE数据进行去空间相关，使LSTM能在各站点学习纯净时间信号，并通过共形预测构建无分布假设的预测区间以量化时空预测不确定性。其创新在于将空间与时间成分显式分离的统计建模思路，以及为时空数据提供无分布假设的不确定性量化框架。
+
+
 ### Calibrated Predictive Distributions from Sample-Based Generators 
 
 - [ ] **分类**: Conformal | **日期**: 2026-07-20

@@ -1216,5 +1216,35 @@
         "date": "2026-07-20",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2609.26951v1": {
+        "title": "Rolling Conformal Prediction in Sequential Model Training",
+        "date": "2026-09-22",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.25388v1": {
+        "title": "PICPIs: Prediction-Interval-Conditional Prediction Intervals",
+        "date": "2026-09-21",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.24528v1": {
+        "title": "Beyond Point Prediction: Artificial Representative Trees with Uncertainty",
+        "date": "2026-09-21",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.23350v1": {
+        "title": "Retrieving predictive densities from conformal predictive distributions",
+        "date": "2026-09-20",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.22182v1": {
+        "title": "Gaussian Process Decorrelation for Spatiotemporal Deep Learning-Based Snow Water Equivalent Prediction",
+        "date": "2026-08-27",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
