@@ -1246,5 +1246,11 @@
         "date": "2026-08-27",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2609.30886v1": {
+        "title": "Conformal Prediction under Exponential-Tilt Joint Shift",
+        "date": "2026-09-25",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

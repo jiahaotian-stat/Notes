@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-27
+> 更新于: 2026-09-28
 
 ---
+### Conformal Prediction under Exponential-Tilt Joint Shift 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-25
+- **链接**: [PDF](http://arxiv.org/abs/2609.30886v1)
+
+!!! note "AI 核心解读"
+
+    该论文在指数倾斜联合偏移下，将ExTRA估计权重用于保形校准，并进一步对源预测分布做倾斜调整，通过识别计算与评分函数同权重估计误差的交互分析，揭示了两种程序在真实权重下均具目标覆盖、在估计权重下共享同一覆盖上界，但额外倾斜会改变覆盖行为。其核心创新在于刻画了评分函数如何与权重估计误差耦合，从而解释为何加权校准单独使用可保持覆盖，而叠加预测倾斜可能显著损失覆盖。
+
+
 ### Rolling Conformal Prediction in Sequential Model Training 
 
 - [ ] **分类**: Conformal | **日期**: 2026-09-22
