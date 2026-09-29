@@ -1252,5 +1252,35 @@
         "date": "2026-09-25",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2609.34887v1": {
+        "title": "Conformal Prediction and Conditional Coverage for Tabular Foundation Models",
+        "date": "2026-09-28",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.33868v1": {
+        "title": "Conformal Coverage of Time Series: Validity and Inference",
+        "date": "2026-09-27",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.33866v1": {
+        "title": "Valid and Efficient Split Conformal Regression for Time Series",
+        "date": "2026-09-27",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.33482v1": {
+        "title": "How Synthetic Labels Improve Conformal Prediction: A Perspective on Conditional Coverage",
+        "date": "2026-09-27",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.33456v1": {
+        "title": "Sharp training-conditional coverage for conformal prediction under covariate shift",
+        "date": "2026-09-27",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

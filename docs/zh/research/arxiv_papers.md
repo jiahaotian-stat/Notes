@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-28
+> 更新于: 2026-09-29
 
 ---
+### Conformal Prediction and Conditional Coverage for Tabular Foundation Models 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-28
+- **链接**: [PDF](http://arxiv.org/abs/2609.34887v1)
+
+!!! note "AI 核心解读"
+
+    C-USIM 将最高预测密度分裂共形预测推广至多模态预测分布，通过构造条件均匀化评分积分，在无需额外训练或模型推断的情况下实现有限样本边际有效性。该工作进一步以分布估计误差与评分离散度显式界定条件-边际覆盖差距，并借助百分位秩-评分图刻画覆盖异质性。
+
+### Conformal Coverage of Time Series: Validity and Inference 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-27
+- **链接**: [PDF](http://arxiv.org/abs/2609.33868v1)
+
+!!! note "AI 核心解读"
+
+    该论文利用函数型依赖度量，在无混合假设下推导了相邻校准与测试集下分裂共形预测边际覆盖误差的非渐近界，并建立Bahadur表示首次给出时间依赖下实际覆盖率的中心极限定理。针对长记忆高斯线性过程，进一步证明极强时间依赖可导致实际覆盖率的非高斯极限分布，并构造了带估计标准化常数的块抽样推断方法。
+
+### Valid and Efficient Split Conformal Regression for Time Series 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-27
+- **链接**: [PDF](http://arxiv.org/abs/2609.33866v1)
+
+!!! note "AI 核心解读"
+
+    该论文用函数依赖测度替代混合条件，为分块共形分位数/中位数回归建立了非渐近覆盖保证与区间长度精度，并首次同时刻画二者的收敛性。针对长记忆高斯线性过程，论文证明校准后区间长度的收敛速度快于中心估计本身，且在校准块相对训练块充分大时给出匹配下界。
+
+### How Synthetic Labels Improve Conformal Prediction: A Perspective on Conditional Coverage 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-27
+- **链接**: [PDF](http://arxiv.org/abs/2609.33482v1)
+
+!!! note "AI 核心解读"
+
+    该论文基于评分分位数回归提出预测驱动分位数学习，利用合成标签池估计pinball风险、用配对可信与合成结果校正偏差，并由独立可信集完成最终保形化，从而在有限可信样本下改进条件覆盖。其核心统计推导是将总体条件覆盖误差刻画为pinball风险关于标量修正的函数梯度，并用相应Hessian消除全局平移、按边界密度加权剩余形状误差，进而给出三资源扩展与合成标签收益—成本规则。
+
+### Sharp training-conditional coverage for conformal prediction under covariate shift 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-27
+- **链接**: [PDF](http://arxiv.org/abs/2609.33456v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过仅依赖固定总体分位数处单一集中不等式，给出了加权分裂共形预测在协变量漂移下显式的训练条件覆盖界，并证明关键尺度并非似然比上确界，而是由漂移的卡方散度及测试总体中概率等于误覆盖水平的最不利区域上似然比均值所构成的方差代理。其构造的两点下界进一步表明根号m速率与卡方贡献是漂移的内在特征，且在显式膨胀水平下加权分位数成为确定性PAC预测集，并可将分析扩展至估计似然比与无标签源样本尾部泛函，从而获得完全有限样本证书。
+
+
 ### Conformal Prediction under Exponential-Tilt Joint Shift 
 
 - [ ] **分类**: Conformal | **日期**: 2026-09-25
