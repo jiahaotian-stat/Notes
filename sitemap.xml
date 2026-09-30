@@ -358,6 +358,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/2SVD/"/>
     </url>
     <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/Matrix_Comp/3GaussianEliminationAndLU/</loc>
+        <lastmod>2026-09-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Matrix_Comp/3GaussianEliminationAndLU/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/3GaussianEliminationAndLU/"/>
+    </url>
+    <url>
         <loc>https://jiahaotian-stat.github.io/Notes/Real_analysis/0Intro/</loc>
         <lastmod>2026-09-30</lastmod>
         <changefreq>daily</changefreq>
@@ -1161,6 +1168,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/2SVD/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Matrix_Comp/2SVD/"/>
+    </url>
+    <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/3GaussianEliminationAndLU/</loc>
+        <lastmod>2026-09-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/3GaussianEliminationAndLU/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Matrix_Comp/3GaussianEliminationAndLU/"/>
     </url>
     <url>
         <loc>https://jiahaotian-stat.github.io/Notes/en/Real_analysis/0Intro/</loc>

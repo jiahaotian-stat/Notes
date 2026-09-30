@@ -8,19 +8,19 @@
       
       
       
-        <link rel="canonical" href="https://jiahaotian-stat.github.io/Notes/Topology/4/">
+        <link rel="canonical" href="https://jiahaotian-stat.github.io/Notes/Matrix_Comp/3GaussianEliminationAndLU/">
       
       
-        <link rel="prev" href="../3/">
+        <link rel="prev" href="../2SVD/">
       
       
-        <link rel="next" href="../5/">
+        <link rel="next" href="../../Statistical_Learning/0Intro/">
       
       
         
           <link rel="alternate" href="./" hreflang="zh">
         
-          <link rel="alternate" href="../../en/Topology/4/" hreflang="en">
+          <link rel="alternate" href="../../en/Matrix_Comp/3GaussianEliminationAndLU/" hreflang="en">
         
       
       
@@ -29,7 +29,7 @@
     
     
       
-        <title>第四章：开集与拓扑 - Jiahao's Academic Space</title>
+        <title>第三章：高斯消去与LU分解 - Jiahao's Academic Space</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#lu" class="md-skip">
           跳转至
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第四章：开集与拓扑
+              第三章：高斯消去与LU分解
             
           </span>
         </div>
@@ -179,7 +179,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/Topology/4/" hreflang="en" class="md-select__link">
+            <a href="../../en/Matrix_Comp/3GaussianEliminationAndLU/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -2226,8 +2226,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2243,11 +2241,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
@@ -2268,7 +2266,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2286,7 +2284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0Intro/" class="md-nav__link">
+      <a href="../../Topology/0Intro/" class="md-nav__link">
         
   
   
@@ -2311,8 +2309,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2325,11 +2321,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
         
           
           <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
@@ -2350,7 +2346,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2368,7 +2364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1/" class="md-nav__link">
+      <a href="../../Topology/1/" class="md-nav__link">
         
   
   
@@ -2396,7 +2392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2/" class="md-nav__link">
+      <a href="../../Topology/2/" class="md-nav__link">
         
   
   
@@ -2424,7 +2420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3/" class="md-nav__link">
+      <a href="../../Topology/3/" class="md-nav__link">
         
   
   
@@ -2449,37 +2445,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第四章：开集与拓扑
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Topology/4/" class="md-nav__link">
         
   
   
@@ -2495,70 +2464,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 度量空间中的开集与闭集
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 连续性的拓扑刻画
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 一般拓扑空间的公理化定义
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-bases-for-a-topology" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 拓扑的基 (Bases for a Topology)
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2571,7 +2476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5/" class="md-nav__link">
+      <a href="../../Topology/5/" class="md-nav__link">
         
   
   
@@ -2599,7 +2504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6/" class="md-nav__link">
+      <a href="../../Topology/6/" class="md-nav__link">
         
   
   
@@ -2627,7 +2532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../7/" class="md-nav__link">
+      <a href="../../Topology/7/" class="md-nav__link">
         
   
   
@@ -2655,7 +2560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8/" class="md-nav__link">
+      <a href="../../Topology/8/" class="md-nav__link">
         
   
   
@@ -2683,7 +2588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../9/" class="md-nav__link">
+      <a href="../../Topology/9/" class="md-nav__link">
         
   
   
@@ -2711,7 +2616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10/" class="md-nav__link">
+      <a href="../../Topology/10/" class="md-nav__link">
         
   
   
@@ -2739,7 +2644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../11/" class="md-nav__link">
+      <a href="../../Topology/11/" class="md-nav__link">
         
   
   
@@ -2767,7 +2672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../12/" class="md-nav__link">
+      <a href="../../Topology/12/" class="md-nav__link">
         
   
   
@@ -2795,7 +2700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../13/" class="md-nav__link">
+      <a href="../../Topology/13/" class="md-nav__link">
         
   
   
@@ -2883,7 +2788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_12/" class="md-nav__link">
+      <a href="../../Topology/sol_12/" class="md-nav__link">
         
   
   
@@ -2911,7 +2816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_34/" class="md-nav__link">
+      <a href="../../Topology/sol_34/" class="md-nav__link">
         
   
   
@@ -2939,7 +2844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_56/" class="md-nav__link">
+      <a href="../../Topology/sol_56/" class="md-nav__link">
         
   
   
@@ -2967,7 +2872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_789/" class="md-nav__link">
+      <a href="../../Topology/sol_789/" class="md-nav__link">
         
   
   
@@ -4137,6 +4042,8 @@
                 
   
   
+    
+  
   
   
     
@@ -4152,11 +4059,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
         
           
           <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
@@ -4177,7 +4084,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4195,7 +4102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Matrix_Comp/0Intro/" class="md-nav__link">
+      <a href="../0Intro/" class="md-nav__link">
         
   
   
@@ -4220,8 +4127,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -4232,11 +4141,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_8_2" id="__nav_2_8_2_label" tabindex="0">
@@ -4257,7 +4166,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_8_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4275,7 +4184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Matrix_Comp/1Matrix_norm/" class="md-nav__link">
+      <a href="../1Matrix_norm/" class="md-nav__link">
         
   
   
@@ -4303,7 +4212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Matrix_Comp/2SVD/" class="md-nav__link">
+      <a href="../2SVD/" class="md-nav__link">
         
   
   
@@ -4328,10 +4237,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Matrix_Comp/3GaussianEliminationAndLU/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第三章：高斯消去与LU分解
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4347,6 +4283,292 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 三角方程组
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 三角方程组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 下三角方程组与向前代入
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 上三角方程组与向后代入
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 三角矩阵的代数性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 三角求解的向后误差
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 高斯消去
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 高斯消去">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 初等消元与高斯变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 第 \(k\) 步消元
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 高斯变换的性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 消元更新与计算量
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. LU 分解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. LU 分解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 从高斯消去到 LU 分解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 LU 分解的存在性与唯一性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 紧凑存储与计算算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 用 LU 分解求解方程组
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-ldmmathsf-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 \(LDM^{\mathsf T}\) 分解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 舍入误差与选主元
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 舍入误差与选主元">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 LU 分解的向后误差
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 对换矩阵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 部分选主元
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 复杂度与稳定性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 本章总结
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5677,10 +5899,60 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 度量空间中的开集与闭集
+        1. 三角方程组
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1. 三角方程组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 下三角方程组与向前代入
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 上三角方程组与向后代入
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 三角矩阵的代数性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 三角求解的向后误差
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5688,29 +5960,201 @@
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 连续性的拓扑刻画
+        2. 高斯消去
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 高斯消去">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 初等消元与高斯变换
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#22-k" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 一般拓扑空间的公理化定义
+        2.2 第 \(k\) 步消元
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-bases-for-a-topology" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 拓扑的基 (Bases for a Topology)
+        2.3 高斯变换的性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 消元更新与计算量
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. LU 分解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. LU 分解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 从高斯消去到 LU 分解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 LU 分解的存在性与唯一性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 紧凑存储与计算算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 用 LU 分解求解方程组
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-ldmmathsf-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 \(LDM^{\mathsf T}\) 分解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 舍入误差与选主元
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 舍入误差与选主元">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 LU 分解的向后误差
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 对换矩阵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 部分选主元
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 复杂度与稳定性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 本章总结
       
     </span>
   </a>
@@ -5738,133 +6182,487 @@
   
 
 
-<h1 id="_1">第四章：开集与拓扑结构</h1>
-<p>在前面的章节中，我们探讨了集合、映射以及距离空间的基本性质。本章将在此基础上，从度量空间中的开集出发，逐步剥离距离的概念，建立起一般拓扑空间的公理化体系，并重点讨论连续性的拓扑刻画以及拓扑基的构造方法。</p>
+<h1 id="lu">第三章：高斯消去与 LU 分解</h1>
+<p>本章讨论一般线性方程组的直接解法。我们先从三角方程组的向前代入与向后代入出发，再用高斯变换描述消元过程，并由此得到 LU 分解。最后讨论舍入误差、部分选主元以及带主元的 LU 分解。</p>
 <hr />
-<h2 id="1">1. 度量空间中的开集与闭集</h2>
-<p>在度量空间（或距离空间）中，一切拓扑性质的基础是“球”的概念。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.1 (<span class="arithmatex">\(\epsilon\)</span>-球)</p>
-<p>设 <span class="arithmatex">\((S, d)\)</span> 为一个度量空间，对于任意的 <span class="arithmatex">\(x \in S\)</span> 以及实数 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，以 <span class="arithmatex">\(x\)</span> 为中心、<span class="arithmatex">\(\epsilon\)</span> 为半径的 <span class="arithmatex">\(\epsilon\)</span>-球定义为：</p>
+<h2 id="1">1. 三角方程组</h2>
+<p>设</p>
 <div class="arithmatex">\[
-B(x, \epsilon) = \{y \in S \mid d(y, x) &lt; \epsilon\}
+A\in\mathbb{R}^{n\times n},
+\qquad
+b\in\mathbb{R}^n.
+\]</div>
+<p>我们希望求解线性方程组</p>
+<div class="arithmatex">\[
+Ax=b.
+\]</div>
+<p>当 <span class="arithmatex">\(A\)</span> 为三角矩阵时，可以依次求出每个未知量，这构成一般消元法的基础。</p>
+<h3 id="11">1.1 下三角方程组与向前代入</h3>
+<p>设 <span class="arithmatex">\(L=(l_{ij})\)</span> 为非奇异下三角矩阵，则方程组 <span class="arithmatex">\(Lx=b\)</span> 可以写成</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+l_{11} &amp; &amp; &amp; \\
+l_{21} &amp; l_{22} &amp; &amp; \\
+\vdots &amp; \vdots &amp; \ddots &amp; \\
+l_{n1} &amp; l_{n2} &amp; \cdots &amp; l_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\x_2\\\vdots\\x_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_1\\b_2\\\vdots\\b_n
+\end{bmatrix}.
+\]</div>
+<p>从第一行开始逐行求解，得到向前代入公式</p>
+<div class="arithmatex">\[
+x_1=\frac{b_1}{l_{11}},
+\qquad
+x_i=\frac{1}{l_{ii}}
+\left(b_i-\sum_{j=1}^{i-1}l_{ij}x_j\right),
+\quad i=2,\ldots,n.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">算法 1.1（向前代入）</p>
+<p>对 <span class="arithmatex">\(i=1,\ldots,n\)</span>，依次计算</p>
+<div class="arithmatex">\[
+x_i=\frac{b_i-l_{i,1:i-1}x_{1:i-1}}{l_{ii}}.
+\]</div>
+<p>若 <span class="arithmatex">\(L\)</span> 为单位下三角矩阵，则 <span class="arithmatex">\(l_{ii}=1\)</span>，不需要除法。</p>
+</div>
+<h3 id="12">1.2 上三角方程组与向后代入</h3>
+<p>设 <span class="arithmatex">\(U=(u_{ij})\)</span> 为非奇异上三角矩阵。从最后一行开始逐行向上求解，得到</p>
+<div class="arithmatex">\[
+x_n=\frac{b_n}{u_{nn}},
+\qquad
+x_i=\frac{1}{u_{ii}}
+\left(b_i-\sum_{j=i+1}^{n}u_{ij}x_j\right),
+\quad i=n-1,\ldots,1.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">算法 1.2（向后代入）</p>
+<p>对 <span class="arithmatex">\(i=n,n-1,\ldots,1\)</span>，依次计算</p>
+<div class="arithmatex">\[
+x_i=\frac{b_i-u_{i,i+1:n}x_{i+1:n}}{u_{ii}}.
 \]</div>
 </div>
-<p>基于 <span class="arithmatex">\(\epsilon\)</span>-球，我们可以严格定义开集与闭集：</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.2 (开集与闭集)</p>
-<ul>
-<li>
-<p><strong>开集 (Open Set)</strong>：称集合 <span class="arithmatex">\(P \subseteq S\)</span> 是开集，如果对于 <span class="arithmatex">\(P\)</span> 中的任意点 <span class="arithmatex">\(x \in P\)</span>，都存在一个常数 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，使得 <span class="arithmatex">\(B(x, \epsilon) \subseteq P\)</span>。</p>
-</li>
-<li>
-<p><strong>闭集 (Closed Set)</strong>：称集合 <span class="arithmatex">\(C \subseteq S\)</span> 是闭集，如果其补集 <span class="arithmatex">\(S \setminus C\)</span> 是开集。</p>
-</li>
-</ul>
-</div>
-<p><strong>基本例子与性质</strong>：</p>
-<ul>
-<li>
-<p>全空间 <span class="arithmatex">\(S\)</span> 和空集 <span class="arithmatex">\(\emptyset\)</span> 既是开集也是闭集。</p>
-</li>
-<li>
-<p><strong>任意并集</strong>：如果族 <span class="arithmatex">\(\{A_i\}_{i \in I}\)</span> 中的每一个 <span class="arithmatex">\(A_i\)</span> 都是开集，那么它们的并集 <span class="arithmatex">\(\bigcup_{i \in I} A_i\)</span> 也是开集。</p>
-</li>
-<li>
-<p><strong>有限交集</strong>：有限多个开集的交集必然是开集。</p>
-</li>
-</ul>
-<details class="proof">
-<summary>证明：有限个开集的交集是开集</summary>
-<p>我们只需证明两个开集的交集是开集，然后通过数学归纳法即可推广到有限个的情况。设 <span class="arithmatex">\(A_1, A_2, \dots, A_k\)</span> 是有限个开集。</p>
-<p>考虑它们的交集 <span class="arithmatex">\(\bigcap_{i=1}^k A_i\)</span>。如果该交集为空集 <span class="arithmatex">\(\emptyset\)</span>，由于空集是开集，结论自然成立。</p>
-<p>如果交集非空，任取一点 <span class="arithmatex">\(x \in \bigcap_{i=1}^k A_i\)</span>。</p>
-<p>这意味着对于每一个 <span class="arithmatex">\(i \in \{1, 2, \dots, k\}\)</span>，都有 <span class="arithmatex">\(x \in A_i\)</span>。</p>
-<p>因为每个 <span class="arithmatex">\(A_i\)</span> 都是开集，根据开集的定义，必定存在对应的 <span class="arithmatex">\(\epsilon_i &gt; 0\)</span>，使得 <span class="arithmatex">\(B(x, \epsilon_i) \subseteq A_i\)</span>。</p>
-<p>我们只需取这些半径中的最小值：</p>
-<div class="arithmatex">\[
-\epsilon = \min\{\epsilon_1, \epsilon_2, \dots, \epsilon_k\}
-\]</div>
-<p>由于集合是有限的，<span class="arithmatex">\(\epsilon\)</span> 必定是一个严格大于 0 的实数。此时，对于所有的 <span class="arithmatex">\(i\)</span>，都有 <span class="arithmatex">\(B(x, \epsilon) \subseteq B(x, \epsilon_i) \subseteq A_i\)</span>。</p>
-<p>因此，<span class="arithmatex">\(B(x, \epsilon) \subseteq \bigcap_{i=1}^k A_i\)</span>。这证明了交集中的任意一点都包含一个完全落在交集内的 <span class="arithmatex">\(\epsilon\)</span>-球，故有限交集是开集。 <span class="arithmatex">\(\square\)</span></p>
-</details>
-<hr />
-<h2 id="2">2. 连续性的拓扑刻画</h2>
-<p>在微积分中，连续性通常通过 <span class="arithmatex">\(\epsilon-\delta\)</span> 语言来描述。在更一般的空间中，我们可以用开集来完全等价地刻画连续性。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.3 (映射的连续性)</p>
-<p>设 <span class="arithmatex">\(f: S \to M\)</span> 是两个空间之间的映射。</p>
-<ul>
-<li>
-<p><strong>在某一点的局部连续性</strong>：称映射 <span class="arithmatex">\(f\)</span> 在点 <span class="arithmatex">\(x_0 \in S\)</span> 处是连续的，如果对于伴域 <span class="arithmatex">\(M\)</span> 中任意一个包含像点 <span class="arithmatex">\(f(x_0)\)</span> 的开集 <span class="arithmatex">\(V\)</span>（即 <span class="arithmatex">\(f(x_0) \in V\)</span>），都存在定义域 <span class="arithmatex">\(S\)</span> 中的一个开集 <span class="arithmatex">\(U\)</span>，满足 <span class="arithmatex">\(x_0 \in U \subseteq f^{-1}(V)\)</span>。</p>
-</li>
-<li>
-<p><strong>全局连续性</strong>：称映射 <span class="arithmatex">\(f\)</span> 在整个 <span class="arithmatex">\(S\)</span> 上是连续的，当且仅当它在 <span class="arithmatex">\(S\)</span> 中的每一个点都连续。等价地，<span class="arithmatex">\(f\)</span> 是连续的，当且仅当对于 <span class="arithmatex">\(M\)</span> 中的任意开集 <span class="arithmatex">\(V\)</span>，其原像 <span class="arithmatex">\(f^{-1}(V)\)</span> 必定是 <span class="arithmatex">\(S\)</span> 中的开集。</p>
-</li>
-</ul>
-</div>
-<hr />
-<h2 id="3">3. 一般拓扑空间的公理化定义</h2>
-<p>一旦我们将连续性的定义完全建立在开集之上，距离 <span class="arithmatex">\(d\)</span> 就不再是必需的了。我们可以直接公理化“开集”的概念，从而定义一般拓扑空间。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.4 (拓扑与拓扑空间)</p>
-<p>设 <span class="arithmatex">\(X\)</span> 是一个非空集合。<span class="arithmatex">\(X\)</span> 上的一个<strong>拓扑 (Topology)</strong> <span class="arithmatex">\(\tau\)</span> 是幂集 <span class="arithmatex">\(\mathcal{P}(X)\)</span> 的一个子族（即 <span class="arithmatex">\(\tau\)</span> 包含 <span class="arithmatex">\(X\)</span> 的部分子集），并且满足以下三条公理：</p>
-<ul>
-<li>
-<p><strong>(1)</strong> 全空间 <span class="arithmatex">\(X\)</span> 和空集 <span class="arithmatex">\(\emptyset\)</span> 属于 <span class="arithmatex">\(\tau\)</span>。即 <span class="arithmatex">\(\emptyset, X \in \tau\)</span>。</p>
-</li>
-<li>
-<p><strong>(2) 任意并封闭</strong>：如果 <span class="arithmatex">\(\{A_i\}_{i \in I} \subseteq \tau\)</span>，那么它们的任意并集也属于 <span class="arithmatex">\(\tau\)</span>。即 <span class="arithmatex">\(\bigcup_{i \in I} A_i \in \tau\)</span>。</p>
-</li>
-<li>
-<p><strong>(3) 有限交封闭</strong>：如果 <span class="arithmatex">\(A_1, A_2, \dots, A_k \in \tau\)</span>，那么它们的有限交集也属于 <span class="arithmatex">\(\tau\)</span>。即 <span class="arithmatex">\(\bigcap_{i=1}^k A_i \in \tau\)</span>。</p>
-</li>
-</ul>
-<p>赋予了拓扑 <span class="arithmatex">\(\tau\)</span> 的集合 <span class="arithmatex">\(X\)</span> 被称为<strong>拓扑空间</strong> <span class="arithmatex">\((X, \tau)\)</span>。拓扑 <span class="arithmatex">\(\tau\)</span> 中的元素被称为 <span class="arithmatex">\(X\)</span> 关于该拓扑的<strong>开集 (Open Sets)</strong>。</p>
-</div>
-<p>如果一个子集 <span class="arithmatex">\(S \subseteq X\)</span> 的补集 <span class="arithmatex">\(X \setminus S\)</span> 是开集（即属于 <span class="arithmatex">\(\tau\)</span>），那么称 <span class="arithmatex">\(S\)</span> 为<strong>闭集 (Closed Set)</strong>。</p>
-<p><strong>例子</strong>：设集合 <span class="arithmatex">\(X = \{a, b\}\)</span>，可以定义一个拓扑 <span class="arithmatex">\(\tau = \{\emptyset, X, \{a\}\}\)</span>。在这个拓扑空间中，<span class="arithmatex">\(\{a\}\)</span> 是开集，相应的补集 <span class="arithmatex">\(\{b\}\)</span> 则是闭集。</p>
-<p>闭集具有与开集对偶的性质：</p>
-<ul>
-<li>
-<p><span class="arithmatex">\(\emptyset\)</span> 和 <span class="arithmatex">\(X\)</span> 都是闭集。</p>
-</li>
-<li>
-<p>任意多个闭集的交集 <span class="arithmatex">\(\bigcap_{i \in I} C_i\)</span> 仍然是闭集。</p>
-</li>
-<li>
-<p>有限多个闭集的并集 <span class="arithmatex">\(\bigcup_{i=1}^k C_i\)</span> 仍然是闭集。</p>
-</li>
-</ul>
-<hr />
-<h2 id="4-bases-for-a-topology">4. 拓扑的基 (Bases for a Topology)</h2>
-<p>为了描述一个拓扑 <span class="arithmatex">\(\tau\)</span>，我们往往不需要列出其中所有的开集，而是可以通过一个更小的集合族——<strong>拓扑基 (Base)</strong> 来生成整个拓扑。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.5 (拓扑的基)</p>
-<p>设 <span class="arithmatex">\((X, \tau)\)</span> 为一个拓扑空间。一个开集族 <span class="arithmatex">\(\mathcal{B} \subseteq \tau\)</span> 被称为拓扑 <span class="arithmatex">\(\tau\)</span> 的<strong>基 (Base)</strong>，如果对于 <span class="arithmatex">\(\tau\)</span> 中的任意开集 <span class="arithmatex">\(S\)</span>，以及 <span class="arithmatex">\(S\)</span> 中的任意点 <span class="arithmatex">\(x \in S\)</span>，都存在一个基元素 <span class="arithmatex">\(B \in \mathcal{B}\)</span>，满足：</p>
-<div class="arithmatex">\[
-x \in B \subseteq S
-\]</div>
-<p>由此可知，拓扑 <span class="arithmatex">\(\tau\)</span> 中的每一个开集 <span class="arithmatex">\(S\)</span> 都可以表示为某些基元素的并集，即 <span class="arithmatex">\(S = \bigcup_{i \in I} B_i\)</span>。</p>
-</div>
-<p>并非任意的集合族都能成为某个拓扑的基。下面的定理给出了判断条件：</p>
+<p>向前代入与向后代入都需要约 <span class="arithmatex">\(n^2\)</span> 次浮点运算，因此时间复杂度为 <span class="arithmatex">\(O(n^2)\)</span>。</p>
+<h3 id="13">1.3 三角矩阵的代数性质</h3>
 <div class="admonition success">
-<p class="admonition-title">定理 4.1 (基的判定准则)</p>
-<p>设 <span class="arithmatex">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> 是集合 <span class="arithmatex">\(X\)</span> 的一个子集族。那么 <span class="arithmatex">\(\mathcal{B}\)</span> 能够成为 <span class="arithmatex">\(X\)</span> 上某个拓扑的基，当且仅当它满足以下两个条件：</p>
-<ul>
-<li><strong>(1) 覆盖性</strong>：基元素的并集必须覆盖整个空间 <span class="arithmatex">\(X\)</span>。即：</li>
-</ul>
+<p class="admonition-title">命题 1.3（三角矩阵的封闭性）</p>
+<p>上三角矩阵的乘积与逆仍为上三角矩阵；下三角矩阵的乘积与逆仍为下三角矩阵。</p>
+<p>若三角矩阵的对角元全为 <span class="arithmatex">\(1\)</span>，则称其为单位三角矩阵。单位三角矩阵的乘积与逆仍为同类型的单位三角矩阵。</p>
+</div>
+<details class="proof">
+<summary>命题 1.3 的证明（点击展开）</summary>
+<p>以上三角矩阵为例。若 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 都是上三角矩阵，则当 <span class="arithmatex">\(i&gt;j\)</span> 时</p>
 <div class="arithmatex">\[
-X = \bigcup_{B \in \mathcal{B}} B
+(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}=0,
 \]</div>
-<ul>
-<li><strong>(2) 内部相容性</strong>：如果选取两个基元素 <span class="arithmatex">\(B_1, B_2 \in \mathcal{B}\)</span>，并且取其交集中的任意一点 <span class="arithmatex">\(x \in B_1 \cap B_2\)</span>，则必定存在第三个基元素 <span class="arithmatex">\(B_3 \in \mathcal{B}\)</span>，使得：</li>
-</ul>
+<p>因为每一项至少有 <span class="arithmatex">\(a_{ik}=0\)</span> 或 <span class="arithmatex">\(b_{kj}=0\)</span>。因此 <span class="arithmatex">\(AB\)</span> 仍为上三角矩阵。</p>
+<p>若 <span class="arithmatex">\(A\)</span> 非奇异，方程 <span class="arithmatex">\(AX=I\)</span> 的每一列都可由向后代入求得，并且所得 <span class="arithmatex">\(X=A^{-1}\)</span> 仍为上三角矩阵。下三角情形完全类似。若对角元全为 <span class="arithmatex">\(1\)</span>，乘积与逆的对角元也全为 <span class="arithmatex">\(1\)</span>。<span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="14">1.4 三角求解的向后误差</h3>
+<p>设单位舍入误差为 <span class="arithmatex">\(u\)</span>。浮点运算得到的向前代入解 <span class="arithmatex">\(\widehat{x}\)</span>，可以看成某个邻近下三角系统的精确解：</p>
 <div class="arithmatex">\[
-x \in B_3 \subseteq B_1 \cap B_2
+(L+\Delta L)\widehat{x}=b,
+\qquad
+|\Delta L|\leq \gamma_n|L|,
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+\gamma_n=\frac{nu}{1-nu}=nu+O(u^2).
+\]</div>
+<p>类似地，向后代入满足</p>
+<div class="arithmatex">\[
+(U+\Delta U)\widehat{x}=b,
+\qquad
+|\Delta U|\leq \gamma_n|U|.
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">解释</p>
+<p>这说明三角求解是向后稳定的：计算结果恰好是一个与原问题非常接近的三角方程组的精确解。</p>
+</div>
+<hr />
+<h2 id="2">2. 高斯消去</h2>
+<h3 id="21">2.1 初等消元与高斯变换</h3>
+<p>设 <span class="arithmatex">\(e_i\)</span> 为第 <span class="arithmatex">\(i\)</span> 个标准基向量。左乘矩阵</p>
+<div class="arithmatex">\[
+I+\lambda e_j e_i^{\mathsf T}
+\]</div>
+<p>等价于把矩阵的第 <span class="arithmatex">\(i\)</span> 行乘以 <span class="arithmatex">\(\lambda\)</span> 后加到第 <span class="arithmatex">\(j\)</span> 行。</p>
+<p>在消去第 <span class="arithmatex">\(1\)</span> 列时，若 <span class="arithmatex">\(a_{11}\neq0\)</span>，定义乘子</p>
+<div class="arithmatex">\[
+\tau_i^{(1)}=\frac{a_{i1}}{a_{11}},
+\qquad i=2,\ldots,n,
+\]</div>
+<p>以及向量</p>
+<div class="arithmatex">\[
+\tau^{(1)}=
+\begin{bmatrix}
+0 &amp; \tau_2^{(1)} &amp; \cdots &amp; \tau_n^{(1)}
+\end{bmatrix}^{\mathsf T}.
+\]</div>
+<p>于是第一步高斯变换为</p>
+<div class="arithmatex">\[
+M_1=I-\tau^{(1)}e_1^{\mathsf T},
+\qquad
+A^{(2)}=M_1A^{(1)},
+\qquad
+A^{(1)}=A.
+\]</div>
+<p>它把第 <span class="arithmatex">\(1\)</span> 列主元下方的元素全部消为零。</p>
+<h3 id="22-k">2.2 第 <span class="arithmatex">\(k\)</span> 步消元</h3>
+<p>假设前 <span class="arithmatex">\(k-1\)</span> 列已经消元。在第 <span class="arithmatex">\(k\)</span> 步，主元为 <span class="arithmatex">\(a_{kk}^{(k)}\)</span>。若</p>
+<div class="arithmatex">\[
+a_{kk}^{(k)}\neq0,
+\]</div>
+<p>定义</p>
+<div class="arithmatex">\[
+\tau_i^{(k)}=
+\frac{a_{ik}^{(k)}}{a_{kk}^{(k)}},
+\quad i=k+1,\ldots,n,
+\]</div>
+<p>并令 <span class="arithmatex">\(\tau_1^{(k)},\ldots,\tau_k^{(k)}\)</span> 均为零。相应的高斯变换为</p>
+<div class="arithmatex">\[
+M_k=I-\tau^{(k)}e_k^{\mathsf T},
+\qquad
+A^{(k+1)}=M_kA^{(k)}.
+\]</div>
+<p>完成 <span class="arithmatex">\(n-1\)</span> 步后，得到上三角矩阵</p>
+<div class="arithmatex">\[
+M_{n-1}M_{n-2}\cdots M_1A=A^{(n)}=U.
+\]</div>
+<div class="admonition warning">
+<p class="admonition-title">主元条件</p>
+<p>不进行行交换的高斯消去要求每一步主元 <span class="arithmatex">\(a_{kk}^{(k)}\)</span> 都非零。矩阵非奇异本身并不能保证这一点。</p>
+</div>
+<h3 id="23">2.3 高斯变换的性质</h3>
+<p>由于</p>
+<div class="arithmatex">\[
+e_k^{\mathsf T}\tau^{(k)}=0,
+\]</div>
+<p>所以</p>
+<div class="arithmatex">\[
+M_k^{-1}=I+\tau^{(k)}e_k^{\mathsf T}.
+\]</div>
+<p>事实上，</p>
+<div class="arithmatex">\[
+\begin{aligned}
+M_kM_k^{-1}
+&amp;=(I-\tau^{(k)}e_k^{\mathsf T})
+  (I+\tau^{(k)}e_k^{\mathsf T})\\
+&amp;=I-\tau^{(k)}
+  (e_k^{\mathsf T}\tau^{(k)})e_k^{\mathsf T}\\
+&amp;=I.
+\end{aligned}
+\]</div>
+<p>当 <span class="arithmatex">\(i&lt;j\)</span> 时，还有</p>
+<div class="arithmatex">\[
+M_iM_j
+=I-\tau^{(i)}e_i^{\mathsf T}
+-\tau^{(j)}e_j^{\mathsf T},
+\]</div>
+<p>因为交叉项中 <span class="arithmatex">\(e_i^{\mathsf T}\tau^{(j)}=0\)</span>。</p>
+<h3 id="24">2.4 消元更新与计算量</h3>
+<p>在第 <span class="arithmatex">\(k\)</span> 步，对 <span class="arithmatex">\(i=k+1,ldots,n\)</span>，先计算乘子</p>
+<div class="arithmatex">\[
+l_{ik}=\frac{a_{ik}^{(k)}}{a_{kk}^{(k)}},
+\]</div>
+<p>再更新余下元素</p>
+<div class="arithmatex">\[
+a_{ij}^{(k+1)}
+=a_{ij}^{(k)}-l_{ik}a_{kj}^{(k)},
+\qquad
+i,j=k+1,\ldots,n.
+\]</div>
+<p>高斯消去的主要计算量约为</p>
+<div class="arithmatex">\[
+\frac{2}{3}n^3+O(n^2)
+\]</div>
+<p>次浮点运算，因此时间复杂度为 <span class="arithmatex">\(O(n^3)\)</span>。</p>
+<hr />
+<h2 id="3-lu">3. LU 分解</h2>
+<h3 id="31-lu">3.1 从高斯消去到 LU 分解</h3>
+<p>由</p>
+<div class="arithmatex">\[
+M_{n-1}\cdots M_1A=U,
+\]</div>
+<p>可得</p>
+<div class="arithmatex">\[
+A=M_1^{-1}M_2^{-1}\cdots M_{n-1}^{-1}U.
+\]</div>
+<p>定义</p>
+<div class="arithmatex">\[
+L=M_1^{-1}M_2^{-1}\cdots M_{n-1}^{-1}.
+\]</div>
+<p>则 <span class="arithmatex">\(L\)</span> 为单位下三角矩阵，于是</p>
+<div class="arithmatex">\[
+A=LU.
+\]</div>
+<p>进一步地，由高斯变换的结构可得</p>
+<div class="arithmatex">\[
+L=I+\sum_{k=1}^{n-1}\tau^{(k)}e_k^{\mathsf T}.
+\]</div>
+<p>因此，<span class="arithmatex">\(L\)</span> 的严格下三角部分恰好保存消元过程中的乘子，而 <span class="arithmatex">\(U\)</span> 保存消元后的上三角部分。</p>
+<h3 id="32-lu">3.2 LU 分解的存在性与唯一性</h3>
+<p>记 <span class="arithmatex">\(A_k=A(1:k,1:k)\)</span> 为 <span class="arithmatex">\(A\)</span> 的第 <span class="arithmatex">\(k\)</span> 个顺序主子矩阵。</p>
+<div class="admonition success">
+<p class="admonition-title">定理 3.1（LU 分解）</p>
+<p>若</p>
+<div class="arithmatex">\[
+\det(A_k)\neq0,
+\qquad k=1,\ldots,n,
+\]</div>
+<p>则存在唯一的单位下三角矩阵 <span class="arithmatex">\(L\)</span> 和上三角矩阵 <span class="arithmatex">\(U\)</span>，使得</p>
+<div class="arithmatex">\[
+A=LU.
+\]</div>
+<p>此外，</p>
+<div class="arithmatex">\[
+\det(A)=\prod_{i=1}^n u_{ii}.
 \]</div>
 </div>
-<p>如果一个集合族 <span class="arithmatex">\(\mathcal{B}\)</span> 满足了上述两个条件，那么由它所生成的拓扑 <span class="arithmatex">\(\tau\)</span> 就精确地包含了由 <span class="arithmatex">\(\mathcal{B}\)</span> 中元素的任意并集所构成的所有子集。</p>
+<details class="proof">
+<summary>定理 3.1 的证明（点击展开）</summary>
+<p>对矩阵阶数作归纳。<span class="arithmatex">\(n=1\)</span> 时结论显然成立。设结论对 <span class="arithmatex">\(n-1\)</span> 阶矩阵成立，并将 <span class="arithmatex">\(A\)</span> 分块为</p>
+<div class="arithmatex">\[
+A=
+\begin{bmatrix}
+A_1 &amp; v\\
+w^{\mathsf T} &amp; \alpha
+\end{bmatrix}.
+\]</div>
+<p>由假设，<span class="arithmatex">\(A_1\)</span> 的所有顺序主子式均非零，所以存在唯一分解</p>
+<div class="arithmatex">\[
+A_1=L_1U_1.
+\]</div>
+<p>于是</p>
+<div class="arithmatex">\[
+A=
+\begin{bmatrix}
+L_1 &amp; 0\\
+w^{\mathsf T}U_1^{-1} &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+U_1 &amp; L_1^{-1}v\\
+0 &amp; \alpha-w^{\mathsf T}A_1^{-1}v
+\end{bmatrix}.
+\]</div>
+<p>这就证明了存在性。</p>
+<p>若还有</p>
+<div class="arithmatex">\[
+A=L_1U_1=L_2U_2,
+\]</div>
+<p>则</p>
+<div class="arithmatex">\[
+L_2^{-1}L_1=U_2U_1^{-1}.
+\]</div>
+<p>左边是单位下三角矩阵，右边是上三角矩阵，二者只能同时为单位矩阵。因此 <span class="arithmatex">\(L_1=L_2\)</span> 且 <span class="arithmatex">\(U_1=U_2\)</span>，唯一性得证。</p>
+<p>最后，由 <span class="arithmatex">\(\det(L)=1\)</span>，有</p>
+<div class="arithmatex">\[
+\det(A)=\det(L)\det(U)=\prod_{i=1}^n u_{ii}.
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">必要性说明</p>
+<p>顺序主子式非零是无主元交换 LU 分解存在的常用充分条件。等价地，只要消元过程中所有主元均非零，就可以完成这种 LU 分解。</p>
+</div>
+<h3 id="33">3.3 紧凑存储与计算算法</h3>
+<p>由于 <span class="arithmatex">\(L\)</span> 的对角元恒为 <span class="arithmatex">\(1\)</span>，可以把 <span class="arithmatex">\(L\)</span> 的严格下三角部分与 <span class="arithmatex">\(U\)</span> 的上三角部分同时存放在原矩阵的空间中：</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+u_{11} &amp; u_{12} &amp; \cdots &amp; u_{1n}\\
+l_{21} &amp; u_{22} &amp; \cdots &amp; u_{2n}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+l_{n1} &amp; l_{n2} &amp; \cdots &amp; u_{nn}
+\end{bmatrix}.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">算法 3.2（原位 LU 分解）</p>
+<p>对 <span class="arithmatex">\(k=1,\ldots,n-1\)</span>：</p>
+<p>先计算</p>
+<div class="arithmatex">\[
+a_{k+1:n,k}\leftarrow
+\frac{a_{k+1:n,k}}{a_{kk}},
+\]</div>
+<p>再进行秩一更新</p>
+<div class="arithmatex">\[
+A_{k+1:n,k+1:n}\leftarrow
+A_{k+1:n,k+1:n}
+-a_{k+1:n,k}a_{k,k+1:n}.
+\]</div>
+<p>算法结束后，严格下三角部分存储 <span class="arithmatex">\(L\)</span> 的乘子，上三角部分存储 <span class="arithmatex">\(U\)</span>。</p>
+</div>
+<h3 id="34-lu">3.4 用 LU 分解求解方程组</h3>
+<p>一旦得到 <span class="arithmatex">\(A=LU\)</span>，原方程组等价于</p>
+<div class="arithmatex">\[
+LUx=b.
+\]</div>
+<p>引入中间变量 <span class="arithmatex">\(y=Ux\)</span>，先通过向前代入求解</p>
+<div class="arithmatex">\[
+Ly=b,
+\]</div>
+<p>再通过向后代入求解</p>
+<div class="arithmatex">\[
+Ux=y.
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">多右端项情形</p>
+<p>LU 分解只需进行一次，代价为 <span class="arithmatex">\(O(n^3)\)</span>；此后每增加一个右端项，只需两次三角求解，代价为 <span class="arithmatex">\(O(n^2)\)</span>。</p>
+</div>
+<h3 id="35-ldmmathsf-t">3.5 <span class="arithmatex">\(LDM^{\mathsf T}\)</span> 分解</h3>
+<p>若 <span class="arithmatex">\(A=LU\)</span> 且 <span class="arithmatex">\(U\)</span> 的对角元均非零，令</p>
+<div class="arithmatex">\[
+D=\operatorname{diag}(u_{11},\ldots,u_{nn}),
+\qquad
+M^{\mathsf T}=D^{-1}U.
+\]</div>
+<p>则 <span class="arithmatex">\(M\)</span> 为单位下三角矩阵，并且</p>
+<div class="arithmatex">\[
+A=LDM^{\mathsf T}.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">推论 3.3（<span class="arithmatex">\(LDM^{\mathsf T}\)</span> 分解）</p>
+<p>在定理 3.1 的条件下，<span class="arithmatex">\(A\)</span> 存在唯一分解</p>
+<div class="arithmatex">\[
+A=LDM^{\mathsf T},
+\]</div>
+<p>其中 <span class="arithmatex">\(L,M\)</span> 为单位下三角矩阵，<span class="arithmatex">\(D\)</span> 为非奇异对角矩阵。</p>
+</div>
+<hr />
+<h2 id="4">4. 舍入误差与选主元</h2>
+<h3 id="41-lu">4.1 LU 分解的向后误差</h3>
+<p>设浮点运算得到 <span class="arithmatex">\(\widehat{L}\)</span> 和 <span class="arithmatex">\(\widehat{U}\)</span>。在标准舍入模型下，可以写成</p>
+<div class="arithmatex">\[
+\widehat{L}\widehat{U}=A+H,
+\]</div>
+<p>且有逐元素误差界</p>
+<div class="arithmatex">\[
+|H|\leq
+2(n-1)u
+\left(|A|+|\widehat{L}||\widehat{U}|\right)
++O(u^2).
+\]</div>
+<p>利用 <span class="arithmatex">\(\widehat{L}\)</span>、<span class="arithmatex">\(\widehat{U}\)</span> 和两次三角求解得到的解 <span class="arithmatex">\(\widehat{x}\)</span> 满足</p>
+<div class="arithmatex">\[
+(A+E)\widehat{x}=b,
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+|E|\leq
+nu\left(2|A|+4|\widehat{L}||\widehat{U}|\right)
++O(u^2).
+\]</div>
+<div class="admonition warning">
+<p class="admonition-title">小主元的危险</p>
+<p>误差界依赖于 <span class="arithmatex">\(|\widehat{L}||\widehat{U}|\)</span>。如果某一步主元很小，消元乘子可能很大，从而使 <span class="arithmatex">\(L\)</span> 和 <span class="arithmatex">\(U\)</span> 的元素显著增长，放大舍入误差。</p>
+</div>
+<p>例如，对</p>
+<div class="arithmatex">\[
+A=
+\begin{bmatrix}
+0.001 &amp; 1\\
+1 &amp; 0
+\end{bmatrix},
+\]</div>
+<p>不交换行时得到</p>
+<div class="arithmatex">\[
+L=
+\begin{bmatrix}
+1 &amp; 0\\
+1000 &amp; 1
+\end{bmatrix},
+\qquad
+U=
+\begin{bmatrix}
+0.001 &amp; 1\\
+0 &amp; -1000
+\end{bmatrix}.
+\]</div>
+<p>这说明非零但很小的主元同样可能造成数值不稳定。</p>
+<h3 id="42">4.2 对换矩阵</h3>
+<p>交换第 <span class="arithmatex">\(i\)</span> 行与第 <span class="arithmatex">\(j\)</span> 行的对换矩阵可写为</p>
+<div class="arithmatex">\[
+P_{ij}
+=I-(e_i-e_j)(e_i-e_j)^{\mathsf T}.
+\]</div>
+<p>它满足</p>
+<div class="arithmatex">\[
+P_{ij}^{\mathsf T}=P_{ij}^{-1}=P_{ij},
+\qquad
+P_{ij}^2=I.
+\]</div>
+<p>左乘 <span class="arithmatex">\(P_{ij}\)</span> 等价于交换矩阵的第 <span class="arithmatex">\(i\)</span> 行与第 <span class="arithmatex">\(j\)</span> 行。</p>
+<h3 id="43">4.3 部分选主元</h3>
+<p>在第 <span class="arithmatex">\(k\)</span> 步，从当前第 <span class="arithmatex">\(k\)</span> 列的第 <span class="arithmatex">\(k\)</span> 行到第 <span class="arithmatex">\(n\)</span> 行中选择绝对值最大的元素：</p>
+<div class="arithmatex">\[
+p_k=\operatorname*{arg\,max}_{k\leq i\leq n}
+|a_{ik}^{(k)}|.
+\]</div>
+<p>随后交换第 <span class="arithmatex">\(k\)</span> 行与第 <span class="arithmatex">\(p_k\)</span> 行，再进行消元。于是所有乘子都满足</p>
+<div class="arithmatex">\[
+|l_{ik}|\leq1,
+\qquad i&gt;k.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">算法 4.1（带部分选主元的高斯消去）</p>
+<p>对 <span class="arithmatex">\(k=1,\ldots,n-1\)</span>：</p>
+<p>选择</p>
+<div class="arithmatex">\[
+p_k=\operatorname*{arg\,max}_{k\leq i\leq n}|a_{ik}|;
+\]</div>
+<p>交换第 <span class="arithmatex">\(k\)</span> 行与第 <span class="arithmatex">\(p_k\)</span> 行；</p>
+<p>计算乘子并更新 Schur 补：</p>
+<div class="arithmatex">\[
+l_{ik}=\frac{a_{ik}}{a_{kk}},
+\qquad
+a_{ij}\leftarrow a_{ij}-l_{ik}a_{kj}.
+\]</div>
+</div>
+<p>多次行交换的乘积构成置换矩阵 <span class="arithmatex">\(P\)</span>，最终得到</p>
+<div class="arithmatex">\[
+PA=LU.
+\]</div>
+<p>求解 <span class="arithmatex">\(Ax=b\)</span> 时，应依次求解</p>
+<div class="arithmatex">\[
+Ly=Pb,
+\qquad
+Ux=y.
+\]</div>
+<h3 id="44">4.4 复杂度与稳定性</h3>
+<p>部分选主元增加约 <span class="arithmatex">\(O(n^2)\)</span> 次比较，但主要消元运算仍为 <span class="arithmatex">\(O(n^3)\)</span>。由于 <span class="arithmatex">\(|l_{ik}|\leq1\)</span>，有</p>
+<div class="arithmatex">\[
+\|L\|_{\infty}\leq n.
+\]</div>
+<p>这控制了消元乘子的增长。虽然 <span class="arithmatex">\(U\)</span> 在极端构造下仍可能出现较大的元素增长，但这种方法在实际计算中通常稳定，因此是求解一般稠密线性方程组的标准方法。</p>
+<div class="admonition info">
+<p class="admonition-title">完全选主元</p>
+<p>完全选主元在剩余子矩阵中选择绝对值最大的元素，并同时交换相应的行与列。它能提供更强的增长控制，但搜索需要 <span class="arithmatex">\(O(n^3)\)</span> 次比较，因此实际中通常优先使用部分选主元。</p>
+</div>
+<hr />
+<h2 id="5">5. 本章总结</h2>
+<div class="admonition success">
+<p class="admonition-title">核心结论</p>
+<ol>
+<li>
+<p>三角方程组可以用向前代入或向后代入在 <span class="arithmatex">\(O(n^2)\)</span> 时间内求解。</p>
+</li>
+<li>
+<p>高斯变换把消元过程写成矩阵乘法，其逆矩阵中的向量正好记录消元乘子。</p>
+</li>
+<li>
+<p>当消元主元均非零时，矩阵具有分解 <span class="arithmatex">\(A=LU\)</span>；在单位下三角规范下，该分解唯一。</p>
+</li>
+<li>
+<p>LU 分解的主要计算量为 <span class="arithmatex">\(O(n^3)\)</span>，但每个新右端项只需 <span class="arithmatex">\(O(n^2)\)</span> 的三角求解。</p>
+</li>
+<li>
+<p>为避免零主元或过小主元，实际计算通常采用部分选主元，得到 <span class="arithmatex">\(PA=LU\)</span>。</p>
+</li>
+</ol>
+</div>
 
 
 

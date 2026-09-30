@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -8,35 +8,35 @@
       
       
       
-        <link rel="canonical" href="https://jiahaotian-stat.github.io/Notes/Topology/4/">
+        <link rel="canonical" href="https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/3GaussianEliminationAndLU/">
       
       
-        <link rel="prev" href="../3/">
+        <link rel="prev" href="../2SVD/">
       
       
-        <link rel="next" href="../5/">
+        <link rel="next" href="../../Statistical_Learning/0Intro/">
       
       
         
-          <link rel="alternate" href="./" hreflang="zh">
+          <link rel="alternate" href="../../../Matrix_Comp/3GaussianEliminationAndLU/" hreflang="zh">
         
-          <link rel="alternate" href="../../en/Topology/4/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>第四章：开集与拓扑 - Jiahao's Academic Space</title>
+        <title>Ch 3: Gaussian Elimination and LU Decomposition - Jiahao's Academic Space</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -92,8 +92,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
-          跳转至
+        <a href="#chapter-3-gaussian-elimination-and-lu-factorization" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -105,8 +105,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第四章：开集与拓扑
+              Ch 3: Gaussian Elimination and LU Decomposition
             
           </span>
         </div>
@@ -166,20 +166,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="选择当前语言">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="zh" class="md-select__link">
+            <a href="../../../Matrix_Comp/3GaussianEliminationAndLU/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../en/Topology/4/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -200,16 +200,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -222,7 +222,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -234,7 +234,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jiahaotian-stat/Notes" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/jiahaotian-stat/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -255,7 +255,7 @@
         
           
             
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -265,13 +265,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../" class="md-tabs__link">
         
   
   
     
   
-  🏠 首页
+  🏠 Home
 
       </a>
     </li>
@@ -301,7 +301,7 @@
           
   
   
-  📚 笔记库
+  📚 Course Notes
 
         </a>
       </li>
@@ -324,7 +324,7 @@
           
   
   
-  🛠️ 知识速查
+  🛠️ Quick Reference
 
         </a>
       </li>
@@ -344,7 +344,7 @@
           
   
   
-  🛰️ 前沿追踪
+  🛰️ Research Updates
 
         </a>
       </li>
@@ -364,7 +364,7 @@
           
   
   
-  🎙️ 讲座与报告
+  🎙️ Lectures & Talks
 
         </a>
       </li>
@@ -392,9 +392,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -404,7 +404,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jiahaotian-stat/Notes" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/jiahaotian-stat/Notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -424,14 +424,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    🏠 首页
+    🏠 Home
   
 
     
@@ -479,7 +479,7 @@
   <span class="md-ellipsis">
     
   
-    📚 笔记库
+    📚 Course Notes
   
 
     
@@ -495,7 +495,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📚 笔记库
+    📚 Course Notes
   
 
           </label>
@@ -534,7 +534,7 @@
   <span class="md-ellipsis">
     
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
     
@@ -550,7 +550,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📈 随机微分方程
+    📈 Stochastic Differential Equations
   
 
           </label>
@@ -570,7 +570,7 @@
   <span class="md-ellipsis">
     
   
-    随机微分方程课程概览
+    SDE Course Overview
   
 
     
@@ -614,7 +614,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -630,7 +630,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -650,7 +650,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：条件期望
+    Ch 1: Conditional Expectation
   
 
     
@@ -678,7 +678,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：布朗运动
+    Ch 2: Brownian Motion
   
 
     
@@ -706,7 +706,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：随机积分
+    Ch 3: Stochastic Integrals
   
 
     
@@ -734,7 +734,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：Itô 积分
+    Ch 4: Itô Integrals
   
 
     
@@ -762,7 +762,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：多元 Itô 积分
+    Ch 5: Multivariate Itô Calculus
   
 
     
@@ -790,7 +790,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：解的存在唯一性
+    Ch 6: Existence & Uniqueness
   
 
     
@@ -818,7 +818,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：期权定价与停时
+    Ch 7: Option Pricing and Stopping Times
   
 
     
@@ -870,7 +870,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -886,7 +886,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -1053,7 +1053,7 @@
   <span class="md-ellipsis">
     
   
-    📊 渐近统计
+    📊 Asymptotic Statistics
   
 
     
@@ -1069,7 +1069,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📊 渐近统计
+    📊 Asymptotic Statistics
   
 
           </label>
@@ -1089,7 +1089,7 @@
   <span class="md-ellipsis">
     
   
-    渐近统计课程概览
+    Asymptotic Statistics Course Overview
   
 
     
@@ -1133,7 +1133,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -1149,7 +1149,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -1169,7 +1169,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：随机收敛
+    Ch 1: Stochastic Convergence
   
 
     
@@ -1197,7 +1197,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：特征函数
+    Ch 2: Characteristic Functions
   
 
     
@@ -1225,7 +1225,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：中心极限定理（一）
+    Ch 3: Central Limit Theorem I
   
 
     
@@ -1253,7 +1253,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：中心极限定理（二）
+    Ch 4: Central Limit Theorem II
   
 
     
@@ -1281,7 +1281,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：弱相依数据（一）
+    Ch 5: Weakly Dependent Data I
   
 
     
@@ -1309,7 +1309,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：弱相依数据（二）
+    Ch 6: Weakly Dependent Data II
   
 
     
@@ -1337,7 +1337,7 @@
   <span class="md-ellipsis">
     
   
-    第七章： Delta 方法
+    Ch 7: Delta Method
   
 
     
@@ -1365,7 +1365,7 @@
   <span class="md-ellipsis">
     
   
-    第八章：矩估计
+    Ch 8: Method of Moments
   
 
     
@@ -1393,7 +1393,7 @@
   <span class="md-ellipsis">
     
   
-    第九章：极大似然估计（一）
+    Ch 9: Maximum Likelihood Estimation I
   
 
     
@@ -1421,7 +1421,7 @@
   <span class="md-ellipsis">
     
   
-    第十章：极大似然估计（二）
+    Ch 10: Maximum Likelihood Estimation II
   
 
     
@@ -1449,7 +1449,7 @@
   <span class="md-ellipsis">
     
   
-    第十一章： M估计和Z估计 (一)
+    Ch 11: M-Estimation and Z-Estimation I
   
 
     
@@ -1477,7 +1477,7 @@
   <span class="md-ellipsis">
     
   
-    第十二章： M估计和Z估计 (二)
+    Ch 12: M-Estimation and Z-Estimation II
   
 
     
@@ -1505,7 +1505,7 @@
   <span class="md-ellipsis">
     
   
-    第十三章： U统计量
+    Ch 13: U-Statistics
   
 
     
@@ -1533,7 +1533,7 @@
   <span class="md-ellipsis">
     
   
-    第十四章： Bootstrap
+    Ch 14: Bootstrap
   
 
     
@@ -1585,7 +1585,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -1601,7 +1601,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -1768,7 +1768,7 @@
   <span class="md-ellipsis">
     
   
-    🌌 泛函分析
+    🌌 Functional Analysis
   
 
     
@@ -1784,7 +1784,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🌌 泛函分析
+    🌌 Functional Analysis
   
 
           </label>
@@ -1804,7 +1804,7 @@
   <span class="md-ellipsis">
     
   
-    泛函分析课程概览
+    Functional Analysis Course Overview
   
 
     
@@ -1848,7 +1848,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -1864,7 +1864,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -1884,7 +1884,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：度量空间
+    Ch 1: Distance Spaces
   
 
     
@@ -1912,7 +1912,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：拓扑与完备性
+    Ch 2: Topology and Completeness
   
 
     
@@ -1940,7 +1940,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：紧性
+    Ch 3: Compactness
   
 
     
@@ -1968,7 +1968,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：压缩映射定理
+    Ch 4: Contraction Mapping Theorem
   
 
     
@@ -1996,7 +1996,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：赋范线性空间
+    Ch 5: Normed Linear Spaces
   
 
     
@@ -2024,7 +2024,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：巴拿赫空间
+    Ch 6: Banach Spaces
   
 
     
@@ -2052,7 +2052,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：希尔伯特空间
+    Ch 7: Hilbert Spaces
   
 
     
@@ -2080,7 +2080,7 @@
   <span class="md-ellipsis">
     
   
-    第八章：希尔伯特空间理论
+    Ch 8: Hilbert Space Theory
   
 
     
@@ -2108,7 +2108,7 @@
   <span class="md-ellipsis">
     
   
-    第九章：线性算子
+    Ch 9: Linear Operators
   
 
     
@@ -2136,7 +2136,7 @@
   <span class="md-ellipsis">
     
   
-    第十章：开映射与闭图定理
+    Ch 10: Open Mapping and Closed Graph Theorems
   
 
     
@@ -2164,7 +2164,7 @@
   <span class="md-ellipsis">
     
   
-    第十一章：对偶空间
+    Ch 11: Dual Spaces
   
 
     
@@ -2192,7 +2192,7 @@
   <span class="md-ellipsis">
     
   
-    第十二章：有界线性泛函的延拓与共鸣定理
+    Ch 12: Extension of Bounded Linear Functionals and Hahn-Banach Theorem
   
 
     
@@ -2226,8 +2226,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2243,11 +2241,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
@@ -2257,7 +2255,7 @@
   <span class="md-ellipsis">
     
   
-    🍩 点集拓扑
+    🍩 Point Set Topology
   
 
     
@@ -2268,12 +2266,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             
   
-    🍩 点集拓扑
+    🍩 Point Set Topology
   
 
           </label>
@@ -2286,14 +2284,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../0Intro/" class="md-nav__link">
+      <a href="../../Topology/0Intro/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    点集拓扑课程概览
+    Point Set Topology Course Overview
   
 
     
@@ -2311,8 +2309,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2325,11 +2321,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
         
           
           <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
@@ -2339,7 +2335,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -2350,12 +2346,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -2368,14 +2364,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../1/" class="md-nav__link">
+      <a href="../../Topology/1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第一章：集合论
+    Ch 1: Set Theory
   
 
     
@@ -2396,14 +2392,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../2/" class="md-nav__link">
+      <a href="../../Topology/2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第二章：函数与关系
+    Ch 2: Functions and Relations
   
 
     
@@ -2424,161 +2420,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../3/" class="md-nav__link">
+      <a href="../../Topology/3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第三章：可数集
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第四章：开集与拓扑
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第四章：开集与拓扑
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 度量空间中的开集与闭集
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. 连续性的拓扑刻画
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. 一般拓扑空间的公理化定义
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-bases-for-a-topology" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. 拓扑的基 (Bases for a Topology)
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../5/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    第五章：诱导拓扑
+    Ch 3: Countable Sets
   
 
     
@@ -2599,14 +2448,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../6/" class="md-nav__link">
+      <a href="../../Topology/4/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第六章：连续与同胚
+    Ch 4: Open Sets and Topology
   
 
     
@@ -2627,14 +2476,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../7/" class="md-nav__link">
+      <a href="../../Topology/5/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第七章：连通性
+    Ch 5: Induced Topology
   
 
     
@@ -2655,14 +2504,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../8/" class="md-nav__link">
+      <a href="../../Topology/6/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第八章：紧性
+    Ch 6: Continuity and Homeomorphisms
   
 
     
@@ -2683,14 +2532,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../9/" class="md-nav__link">
+      <a href="../../Topology/7/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第九章：欧式空间的紧性
+    Ch 7: Connectedness
   
 
     
@@ -2711,14 +2560,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../10/" class="md-nav__link">
+      <a href="../../Topology/8/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第十章：序列紧
+    Ch 8: Compactness
   
 
     
@@ -2739,14 +2588,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../11/" class="md-nav__link">
+      <a href="../../Topology/9/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第十一章：单点紧化
+    Ch 9: Compactness in Euclidean Spaces
   
 
     
@@ -2767,14 +2616,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../12/" class="md-nav__link">
+      <a href="../../Topology/10/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第十二章：可数性
+    Ch 10: Sequential Compactness
   
 
     
@@ -2795,14 +2644,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../13/" class="md-nav__link">
+      <a href="../../Topology/11/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第十三章：分离公理
+    Ch 11: One-Point Compactification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: Countability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 13: Separation Axioms
   
 
     
@@ -2854,7 +2759,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -2870,7 +2775,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -2883,7 +2788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_12/" class="md-nav__link">
+      <a href="../../Topology/sol_12/" class="md-nav__link">
         
   
   
@@ -2911,7 +2816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_34/" class="md-nav__link">
+      <a href="../../Topology/sol_34/" class="md-nav__link">
         
   
   
@@ -2939,7 +2844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_56/" class="md-nav__link">
+      <a href="../../Topology/sol_56/" class="md-nav__link">
         
   
   
@@ -2967,7 +2872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sol_789/" class="md-nav__link">
+      <a href="../../Topology/sol_789/" class="md-nav__link">
         
   
   
@@ -3037,7 +2942,7 @@
   <span class="md-ellipsis">
     
   
-    🧱 实分析
+    🧱 Real Analysis
   
 
     
@@ -3053,7 +2958,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🧱 实分析
+    🧱 Real Analysis
   
 
           </label>
@@ -3073,7 +2978,7 @@
   <span class="md-ellipsis">
     
   
-    实分析课程概览
+    Real Analysis Course Overview
   
 
     
@@ -3117,7 +3022,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -3133,7 +3038,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -3153,7 +3058,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：sigma-代数
+    Ch 1: Sigma-Algebras
   
 
     
@@ -3181,7 +3086,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：外测度
+    Ch 2: Outer Measure
   
 
     
@@ -3209,7 +3114,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：Lebesgue测度
+    Ch 3: Lebesgue
   
 
     
@@ -3237,7 +3142,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：可测函数（一）
+    Ch 4: Measurable Functions I
   
 
     
@@ -3265,7 +3170,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：可测函数（二）
+    Ch 5: Measurable Functions II
   
 
     
@@ -3293,7 +3198,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：积分构造
+    Ch 6: Construction of the Integral
   
 
     
@@ -3321,7 +3226,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：收敛定理
+    Ch 7: Convergence Theorems
   
 
     
@@ -3349,7 +3254,7 @@
   <span class="md-ellipsis">
     
   
-    第八章：Fubini定理
+    Ch 8: Fubini's Theorem
   
 
     
@@ -3377,7 +3282,7 @@
   <span class="md-ellipsis">
     
   
-    第九章：Hahn-Jordan分解
+    Ch 9: Hahn-Jordan Decomposition
   
 
     
@@ -3405,7 +3310,7 @@
   <span class="md-ellipsis">
     
   
-    第十章：Radon-Nikodym定理
+    Ch 10: Radon-Nikodym Theorem
   
 
     
@@ -3433,7 +3338,7 @@
   <span class="md-ellipsis">
     
   
-    第十一章：微积分基本定理
+    Ch 11: Fundamental Theorem of Calculus
   
 
     
@@ -3461,7 +3366,7 @@
   <span class="md-ellipsis">
     
   
-    第十二章：L^p空间
+    Ch 12: L^p Spaces
   
 
     
@@ -3524,7 +3429,7 @@
   <span class="md-ellipsis">
     
   
-    🎯 高等概率论
+    🎯 Advanced Probability Theory
   
 
     
@@ -3540,7 +3445,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🎯 高等概率论
+    🎯 Advanced Probability Theory
   
 
           </label>
@@ -3560,7 +3465,7 @@
   <span class="md-ellipsis">
     
   
-    高等概率论课程概览
+    Advanced Probability Theory Course Overview
   
 
     
@@ -3604,7 +3509,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -3620,7 +3525,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -3640,7 +3545,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：概率空间与随机变量
+    Ch 1: Probability Spaces and Random Variables
   
 
     
@@ -3668,7 +3573,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：数字特征
+    Ch 2: Numerical Characteristics
   
 
     
@@ -3696,7 +3601,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：极限定理
+    Ch 3: Limit Theorems
   
 
     
@@ -3759,7 +3664,7 @@
   <span class="md-ellipsis">
     
   
-    ⏳ 高等数理统计
+    ⏳ Advanced Mathematical Statistics
   
 
     
@@ -3775,7 +3680,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    ⏳ 高等数理统计
+    ⏳ Advanced Mathematical Statistics
   
 
           </label>
@@ -3795,7 +3700,7 @@
   <span class="md-ellipsis">
     
   
-    高等数理统计课程概览
+    Advanced Mathematical Statistics Course Overview
   
 
     
@@ -3839,7 +3744,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -3855,7 +3760,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -3875,7 +3780,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：高斯几何与经典分布
+    Ch 1: Gaussian Geometry and Classical Distributions
   
 
     
@@ -3903,7 +3808,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：充分性与指数族
+    Ch 2: Sufficiency and Exponential Families
   
 
     
@@ -3931,7 +3836,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：完备性与UMVU
+    Ch 3: Completeness and UMVU
   
 
     
@@ -3959,7 +3864,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：U统计量与信息下界
+    Ch 4: U-Statistics and Information Lower Bounds
   
 
     
@@ -3987,7 +3892,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：容许性
+    Ch 5: Admissibility
   
 
     
@@ -4015,7 +3920,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：贝叶斯规则
+    Ch 6: Bayes' Rule
   
 
     
@@ -4067,7 +3972,7 @@
   <span class="md-ellipsis">
     
   
-    📝 习题
+    📝 Exercises
   
 
     
@@ -4083,7 +3988,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📝 习题
+    📝 Exercises
   
 
           </label>
@@ -4137,6 +4042,8 @@
                 
   
   
+    
+  
   
   
     
@@ -4152,11 +4059,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
         
           
           <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
@@ -4166,7 +4073,7 @@
   <span class="md-ellipsis">
     
   
-    🔲 矩阵计算
+    🔲 Matrix Computation
   
 
     
@@ -4177,12 +4084,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             
   
-    🔲 矩阵计算
+    🔲 Matrix Computation
   
 
           </label>
@@ -4195,14 +4102,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Matrix_Comp/0Intro/" class="md-nav__link">
+      <a href="../0Intro/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    矩阵计算课程概览
+    Matrix Computation Course Overview
   
 
     
@@ -4220,8 +4127,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -4232,11 +4141,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_8_2" id="__nav_2_8_2_label" tabindex="0">
@@ -4246,7 +4155,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -4257,12 +4166,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_8_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -4275,14 +4184,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Matrix_Comp/1Matrix_norm/" class="md-nav__link">
+      <a href="../1Matrix_norm/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第一章：矩阵范数
+    Ch 1: Matrix Norms
   
 
     
@@ -4303,14 +4212,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Matrix_Comp/2SVD/" class="md-nav__link">
+      <a href="../2SVD/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    第二章：奇异值分解
+    Ch 2: Singular Value Decomposition
   
 
     
@@ -4328,17 +4237,44 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Matrix_Comp/3GaussianEliminationAndLU/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Gaussian Elimination and LU Decomposition
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    第三章：高斯消去与LU分解
+    Ch 3: Gaussian Elimination and LU Decomposition
   
 
     
@@ -4347,6 +4283,292 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-triangular-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Triangular Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Triangular Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-lower-triangular-systems-and-forward-substitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Lower Triangular Systems and Forward Substitution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-upper-triangular-systems-and-backward-substitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Upper Triangular Systems and Backward Substitution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-algebraic-properties-of-triangular-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Algebraic Properties of Triangular Matrices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-backward-error-of-triangular-solves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Backward Error of Triangular Solves
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gaussian-elimination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Gaussian Elimination
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Gaussian Elimination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-elementary-elimination-and-gauss-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Elementary Elimination and Gauss Transformations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-the-kth-elimination-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 The \(k\)th Elimination Step
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-properties-of-gauss-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Properties of Gauss Transformations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-elimination-updates-and-operation-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Elimination Updates and Operation Count
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lu-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. LU Factorization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. LU Factorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-from-gaussian-elimination-to-lu-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 From Gaussian Elimination to LU Factorization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-existence-and-uniqueness-of-the-lu-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Existence and Uniqueness of the LU Factorization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-compact-storage-and-the-computational-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Compact Storage and the Computational Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-solving-linear-systems-with-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Solving Linear Systems with LU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-the-ldmmathsf-t-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 The \(LDM^{\mathsf T}\) Factorization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-rounding-errors-and-pivoting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Rounding Errors and Pivoting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Rounding Errors and Pivoting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-backward-error-of-lu-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Backward Error of LU Factorization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-interchange-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Interchange Matrices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-partial-pivoting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Partial Pivoting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-complexity-and-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Complexity and Stability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4401,7 +4623,7 @@
   <span class="md-ellipsis">
     
   
-    🤖 统计学习
+    🤖 Statistical Learning
   
 
     
@@ -4417,7 +4639,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🤖 统计学习
+    🤖 Statistical Learning
   
 
           </label>
@@ -4437,7 +4659,7 @@
   <span class="md-ellipsis">
     
   
-    统计学习课程概览
+    Statistical Learning Course Overview
   
 
     
@@ -4481,7 +4703,7 @@
   <span class="md-ellipsis">
     
   
-    📖 笔记
+    📖 Notes
   
 
     
@@ -4497,7 +4719,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📖 笔记
+    📖 Notes
   
 
           </label>
@@ -4517,7 +4739,7 @@
   <span class="md-ellipsis">
     
   
-    第一章：KNN
+    Ch 1: K-Nearest Neighbors
   
 
     
@@ -4545,7 +4767,7 @@
   <span class="md-ellipsis">
     
   
-    第二章：线性回归
+    Ch 2: Linear Regression
   
 
     
@@ -4573,7 +4795,7 @@
   <span class="md-ellipsis">
     
   
-    第三章：惩罚线性回归（一）
+    Ch 3: Penalized Linear Regression I
   
 
     
@@ -4601,7 +4823,7 @@
   <span class="md-ellipsis">
     
   
-    第四章：惩罚线性回归（二）
+    Ch 4: Penalized Linear Regression II
   
 
     
@@ -4629,7 +4851,7 @@
   <span class="md-ellipsis">
     
   
-    第五章：分类问题
+    Ch 5: Classification Problems
   
 
     
@@ -4657,7 +4879,7 @@
   <span class="md-ellipsis">
     
   
-    第六章：支持向量机
+    Ch 6: Support Vector Machines
   
 
     
@@ -4685,7 +4907,7 @@
   <span class="md-ellipsis">
     
   
-    第七章：RKHS与核回归
+    Ch 7: RKHS and Kernel Regression
   
 
     
@@ -4713,7 +4935,7 @@
   <span class="md-ellipsis">
     
   
-    第八章：核密度估计
+    Ch 8: Kernel Density Estimation
   
 
     
@@ -4741,7 +4963,7 @@
   <span class="md-ellipsis">
     
   
-    第九章：树模型
+    Ch 9: Tree Models
   
 
     
@@ -4769,7 +4991,7 @@
   <span class="md-ellipsis">
     
   
-    第十章：因果推断
+    Ch 10: Causal Inference
   
 
     
@@ -4836,7 +5058,7 @@
   <span class="md-ellipsis">
     
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
     
@@ -4852,7 +5074,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛠️ 知识速查
+    🛠️ Quick Reference
   
 
           </label>
@@ -4872,7 +5094,7 @@
   <span class="md-ellipsis">
     
   
-    📖 概览
+    📖 Overview
   
 
     
@@ -4916,7 +5138,7 @@
   <span class="md-ellipsis">
     
   
-    🛠️ 速查
+    🛠️ Quick Reference
   
 
     
@@ -4932,7 +5154,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛠️ 速查
+    🛠️ Quick Reference
   
 
           </label>
@@ -4952,7 +5174,7 @@
   <span class="md-ellipsis">
     
   
-    📊 数理统计
+    📊 Mathematical Statistics
   
 
     
@@ -4980,7 +5202,7 @@
   <span class="md-ellipsis">
     
   
-    🎲 概率论
+    🎲 Probability Theory
   
 
     
@@ -5008,7 +5230,7 @@
   <span class="md-ellipsis">
     
   
-    📏 测度论基础
+    📏 Measure Theory
   
 
     
@@ -5036,7 +5258,7 @@
   <span class="md-ellipsis">
     
   
-    🔢 线性代数
+    🔢 Linear Algebra
   
 
     
@@ -5064,7 +5286,7 @@
   <span class="md-ellipsis">
     
   
-    🌊 随机过程
+    🌊 Stochastic Processes
   
 
     
@@ -5092,7 +5314,7 @@
   <span class="md-ellipsis">
     
   
-    🎯 凸优化
+    🎯 Convex Optimization
   
 
     
@@ -5120,7 +5342,7 @@
   <span class="md-ellipsis">
     
   
-    📈 回归分析
+    📈 Regression Analysis
   
 
     
@@ -5148,7 +5370,7 @@
   <span class="md-ellipsis">
     
   
-    ♾️ 数学分析
+    ♾️ Mathematical Analysis
   
 
     
@@ -5207,7 +5429,7 @@
   <span class="md-ellipsis">
     
   
-    🛰️ 前沿追踪
+    🛰️ Research Updates
   
 
     
@@ -5223,7 +5445,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🛰️ 前沿追踪
+    🛰️ Research Updates
   
 
           </label>
@@ -5243,7 +5465,7 @@
   <span class="md-ellipsis">
     
   
-    📝 最新论文
+    📝 Latest Papers
   
 
     
@@ -5294,7 +5516,7 @@
   <span class="md-ellipsis">
     
   
-    🎙️ 讲座与报告
+    🎙️ Lectures & Talks
   
 
     
@@ -5310,7 +5532,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🎙️ 讲座与报告
+    🎙️ Lectures & Talks
   
 
           </label>
@@ -5330,7 +5552,7 @@
   <span class="md-ellipsis">
     
   
-    📖 概览
+    📖 Overview
   
 
     
@@ -5374,7 +5596,7 @@
   <span class="md-ellipsis">
     
   
-    🏛️ 基础理论
+    🏛️ Fundamental Theory
   
 
     
@@ -5390,7 +5612,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    🏛️ 基础理论
+    🏛️ Fundamental Theory
   
 
           </label>
@@ -5426,7 +5648,7 @@
   <span class="md-ellipsis">
     
   
-    2025秋季高等概率论讨论班
+    2025 Fall Advanced Probability Seminar
   
 
     
@@ -5442,7 +5664,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    2025秋季高等概率论讨论班
+    2025 Fall Advanced Probability Seminar
   
 
           </label>
@@ -5462,7 +5684,7 @@
   <span class="md-ellipsis">
     
   
-    大偏差原理 (LDP)
+    Large Deviation Principle (LDP)
   
 
     
@@ -5522,7 +5744,7 @@
   <span class="md-ellipsis">
     
   
-    📑 文献研讨
+    📑 Paper Discussions
   
 
     
@@ -5538,7 +5760,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    📑 文献研讨
+    📑 Paper Discussions
   
 
           </label>
@@ -5574,7 +5796,7 @@
   <span class="md-ellipsis">
     
   
-    2025秋季组会
+    2025 Fall Group Meetings
   
 
     
@@ -5590,7 +5812,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    2025秋季组会
+    2025 Fall Group Meetings
   
 
           </label>
@@ -5660,7 +5882,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -5669,48 +5891,270 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-triangular-systems" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. 度量空间中的开集与闭集
+        1. Triangular Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Triangular Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-lower-triangular-systems-and-forward-substitution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Lower Triangular Systems and Forward Substitution
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-upper-triangular-systems-and-backward-substitution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 连续性的拓扑刻画
+        1.2 Upper Triangular Systems and Backward Substitution
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#13-algebraic-properties-of-triangular-matrices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 一般拓扑空间的公理化定义
+        1.3 Algebraic Properties of Triangular Matrices
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4-bases-for-a-topology" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#14-backward-error-of-triangular-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 拓扑的基 (Bases for a Topology)
+        1.4 Backward Error of Triangular Solves
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gaussian-elimination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Gaussian Elimination
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Gaussian Elimination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-elementary-elimination-and-gauss-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Elementary Elimination and Gauss Transformations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-the-kth-elimination-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 The \(k\)th Elimination Step
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-properties-of-gauss-transformations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Properties of Gauss Transformations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-elimination-updates-and-operation-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Elimination Updates and Operation Count
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-lu-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. LU Factorization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. LU Factorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-from-gaussian-elimination-to-lu-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 From Gaussian Elimination to LU Factorization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-existence-and-uniqueness-of-the-lu-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Existence and Uniqueness of the LU Factorization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-compact-storage-and-the-computational-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Compact Storage and the Computational Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-solving-linear-systems-with-lu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Solving Linear Systems with LU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-the-ldmmathsf-t-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 The \(LDM^{\mathsf T}\) Factorization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-rounding-errors-and-pivoting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Rounding Errors and Pivoting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Rounding Errors and Pivoting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-backward-error-of-lu-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Backward Error of LU Factorization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-interchange-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Interchange Matrices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-partial-pivoting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Partial Pivoting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-complexity-and-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Complexity and Stability
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Chapter Summary
       
     </span>
   </a>
@@ -5738,133 +6182,487 @@
   
 
 
-<h1 id="_1">第四章：开集与拓扑结构</h1>
-<p>在前面的章节中，我们探讨了集合、映射以及距离空间的基本性质。本章将在此基础上，从度量空间中的开集出发，逐步剥离距离的概念，建立起一般拓扑空间的公理化体系，并重点讨论连续性的拓扑刻画以及拓扑基的构造方法。</p>
+<h1 id="chapter-3-gaussian-elimination-and-lu-factorization">Chapter 3: Gaussian Elimination and LU Factorization</h1>
+<p>This chapter studies direct methods for general linear systems. We begin with forward and backward substitution for triangular systems, describe elimination through Gauss transformations, and then derive the LU factorization. Finally, we discuss rounding errors, partial pivoting, and LU factorization with pivoting.</p>
 <hr />
-<h2 id="1">1. 度量空间中的开集与闭集</h2>
-<p>在度量空间（或距离空间）中，一切拓扑性质的基础是“球”的概念。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.1 (<span class="arithmatex">\(\epsilon\)</span>-球)</p>
-<p>设 <span class="arithmatex">\((S, d)\)</span> 为一个度量空间，对于任意的 <span class="arithmatex">\(x \in S\)</span> 以及实数 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，以 <span class="arithmatex">\(x\)</span> 为中心、<span class="arithmatex">\(\epsilon\)</span> 为半径的 <span class="arithmatex">\(\epsilon\)</span>-球定义为：</p>
+<h2 id="1-triangular-systems">1. Triangular Systems</h2>
+<p>Let</p>
 <div class="arithmatex">\[
-B(x, \epsilon) = \{y \in S \mid d(y, x) &lt; \epsilon\}
+A\in\mathbb{R}^{n\times n},
+\qquad
+b\in\mathbb{R}^n.
+\]</div>
+<p>We wish to solve the linear system</p>
+<div class="arithmatex">\[
+Ax=b.
+\]</div>
+<p>When <span class="arithmatex">\(A\)</span> is triangular, the unknowns can be determined successively. This is the foundation of general elimination methods.</p>
+<h3 id="11-lower-triangular-systems-and-forward-substitution">1.1 Lower Triangular Systems and Forward Substitution</h3>
+<p>Let <span class="arithmatex">\(L=(l_{ij})\)</span> be a nonsingular lower triangular matrix. The system <span class="arithmatex">\(Lx=b\)</span> can be written as</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+l_{11} &amp; &amp; &amp; \\
+l_{21} &amp; l_{22} &amp; &amp; \\
+\vdots &amp; \vdots &amp; \ddots &amp; \\
+l_{n1} &amp; l_{n2} &amp; \cdots &amp; l_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\x_2\\\vdots\\x_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_1\\b_2\\\vdots\\b_n
+\end{bmatrix}.
+\]</div>
+<p>Solving row by row from the first row gives the forward-substitution formulas</p>
+<div class="arithmatex">\[
+x_1=\frac{b_1}{l_{11}},
+\qquad
+x_i=\frac{1}{l_{ii}}
+\left(b_i-\sum_{j=1}^{i-1}l_{ij}x_j\right),
+\quad i=2,\ldots,n.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Algorithm 1.1 (Forward Substitution)</p>
+<p>For <span class="arithmatex">\(i=1,\ldots,n\)</span>, compute successively</p>
+<div class="arithmatex">\[
+x_i=\frac{b_i-l_{i,1:i-1}x_{1:i-1}}{l_{ii}}.
+\]</div>
+<p>If <span class="arithmatex">\(L\)</span> is unit lower triangular, then <span class="arithmatex">\(l_{ii}=1\)</span>, so no division is needed.</p>
+</div>
+<h3 id="12-upper-triangular-systems-and-backward-substitution">1.2 Upper Triangular Systems and Backward Substitution</h3>
+<p>Let <span class="arithmatex">\(U=(u_{ij})\)</span> be a nonsingular upper triangular matrix. Solving upward from the last row gives</p>
+<div class="arithmatex">\[
+x_n=\frac{b_n}{u_{nn}},
+\qquad
+x_i=\frac{1}{u_{ii}}
+\left(b_i-\sum_{j=i+1}^{n}u_{ij}x_j\right),
+\quad i=n-1,\ldots,1.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Algorithm 1.2 (Backward Substitution)</p>
+<p>For <span class="arithmatex">\(i=n,n-1,\ldots,1\)</span>, compute successively</p>
+<div class="arithmatex">\[
+x_i=\frac{b_i-u_{i,i+1:n}x_{i+1:n}}{u_{ii}}.
 \]</div>
 </div>
-<p>基于 <span class="arithmatex">\(\epsilon\)</span>-球，我们可以严格定义开集与闭集：</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.2 (开集与闭集)</p>
-<ul>
-<li>
-<p><strong>开集 (Open Set)</strong>：称集合 <span class="arithmatex">\(P \subseteq S\)</span> 是开集，如果对于 <span class="arithmatex">\(P\)</span> 中的任意点 <span class="arithmatex">\(x \in P\)</span>，都存在一个常数 <span class="arithmatex">\(\epsilon &gt; 0\)</span>，使得 <span class="arithmatex">\(B(x, \epsilon) \subseteq P\)</span>。</p>
-</li>
-<li>
-<p><strong>闭集 (Closed Set)</strong>：称集合 <span class="arithmatex">\(C \subseteq S\)</span> 是闭集，如果其补集 <span class="arithmatex">\(S \setminus C\)</span> 是开集。</p>
-</li>
-</ul>
-</div>
-<p><strong>基本例子与性质</strong>：</p>
-<ul>
-<li>
-<p>全空间 <span class="arithmatex">\(S\)</span> 和空集 <span class="arithmatex">\(\emptyset\)</span> 既是开集也是闭集。</p>
-</li>
-<li>
-<p><strong>任意并集</strong>：如果族 <span class="arithmatex">\(\{A_i\}_{i \in I}\)</span> 中的每一个 <span class="arithmatex">\(A_i\)</span> 都是开集，那么它们的并集 <span class="arithmatex">\(\bigcup_{i \in I} A_i\)</span> 也是开集。</p>
-</li>
-<li>
-<p><strong>有限交集</strong>：有限多个开集的交集必然是开集。</p>
-</li>
-</ul>
-<details class="proof">
-<summary>证明：有限个开集的交集是开集</summary>
-<p>我们只需证明两个开集的交集是开集，然后通过数学归纳法即可推广到有限个的情况。设 <span class="arithmatex">\(A_1, A_2, \dots, A_k\)</span> 是有限个开集。</p>
-<p>考虑它们的交集 <span class="arithmatex">\(\bigcap_{i=1}^k A_i\)</span>。如果该交集为空集 <span class="arithmatex">\(\emptyset\)</span>，由于空集是开集，结论自然成立。</p>
-<p>如果交集非空，任取一点 <span class="arithmatex">\(x \in \bigcap_{i=1}^k A_i\)</span>。</p>
-<p>这意味着对于每一个 <span class="arithmatex">\(i \in \{1, 2, \dots, k\}\)</span>，都有 <span class="arithmatex">\(x \in A_i\)</span>。</p>
-<p>因为每个 <span class="arithmatex">\(A_i\)</span> 都是开集，根据开集的定义，必定存在对应的 <span class="arithmatex">\(\epsilon_i &gt; 0\)</span>，使得 <span class="arithmatex">\(B(x, \epsilon_i) \subseteq A_i\)</span>。</p>
-<p>我们只需取这些半径中的最小值：</p>
-<div class="arithmatex">\[
-\epsilon = \min\{\epsilon_1, \epsilon_2, \dots, \epsilon_k\}
-\]</div>
-<p>由于集合是有限的，<span class="arithmatex">\(\epsilon\)</span> 必定是一个严格大于 0 的实数。此时，对于所有的 <span class="arithmatex">\(i\)</span>，都有 <span class="arithmatex">\(B(x, \epsilon) \subseteq B(x, \epsilon_i) \subseteq A_i\)</span>。</p>
-<p>因此，<span class="arithmatex">\(B(x, \epsilon) \subseteq \bigcap_{i=1}^k A_i\)</span>。这证明了交集中的任意一点都包含一个完全落在交集内的 <span class="arithmatex">\(\epsilon\)</span>-球，故有限交集是开集。 <span class="arithmatex">\(\square\)</span></p>
-</details>
-<hr />
-<h2 id="2">2. 连续性的拓扑刻画</h2>
-<p>在微积分中，连续性通常通过 <span class="arithmatex">\(\epsilon-\delta\)</span> 语言来描述。在更一般的空间中，我们可以用开集来完全等价地刻画连续性。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.3 (映射的连续性)</p>
-<p>设 <span class="arithmatex">\(f: S \to M\)</span> 是两个空间之间的映射。</p>
-<ul>
-<li>
-<p><strong>在某一点的局部连续性</strong>：称映射 <span class="arithmatex">\(f\)</span> 在点 <span class="arithmatex">\(x_0 \in S\)</span> 处是连续的，如果对于伴域 <span class="arithmatex">\(M\)</span> 中任意一个包含像点 <span class="arithmatex">\(f(x_0)\)</span> 的开集 <span class="arithmatex">\(V\)</span>（即 <span class="arithmatex">\(f(x_0) \in V\)</span>），都存在定义域 <span class="arithmatex">\(S\)</span> 中的一个开集 <span class="arithmatex">\(U\)</span>，满足 <span class="arithmatex">\(x_0 \in U \subseteq f^{-1}(V)\)</span>。</p>
-</li>
-<li>
-<p><strong>全局连续性</strong>：称映射 <span class="arithmatex">\(f\)</span> 在整个 <span class="arithmatex">\(S\)</span> 上是连续的，当且仅当它在 <span class="arithmatex">\(S\)</span> 中的每一个点都连续。等价地，<span class="arithmatex">\(f\)</span> 是连续的，当且仅当对于 <span class="arithmatex">\(M\)</span> 中的任意开集 <span class="arithmatex">\(V\)</span>，其原像 <span class="arithmatex">\(f^{-1}(V)\)</span> 必定是 <span class="arithmatex">\(S\)</span> 中的开集。</p>
-</li>
-</ul>
-</div>
-<hr />
-<h2 id="3">3. 一般拓扑空间的公理化定义</h2>
-<p>一旦我们将连续性的定义完全建立在开集之上，距离 <span class="arithmatex">\(d\)</span> 就不再是必需的了。我们可以直接公理化“开集”的概念，从而定义一般拓扑空间。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.4 (拓扑与拓扑空间)</p>
-<p>设 <span class="arithmatex">\(X\)</span> 是一个非空集合。<span class="arithmatex">\(X\)</span> 上的一个<strong>拓扑 (Topology)</strong> <span class="arithmatex">\(\tau\)</span> 是幂集 <span class="arithmatex">\(\mathcal{P}(X)\)</span> 的一个子族（即 <span class="arithmatex">\(\tau\)</span> 包含 <span class="arithmatex">\(X\)</span> 的部分子集），并且满足以下三条公理：</p>
-<ul>
-<li>
-<p><strong>(1)</strong> 全空间 <span class="arithmatex">\(X\)</span> 和空集 <span class="arithmatex">\(\emptyset\)</span> 属于 <span class="arithmatex">\(\tau\)</span>。即 <span class="arithmatex">\(\emptyset, X \in \tau\)</span>。</p>
-</li>
-<li>
-<p><strong>(2) 任意并封闭</strong>：如果 <span class="arithmatex">\(\{A_i\}_{i \in I} \subseteq \tau\)</span>，那么它们的任意并集也属于 <span class="arithmatex">\(\tau\)</span>。即 <span class="arithmatex">\(\bigcup_{i \in I} A_i \in \tau\)</span>。</p>
-</li>
-<li>
-<p><strong>(3) 有限交封闭</strong>：如果 <span class="arithmatex">\(A_1, A_2, \dots, A_k \in \tau\)</span>，那么它们的有限交集也属于 <span class="arithmatex">\(\tau\)</span>。即 <span class="arithmatex">\(\bigcap_{i=1}^k A_i \in \tau\)</span>。</p>
-</li>
-</ul>
-<p>赋予了拓扑 <span class="arithmatex">\(\tau\)</span> 的集合 <span class="arithmatex">\(X\)</span> 被称为<strong>拓扑空间</strong> <span class="arithmatex">\((X, \tau)\)</span>。拓扑 <span class="arithmatex">\(\tau\)</span> 中的元素被称为 <span class="arithmatex">\(X\)</span> 关于该拓扑的<strong>开集 (Open Sets)</strong>。</p>
-</div>
-<p>如果一个子集 <span class="arithmatex">\(S \subseteq X\)</span> 的补集 <span class="arithmatex">\(X \setminus S\)</span> 是开集（即属于 <span class="arithmatex">\(\tau\)</span>），那么称 <span class="arithmatex">\(S\)</span> 为<strong>闭集 (Closed Set)</strong>。</p>
-<p><strong>例子</strong>：设集合 <span class="arithmatex">\(X = \{a, b\}\)</span>，可以定义一个拓扑 <span class="arithmatex">\(\tau = \{\emptyset, X, \{a\}\}\)</span>。在这个拓扑空间中，<span class="arithmatex">\(\{a\}\)</span> 是开集，相应的补集 <span class="arithmatex">\(\{b\}\)</span> 则是闭集。</p>
-<p>闭集具有与开集对偶的性质：</p>
-<ul>
-<li>
-<p><span class="arithmatex">\(\emptyset\)</span> 和 <span class="arithmatex">\(X\)</span> 都是闭集。</p>
-</li>
-<li>
-<p>任意多个闭集的交集 <span class="arithmatex">\(\bigcap_{i \in I} C_i\)</span> 仍然是闭集。</p>
-</li>
-<li>
-<p>有限多个闭集的并集 <span class="arithmatex">\(\bigcup_{i=1}^k C_i\)</span> 仍然是闭集。</p>
-</li>
-</ul>
-<hr />
-<h2 id="4-bases-for-a-topology">4. 拓扑的基 (Bases for a Topology)</h2>
-<p>为了描述一个拓扑 <span class="arithmatex">\(\tau\)</span>，我们往往不需要列出其中所有的开集，而是可以通过一个更小的集合族——<strong>拓扑基 (Base)</strong> 来生成整个拓扑。</p>
-<div class="admonition info">
-<p class="admonition-title">定义 4.5 (拓扑的基)</p>
-<p>设 <span class="arithmatex">\((X, \tau)\)</span> 为一个拓扑空间。一个开集族 <span class="arithmatex">\(\mathcal{B} \subseteq \tau\)</span> 被称为拓扑 <span class="arithmatex">\(\tau\)</span> 的<strong>基 (Base)</strong>，如果对于 <span class="arithmatex">\(\tau\)</span> 中的任意开集 <span class="arithmatex">\(S\)</span>，以及 <span class="arithmatex">\(S\)</span> 中的任意点 <span class="arithmatex">\(x \in S\)</span>，都存在一个基元素 <span class="arithmatex">\(B \in \mathcal{B}\)</span>，满足：</p>
-<div class="arithmatex">\[
-x \in B \subseteq S
-\]</div>
-<p>由此可知，拓扑 <span class="arithmatex">\(\tau\)</span> 中的每一个开集 <span class="arithmatex">\(S\)</span> 都可以表示为某些基元素的并集，即 <span class="arithmatex">\(S = \bigcup_{i \in I} B_i\)</span>。</p>
-</div>
-<p>并非任意的集合族都能成为某个拓扑的基。下面的定理给出了判断条件：</p>
+<p>Both forward and backward substitution require approximately <span class="arithmatex">\(n^2\)</span> floating-point operations and therefore have complexity <span class="arithmatex">\(O(n^2)\)</span>.</p>
+<h3 id="13-algebraic-properties-of-triangular-matrices">1.3 Algebraic Properties of Triangular Matrices</h3>
 <div class="admonition success">
-<p class="admonition-title">定理 4.1 (基的判定准则)</p>
-<p>设 <span class="arithmatex">\(\mathcal{B} \subseteq \mathcal{P}(X)\)</span> 是集合 <span class="arithmatex">\(X\)</span> 的一个子集族。那么 <span class="arithmatex">\(\mathcal{B}\)</span> 能够成为 <span class="arithmatex">\(X\)</span> 上某个拓扑的基，当且仅当它满足以下两个条件：</p>
-<ul>
-<li><strong>(1) 覆盖性</strong>：基元素的并集必须覆盖整个空间 <span class="arithmatex">\(X\)</span>。即：</li>
-</ul>
+<p class="admonition-title">Proposition 1.3 (Closure of Triangular Matrices)</p>
+<p>The product and inverse of upper triangular matrices are upper triangular; the product and inverse of lower triangular matrices are lower triangular.</p>
+<p>A triangular matrix whose diagonal entries are all <span class="arithmatex">\(1\)</span> is called a unit triangular matrix. The product and inverse of unit triangular matrices remain unit triangular matrices of the same type.</p>
+</div>
+<details class="proof">
+<summary>Proof of Proposition 1.3 (click to expand)</summary>
+<p>Consider upper triangular matrices. If both <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are upper triangular, then for <span class="arithmatex">\(i&gt;j\)</span>,</p>
 <div class="arithmatex">\[
-X = \bigcup_{B \in \mathcal{B}} B
+(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}=0,
 \]</div>
-<ul>
-<li><strong>(2) 内部相容性</strong>：如果选取两个基元素 <span class="arithmatex">\(B_1, B_2 \in \mathcal{B}\)</span>，并且取其交集中的任意一点 <span class="arithmatex">\(x \in B_1 \cap B_2\)</span>，则必定存在第三个基元素 <span class="arithmatex">\(B_3 \in \mathcal{B}\)</span>，使得：</li>
-</ul>
+<p>because every term has either <span class="arithmatex">\(a_{ik}=0\)</span> or <span class="arithmatex">\(b_{kj}=0\)</span>. Hence <span class="arithmatex">\(AB\)</span> is upper triangular.</p>
+<p>If <span class="arithmatex">\(A\)</span> is nonsingular, each column of <span class="arithmatex">\(AX=I\)</span> can be found by backward substitution, and the resulting matrix <span class="arithmatex">\(X=A^{-1}\)</span> is upper triangular. The lower triangular case is analogous. If every diagonal entry equals <span class="arithmatex">\(1\)</span>, the diagonal entries of both the product and inverse also equal <span class="arithmatex">\(1\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="14-backward-error-of-triangular-solves">1.4 Backward Error of Triangular Solves</h3>
+<p>Let the unit roundoff be <span class="arithmatex">\(u\)</span>. The floating-point solution <span class="arithmatex">\(\widehat{x}\)</span> produced by forward substitution can be interpreted as the exact solution of a nearby lower triangular system:</p>
 <div class="arithmatex">\[
-x \in B_3 \subseteq B_1 \cap B_2
+(L+\Delta L)\widehat{x}=b,
+\qquad
+|\Delta L|\leq \gamma_n|L|,
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+\gamma_n=\frac{nu}{1-nu}=nu+O(u^2).
+\]</div>
+<p>Similarly, backward substitution satisfies</p>
+<div class="arithmatex">\[
+(U+\Delta U)\widehat{x}=b,
+\qquad
+|\Delta U|\leq \gamma_n|U|.
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Interpretation</p>
+<p>Thus triangular solves are backward stable: the computed result is the exact solution of a triangular system that is very close to the original one.</p>
+</div>
+<hr />
+<h2 id="2-gaussian-elimination">2. Gaussian Elimination</h2>
+<h3 id="21-elementary-elimination-and-gauss-transformations">2.1 Elementary Elimination and Gauss Transformations</h3>
+<p>Let <span class="arithmatex">\(e_i\)</span> denote the <span class="arithmatex">\(i\)</span>th standard basis vector. Left multiplication by</p>
+<div class="arithmatex">\[
+I+\lambda e_j e_i^{\mathsf T}
+\]</div>
+<p>is equivalent to adding <span class="arithmatex">\(\lambda\)</span> times row <span class="arithmatex">\(i\)</span> to row <span class="arithmatex">\(j\)</span>.</p>
+<p>To eliminate the first column, suppose <span class="arithmatex">\(a_{11}\neq0\)</span> and define the multipliers</p>
+<div class="arithmatex">\[
+\tau_i^{(1)}=\frac{a_{i1}}{a_{11}},
+\qquad i=2,\ldots,n,
+\]</div>
+<p>and the vector</p>
+<div class="arithmatex">\[
+\tau^{(1)}=
+\begin{bmatrix}
+0 &amp; \tau_2^{(1)} &amp; \cdots &amp; \tau_n^{(1)}
+\end{bmatrix}^{\mathsf T}.
+\]</div>
+<p>The first Gauss transformation is then</p>
+<div class="arithmatex">\[
+M_1=I-\tau^{(1)}e_1^{\mathsf T},
+\qquad
+A^{(2)}=M_1A^{(1)},
+\qquad
+A^{(1)}=A.
+\]</div>
+<p>It annihilates every entry below the pivot in the first column.</p>
+<h3 id="22-the-kth-elimination-step">2.2 The <span class="arithmatex">\(k\)</span>th Elimination Step</h3>
+<p>Assume that the first <span class="arithmatex">\(k-1\)</span> columns have already been eliminated. At step <span class="arithmatex">\(k\)</span>, the pivot is <span class="arithmatex">\(a_{kk}^{(k)}\)</span>. If</p>
+<div class="arithmatex">\[
+a_{kk}^{(k)}\neq0,
+\]</div>
+<p>define</p>
+<div class="arithmatex">\[
+\tau_i^{(k)}=
+\frac{a_{ik}^{(k)}}{a_{kk}^{(k)}},
+\quad i=k+1,\ldots,n,
+\]</div>
+<p>and set <span class="arithmatex">\(\tau_1^{(k)},\ldots,\tau_k^{(k)}\)</span> equal to zero. The corresponding Gauss transformation is</p>
+<div class="arithmatex">\[
+M_k=I-\tau^{(k)}e_k^{\mathsf T},
+\qquad
+A^{(k+1)}=M_kA^{(k)}.
+\]</div>
+<p>After <span class="arithmatex">\(n-1\)</span> steps, we obtain the upper triangular matrix</p>
+<div class="arithmatex">\[
+M_{n-1}M_{n-2}\cdots M_1A=A^{(n)}=U.
+\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Pivot Condition</p>
+<p>Gaussian elimination without row interchanges requires every pivot <span class="arithmatex">\(a_{kk}^{(k)}\)</span> to be nonzero. Nonsingularity of the matrix alone does not guarantee this condition.</p>
+</div>
+<h3 id="23-properties-of-gauss-transformations">2.3 Properties of Gauss Transformations</h3>
+<p>Since</p>
+<div class="arithmatex">\[
+e_k^{\mathsf T}\tau^{(k)}=0,
+\]</div>
+<p>we have</p>
+<div class="arithmatex">\[
+M_k^{-1}=I+\tau^{(k)}e_k^{\mathsf T}.
+\]</div>
+<p>Indeed,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+M_kM_k^{-1}
+&amp;=(I-\tau^{(k)}e_k^{\mathsf T})
+  (I+\tau^{(k)}e_k^{\mathsf T})\\
+&amp;=I-\tau^{(k)}
+  (e_k^{\mathsf T}\tau^{(k)})e_k^{\mathsf T}\\
+&amp;=I.
+\end{aligned}
+\]</div>
+<p>When <span class="arithmatex">\(i&lt;j\)</span>, we also have</p>
+<div class="arithmatex">\[
+M_iM_j
+=I-\tau^{(i)}e_i^{\mathsf T}
+-\tau^{(j)}e_j^{\mathsf T},
+\]</div>
+<p>because <span class="arithmatex">\(e_i^{\mathsf T}\tau^{(j)}=0\)</span> in the cross term.</p>
+<h3 id="24-elimination-updates-and-operation-count">2.4 Elimination Updates and Operation Count</h3>
+<p>At step <span class="arithmatex">\(k\)</span>, for <span class="arithmatex">\(i=k+1,\ldots,n\)</span>, first compute the multiplier</p>
+<div class="arithmatex">\[
+l_{ik}=\frac{a_{ik}^{(k)}}{a_{kk}^{(k)}},
+\]</div>
+<p>and then update the remaining entries by</p>
+<div class="arithmatex">\[
+a_{ij}^{(k+1)}
+=a_{ij}^{(k)}-l_{ik}a_{kj}^{(k)},
+\qquad
+i,j=k+1,\ldots,n.
+\]</div>
+<p>The leading operation count of Gaussian elimination is approximately</p>
+<div class="arithmatex">\[
+\frac{2}{3}n^3+O(n^2)
+\]</div>
+<p>floating-point operations, so its complexity is <span class="arithmatex">\(O(n^3)\)</span>.</p>
+<hr />
+<h2 id="3-lu-factorization">3. LU Factorization</h2>
+<h3 id="31-from-gaussian-elimination-to-lu-factorization">3.1 From Gaussian Elimination to LU Factorization</h3>
+<p>From</p>
+<div class="arithmatex">\[
+M_{n-1}\cdots M_1A=U,
+\]</div>
+<p>we obtain</p>
+<div class="arithmatex">\[
+A=M_1^{-1}M_2^{-1}\cdots M_{n-1}^{-1}U.
+\]</div>
+<p>Define</p>
+<div class="arithmatex">\[
+L=M_1^{-1}M_2^{-1}\cdots M_{n-1}^{-1}.
+\]</div>
+<p>Then <span class="arithmatex">\(L\)</span> is unit lower triangular, and hence</p>
+<div class="arithmatex">\[
+A=LU.
+\]</div>
+<p>Moreover, the structure of the Gauss transformations gives</p>
+<div class="arithmatex">\[
+L=I+\sum_{k=1}^{n-1}\tau^{(k)}e_k^{\mathsf T}.
+\]</div>
+<p>Thus the strict lower triangular part of <span class="arithmatex">\(L\)</span> stores exactly the elimination multipliers, while <span class="arithmatex">\(U\)</span> stores the upper triangular result of elimination.</p>
+<h3 id="32-existence-and-uniqueness-of-the-lu-factorization">3.2 Existence and Uniqueness of the LU Factorization</h3>
+<p>Let <span class="arithmatex">\(A_k=A(1:k,1:k)\)</span> denote the <span class="arithmatex">\(k\)</span>th leading principal submatrix of <span class="arithmatex">\(A\)</span>.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.1 (LU Factorization)</p>
+<p>If</p>
+<div class="arithmatex">\[
+\det(A_k)\neq0,
+\qquad k=1,\ldots,n,
+\]</div>
+<p>then there exist unique matrices <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(U\)</span>, with <span class="arithmatex">\(L\)</span> unit lower triangular and <span class="arithmatex">\(U\)</span> upper triangular, such that</p>
+<div class="arithmatex">\[
+A=LU.
+\]</div>
+<p>Moreover,</p>
+<div class="arithmatex">\[
+\det(A)=\prod_{i=1}^n u_{ii}.
 \]</div>
 </div>
-<p>如果一个集合族 <span class="arithmatex">\(\mathcal{B}\)</span> 满足了上述两个条件，那么由它所生成的拓扑 <span class="arithmatex">\(\tau\)</span> 就精确地包含了由 <span class="arithmatex">\(\mathcal{B}\)</span> 中元素的任意并集所构成的所有子集。</p>
+<details class="proof">
+<summary>Proof of Theorem 3.1 (click to expand)</summary>
+<p>We use induction on the order of the matrix. The result is immediate for <span class="arithmatex">\(n=1\)</span>. Assume it holds for matrices of order <span class="arithmatex">\(n-1\)</span>, and partition <span class="arithmatex">\(A\)</span> as</p>
+<div class="arithmatex">\[
+A=
+\begin{bmatrix}
+A_1 &amp; v\\
+w^{\mathsf T} &amp; \alpha
+\end{bmatrix}.
+\]</div>
+<p>By assumption, all leading principal minors of <span class="arithmatex">\(A_1\)</span> are nonzero, so there is a unique factorization</p>
+<div class="arithmatex">\[
+A_1=L_1U_1.
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+A=
+\begin{bmatrix}
+L_1 &amp; 0\\
+w^{\mathsf T}U_1^{-1} &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+U_1 &amp; L_1^{-1}v\\
+0 &amp; \alpha-w^{\mathsf T}A_1^{-1}v
+\end{bmatrix}.
+\]</div>
+<p>This proves existence.</p>
+<p>If also</p>
+<div class="arithmatex">\[
+A=L_1U_1=L_2U_2,
+\]</div>
+<p>then</p>
+<div class="arithmatex">\[
+L_2^{-1}L_1=U_2U_1^{-1}.
+\]</div>
+<p>The left-hand side is unit lower triangular, whereas the right-hand side is upper triangular. They can be equal only if both are the identity. Therefore <span class="arithmatex">\(L_1=L_2\)</span> and <span class="arithmatex">\(U_1=U_2\)</span>, proving uniqueness.</p>
+<p>Finally, since <span class="arithmatex">\(\det(L)=1\)</span>,</p>
+<div class="arithmatex">\[
+\det(A)=\det(L)\det(U)=\prod_{i=1}^n u_{ii}.
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Remark on the Condition</p>
+<p>Nonzero leading principal minors are a standard sufficient condition for the existence of an LU factorization without pivoting. Equivalently, this factorization can be completed whenever every pivot generated during elimination is nonzero.</p>
+</div>
+<h3 id="33-compact-storage-and-the-computational-algorithm">3.3 Compact Storage and the Computational Algorithm</h3>
+<p>Because every diagonal entry of <span class="arithmatex">\(L\)</span> equals <span class="arithmatex">\(1\)</span>, the strict lower triangular part of <span class="arithmatex">\(L\)</span> and the upper triangular part of <span class="arithmatex">\(U\)</span> can be stored together in the space originally occupied by <span class="arithmatex">\(A\)</span>:</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+u_{11} &amp; u_{12} &amp; \cdots &amp; u_{1n}\\
+l_{21} &amp; u_{22} &amp; \cdots &amp; u_{2n}\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+l_{n1} &amp; l_{n2} &amp; \cdots &amp; u_{nn}
+\end{bmatrix}.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Algorithm 3.2 (In-Place LU Factorization)</p>
+<p>For <span class="arithmatex">\(k=1,\ldots,n-1\)</span>:</p>
+<p>First compute</p>
+<div class="arithmatex">\[
+a_{k+1:n,k}\leftarrow
+\frac{a_{k+1:n,k}}{a_{kk}},
+\]</div>
+<p>and then perform the rank-one update</p>
+<div class="arithmatex">\[
+A_{k+1:n,k+1:n}\leftarrow
+A_{k+1:n,k+1:n}
+-a_{k+1:n,k}a_{k,k+1:n}.
+\]</div>
+<p>At termination, the strict lower triangular part stores the multipliers of <span class="arithmatex">\(L\)</span>, and the upper triangular part stores <span class="arithmatex">\(U\)</span>.</p>
+</div>
+<h3 id="34-solving-linear-systems-with-lu">3.4 Solving Linear Systems with LU</h3>
+<p>Once <span class="arithmatex">\(A=LU\)</span> has been computed, the original system is equivalent to</p>
+<div class="arithmatex">\[
+LUx=b.
+\]</div>
+<p>Introducing the intermediate variable <span class="arithmatex">\(y=Ux\)</span>, first solve by forward substitution</p>
+<div class="arithmatex">\[
+Ly=b,
+\]</div>
+<p>and then solve by backward substitution</p>
+<div class="arithmatex">\[
+Ux=y.
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Multiple Right-Hand Sides</p>
+<p>The LU factorization is computed only once at a cost of <span class="arithmatex">\(O(n^3)\)</span>. Each additional right-hand side then requires only two triangular solves, with cost <span class="arithmatex">\(O(n^2)\)</span>.</p>
+</div>
+<h3 id="35-the-ldmmathsf-t-factorization">3.5 The <span class="arithmatex">\(LDM^{\mathsf T}\)</span> Factorization</h3>
+<p>If <span class="arithmatex">\(A=LU\)</span> and every diagonal entry of <span class="arithmatex">\(U\)</span> is nonzero, define</p>
+<div class="arithmatex">\[
+D=\operatorname{diag}(u_{11},\ldots,u_{nn}),
+\qquad
+M^{\mathsf T}=D^{-1}U.
+\]</div>
+<p>Then <span class="arithmatex">\(M\)</span> is unit lower triangular and</p>
+<div class="arithmatex">\[
+A=LDM^{\mathsf T}.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Corollary 3.3 (The <span class="arithmatex">\(LDM^{\mathsf T}\)</span> Factorization)</p>
+<p>Under the assumptions of Theorem 3.1, <span class="arithmatex">\(A\)</span> has a unique factorization</p>
+<div class="arithmatex">\[
+A=LDM^{\mathsf T},
+\]</div>
+<p>where <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(M\)</span> are unit lower triangular and <span class="arithmatex">\(D\)</span> is nonsingular and diagonal.</p>
+</div>
+<hr />
+<h2 id="4-rounding-errors-and-pivoting">4. Rounding Errors and Pivoting</h2>
+<h3 id="41-backward-error-of-lu-factorization">4.1 Backward Error of LU Factorization</h3>
+<p>Let <span class="arithmatex">\(\widehat{L}\)</span> and <span class="arithmatex">\(\widehat{U}\)</span> be the computed floating-point factors. Under the standard rounding model, we can write</p>
+<div class="arithmatex">\[
+\widehat{L}\widehat{U}=A+H,
+\]</div>
+<p>with the componentwise error bound</p>
+<div class="arithmatex">\[
+|H|\leq
+2(n-1)u
+\left(|A|+|\widehat{L}||\widehat{U}|\right)
++O(u^2).
+\]</div>
+<p>The solution <span class="arithmatex">\(\widehat{x}\)</span> obtained from <span class="arithmatex">\(\widehat{L}\)</span>, <span class="arithmatex">\(\widehat{U}\)</span>, and two triangular solves satisfies</p>
+<div class="arithmatex">\[
+(A+E)\widehat{x}=b,
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+|E|\leq
+nu\left(2|A|+4|\widehat{L}||\widehat{U}|\right)
++O(u^2).
+\]</div>
+<div class="admonition warning">
+<p class="admonition-title">The Danger of a Small Pivot</p>
+<p>The error bound depends on <span class="arithmatex">\(|\widehat{L}||\widehat{U}|\)</span>. If a pivot is very small, the elimination multipliers may become large, causing substantial element growth in <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(U\)</span> and amplifying rounding errors.</p>
+</div>
+<p>For example, for</p>
+<div class="arithmatex">\[
+A=
+\begin{bmatrix}
+0.001 &amp; 1\\
+1 &amp; 0
+\end{bmatrix},
+\]</div>
+<p>elimination without a row interchange gives</p>
+<div class="arithmatex">\[
+L=
+\begin{bmatrix}
+1 &amp; 0\\
+1000 &amp; 1
+\end{bmatrix},
+\qquad
+U=
+\begin{bmatrix}
+0.001 &amp; 1\\
+0 &amp; -1000
+\end{bmatrix}.
+\]</div>
+<p>Thus a nonzero but very small pivot can still cause numerical instability.</p>
+<h3 id="42-interchange-matrices">4.2 Interchange Matrices</h3>
+<p>The interchange matrix that swaps rows <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span> can be written as</p>
+<div class="arithmatex">\[
+P_{ij}
+=I-(e_i-e_j)(e_i-e_j)^{\mathsf T}.
+\]</div>
+<p>It satisfies</p>
+<div class="arithmatex">\[
+P_{ij}^{\mathsf T}=P_{ij}^{-1}=P_{ij},
+\qquad
+P_{ij}^2=I.
+\]</div>
+<p>Left multiplication by <span class="arithmatex">\(P_{ij}\)</span> is equivalent to interchanging rows <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span> of a matrix.</p>
+<h3 id="43-partial-pivoting">4.3 Partial Pivoting</h3>
+<p>At step <span class="arithmatex">\(k\)</span>, choose the entry with the largest absolute value among rows <span class="arithmatex">\(k\)</span> through <span class="arithmatex">\(n\)</span> of the current <span class="arithmatex">\(k\)</span>th column:</p>
+<div class="arithmatex">\[
+p_k=\operatorname*{arg\,max}_{k\leq i\leq n}
+|a_{ik}^{(k)}|.
+\]</div>
+<p>Then interchange rows <span class="arithmatex">\(k\)</span> and <span class="arithmatex">\(p_k\)</span> before performing elimination. Consequently, every multiplier satisfies</p>
+<div class="arithmatex">\[
+|l_{ik}|\leq1,
+\qquad i&gt;k.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Algorithm 4.1 (Gaussian Elimination with Partial Pivoting)</p>
+<p>For <span class="arithmatex">\(k=1,\ldots,n-1\)</span>:</p>
+<p>Choose</p>
+<div class="arithmatex">\[
+p_k=\operatorname*{arg\,max}_{k\leq i\leq n}|a_{ik}|;
+\]</div>
+<p>interchange rows <span class="arithmatex">\(k\)</span> and <span class="arithmatex">\(p_k\)</span>;</p>
+<p>compute the multipliers and update the Schur complement:</p>
+<div class="arithmatex">\[
+l_{ik}=\frac{a_{ik}}{a_{kk}},
+\qquad
+a_{ij}\leftarrow a_{ij}-l_{ik}a_{kj}.
+\]</div>
+</div>
+<p>The product of all row interchanges forms a permutation matrix <span class="arithmatex">\(P\)</span>, and the final factorization is</p>
+<div class="arithmatex">\[
+PA=LU.
+\]</div>
+<p>To solve <span class="arithmatex">\(Ax=b\)</span>, solve successively</p>
+<div class="arithmatex">\[
+Ly=Pb,
+\qquad
+Ux=y.
+\]</div>
+<h3 id="44-complexity-and-stability">4.4 Complexity and Stability</h3>
+<p>Partial pivoting adds approximately <span class="arithmatex">\(O(n^2)\)</span> comparisons, while the main elimination work remains <span class="arithmatex">\(O(n^3)\)</span>. Since <span class="arithmatex">\(|l_{ik}|\leq1\)</span>, we have</p>
+<div class="arithmatex">\[
+\|L\|_{\infty}\leq n.
+\]</div>
+<p>This controls the growth of the elimination multipliers. Although <span class="arithmatex">\(U\)</span> can still exhibit large element growth for specially constructed extreme examples, the method is usually stable in practice and is therefore the standard method for solving general dense linear systems.</p>
+<div class="admonition info">
+<p class="admonition-title">Complete Pivoting</p>
+<p>Complete pivoting selects the entry of largest absolute value in the entire remaining submatrix and interchanges both the corresponding rows and columns. It provides stronger growth control, but the search requires <span class="arithmatex">\(O(n^3)\)</span> comparisons, so partial pivoting is usually preferred in practice.</p>
+</div>
+<hr />
+<h2 id="5-chapter-summary">5. Chapter Summary</h2>
+<div class="admonition success">
+<p class="admonition-title">Key Conclusions</p>
+<ol>
+<li>
+<p>A triangular system can be solved by forward or backward substitution in <span class="arithmatex">\(O(n^2)\)</span> time.</p>
+</li>
+<li>
+<p>Gauss transformations express elimination as matrix multiplication, and the vectors in their inverses record exactly the elimination multipliers.</p>
+</li>
+<li>
+<p>If all elimination pivots are nonzero, then <span class="arithmatex">\(A=LU\)</span>; with the unit lower triangular normalization, this factorization is unique.</p>
+</li>
+<li>
+<p>LU factorization costs <span class="arithmatex">\(O(n^3)\)</span>, but each new right-hand side requires only <span class="arithmatex">\(O(n^2)\)</span> work in triangular solves.</p>
+</li>
+<li>
+<p>To avoid zero or excessively small pivots, practical computations usually use partial pivoting and obtain <span class="arithmatex">\(PA=LU\)</span>.</p>
+</li>
+</ol>
+</div>
 
 
 
@@ -5909,7 +6707,7 @@ x \in B_3 \subseteq B_1 \cap B_2
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  回到页面顶部
+  Back to top
 </button>
         
       </main>
@@ -5941,20 +6739,20 @@ x \in B_3 \subseteq B_1 \cap B_2
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../javascripts/security.js"></script>
+        <script src="../../../javascripts/security.js"></script>
       
         <script src="https://d3js.org/d3.v7.min.js"></script>
       
-        <script src="../../javascripts/starry_map.js"></script>
+        <script src="../../../javascripts/starry_map.js"></script>
       
     
   </body>
