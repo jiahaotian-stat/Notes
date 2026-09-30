@@ -147,6 +147,7 @@ plugins:
             "矩阵计算课程概览": "Matrix Computation Course Overview"
             "第一章：矩阵范数": "Ch 1: Matrix Norms"
             "第二章：奇异值分解": "Ch 2: Singular Value Decomposition"
+            "第三章：高斯消去与LU分解": "Ch 3: Gaussian Elimination and LU Decomposition"
             "🤖 统计学习": "🤖 Statistical Learning"
             "统计学习课程概览": "Statistical Learning Course Overview"
             "第一章：KNN": "Ch 1: K-Nearest Neighbors"
@@ -311,6 +312,7 @@ nav:
           - 📖 笔记:
               - 第一章：矩阵范数: zh/Matrix_Comp/1Matrix_norm.md
               - 第二章：奇异值分解: zh/Matrix_Comp/2SVD.md
+              - 第三章：高斯消去与LU分解: zh/Matrix_Comp/3GaussianEliminationAndLU.md
       - 🤖 统计学习:
           - 统计学习课程概览: zh/Statistical_Learning/0Intro.md
           - 📖 笔记:
