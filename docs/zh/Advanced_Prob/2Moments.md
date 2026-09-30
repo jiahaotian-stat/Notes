@@ -631,10 +631,10 @@ M_X^{(k)}(0)=EX^k.
     这是因为相应特征函数的乘积为
 
     \[
-    \exp\left{
+    \exp\left\{
     it\sum_{i=1}^n\mu_i
     -\frac{t^2}{2}\sum_{i=1}^n\sigma_i^2
-    \right},
+    \right\},
     \]
 
     它正是上述正态分布的特征函数。
