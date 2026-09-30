@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-29
+> 更新于: 2026-09-30
 
 ---
+### Byzantine-Robust Federated RAG via Aligned Calibration and Fixed-Membership Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-27
+- **链接**: [PDF](http://arxiv.org/abs/2609.33037v2)
+
+!!! note "AI 核心解读"
+
+    该论文将校准与查询两阶段中诚实节点集合相同这一事实形式化为可枚举的候选诚实子群约束，并据此构造评分函数：仅当存在某个规模合规的诚实子群在两阶段自洽评分下支持某答案时才保留该候选，从而在有限样本下证明所返回集合以预设概率覆盖正确答案，且该保证对 Byzantine 节点的任意报告均成立。作者进一步证明在相同信息下不存在能返回更小集合而不损失诚实节点支持答案的方法，确立了该构造的极小极大最优性，并给出随机失效情形下保证仅按超出声明上限的失效概率衰减的理论刻画。
+
+### Uncertainty Quantification of Next Generation Reservoir Computing with Applications to Memory-Driven Dynamical Systems 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-26
+- **链接**: [PDF](http://arxiv.org/abs/2609.32169v1)
+
+!!! note "AI 核心解读"
+
+    该论文在低维情形下推导出Bayesian ridge与conformal预测区间的渐近宽度分别由残差分布的不同统计量决定，从而证明二者是否一致取决于残差形状而非仅维度；在高维情形下进一步刻画了正则化在估计方差、收缩偏差与后验不确定性之间的权衡，并给出Bayesian区间宽于或窄于conformal区间的显式转变条件。作者还将上述统计推导推广至二次NGRC特征映射，并给出在时间相依预测窗口下迁移该分析的充分条件。
+
+
 ### Conformal Prediction and Conditional Coverage for Tabular Foundation Models 
 
 - [ ] **分类**: Conformal | **日期**: 2026-09-28

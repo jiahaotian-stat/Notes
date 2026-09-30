@@ -1282,5 +1282,17 @@
         "date": "2026-09-27",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2609.33037v2": {
+        "title": "Byzantine-Robust Federated RAG via Aligned Calibration and Fixed-Membership Conformal Prediction",
+        "date": "2026-09-27",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.32169v1": {
+        "title": "Uncertainty Quantification of Next Generation Reservoir Computing with Applications to Memory-Driven Dynamical Systems",
+        "date": "2026-09-26",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
