@@ -142,6 +142,7 @@ plugins:
             "第三章：完备性与UMVU": "Ch 3: Completeness and UMVU"
             "第四章：U统计量与信息下界": "Ch 4: U-Statistics and Information Lower Bounds"
             "第五章：容许性": "Ch 5: Admissibility"
+            "第六章：贝叶斯规则": "Ch 6: Bayes' Rule"
             "🔲 矩阵计算": "🔲 Matrix Computation"
             "矩阵计算课程概览": "Matrix Computation Course Overview"
             "第一章：矩阵范数": "Ch 1: Matrix Norms"
@@ -302,6 +303,7 @@ nav:
               - 第三章：完备性与UMVU: zh/Advanced_Stat/3completeness.md
               - 第四章：U统计量与信息下界: zh/Advanced_Stat/4Ustatistics.md
               - 第五章：容许性: zh/Advanced_Stat/5Admissibility.md
+              - 第六章：贝叶斯规则: zh/Advanced_Stat/6Bayes.md
           - 📝 习题:
               - Homework 1: zh/Advanced_Stat/sol_1.md
       - 🔲 矩阵计算:
