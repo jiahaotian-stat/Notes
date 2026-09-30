@@ -8,17 +8,17 @@
       
       
       
-        <link rel="canonical" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Prob/2Moments/">
+        <link rel="canonical" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/6Bayes/">
       
       
-        <link rel="prev" href="../1Random_var/">
+        <link rel="prev" href="../5Admissibility/">
       
       
-        <link rel="next" href="../3LimitTheorems/">
+        <link rel="next" href="../sol_1/">
       
       
         
-          <link rel="alternate" href="../../../Advanced_Prob/2Moments/" hreflang="zh">
+          <link rel="alternate" href="../../../Advanced_Stat/6Bayes/" hreflang="zh">
         
           <link rel="alternate" href="./" hreflang="en">
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Ch 2: Numerical Characteristics - Jiahao's Academic Space</title>
+        <title>Ch 6: Bayes' Rule - Jiahao's Academic Space</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-2-independence-numerical-characteristics-characteristic-functions-and-convergence-in-distribution" class="md-skip">
+        <a href="#chapter-6-bayes-rules-generalized-bayes-and-empirical-bayes" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ch 2: Numerical Characteristics
+              Ch 6: Bayes' Rule
             
           </span>
         </div>
@@ -173,7 +173,7 @@
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../../Advanced_Prob/2Moments/" hreflang="zh" class="md-select__link">
+            <a href="../../../Advanced_Stat/6Bayes/" hreflang="zh" class="md-select__link">
               中文
             </a>
           </li>
@@ -3400,8 +3400,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3417,11 +3415,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
@@ -3442,7 +3440,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3460,7 +3458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0Intro/" class="md-nav__link">
+      <a href="../../Advanced_Prob/0Intro/" class="md-nav__link">
         
   
   
@@ -3485,8 +3483,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3499,11 +3495,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
         
           
           <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
@@ -3524,7 +3520,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -3542,7 +3538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1Random_var/" class="md-nav__link">
+      <a href="../../Advanced_Prob/1Random_var/" class="md-nav__link">
         
   
   
@@ -3567,37 +3563,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ch 2: Numerical Characteristics
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/2Moments/" class="md-nav__link">
         
   
   
@@ -3613,436 +3582,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-independence-of-random-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Independence of Random Variables
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Independence of Random Variables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-independence-of-two-random-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1 Independence of Two Random Variables
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-independence-is-preserved-under-measurable-transformations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2 Independence Is Preserved under Measurable Transformations
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-independence-of-multiple-random-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3 Independence of Multiple Random Variables
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-numerical-characteristics-of-random-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Numerical Characteristics of Random Variables
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Numerical Characteristics of Random Variables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-measure-theoretic-definition-of-expectation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1 Measure-Theoretic Definition of Expectation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-from-simple-random-variables-to-general-random-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.2 From Simple Random Variables to General Random Variables
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-basic-properties-of-expectation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3 Basic Properties of Expectation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-law-of-the-unconscious-statistician" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4 Law of the Unconscious Statistician
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25-variance-covariance-and-moments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.5 Variance, Covariance, and Moments
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#26-chebyshevs-inequality" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.6 Chebyshev's Inequality
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#27-moments-of-common-distributions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.7 Moments of Common Distributions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-moment-generating-functions-and-characteristic-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Moment Generating Functions and Characteristic Functions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Moment Generating Functions and Characteristic Functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-moment-generating-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 Moment Generating Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-definition-of-the-characteristic-function" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 Definition of the Characteristic Function
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-characteristic-functions-of-common-distributions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 Characteristic Functions of Common Distributions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-basic-properties-of-characteristic-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.4 Basic Properties of Characteristic Functions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35-nonnegative-definiteness" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.5 Nonnegative Definiteness
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#36-derivatives-of-characteristic-functions-and-moments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.6 Derivatives of Characteristic Functions and Moments
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#37-sums-of-independent-random-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.7 Sums of Independent Random Variables
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-characteristic-functions-and-distributions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Characteristic Functions and Distributions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Characteristic Functions and Distributions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-uniqueness-theorem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Uniqueness Theorem
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-inversion-formula" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Inversion Formula
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-fourier-inversion-of-densities" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 Fourier Inversion of Densities
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-convergence-of-sequences-of-random-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Convergence of Sequences of Random Variables
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Convergence of Sequences of Random Variables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-convergence-in-probability" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.1 Convergence in Probability
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-convergence-in-distribution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.2 Convergence in Distribution
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#53-levy-continuity-theorem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5.3 Lévy Continuity Theorem
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-limit-theorems-for-sums-of-bernoulli-random-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Limit Theorems for Sums of Bernoulli Random Variables
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Limit Theorems for Sums of Bernoulli Random Variables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#61-bernoulli-weak-law-of-large-numbers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.1 Bernoulli Weak Law of Large Numbers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62-poisson-limit-theorem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.2 Poisson Limit Theorem
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#63-de-moivre-laplace-theorem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.3 De Moivre-Laplace Theorem
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-characteristic-function-proof-of-the-central-limit-theorem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Characteristic Function Proof of the Central Limit Theorem
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-summary-of-this-chapter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Summary of This Chapter
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4055,7 +3594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3LimitTheorems/" class="md-nav__link">
+      <a href="../../Advanced_Prob/3LimitTheorems/" class="md-nav__link">
         
   
   
@@ -4096,6 +3635,8 @@
                 
   
   
+    
+  
   
   
     
@@ -4111,11 +3652,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
@@ -4136,7 +3677,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4154,7 +3695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Advanced_Stat/0Intro/" class="md-nav__link">
+      <a href="../0Intro/" class="md-nav__link">
         
   
   
@@ -4179,8 +3720,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -4191,11 +3734,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_7_2" id="__nav_2_7_2_label" tabindex="0">
@@ -4216,7 +3759,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_7_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -4234,7 +3777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Advanced_Stat/1_Gaussian_Geometry/" class="md-nav__link">
+      <a href="../1_Gaussian_Geometry/" class="md-nav__link">
         
   
   
@@ -4262,7 +3805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Advanced_Stat/2Sufficiency/" class="md-nav__link">
+      <a href="../2Sufficiency/" class="md-nav__link">
         
   
   
@@ -4290,7 +3833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Advanced_Stat/3completeness/" class="md-nav__link">
+      <a href="../3completeness/" class="md-nav__link">
         
   
   
@@ -4318,7 +3861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Advanced_Stat/4Ustatistics/" class="md-nav__link">
+      <a href="../4Ustatistics/" class="md-nav__link">
         
   
   
@@ -4346,7 +3889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Advanced_Stat/5Admissibility/" class="md-nav__link">
+      <a href="../5Admissibility/" class="md-nav__link">
         
   
   
@@ -4371,10 +3914,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Advanced_Stat/6Bayes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Bayes' Rule
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -4390,6 +3960,553 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-from-frequentist-risk-to-bayes-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. From frequentist risk to Bayes risk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. From frequentist risk to Bayes risk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-rule-estimator-and-estimate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Rule, estimator, and estimate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-frequentist-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Frequentist risk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-introducing-a-prior-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Introducing a prior distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-bayes-risk-and-posterior-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Bayes risk and posterior risk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bayes-estimators-under-common-loss-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bayes estimators under common loss functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Bayes estimators under common loss functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-squared-error-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Squared-error loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-weighted-squared-error-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Weighted squared-error loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-absolute-error-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Absolute-error loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-01-loss-and-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 0–1 loss and MAP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conjugate-priors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Conjugate priors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-betabinomial-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Beta–Binomial model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-gammapoisson-model-optional-enrichment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Gamma–Poisson model (optional enrichment)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gammaexponential-model-comparing-three-estimation-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Gamma–Exponential model: comparing three estimation principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Gamma–Exponential model: comparing three estimation principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-plug-in-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Plug-in estimator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-minimum-risk-unbiased-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Minimum-risk unbiased estimator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-bayes-estimator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Bayes estimator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-normalnormal-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Normal–Normal model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-conjugate-priors-in-exponential-families-optional-enrichment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Conjugate priors in exponential families (optional enrichment)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-improper-priors-and-generalized-bayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Improper priors and generalized Bayes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Improper priors and generalized Bayes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-improper-prior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Improper prior
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-flat-prior-for-the-normal-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Flat prior for the normal mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-why-is-bar-x-not-proper-bayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Why is \(\bar X\) not proper Bayes?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-jeffreys-prior-and-reference-priors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Jeffreys prior and reference priors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Jeffreys prior and reference priors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-bernoulli-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Bernoulli parameter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-location-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Location family
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-scale-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Scale family
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-multivariate-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4 Multivariate parameter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-reference-priors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5 Reference priors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-map-and-regularization-optional-enrichment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. MAP and regularization (optional enrichment)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. MAP and regularization (optional enrichment)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-spike-and-slab-prior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Spike-and-slab prior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-empirical-bayes-learning-a-prior-from-an-ensemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Empirical Bayes: learning a prior from an ensemble
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Empirical Bayes: learning a prior from an ensemble">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-historical-data-eb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Historical-data EB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-compound-parallel-eb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Compound / parallel EB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-parametric-and-nonparametric-eb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 Parametric and nonparametric EB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-poisson-empirical-bayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 Poisson empirical Bayes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-why-does-bayes-enter-naturally-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Why does Bayes enter naturally here?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Why does Bayes enter naturally here?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-two-viewpoints-on-bayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Two viewpoints on Bayes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.1 Two viewpoints on Bayes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-theoretic-viewpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision-theoretic viewpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistical-inference-viewpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistical-inference viewpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-why-does-weighted-risk-become-posterior-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 Why does weighted risk become posterior risk?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-what-bayesian-methods-contribute-to-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. What Bayesian methods contribute to statistics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Chapter summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4462,7 +4579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Advanced_Stat/sol_1/" class="md-nav__link">
+      <a href="../sol_1/" class="md-nav__link">
         
   
   
@@ -6012,22 +6129,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-independence-of-random-variables" class="md-nav__link">
+  <a href="#1-from-frequentist-risk-to-bayes-risk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Independence of Random Variables
+        1. From frequentist risk to Bayes risk
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Independence of Random Variables">
+    <nav class="md-nav" aria-label="1. From frequentist risk to Bayes risk">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-independence-of-two-random-variables" class="md-nav__link">
+  <a href="#11-rule-estimator-and-estimate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1 Independence of Two Random Variables
+        1.1 Rule, estimator, and estimate
       
     </span>
   </a>
@@ -6035,10 +6152,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-independence-is-preserved-under-measurable-transformations" class="md-nav__link">
+  <a href="#12-frequentist-risk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2 Independence Is Preserved under Measurable Transformations
+        1.2 Frequentist risk
       
     </span>
   </a>
@@ -6046,10 +6163,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-independence-of-multiple-random-variables" class="md-nav__link">
+  <a href="#13-introducing-a-prior-distribution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3 Independence of Multiple Random Variables
+        1.3 Introducing a prior distribution
       
     </span>
   </a>
@@ -6062,22 +6179,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-numerical-characteristics-of-random-variables" class="md-nav__link">
+  <a href="#2-bayes-risk-and-posterior-risk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Numerical Characteristics of Random Variables
+        2. Bayes risk and posterior risk
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Numerical Characteristics of Random Variables">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bayes-estimators-under-common-loss-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Bayes estimators under common loss functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Bayes estimators under common loss functions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-measure-theoretic-definition-of-expectation" class="md-nav__link">
+  <a href="#31-squared-error-loss" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1 Measure-Theoretic Definition of Expectation
+        3.1 Squared-error loss
       
     </span>
   </a>
@@ -6085,10 +6213,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-from-simple-random-variables-to-general-random-variables" class="md-nav__link">
+  <a href="#32-weighted-squared-error-loss" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 From Simple Random Variables to General Random Variables
+        3.2 Weighted squared-error loss
       
     </span>
   </a>
@@ -6096,10 +6224,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-basic-properties-of-expectation" class="md-nav__link">
+  <a href="#33-absolute-error-loss" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3 Basic Properties of Expectation
+        3.3 Absolute-error loss
       
     </span>
   </a>
@@ -6107,43 +6235,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#24-law-of-the-unconscious-statistician" class="md-nav__link">
+  <a href="#34-01-loss-and-map" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4 Law of the Unconscious Statistician
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25-variance-covariance-and-moments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.5 Variance, Covariance, and Moments
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#26-chebyshevs-inequality" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.6 Chebyshev's Inequality
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#27-moments-of-common-distributions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.7 Moments of Common Distributions
+        3.4 0–1 loss and MAP
       
     </span>
   </a>
@@ -6156,22 +6251,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-moment-generating-functions-and-characteristic-functions" class="md-nav__link">
+  <a href="#4-conjugate-priors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Moment Generating Functions and Characteristic Functions
+        4. Conjugate priors
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Moment Generating Functions and Characteristic Functions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-betabinomial-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Beta–Binomial model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-gammapoisson-model-optional-enrichment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Gamma–Poisson model (optional enrichment)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gammaexponential-model-comparing-three-estimation-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Gamma–Exponential model: comparing three estimation principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Gamma–Exponential model: comparing three estimation principles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-moment-generating-function" class="md-nav__link">
+  <a href="#71-plug-in-estimator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 Moment Generating Function
+        7.1 Plug-in estimator
       
     </span>
   </a>
@@ -6179,10 +6307,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-definition-of-the-characteristic-function" class="md-nav__link">
+  <a href="#72-minimum-risk-unbiased-estimator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 Definition of the Characteristic Function
+        7.2 Minimum-risk unbiased estimator
       
     </span>
   </a>
@@ -6190,54 +6318,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-characteristic-functions-of-common-distributions" class="md-nav__link">
+  <a href="#73-bayes-estimator" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 Characteristic Functions of Common Distributions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-basic-properties-of-characteristic-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.4 Basic Properties of Characteristic Functions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35-nonnegative-definiteness" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.5 Nonnegative Definiteness
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#36-derivatives-of-characteristic-functions-and-moments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.6 Derivatives of Characteristic Functions and Moments
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#37-sums-of-independent-random-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.7 Sums of Independent Random Variables
+        7.3 Bayes estimator
       
     </span>
   </a>
@@ -6250,22 +6334,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-characteristic-functions-and-distributions" class="md-nav__link">
+  <a href="#8-normalnormal-model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Characteristic Functions and Distributions
+        8. Normal–Normal model
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Characteristic Functions and Distributions">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-conjugate-priors-in-exponential-families-optional-enrichment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Conjugate priors in exponential families (optional enrichment)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-improper-priors-and-generalized-bayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Improper priors and generalized Bayes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Improper priors and generalized Bayes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-uniqueness-theorem" class="md-nav__link">
+  <a href="#101-improper-prior" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 Uniqueness Theorem
+        10.1 Improper prior
       
     </span>
   </a>
@@ -6273,10 +6379,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-inversion-formula" class="md-nav__link">
+  <a href="#102-flat-prior-for-the-normal-mean" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 Inversion Formula
+        10.2 Flat prior for the normal mean
       
     </span>
   </a>
@@ -6284,10 +6390,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-fourier-inversion-of-densities" class="md-nav__link">
+  <a href="#103-why-is-bar-x-not-proper-bayes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3 Fourier Inversion of Densities
+        10.3 Why is \(\bar X\) not proper Bayes?
       
     </span>
   </a>
@@ -6300,22 +6406,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-convergence-of-sequences-of-random-variables" class="md-nav__link">
+  <a href="#11-jeffreys-prior-and-reference-priors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Convergence of Sequences of Random Variables
+        11. Jeffreys prior and reference priors
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Convergence of Sequences of Random Variables">
+    <nav class="md-nav" aria-label="11. Jeffreys prior and reference priors">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-convergence-in-probability" class="md-nav__link">
+  <a href="#111-bernoulli-parameter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1 Convergence in Probability
+        11.1 Bernoulli parameter
       
     </span>
   </a>
@@ -6323,10 +6429,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-convergence-in-distribution" class="md-nav__link">
+  <a href="#112-location-family" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2 Convergence in Distribution
+        11.2 Location family
       
     </span>
   </a>
@@ -6334,10 +6440,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#53-levy-continuity-theorem" class="md-nav__link">
+  <a href="#113-scale-family" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3 Lévy Continuity Theorem
+        11.3 Scale family
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-multivariate-parameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4 Multivariate parameter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-reference-priors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5 Reference priors
       
     </span>
   </a>
@@ -6350,44 +6478,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-limit-theorems-for-sums-of-bernoulli-random-variables" class="md-nav__link">
+  <a href="#12-map-and-regularization-optional-enrichment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Limit Theorems for Sums of Bernoulli Random Variables
+        12. MAP and regularization (optional enrichment)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. Limit Theorems for Sums of Bernoulli Random Variables">
+    <nav class="md-nav" aria-label="12. MAP and regularization (optional enrichment)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-bernoulli-weak-law-of-large-numbers" class="md-nav__link">
+  <a href="#121-spike-and-slab-prior" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1 Bernoulli Weak Law of Large Numbers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#62-poisson-limit-theorem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.2 Poisson Limit Theorem
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#63-de-moivre-laplace-theorem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.3 De Moivre-Laplace Theorem
+        12.1 Spike-and-slab prior
       
     </span>
   </a>
@@ -6400,10 +6506,138 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-characteristic-function-proof-of-the-central-limit-theorem" class="md-nav__link">
+  <a href="#13-empirical-bayes-learning-a-prior-from-an-ensemble" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Characteristic Function Proof of the Central Limit Theorem
+        13. Empirical Bayes: learning a prior from an ensemble
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Empirical Bayes: learning a prior from an ensemble">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-historical-data-eb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Historical-data EB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-compound-parallel-eb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Compound / parallel EB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-parametric-and-nonparametric-eb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 Parametric and nonparametric EB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-poisson-empirical-bayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 Poisson empirical Bayes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-why-does-bayes-enter-naturally-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Why does Bayes enter naturally here?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Why does Bayes enter naturally here?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-two-viewpoints-on-bayes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Two viewpoints on Bayes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.1 Two viewpoints on Bayes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-theoretic-viewpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision-theoretic viewpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistical-inference-viewpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistical-inference viewpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-why-does-weighted-risk-become-posterior-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 Why does weighted risk become posterior risk?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-what-bayesian-methods-contribute-to-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. What Bayesian methods contribute to statistics
       
     </span>
   </a>
@@ -6411,10 +6645,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-summary-of-this-chapter" class="md-nav__link">
+  <a href="#16-chapter-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. Summary of This Chapter
+        16. Chapter summary
       
     </span>
   </a>
@@ -6442,759 +6676,1375 @@
   
 
 
-<h1 id="chapter-2-independence-numerical-characteristics-characteristic-functions-and-convergence-in-distribution">Chapter 2: Independence, Numerical Characteristics, Characteristic Functions, and Convergence in Distribution</h1>
-<p>This chapter first discusses the independence of random variables and its preservation under measurable transformations, then introduces expectation, variance, moments, and Chebyshev's inequality. On this basis, we introduce moment generating functions and characteristic functions, and use characteristic functions to study sums of independent random variables and the uniqueness of distributions. Finally, we introduce convergence in probability, convergence in distribution, limit theorems for sums of Bernoulli random variables, and the central limit theorem.</p>
+<h1 id="chapter-6-bayes-rules-generalized-bayes-and-empirical-bayes">Chapter 6: Bayes Rules, Generalized Bayes, and Empirical Bayes</h1>
+<p>This chapter moves from frequentist risk to Bayesian decision theory. In the previous chapter, admissibility compared the entire risk function
+[
+\theta\longmapsto R(\theta,\delta),
+]
+but risk curves of two estimators often cross, so they cannot be uniformly ordered. Bayesian decision theory introduces a prior distribution on the parameter space, averages the risk function into a scalar Bayes risk, and turns the global optimization problem into pointwise minimization of posterior expected loss.</p>
+<p>We will study Bayes risk and posterior risk, Bayes estimators under common loss functions, conjugate priors, generalized Bayes procedures, Jeffreys priors, MAP and regularization, and the basic ideas of empirical Bayes.</p>
 <hr />
-<h2 id="1-independence-of-random-variables">1. Independence of Random Variables</h2>
-<h3 id="11-independence-of-two-random-variables">1.1 Independence of Two Random Variables</h3>
-<p>Let <span class="arithmatex">\(X,Y\)</span> be random variables on the probability space <span class="arithmatex">\((\Omega,\mathcal{A},P)\)</span>, with joint distribution function</p>
+<h2 id="1-from-frequentist-risk-to-bayes-risk">1. From frequentist risk to Bayes risk</h2>
+<h3 id="11-rule-estimator-and-estimate">1.1 Rule, estimator, and estimate</h3>
+<p>Let the sample space be <span class="arithmatex">\(\mathcal X\)</span> and the action space be <span class="arithmatex">\(\mathcal A\)</span>. A <strong>decision rule</strong> is a measurable map</p>
 <div class="arithmatex">\[
-F_{X,Y}(x,y)=P(X\leq x,Y\leq y).
+\delta:\mathcal X\to\mathcal A.
 \]</div>
-<div class="admonition info">
-<p class="admonition-title">Definition 1.1 (Independence of Random Variables)</p>
-<p>If for any Borel sets <span class="arithmatex">\(A,B\in\mathcal{B}(\mathbb{R})\)</span>,</p>
+<p>When the action <span class="arithmatex">\(a\)</span> is intended to estimate some target <span class="arithmatex">\(g(\theta)\)</span>, the same object is also called an <strong>estimator</strong>.</p>
+<p>After observing a particular data value <span class="arithmatex">\(X=x\)</span>,</p>
 <div class="arithmatex">\[
-P(X\in A,Y\in B)
-=P(X\in A)P(Y\in B),
+\delta(x)
 \]</div>
-<p>then the random variables <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are called mutually independent.</p>
+<p>is the realized number or vector and is called an <strong>estimate</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Terminology</p>
+<ul>
+<li><strong>Bayes rule</strong>: a Bayes-optimal decision rule in a general decision problem;</li>
+<li><strong>Bayes estimator</strong>: a Bayes rule when the action is used to estimate a parameter or a function <span class="arithmatex">\(g(\theta)\)</span>;</li>
+<li><strong>Bayes estimate</strong>: the realized value <span class="arithmatex">\(\delta_\pi(x)\)</span> after observing <span class="arithmatex">\(x\)</span>.</li>
+</ul>
 </div>
-<p>It suffices to verify this equality on a family of sets that generates the Borel <span class="arithmatex">\(\sigma\)</span>-algebra. Therefore, <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are independent if and only if</p>
+<h3 id="12-frequentist-risk">1.2 Frequentist risk</h3>
+<p>Given a loss function <span class="arithmatex">\(L(\theta,a)\)</span>, the frequentist risk is</p>
 <div class="arithmatex">\[
-F_{X,Y}(x,y)=F_X(x)F_Y(y),
-\qquad \forall x,y\in\mathbb{R}.
+R(\theta,\delta)
+=
+E_\theta L\{\theta,\delta(X)\},
 \]</div>
-<p>For discrete random variables, if the possible values of <span class="arithmatex">\(X\)</span> are <span class="arithmatex">\(x_i\)</span> and the possible values of <span class="arithmatex">\(Y\)</span> are <span class="arithmatex">\(y_j\)</span>, then independence is equivalent to</p>
+<p>where <span class="arithmatex">\(\theta\)</span> is treated as a fixed unknown quantity and the expectation is taken only over repeated sampling</p>
 <div class="arithmatex">\[
-P(X=x_i,Y=y_j)
-=P(X=x_i)P(Y=y_j),
-\qquad \forall i,j.
+X\sim P_\theta.
 \]</div>
-<p>If the joint distribution has a density, then independence is equivalent to</p>
+<p>Thus frequentist theory compares the entire function</p>
 <div class="arithmatex">\[
-f_{X,Y}(x,y)=f_X(x)f_Y(y)
+\theta\mapsto R(\theta,\delta).
 \]</div>
-<p>for Lebesgue almost every <span class="arithmatex">\((x,y)\)</span>.</p>
-<h3 id="12-independence-is-preserved-under-measurable-transformations">1.2 Independence Is Preserved under Measurable Transformations</h3>
-<div class="admonition success">
-<p class="admonition-title">Proposition 1.2 (Functions of Independent Random Variables Are Still Independent)</p>
-<p>If <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are independent, and <span class="arithmatex">\(f,g:\mathbb{R}\to\mathbb{R}\)</span> are Borel measurable functions, then</p>
+<h3 id="13-introducing-a-prior-distribution">1.3 Introducing a prior distribution</h3>
+<p>Bayesian decision theory introduces a prior distribution <span class="arithmatex">\(\pi\)</span> on the parameter space <span class="arithmatex">\(\Theta\)</span>:</p>
 <div class="arithmatex">\[
-U=f(X),
+\theta\sim\pi,
 \qquad
-V=g(Y)
+X\mid\theta\sim P_\theta.
 \]</div>
-<p>are also mutually independent.</p>
-</div>
-<details class="proof">
-<summary>Proof of Proposition 1.2 (click to expand)</summary>
-<p>For any Borel sets <span class="arithmatex">\(A,B\)</span>,</p>
+<p>The joint distribution of <span class="arithmatex">\((\theta,X)\)</span> can therefore be written as</p>
 <div class="arithmatex">\[
-\begin{aligned}
-P(U\in A,V\in B)
-&amp;=P\bigl(X\in f^{-1}(A),Y\in g^{-1}(B)\bigr)\\
-&amp;=P\bigl(X\in f^{-1}(A)\bigr)
-  P\bigl(Y\in g^{-1}(B)\bigr)\\
-&amp;=P(U\in A)P(V\in B).
-\end{aligned}
+H(d\theta,dx)
+=
+\pi(d\theta)P_\theta(dx).
 \]</div>
-<p>Here <span class="arithmatex">\(f^{-1}(A)\)</span> and <span class="arithmatex">\(g^{-1}(B)\)</span> are both Borel sets. <span class="arithmatex">\(\square\)</span></p>
-</details>
-<h3 id="13-independence-of-multiple-random-variables">1.3 Independence of Multiple Random Variables</h3>
-<div class="admonition info">
-<p class="admonition-title">Definition 1.3 (Multiple Random Variables Are Mutually Independent)</p>
-<p>Random variables <span class="arithmatex">\(X_1,\ldots,X_m\)</span> are called mutually independent if for any Borel sets <span class="arithmatex">\(A_1,\ldots,A_m\)</span>,</p>
+<p>The marginal distribution of <span class="arithmatex">\(X\)</span> is</p>
 <div class="arithmatex">\[
-P(X_1\in A_1,\ldots,X_m\in A_m)
-=\prod_{j=1}^mP(X_j\in A_j).
+m_\pi(dx)
+=
+\int_\Theta P_\theta(dx)\,\pi(d\theta).
 \]</div>
-</div>
-<p>If the joint density exists, then mutual independence is equivalent to</p>
+<p>Whenever a regular conditional distribution exists, the posterior distribution is denoted by</p>
 <div class="arithmatex">\[
-f_{X_1,\ldots,X_m}(x_1,\ldots,x_m)
-=\prod_{j=1}^mf_{X_j}(x_j)
+\pi(d\theta\mid x).
 \]</div>
-<p>almost everywhere.</p>
-<div class="admonition success">
-<p class="admonition-title">Proposition 1.4 (Functions of Independent Subgroups)</p>
-<p>Let <span class="arithmatex">\(X_1,\ldots,X_m\)</span> be mutually independent. If</p>
+<p>The same joint law admits the factorization</p>
 <div class="arithmatex">\[
-I,J\subseteq\{1,\ldots,m\},
-\qquad I\cap J=\varnothing,
+\pi(d\theta)P_\theta(dx)
+=
+m_\pi(dx)\pi(d\theta\mid x).
 \]</div>
-<p>and <span class="arithmatex">\(f\)</span> and <span class="arithmatex">\(g\)</span> are Borel measurable functions of the corresponding dimensions, then</p>
+<p>If <span class="arithmatex">\(P_\theta\)</span> has density <span class="arithmatex">\(p(x\mid\theta)\)</span> with respect to <span class="arithmatex">\(\mu\)</span> and the prior has density <span class="arithmatex">\(\pi(\theta)\)</span> with respect to <span class="arithmatex">\(\nu\)</span>, then</p>
 <div class="arithmatex">\[
-f\bigl((X_i)_{i\in I}\bigr)
-\quad\text{and}\quad
-g\bigl((X_j)_{j\in J}\bigr)
-\]</div>
-<p>are mutually independent.</p>
-</div>
-<hr />
-<h2 id="2-numerical-characteristics-of-random-variables">2. Numerical Characteristics of Random Variables</h2>
-<h3 id="21-measure-theoretic-definition-of-expectation">2.1 Measure-Theoretic Definition of Expectation</h3>
-<p>Let the distribution of the random variable <span class="arithmatex">\(X\)</span> be <span class="arithmatex">\(P_X=P\circ X^{-1}\)</span>. The expectation can be written as an integral with respect to the distribution:</p>
-<div class="arithmatex">\[
-EX=\int_{\mathbb{R}}x\,P_X(dx)
-=\int_{\mathbb{R}}x\,dF_X(x).
-\]</div>
-<p>The last integral can be understood as a Lebesgue-Stieltjes integral. It unifies the discrete and continuous cases:</p>
-<div class="arithmatex">\[
-EX=\sum_i x_iP(X=x_i)
+m_\pi(x)
+=
+\int_\Theta
+p(x\mid\theta)\pi(\theta)\,\nu(d\theta),
 \]</div>
 <p>and</p>
 <div class="arithmatex">\[
-EX=\int_{-\infty}^{\infty}xf_X(x)\,dx.
+\pi(\theta\mid x)
+=
+\frac{p(x\mid\theta)\pi(\theta)}
+{m_\pi(x)}.
 \]</div>
-<p>Equivalently, one may also integrate directly on the original probability space:</p>
+<p>Since the normalizing constant <span class="arithmatex">\(m_\pi(x)\)</span> does not depend on the action <span class="arithmatex">\(a\)</span>, a Bayes rule may equivalently be found by minimizing</p>
 <div class="arithmatex">\[
-EX=\int_\Omega X(\omega)\,P(d\omega).
+\int_\Theta
+L(\theta,a)p(x\mid\theta)\pi(\theta)\,\nu(d\theta).
 \]</div>
-<h3 id="22-from-simple-random-variables-to-general-random-variables">2.2 From Simple Random Variables to General Random Variables</h3>
-<p>If <span class="arithmatex">\(A\in\mathcal{A}\)</span>, then the expectation of the indicator function <span class="arithmatex">\(\mathbf{1}_A\)</span> is</p>
-<div class="arithmatex">\[
-E\mathbf{1}_A=P(A).
-\]</div>
-<p>If <span class="arithmatex">\(X\)</span> is a simple random variable</p>
-<div class="arithmatex">\[
-X=\sum_{i=1}^na_i\mathbf{1}_{A_i},
-\]</div>
-<p>where <span class="arithmatex">\(A_1,\ldots,A_n\)</span> are pairwise disjoint, then define</p>
-<div class="arithmatex">\[
-EX=\sum_{i=1}^na_iP(A_i).
-\]</div>
-<p>For a nonnegative random variable <span class="arithmatex">\(X\geq0\)</span>, one can take a sequence of nonnegative simple random variables <span class="arithmatex">\(X_n\)</span> such that</p>
-<div class="arithmatex">\[
-0\leq X_n\uparrow X,
-\]</div>
-<p>and define</p>
-<div class="arithmatex">\[
-EX=\lim_{n\to\infty}EX_n.
-\]</div>
-<p>For a general real-valued random variable, define the positive and negative parts</p>
-<div class="arithmatex">\[
-X^+=\max\{X,0\},
-\qquad
-X^-=\max\{-X,0\},
-\]</div>
-<p>then</p>
-<div class="arithmatex">\[
-X=X^+-X^-,
-\qquad
-|X|=X^++X^-.
-\]</div>
-<p>When <span class="arithmatex">\(EX^+\)</span> and <span class="arithmatex">\(EX^-\)</span> are not both infinite, one can define</p>
-<div class="arithmatex">\[
-EX=EX^+-EX^-.
-\]</div>
-<p>In particular, <span class="arithmatex">\(X\)</span> is integrable if and only if</p>
-<div class="arithmatex">\[
-E|X|=EX^++EX^-&lt;\infty.
-\]</div>
-<p>In this case, <span class="arithmatex">\(EX\)</span> is a finite real number.</p>
-<h3 id="23-basic-properties-of-expectation">2.3 Basic Properties of Expectation</h3>
-<div class="admonition success">
-<p class="admonition-title">Proposition 2.1 (Basic Properties of Expectation)</p>
-<p>Assume the relevant expectations exist. Then:</p>
-<p>(i) If <span class="arithmatex">\(a\leq X\leq b\)</span>, then</p>
-<div class="arithmatex">\[
-a\leq EX\leq b.
-\]</div>
-<p>(ii) For constants <span class="arithmatex">\(a,b\)</span>,</p>
-<div class="arithmatex">\[
-E(aX+b)=aEX+b.
-\]</div>
-<p>(iii) If <span class="arithmatex">\(X,Y\)</span> are integrable, then</p>
-<div class="arithmatex">\[
-E(X+Y)=EX+EY.
-\]</div>
-<p>(iv) If <span class="arithmatex">\(X\leq Y\)</span> almost everywhere, then</p>
-<div class="arithmatex">\[
-EX\leq EY.
-\]</div>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Theorem 2.2 (Monotone Convergence Theorem)</p>
-<p>If <span class="arithmatex">\(X_n\geq0\)</span> and</p>
-<div class="arithmatex">\[
-X_n\uparrow X
-\quad\text{almost everywhere},
-\]</div>
-<p>then</p>
-<div class="arithmatex">\[
-EX_n\uparrow EX.
-\]</div>
-</div>
-<h3 id="24-law-of-the-unconscious-statistician">2.4 Law of the Unconscious Statistician</h3>
-<div class="admonition success">
-<p class="admonition-title">Theorem 2.3 (LOTUS)</p>
-<p>Let <span class="arithmatex">\(Y=g(X)\)</span>. If the expectation exists, then</p>
-<div class="arithmatex">\[
-E\{g(X)\}
-=\int_{\mathbb{R}}g(x)\,P_X(dx)
-=\int_{\mathbb{R}}g(x)\,dF_X(x).
-\]</div>
-<p>In the discrete case,</p>
-<div class="arithmatex">\[
-E\{g(X)\}
-=\sum_i g(x_i)P(X=x_i),
-\]</div>
-<p>and in the continuous case with a density,</p>
-<div class="arithmatex">\[
-E\{g(X)\}
-=\int_{-\infty}^{\infty}g(x)f_X(x)\,dx.
-\]</div>
-</div>
-<p>This formula does not require first finding the distribution of <span class="arithmatex">\(Y=g(X)\)</span>.</p>
-<h3 id="25-variance-covariance-and-moments">2.5 Variance, Covariance, and Moments</h3>
-<div class="admonition info">
-<p class="admonition-title">Definition 2.4 (Variance)</p>
-<p>If <span class="arithmatex">\(EX^2&lt;\infty\)</span>, then the variance of <span class="arithmatex">\(X\)</span> is defined as</p>
-<div class="arithmatex">\[
-\operatorname{Var}(X)
-=E(X-EX)^2
-=EX^2-(EX)^2.
-\]</div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Definition 2.5 (Moments and Central Moments)</p>
-<p>If the expectation exists, then <span class="arithmatex">\(EX^k\)</span> is called the <span class="arithmatex">\(k\)</span>-th raw moment of <span class="arithmatex">\(X\)</span>, and <span class="arithmatex">\(E(X-EX)^k\)</span> is called the <span class="arithmatex">\(k\)</span>-th central moment of <span class="arithmatex">\(X\)</span>.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Definition 2.6 (Covariance)</p>
-<p>If <span class="arithmatex">\(X,Y\)</span> are square integrable, then</p>
-<div class="arithmatex">\[
-\operatorname{Cov}(X,Y)
-=E\{(X-EX)(Y-EY)\}.
-\]</div>
-</div>
-<p>By direct expansion, we obtain</p>
-<div class="arithmatex">\[
-\operatorname{Var}(X+Y)
-=\operatorname{Var}(X)
-+\operatorname{Var}(Y)
-+2\operatorname{Cov}(X,Y).
-\]</div>
-<p>If <span class="arithmatex">\(X_1,\ldots,X_n\)</span> are pairwise uncorrelated, then</p>
-<div class="arithmatex">\[
-\operatorname{Var}\left(\sum_{i=1}^nX_i\right)
-=\sum_{i=1}^n\operatorname{Var}(X_i).
-\]</div>
-<p>In particular, mutually independent and square integrable random variables are pairwise uncorrelated, so the above identity holds.</p>
-<h3 id="26-chebyshevs-inequality">2.6 Chebyshev's Inequality</h3>
-<div class="admonition success">
-<p class="admonition-title">Theorem 2.7 (Chebyshev's Inequality)</p>
-<p>If <span class="arithmatex">\(EX^2&lt;\infty\)</span>, then for any <span class="arithmatex">\(\varepsilon&gt;0\)</span>,</p>
-<div class="arithmatex">\[
-P(|X-EX|\geq\varepsilon)
-\leq\frac{\operatorname{Var}(X)}{\varepsilon^2}.
-\]</div>
-</div>
-<details class="proof">
-<summary>Proof of Theorem 2.7 (click to expand)</summary>
-<p>On the event <span class="arithmatex">\(\{|X-EX|\geq\varepsilon\}\)</span>,</p>
-<div class="arithmatex">\[
-\mathbf{1}_{\{|X-EX|\geq\varepsilon\}}
-\leq\frac{|X-EX|^2}{\varepsilon^2}.
-\]</div>
-<p>Taking expectations of both sides gives</p>
-<div class="arithmatex">\[
-\begin{aligned}
-P(|X-EX|\geq\varepsilon)
-&amp;=E\mathbf{1}_{\{|X-EX|\geq\varepsilon\}}\\
-&amp;\leq\frac{E|X-EX|^2}{\varepsilon^2}\\
-&amp;=\frac{\operatorname{Var}(X)}{\varepsilon^2}.
-\end{aligned}
-\]</div>
-<p>This completes the proof. <span class="arithmatex">\(\square\)</span></p>
-</details>
-<h3 id="27-moments-of-common-distributions">2.7 Moments of Common Distributions</h3>
-<div class="admonition example">
-<p class="admonition-title">Example 2.8 (Cauchy Distribution)</p>
-<p>If <span class="arithmatex">\(X\)</span> follows the standard Cauchy distribution, then</p>
-<div class="arithmatex">\[
-f_X(x)=\frac{1}{\pi(1+x^2)}.
-\]</div>
-<p>Since <span class="arithmatex">\(E|X|=\infty\)</span>, <span class="arithmatex">\(EX\)</span> does not exist.</p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example 2.9 (Normal Distribution)</p>
-<p>If <span class="arithmatex">\(X\sim N(0,\sigma^2)\)</span>, then for <span class="arithmatex">\(k\geq0\)</span>,</p>
-<div class="arithmatex">\[
-EX^{2k+1}=0,
-\]</div>
-<div class="arithmatex">\[
-EX^{2k}=(2k-1)!!\,\sigma^{2k}.
-\]</div>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example 2.10 (Poisson Distribution)</p>
-<p>If <span class="arithmatex">\(X\sim\operatorname{Poisson}(\lambda)\)</span>, then the falling factorial moments satisfy</p>
-<div class="arithmatex">\[
-E\{X(X-1)\cdots(X-m+1)\}
-=\lambda^m.
-\]</div>
-</div>
 <hr />
-<h2 id="3-moment-generating-functions-and-characteristic-functions">3. Moment Generating Functions and Characteristic Functions</h2>
-<h3 id="31-moment-generating-function">3.1 Moment Generating Function</h3>
+<h2 id="2-bayes-risk-and-posterior-risk">2. Bayes risk and posterior risk</h2>
 <div class="admonition info">
-<p class="admonition-title">Definition 3.1 (Moment Generating Function)</p>
-<p>The moment generating function of a random variable <span class="arithmatex">\(X\)</span> is defined as</p>
+<p class="admonition-title">Definition 2.1 (Bayes risk)</p>
+<p>For a prior <span class="arithmatex">\(\pi\)</span>, the <strong>Bayes risk</strong>, or <strong>integrated risk</strong>, of a decision rule <span class="arithmatex">\(\delta\)</span> is</p>
 <div class="arithmatex">\[
-M_X(t)=Ee^{tX},
-\]</div>
-<p>where <span class="arithmatex">\(t\)</span> is taken over real numbers for which this expectation is finite.</p>
-</div>
-<p>If <span class="arithmatex">\(M_X(t)\)</span> is finite in some neighborhood of <span class="arithmatex">\(t=0\)</span>, then it uniquely determines the distribution of <span class="arithmatex">\(X\)</span> in that neighborhood, and under the corresponding differentiability conditions</p>
-<div class="arithmatex">\[
-M_X^{(k)}(0)=EX^k.
-\]</div>
-<div class="admonition warning">
-<p class="admonition-title">Moments Do Not Always Uniquely Determine a Distribution</p>
-<p>Merely knowing that all moments are equal generally does not guarantee that two random variables have the same distribution. If the moment generating function exists in a neighborhood of the origin, then the uniqueness of the moment generating function can be used to obtain uniqueness of the distribution.</p>
-</div>
-<h3 id="32-definition-of-the-characteristic-function">3.2 Definition of the Characteristic Function</h3>
-<div class="admonition info">
-<p class="admonition-title">Definition 3.2 (Characteristic Function)</p>
-<p>The characteristic function of a random variable <span class="arithmatex">\(X\)</span> is defined as</p>
-<div class="arithmatex">\[
-\varphi_X(t)=Ee^{itX},
-\qquad t\in\mathbb{R}.
+r(\pi,\delta)
+=
+\int_\Theta
+R(\theta,\delta)\,\pi(d\theta).
 \]</div>
 <p>Equivalently,</p>
 <div class="arithmatex">\[
-\varphi_X(t)
-=E\cos(tX)+iE\sin(tX)
-=\int_{\mathbb{R}}e^{itx}\,P_X(dx).
+r(\pi,\delta)
+=
+\int_\Theta
+\int_{\mathcal X}
+L\{\theta,\delta(x)\}
+P_\theta(dx)\pi(d\theta).
 \]</div>
+<p>A rule <span class="arithmatex">\(\delta_\pi\)</span> is called a <strong>Bayes rule</strong> with respect to <span class="arithmatex">\(\pi\)</span> if it minimizes <span class="arithmatex">\(r(\pi,\delta)\)</span> over all decision rules.</p>
 </div>
-<p>Unlike the moment generating function, the characteristic function exists for every real-valued random variable and every <span class="arithmatex">\(t\in\mathbb{R}\)</span>, because</p>
+<p>Define the <strong>posterior expected loss</strong></p>
 <div class="arithmatex">\[
-|e^{itX}|=1.
+C(a,x)
+=
+\int_\Theta
+L(\theta,a)\pi(d\theta\mid x).
 \]</div>
-<h3 id="33-characteristic-functions-of-common-distributions">3.3 Characteristic Functions of Common Distributions</h3>
-<div class="admonition example">
-<p class="admonition-title">Example 3.3 (Poisson Distribution)</p>
-<p>If <span class="arithmatex">\(X\sim\operatorname{Poisson}(\lambda)\)</span>, then</p>
-<div class="arithmatex">\[
-\varphi_X(t)
-=\exp\{\lambda(e^{it}-1)\}.
-\]</div>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example 3.4 (Normal Distribution)</p>
-<p>If <span class="arithmatex">\(X\sim N(\mu,\sigma^2)\)</span>, then</p>
-<div class="arithmatex">\[
-\varphi_X(t)
-=\exp\left(i\mu t-\frac{\sigma^2t^2}{2}\right).
-\]</div>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example 3.5 (Standard Cauchy Distribution)</p>
-<p>If <span class="arithmatex">\(X\)</span> follows the standard Cauchy distribution, then</p>
-<div class="arithmatex">\[
-\varphi_X(t)=e^{-|t|}.
-\]</div>
-</div>
-<h3 id="34-basic-properties-of-characteristic-functions">3.4 Basic Properties of Characteristic Functions</h3>
-<div class="admonition success">
-<p class="admonition-title">Proposition 3.6 (Basic Properties of Characteristic Functions)</p>
-<p>Any characteristic function satisfies:</p>
-<p>(i)</p>
-<div class="arithmatex">\[
-\varphi_X(0)=1.
-\]</div>
-<p>(ii)</p>
-<div class="arithmatex">\[
-|\varphi_X(t)|\leq1,
-\qquad \forall t\in\mathbb{R}.
-\]</div>
-<p>(iii)</p>
-<div class="arithmatex">\[
-\varphi_X(-t)=\overline{\varphi_X(t)}.
-\]</div>
-<p>(iv) <span class="arithmatex">\(\varphi_X\)</span> is uniformly continuous on <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
-</div>
-<details class="proof">
-<summary>Proof of Uniform Continuity (click to expand)</summary>
-<p>For any <span class="arithmatex">\(t,h\in\mathbb{R}\)</span>,</p>
+<p>Using the two factorizations of the joint distribution,</p>
 <div class="arithmatex">\[
 \begin{aligned}
-|\varphi_X(t+h)-\varphi_X(t)|
-&amp;=\left|E\left[e^{itX}(e^{ihX}-1)\right]\right|\\
-&amp;\leq E|e^{ihX}-1|.
+r(\pi,\delta)
+&amp;=
+\int_{\mathcal X}
+\int_\Theta
+L\{\theta,\delta(x)\}
+\pi(d\theta\mid x)
+m_\pi(dx)\\
+&amp;=
+\int_{\mathcal X}
+C\{\delta(x),x\}\,m_\pi(dx).
 \end{aligned}
 \]</div>
-<p>As <span class="arithmatex">\(h\to0\)</span>, <span class="arithmatex">\(|e^{ihX}-1|\to0\)</span> almost everywhere, and</p>
-<div class="arithmatex">\[
-|e^{ihX}-1|\leq2.
-\]</div>
-<p>By the dominated convergence theorem,</p>
-<div class="arithmatex">\[
-E|e^{ihX}-1|\to0.
-\]</div>
-<p>The right-hand side is independent of <span class="arithmatex">\(t\)</span>, so <span class="arithmatex">\(\varphi_X\)</span> is uniformly continuous. <span class="arithmatex">\(\square\)</span></p>
-</details>
-<h3 id="35-nonnegative-definiteness">3.5 Nonnegative Definiteness</h3>
+<p>Thus Bayes risk minimization can be performed separately for each value of <span class="arithmatex">\(x\)</span>.</p>
 <div class="admonition success">
-<p class="admonition-title">Proposition 3.7 (Bochner Nonnegative Definiteness)</p>
-<p>For any <span class="arithmatex">\(n\geq1\)</span>, complex numbers <span class="arithmatex">\(a_1,\ldots,a_n\)</span>, and real numbers <span class="arithmatex">\(t_1,\ldots,t_n\)</span>,</p>
+<p class="admonition-title">Theorem 2.2 (Posterior-risk characterization)</p>
+<p>Assume that at least one decision rule has finite Bayes risk. If, for <span class="arithmatex">\(m_\pi\)</span>-almost every <span class="arithmatex">\(x\)</span>,</p>
 <div class="arithmatex">\[
-\sum_{j=1}^n\sum_{k=1}^n
-a_j\overline{a_k}\,
-\varphi_X(t_j-t_k)
-\geq0.
+C\{\delta_\pi(x),x\}
+=
+\inf_{a\in\mathcal A}C(a,x),
 \]</div>
+<p>then <span class="arithmatex">\(\delta_\pi\)</span> is a Bayes rule.</p>
 </div>
 <details class="proof">
-<summary>Proof of Proposition 3.7 (click to expand)</summary>
-<p>By the definition of the characteristic function,</p>
+<summary>Proof idea for Theorem 2.2 (click to expand)</summary>
+<p>Since</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\sum_{j,k}a_j\overline{a_k}\varphi_X(t_j-t_k)
-&amp;=E\left(\sum_ja_je^{it_jX}\right)
-  \overline{\left(\sum_ka_ke^{it_kX}\right)}\\
-&amp;=E\left|\sum_{j=1}^na_je^{it_jX}\right|^2
-\geq0.
-\end{aligned}
+r(\pi,\delta)
+=
+\int_{\mathcal X}
+C\{\delta(x),x\}\,m_\pi(dx),
 \]</div>
-<p>This completes the proof. <span class="arithmatex">\(\square\)</span></p>
+<p>choosing, for each observed value <span class="arithmatex">\(x\)</span>, an action that minimizes <span class="arithmatex">\(C(a,x)\)</span> also minimizes the entire integral.</p>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{
+\text{minimize Bayes risk}
+\iff
+\text{minimize posterior expected loss pointwise}
+}.
+\]</div>
 </details>
-<h3 id="36-derivatives-of-characteristic-functions-and-moments">3.6 Derivatives of Characteristic Functions and Moments</h3>
-<div class="admonition success">
-<p class="admonition-title">Theorem 3.8 (Derivatives of Characteristic Functions)</p>
-<p>If <span class="arithmatex">\(E|X|^k&lt;\infty\)</span>, then <span class="arithmatex">\(\varphi_X\)</span> is at least <span class="arithmatex">\(k\)</span> times differentiable, and</p>
+<hr />
+<h2 id="3-bayes-estimators-under-common-loss-functions">3. Bayes estimators under common loss functions</h2>
+<p>Let the target be <span class="arithmatex">\(g(\theta)\)</span> and let the action satisfy <span class="arithmatex">\(a\in\mathbb R\)</span>.</p>
+<h3 id="31-squared-error-loss">3.1 Squared-error loss</h3>
+<p>Suppose</p>
 <div class="arithmatex">\[
-\varphi_X^{(j)}(t)
-=E\left[(iX)^je^{itX}\right],
-\qquad j=1,\ldots,k.
+L(\theta,a)
+=
+\{g(\theta)-a\}^2.
 \]</div>
-<p>In particular,</p>
+<p>The posterior risk is</p>
 <div class="arithmatex">\[
-\varphi_X^{(j)}(0)=i^jEX^j.
+C(a,x)
+=
+E\left[
+\{g(\theta)-a\}^2
+\mid X=x
+\right].
+\]</div>
+<p>Expanding,</p>
+<div class="arithmatex">\[
+C(a,x)
+=
+E\{g(\theta)^2\mid x\}
+-2aE\{g(\theta)\mid x\}
++a^2.
+\]</div>
+<p>Differentiating with respect to <span class="arithmatex">\(a\)</span> and setting the derivative equal to zero gives</p>
+<div class="arithmatex">\[
+a
+=
+E\{g(\theta)\mid X=x\}.
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Conclusion: squared-error loss</p>
+<p>Under squared-error loss, the Bayes estimator is the <strong>posterior mean</strong>:</p>
+<div class="arithmatex">\[
+\boxed{
+\delta_\pi(x)
+=
+E\{g(\theta)\mid X=x\}
+}.
 \]</div>
 </div>
-<p>Therefore, when the corresponding moments exist, the characteristic function has the expansion near the origin</p>
+<p>The minimum posterior risk is</p>
 <div class="arithmatex">\[
-\varphi_X(t)
-=\sum_{j=0}^k\frac{i^jEX^j}{j!}t^j+o(t^k).
+\inf_a C(a,x)
+=
+\operatorname{Var}\{g(\theta)\mid X=x\}.
 \]</div>
-<h3 id="37-sums-of-independent-random-variables">3.7 Sums of Independent Random Variables</h3>
-<div class="admonition success">
-<p class="admonition-title">Proposition 3.9 (Characteristic Function of a Sum of Independent Random Variables)</p>
-<p>If <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are independent, then</p>
+<h3 id="32-weighted-squared-error-loss">3.2 Weighted squared-error loss</h3>
+<p>Consider</p>
 <div class="arithmatex">\[
-\varphi_{X+Y}(t)
-=\varphi_X(t)\varphi_Y(t).
+L(\theta,a)
+=
+w(\theta)\{g(\theta)-a\}^2,
+\qquad
+w(\theta)\ge 0.
 \]</div>
-<p>More generally, if <span class="arithmatex">\(X_1,\ldots,X_n\)</span> are mutually independent, then</p>
+<p>Define</p>
 <div class="arithmatex">\[
-\varphi_{\sum_{j=1}^nX_j}(t)
-=\prod_{j=1}^n\varphi_{X_j}(t).
+A_j(x)
+=
+E\{w(\theta)g(\theta)^j\mid X=x\},
+\qquad
+j=0,1,2.
 \]</div>
-</div>
-<details class="proof">
-<summary>Proof of Proposition 3.9 (click to expand)</summary>
-<p>By independence,</p>
+<p>Then</p>
 <div class="arithmatex">\[
-\begin{aligned}
-\varphi_{X+Y}(t)
-&amp;=E e^{it(X+Y)}\\
-&amp;=E(e^{itX}e^{itY})\\
-&amp;=Ee^{itX}\,Ee^{itY}.
-\end{aligned}
+C(a,x)
+=
+A_2(x)-2aA_1(x)+a^2A_0(x).
 \]</div>
-<p>The case of multiple random variables follows by induction. <span class="arithmatex">\(\square\)</span></p>
-</details>
+<p>When</p>
+<div class="arithmatex">\[
+0&lt;A_0(x)&lt;\infty
+\]</div>
+<p>and the required moments are finite,</p>
+<div class="arithmatex">\[
+\boxed{
+\delta_\pi(x)
+=
+\frac{
+E\{w(\theta)g(\theta)\mid X=x\}
+}{
+E\{w(\theta)\mid X=x\}
+}
+}.
+\]</div>
+<p>Moreover,</p>
+<div class="arithmatex">\[
+C(a,x)
+=
+C\{\delta_\pi(x),x\}
++
+A_0(x)\{a-\delta_\pi(x)\}^2.
+\]</div>
 <div class="admonition example">
-<p class="admonition-title">Example 3.10 (Sum of Independent Normal Variables)</p>
+<p class="admonition-title">Example 3.1 (Relative squared error for a positive parameter)</p>
+<p>Suppose the posterior, in rate parameterization, is</p>
+<div class="arithmatex">\[
+\theta\mid x
+\sim
+\operatorname{Gamma}(k,r),
+\]</div>
+<p>and the loss is</p>
+<div class="arithmatex">\[
+L(\theta,a)
+=
+\left(\frac a\theta-1\right)^2
+=
+\theta^{-2}(a-\theta)^2.
+\]</div>
+<p>Hence</p>
+<div class="arithmatex">\[
+g(\theta)=\theta,
+\qquad
+w(\theta)=\theta^{-2}.
+\]</div>
+<p>For <span class="arithmatex">\(k&gt;2\)</span>,</p>
+<div class="arithmatex">\[
+\delta_\pi(x)
+=
+\frac{E(\theta^{-1}\mid x)}
+{E(\theta^{-2}\mid x)}
+=
+\frac{k-2}{r}.
+\]</div>
+<p>Under ordinary squared-error loss, however, the Bayes estimator is</p>
+<div class="arithmatex">\[
+E(\theta\mid x)
+=
+\frac{k}{r}.
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Important idea</p>
+<p><strong>The posterior distribution itself has not changed.</strong></p>
+<p>What changes is the loss function, and therefore the optimal action changes as well. A Bayesian decision is determined not only by the posterior distribution, but also by how the cost of error is defined.</p>
+</div>
+<h3 id="33-absolute-error-loss">3.3 Absolute-error loss</h3>
 <p>If</p>
 <div class="arithmatex">\[
-X_i\sim N(\mu_i,\sigma_i^2),
-\qquad i=1,\ldots,n,
+L(\theta,a)
+=
+|g(\theta)-a|,
 \]</div>
-<p>and <span class="arithmatex">\(X_1,\ldots,X_n\)</span> are mutually independent, then</p>
+<p>then any posterior median is a Bayes estimator; that is, <span class="arithmatex">\(a\)</span> satisfies</p>
 <div class="arithmatex">\[
-\sum_{i=1}^nX_i
-\sim N\left(\sum_{i=1}^n\mu_i,
-\sum_{i=1}^n\sigma_i^2\right).
+P\{g(\theta)\le a\mid X=x\}
+\ge \frac12,
 \]</div>
-<p>This is because the product of the corresponding characteristic functions is</p>
+<p>and</p>
 <div class="arithmatex">\[
-\exp\left\{
-it\sum_{i=1}^n\mu_i
--\frac{t^2}{2}\sum_{i=1}^n\sigma_i^2
-\right\},
+P\{g(\theta)\ge a\mid X=x\}
+\ge \frac12.
 \]</div>
-<p>which is exactly the characteristic function of the above normal distribution.</p>
+<p>Hence</p>
+<div class="arithmatex">\[
+\boxed{
+\text{absolute loss}
+\longrightarrow
+\text{posterior median}
+}.
+\]</div>
+<h3 id="34-01-loss-and-map">3.4 0–1 loss and MAP</h3>
+<p>For a discrete parameter, consider exact 0–1 loss</p>
+<div class="arithmatex">\[
+L(\theta,a)
+=
+\mathbf 1\{a\ne\theta\}.
+\]</div>
+<p>The posterior risk is</p>
+<div class="arithmatex">\[
+C(a,x)
+=
+P(\theta\ne a\mid X=x)
+=
+1-P(\theta=a\mid X=x).
+\]</div>
+<p>Thus the Bayes rule is the posterior mode:</p>
+<div class="arithmatex">\[
+\boxed{
+\delta_\pi(x)
+\in
+\arg\max_a
+P(\theta=a\mid X=x)
+}.
+\]</div>
+<p>For a continuous parameter,</p>
+<div class="arithmatex">\[
+P(\theta=a\mid X=x)=0
+\]</div>
+<p>typically holds, so exact 0–1 loss is not useful. A common alternative is interval 0–1 loss,</p>
+<div class="arithmatex">\[
+L(\theta,a)
+=
+\mathbf 1\{|g(\theta)-a|&gt;c\}.
+\]</div>
+<p>The optimal action is the center of a length-<span class="arithmatex">\(2c\)</span> interval having the largest posterior probability:</p>
+<div class="arithmatex">\[
+\delta_\pi(x)
+\in
+\arg\max_a
+P\{a-c\le g(\theta)\le a+c\mid X=x\}.
+\]</div>
+<p>As <span class="arithmatex">\(c\downarrow0\)</span>, this informally leads to the posterior mode, or MAP estimator, when a posterior density exists.</p>
+<div class="admonition note">
+<p class="admonition-title">Common losses and Bayes point estimators</p>
+<div class="arithmatex">\[
+\begin{array}{c|c}
+\text{Loss} &amp; \text{Bayes point estimator}\\
+\hline
+\text{Squared error} &amp; \text{Posterior mean}\\
+\text{Absolute error} &amp; \text{Posterior median}\\
+\text{0--1 / local 0--1} &amp; \text{Posterior mode / MAP}
+\end{array}
+\]</div>
 </div>
 <hr />
-<h2 id="4-characteristic-functions-and-distributions">4. Characteristic Functions and Distributions</h2>
-<h3 id="41-uniqueness-theorem">4.1 Uniqueness Theorem</h3>
-<div class="admonition success">
-<p class="admonition-title">Theorem 4.1 (Uniqueness of Characteristic Functions)</p>
-<p>The characteristic function uniquely determines the probability distribution. That is,</p>
+<h2 id="4-conjugate-priors">4. Conjugate priors</h2>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.1 (Conjugate family)</p>
+<p>For a sampling model <span class="arithmatex">\(p(x\mid\theta)\)</span>, a family of priors <span class="arithmatex">\(\mathcal F\)</span> is called <strong>conjugate</strong> if</p>
 <div class="arithmatex">\[
-X\overset d=Y
-\quad\Longleftrightarrow\quad
-\varphi_X(t)=\varphi_Y(t),
-\qquad \forall t\in\mathbb{R}.
+\pi\in\mathcal F
+\Longrightarrow
+\pi(\cdot\mid x)\in\mathcal F
 \]</div>
+<p>for every possible observation <span class="arithmatex">\(x\)</span>.</p>
 </div>
-<h3 id="42-inversion-formula">4.2 Inversion Formula</h3>
-<div class="admonition success">
-<p class="admonition-title">Theorem 4.2 (Lévy Inversion Formula)</p>
-<p>Let <span class="arithmatex">\(F\)</span> be the distribution function of <span class="arithmatex">\(X\)</span>, let <span class="arithmatex">\(x_1&lt;x_2\)</span>, and suppose <span class="arithmatex">\(x_1,x_2\)</span> are both continuity points of <span class="arithmatex">\(F\)</span>. Then</p>
+<p>The key advantage of conjugacy is <strong>algebraic closure</strong>: the prior and posterior have the same functional form, and only the hyperparameters are updated.</p>
+<hr />
+<h2 id="5-betabinomial-model">5. Beta–Binomial model</h2>
+<p>Let</p>
 <div class="arithmatex">\[
-F(x_2)-F(x_1)
-=\lim_{T\to\infty}\frac{1}{2\pi}
-\int_{-T}^T
-\frac{e^{-itx_1}-e^{-itx_2}}{it}
-\varphi_X(t)\,dt.
+X_1,\ldots,X_n
+\overset{\text{iid}}{\sim}
+\operatorname{Bernoulli}(p),
 \]</div>
-</div>
-<p>This formula shows that one can recover the probability mass of the distribution function between continuity points from the characteristic function, thereby obtaining the uniqueness theorem.</p>
-<div class="admonition note">
-<p class="admonition-title">Discontinuity Points of Distribution Functions</p>
-<p>The jump size of the distribution function at point <span class="arithmatex">\(x\)</span> is</p>
+<p>and define</p>
 <div class="arithmatex">\[
-F(x)-F(x-)=P(X=x).
+T=\sum_{i=1}^nX_i.
 \]</div>
-<p>Therefore, the discontinuity points of a distribution function are at most countable.</p>
-</div>
-<h3 id="43-fourier-inversion-of-densities">4.3 Fourier Inversion of Densities</h3>
-<p>Under suitable integrability conditions, if <span class="arithmatex">\(X\)</span> has density <span class="arithmatex">\(f_X\)</span>, then</p>
+<p>The likelihood satisfies</p>
 <div class="arithmatex">\[
-\varphi_X(t)
-=\int_{-\infty}^{\infty}e^{itx}f_X(x)\,dx,
+L(p;x)
+\propto
+p^T(1-p)^{n-T}.
 \]</div>
-<p>and by Fourier inversion one obtains</p>
+<p>Take a Beta prior</p>
 <div class="arithmatex">\[
-f_X(x)
-=\frac{1}{2\pi}
-\int_{-\infty}^{\infty}e^{-itx}\varphi_X(t)\,dt.
+p\sim\operatorname{Beta}(a,b),
 \]</div>
+<p>with density</p>
+<div class="arithmatex">\[
+\pi(p)
+=
+\frac{\Gamma(a+b)}
+{\Gamma(a)\Gamma(b)}
+p^{a-1}(1-p)^{b-1},
+\qquad
+0&lt;p&lt;1.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\pi(p\mid x)
+\propto
+p^{a+T-1}
+(1-p)^{b+n-T-1},
+\]</div>
+<p>so</p>
+<div class="arithmatex">\[
+\boxed{
+p\mid X
+\sim
+\operatorname{Beta}(a+T,b+n-T)
+}.
+\]</div>
+<p>Under squared-error loss,</p>
+<div class="arithmatex">\[
+\delta_\pi(X)
+=
+E(p\mid X)
+=
+\frac{a+T}{a+b+n}.
+\]</div>
+<p>This can be rewritten in shrinkage form:</p>
+<div class="arithmatex">\[
+\frac{a+T}{a+b+n}
+=
+\frac{n}{n+a+b}\bar X
++
+\frac{a+b}{n+a+b}
+\frac{a}{a+b}.
+\]</div>
+<p>Thus the posterior mean shrinks the sample proportion <span class="arithmatex">\(\bar X\)</span> toward the prior mean</p>
+<div class="arithmatex">\[
+\frac{a}{a+b},
+\]</div>
+<p>while</p>
+<div class="arithmatex">\[
+a+b
+\]</div>
+<p>acts as a prior strength.</p>
 <div class="admonition example">
-<p class="admonition-title">Example 4.3 (Symmetric Two-Point Distribution)</p>
+<p class="admonition-title">Example 5.1 (Uniform prior and Laplace smoothing)</p>
 <p>If</p>
 <div class="arithmatex">\[
-P(X=1)=P(X=-1)=\frac12,
+a=b=1,
 \]</div>
 <p>then</p>
 <div class="arithmatex">\[
-\varphi_X(t)
-=\frac12e^{it}+\frac12e^{-it}
-=\cos t.
+\delta_\pi(X)
+=
+\frac{T+1}{n+2}.
 \]</div>
+<p>This is Laplace smoothing. Even when <span class="arithmatex">\(T=0\)</span> or <span class="arithmatex">\(T=n\)</span>, the estimate is not exactly <span class="arithmatex">\(0\)</span> or <span class="arithmatex">\(1\)</span>.</p>
 </div>
 <hr />
-<h2 id="5-convergence-of-sequences-of-random-variables">5. Convergence of Sequences of Random Variables</h2>
-<h3 id="51-convergence-in-probability">5.1 Convergence in Probability</h3>
-<div class="admonition info">
-<p class="admonition-title">Definition 5.1 (Convergence in Probability)</p>
-<p>If for every <span class="arithmatex">\(\varepsilon&gt;0\)</span>,</p>
+<h2 id="6-gammapoisson-model-optional-enrichment">6. Gamma–Poisson model (optional enrichment)</h2>
+<p>Let</p>
 <div class="arithmatex">\[
-P(|X_n-X|&gt;\varepsilon)\to0,
-\]</div>
-<p>then <span class="arithmatex">\(X_n\)</span> is said to converge to <span class="arithmatex">\(X\)</span> in probability, denoted by</p>
-<div class="arithmatex">\[
-X_n\xrightarrow{P}X.
-\]</div>
-</div>
-<h3 id="52-convergence-in-distribution">5.2 Convergence in Distribution</h3>
-<div class="admonition info">
-<p class="admonition-title">Definition 5.2 (Convergence in Distribution)</p>
-<p>Let <span class="arithmatex">\(F_n\)</span> and <span class="arithmatex">\(F\)</span> be the distribution functions of <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span>, respectively. If for every continuity point <span class="arithmatex">\(x\)</span> of <span class="arithmatex">\(F\)</span>,</p>
-<div class="arithmatex">\[
-F_n(x)\to F(x),
-\]</div>
-<p>then <span class="arithmatex">\(X_n\)</span> is said to converge to <span class="arithmatex">\(X\)</span> in distribution, denoted by</p>
-<div class="arithmatex">\[
-X_n\xrightarrow{d}X.
-\]</div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Why Only Convergence at Continuity Points of the Limiting Distribution Is Required</p>
-<p>Let <span class="arithmatex">\(x_n=1/n\)</span>, and regard <span class="arithmatex">\(X_n\equiv x_n\)</span> and <span class="arithmatex">\(X\equiv0\)</span> as degenerate random variables. Clearly</p>
-<div class="arithmatex">\[
-X_n\to X
-\]</div>
-<p>holds pointwise, and hence <span class="arithmatex">\(X_n\xrightarrow{d}X\)</span>. However, at <span class="arithmatex">\(x=0\)</span>,</p>
-<div class="arithmatex">\[
-F_n(0)=0,
+X_1,\ldots,X_n
+\overset{\text{iid}}{\sim}
+\operatorname{Poisson}(\lambda),
 \qquad
-F(0)=1.
+T=\sum_{i=1}^nX_i.
 \]</div>
-<p>Therefore, the distribution functions need not converge at discontinuity points of the limiting distribution.</p>
-</div>
-<p>Convergence in probability implies convergence in distribution, but the converse generally does not hold.</p>
-<h3 id="53-levy-continuity-theorem">5.3 Lévy Continuity Theorem</h3>
-<div class="admonition success">
-<p class="admonition-title">Theorem 5.3 (Lévy Continuity Theorem)</p>
-<p>If the characteristic functions of <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(X\)</span> are <span class="arithmatex">\(\varphi_n\)</span> and <span class="arithmatex">\(\varphi\)</span>, respectively, then</p>
+<p>The likelihood satisfies</p>
 <div class="arithmatex">\[
-X_n\xrightarrow{d}X
-\quad\Longleftrightarrow\quad
-\varphi_n(t)\to\varphi(t),
-\qquad \forall t\in\mathbb{R}.
+L(\lambda;x)
+\propto
+e^{-n\lambda}\lambda^T.
 \]</div>
-</div>
-<p>More generally, if <span class="arithmatex">\(\varphi_n(t)\)</span> converges pointwise to a function <span class="arithmatex">\(\varphi(t)\)</span>, and <span class="arithmatex">\(\varphi\)</span> is continuous at <span class="arithmatex">\(0\)</span>, then <span class="arithmatex">\(\varphi\)</span> is the characteristic function of some probability distribution, and the corresponding distributions converge weakly to that distribution.</p>
-<hr />
-<h2 id="6-limit-theorems-for-sums-of-bernoulli-random-variables">6. Limit Theorems for Sums of Bernoulli Random Variables</h2>
-<p>Let event <span class="arithmatex">\(A\)</span> have probability <span class="arithmatex">\(p\)</span>, and let</p>
+<p>Use the Gamma prior in rate parameterization:</p>
 <div class="arithmatex">\[
-\xi_i(\omega)=
-\begin{cases}
-1,&amp;\omega_i\in A,\\
-0,&amp;\omega_i\notin A,
-\end{cases}
+\lambda
+\sim
+\operatorname{Gamma}(\alpha,\beta),
 \]</div>
-<p>where <span class="arithmatex">\(\xi_1,\ldots,\xi_n\)</span> are mutually independent, and set</p>
 <div class="arithmatex">\[
-S_n=\sum_{i=1}^n\xi_i.
+\pi(\lambda)
+=
+\frac{\beta^\alpha}{\Gamma(\alpha)}
+\lambda^{\alpha-1}e^{-\beta\lambda},
+\qquad
+\lambda&gt;0.
 \]</div>
 <p>Then</p>
 <div class="arithmatex">\[
-S_n\sim\operatorname{Binomial}(n,p),
+\pi(\lambda\mid x)
+\propto
+\lambda^{\alpha+T-1}
+e^{-(\beta+n)\lambda},
 \]</div>
-<p>that is,</p>
+<p>and therefore</p>
 <div class="arithmatex">\[
-P(S_n=k)=\binom nkp^k(1-p)^{n-k}.
+\boxed{
+\lambda\mid X
+\sim
+\operatorname{Gamma}(\alpha+T,\beta+n)
+}.
 \]</div>
-<h3 id="61-bernoulli-weak-law-of-large-numbers">6.1 Bernoulli Weak Law of Large Numbers</h3>
-<div class="admonition success">
-<p class="admonition-title">Theorem 6.1 (Bernoulli Weak Law of Large Numbers)</p>
-<p>For fixed <span class="arithmatex">\(0&lt;p&lt;1\)</span>,</p>
+<p>Under squared-error loss,</p>
 <div class="arithmatex">\[
-\frac{S_n}{n}\xrightarrow{P}p.
+\delta_\pi(X)
+=
+E(\lambda\mid X)
+=
+\frac{\alpha+T}{\beta+n}.
 \]</div>
-</div>
-<details class="proof">
-<summary>Proof of Theorem 6.1 (click to expand)</summary>
+<p>It may also be written as</p>
+<div class="arithmatex">\[
+\frac{\alpha+T}{\beta+n}
+=
+\frac{n}{\beta+n}
+\frac{T}{n}
++
+\frac{\beta}{\beta+n}
+\frac{\alpha}{\beta}.
+\]</div>
+<p>Hence it is a weighted average of the sample mean and the prior mean, with <span class="arithmatex">\(\beta\)</span> behaving like a prior sample size.</p>
+<hr />
+<h2 id="7-gammaexponential-model-comparing-three-estimation-principles">7. Gamma–Exponential model: comparing three estimation principles</h2>
+<p>Let <span class="arithmatex">\(n\ge2\)</span> and</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\text{iid}}{\sim}
+f(x\mid\theta)
+=
+\theta e^{-\theta x}\mathbf1\{x&gt;0\},
+\qquad
+\theta&gt;0.
+\]</div>
+<p>Define</p>
+<div class="arithmatex">\[
+T=\sum_{i=1}^nX_i.
+\]</div>
+<p>The likelihood is</p>
+<div class="arithmatex">\[
+L(\theta;x)
+\propto
+\theta^n e^{-\theta T}.
+\]</div>
+<p>Take the Gamma prior</p>
+<div class="arithmatex">\[
+\theta
+\sim
+\operatorname{Gamma}(\beta,\alpha),
+\]</div>
+<p>whose density is proportional to</p>
+<div class="arithmatex">\[
+\theta^{\beta-1}e^{-\alpha\theta}.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\boxed{
+\theta\mid X
+\sim
+\operatorname{Gamma}(n+\beta,\alpha+T)
+}.
+\]</div>
+<p>We wish to estimate the reliability probability that a new component survives beyond <span class="arithmatex">\(t_0\)</span>:</p>
+<div class="arithmatex">\[
+g(\theta)
+=
+P_\theta(X_{\mathrm{new}}&gt;t_0)
+=
+e^{-\theta t_0}.
+\]</div>
+<h3 id="71-plug-in-estimator">7.1 Plug-in estimator</h3>
+<p>The maximum likelihood estimator is</p>
+<div class="arithmatex">\[
+\widehat\theta_{\mathrm{MLE}}
+=
+\frac nT.
+\]</div>
+<p>By invariance of the MLE,</p>
+<div class="arithmatex">\[
+\boxed{
+\widehat g_{\mathrm{plug}}
+=
+e^{-nt_0/T}
+}.
+\]</div>
+<h3 id="72-minimum-risk-unbiased-estimator">7.2 Minimum-risk unbiased estimator</h3>
 <p>Because</p>
 <div class="arithmatex">\[
-E\left(\frac{S_n}{n}\right)=p,
-\qquad
-\operatorname{Var}\left(\frac{S_n}{n}\right)
-=\frac{p(1-p)}{n},
+\mathbf1\{X_1&gt;t_0\}
 \]</div>
-<p>by Chebyshev's inequality, for every <span class="arithmatex">\(\varepsilon&gt;0\)</span>,</p>
+<p>satisfies</p>
 <div class="arithmatex">\[
-P\left(\left|\frac{S_n}{n}-p\right|&gt;\varepsilon\right)
-\leq\frac{p(1-p)}{n\varepsilon^2}
-\to0.
+E_\theta\mathbf1\{X_1&gt;t_0\}
+=
+e^{-\theta t_0}
+=
+g(\theta),
 \]</div>
-<p>This completes the proof. <span class="arithmatex">\(\square\)</span></p>
-</details>
-<h3 id="62-poisson-limit-theorem">6.2 Poisson Limit Theorem</h3>
-<div class="admonition success">
-<p class="admonition-title">Theorem 6.2 (Poisson Limit Theorem)</p>
-<p>Let</p>
+<p>it is an unbiased estimator of <span class="arithmatex">\(g(\theta)\)</span>.</p>
+<p>Conditional on the complete sufficient statistic <span class="arithmatex">\(T\)</span>,</p>
 <div class="arithmatex">\[
-S_n\sim\operatorname{Binomial}(n,p_n),
-\qquad np_n\to\lambda\in(0,\infty).
-\]</div>
-<p>Then for every fixed nonnegative integer <span class="arithmatex">\(k\)</span>,</p>
-<div class="arithmatex">\[
-P(S_n=k)
-\to e^{-\lambda}\frac{\lambda^k}{k!}.
-\]</div>
-<p>Therefore</p>
-<div class="arithmatex">\[
-S_n\xrightarrow{d}\operatorname{Poisson}(\lambda).
-\]</div>
-</div>
-<h3 id="63-de-moivre-laplace-theorem">6.3 De Moivre-Laplace Theorem</h3>
-<p>Let <span class="arithmatex">\(q=1-p\)</span>.</p>
-<div class="admonition success">
-<p class="admonition-title">Theorem 6.3 (De Moivre-Laplace Central Limit Theorem)</p>
-<p>If <span class="arithmatex">\(S_n\sim\operatorname{Binomial}(n,p)\)</span>, where <span class="arithmatex">\(0&lt;p&lt;1\)</span> is fixed, then</p>
-<div class="arithmatex">\[
-\frac{S_n-np}{\sqrt{npq}}
-\xrightarrow{d}N(0,1).
-\]</div>
-<p>Equivalently, for every <span class="arithmatex">\(x\in\mathbb{R}\)</span>,</p>
-<div class="arithmatex">\[
-P\left(
-\frac{S_n-np}{\sqrt{npq}}\leq x
+\left(
+\frac{X_1}{T},
+\ldots,
+\frac{X_n}{T}
 \right)
-\to
-\Phi(x)
-=\frac{1}{\sqrt{2\pi}}
-\int_{-\infty}^xe^{-t^2/2}\,dt.
 \]</div>
+<p>is uniform on the simplex. Rao–Blackwellization therefore gives</p>
+<div class="arithmatex">\[
+\boxed{
+\widehat g_{\mathrm{MRU}}
+=
+E\{\mathbf1(X_1&gt;t_0)\mid T\}
+=
+\left(1-\frac{t_0}{T}\right)_+^{n-1}
+}.
+\]</div>
+<p>Under convex loss, this is the minimum-risk unbiased rule; in particular, under squared-error loss it is the UMVU estimator.</p>
+<h3 id="73-bayes-estimator">7.3 Bayes estimator</h3>
+<p>Under squared-error loss, the Bayes estimator is</p>
+<div class="arithmatex">\[
+E(e^{-\theta t_0}\mid X).
+\]</div>
+<p>Using the Laplace transform of the Gamma posterior,</p>
+<div class="arithmatex">\[
+\boxed{
+\delta_\pi(X)
+=
+\left(
+\frac{\alpha+T}
+{\alpha+T+t_0}
+\right)^{n+\beta}
+=
+\left(
+1+\frac{t_0}{\alpha+T}
+\right)^{-(n+\beta)}
+}.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">The three estimators solve different optimization problems</p>
+<ul>
+<li>Plug-in estimator: substitute <span class="arithmatex">\(\widehat\theta_{\mathrm{MLE}}\)</span> into the target function;</li>
+<li>MRU / UMVU estimator: optimize within the class of unbiased estimators;</li>
+<li>Bayes estimator: minimize Bayes risk under a specified prior and loss.</li>
+</ul>
+<p>There is no reason for them to coincide.</p>
 </div>
-<p>This theorem can be proved starting from the binomial probability mass function by using Stirling's formula</p>
-<div class="arithmatex">\[
-n!\sim\sqrt{2\pi n}\left(\frac ne\right)^n.
-\]</div>
 <hr />
-<h2 id="7-characteristic-function-proof-of-the-central-limit-theorem">7. Characteristic Function Proof of the Central Limit Theorem</h2>
-<div class="admonition success">
-<p class="admonition-title">Theorem 7.1 (Lindeberg-Lévy Central Limit Theorem)</p>
-<p>Let <span class="arithmatex">\(X_1,X_2,\ldots\)</span> be independent and identically distributed, and</p>
-<div class="arithmatex">\[
-EX_1=\mu,
-\qquad
-\operatorname{Var}(X_1)=\sigma^2\in(0,\infty).
-\]</div>
+<h2 id="8-normalnormal-model">8. Normal–Normal model</h2>
 <p>Let</p>
 <div class="arithmatex">\[
-S_n=\sum_{i=1}^nX_i.
+X_1,\ldots,X_n
+\overset{\text{iid}}{\sim}
+N(\theta,\sigma^2),
+\]</div>
+<p>where <span class="arithmatex">\(\sigma^2\)</span> is known, and take the prior</p>
+<div class="arithmatex">\[
+\theta
+\sim
+N(\mu,\tau^2).
+\]</div>
+<p>The likelihood depends on the data only through <span class="arithmatex">\(\bar X\)</span>. Completing the square gives</p>
+<div class="arithmatex">\[
+\theta\mid X
+\sim
+N(m_n,v_n),
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+v_n
+=
+\frac{1}
+{n/\sigma^2+1/\tau^2},
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+m_n
+=
+v_n
+\left(
+\frac{n\bar X}{\sigma^2}
++
+\frac{\mu}{\tau^2}
+\right).
+\]</div>
+<p>Equivalently,</p>
+<div class="arithmatex">\[
+m_n
+=
+\frac{n\sigma^{-2}}
+{n\sigma^{-2}+\tau^{-2}}
+\bar X
++
+\frac{\tau^{-2}}
+{n\sigma^{-2}+\tau^{-2}}
+\mu.
+\]</div>
+<p>Under squared-error loss,</p>
+<div class="arithmatex">\[
+\boxed{
+\delta_\pi(X)=m_n
+}.
+\]</div>
+<p>The posterior risk of this Bayes rule is</p>
+<div class="arithmatex">\[
+\operatorname{Var}(\theta\mid X)
+=
+v_n.
+\]</div>
+<p>In this conjugate normal model, <span class="arithmatex">\(v_n\)</span> does not depend on the realized data <span class="arithmatex">\(X\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Shrinkage interpretation</p>
+<p>The posterior mean is a <strong>precision-weighted average</strong> of the sample mean and the prior mean.</p>
+<p>The data precision is</p>
+<div class="arithmatex">\[
+\frac{n}{\sigma^2},
+\]</div>
+<p>while the prior precision is</p>
+<div class="arithmatex">\[
+\frac1{\tau^2}.
+\]</div>
+<p>As <span class="arithmatex">\(n\)</span> increases, the data receive more weight; as <span class="arithmatex">\(\tau^2\)</span> becomes small, the prior becomes more concentrated and receives more weight.</p>
+</div>
+<hr />
+<h2 id="9-conjugate-priors-in-exponential-families-optional-enrichment">9. Conjugate priors in exponential families (optional enrichment)</h2>
+<p>Consider the canonical exponential family</p>
+<div class="arithmatex">\[
+p_\eta(t)
+=
+\exp\{\eta^Tt-A(\eta)\}K(t),
+\qquad
+\eta\in\mathcal H.
+\]</div>
+<p>For i.i.d. data <span class="arithmatex">\(T_1,\ldots,T_n\)</span>, the likelihood is proportional to</p>
+<div class="arithmatex">\[
+\exp\left\{
+\eta^T\sum_{i=1}^nT_i
+-
+nA(\eta)
+\right\}.
+\]</div>
+<p>A conjugate prior may be written as</p>
+<div class="arithmatex">\[
+\pi_{n_0,t_0}(\eta)
+\propto
+\exp\{
+n_0t_0^T\eta-n_0A(\eta)
+\}.
+\]</div>
+<p>The posterior is</p>
+<div class="arithmatex">\[
+\pi(\eta\mid T_1,\ldots,T_n)
+\propto
+\exp\left\{
+\left(
+n_0t_0+\sum_{i=1}^nT_i
+\right)^T\eta
+-
+(n_0+n)A(\eta)
+\right\}.
+\]</div>
+<p>Hence the hyperparameters update according to</p>
+<div class="arithmatex">\[
+n_0
+\longmapsto
+n_0+n,
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+t_0
+\longmapsto
+\frac{
+n_0t_0+\sum_{i=1}^nT_i
+}{
+n_0+n
+}.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Pseudo-observation interpretation</p>
+<p>The quantity <span class="arithmatex">\(n_0\)</span> behaves like an effective prior sample size, while <span class="arithmatex">\(t_0\)</span> behaves like a prior mean sufficient statistic.</p>
+</div>
+<hr />
+<h2 id="10-improper-priors-and-generalized-bayes">10. Improper priors and generalized Bayes</h2>
+<h3 id="101-improper-prior">10.1 Improper prior</h3>
+<p>If</p>
+<div class="arithmatex">\[
+\int_\Theta\pi(d\theta)=\infty,
+\]</div>
+<p>then <span class="arithmatex">\(\pi\)</span> is called an <strong>improper prior</strong>.</p>
+<p>It is not a probability distribution, but it may still yield a proper posterior. If</p>
+<div class="arithmatex">\[
+m(x)
+=
+\int_\Theta
+p(x\mid\theta)\pi(d\theta)
+&lt;
+\infty,
+\]</div>
+<p>then the formal posterior</p>
+<div class="arithmatex">\[
+\pi(d\theta\mid x)
+=
+\frac{
+p(x\mid\theta)\pi(d\theta)
+}{
+m(x)
+}
+\]</div>
+<p>is a genuine probability distribution.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 10.1 (Generalized Bayes rule)</p>
+<p>A decision rule is called a <strong>generalized Bayes rule</strong> with respect to an improper prior if it minimizes posterior expected loss under the formal posterior generated by that prior.</p>
+</div>
+<h3 id="102-flat-prior-for-the-normal-mean">10.2 Flat prior for the normal mean</h3>
+<p>Let</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_n
+\overset{\text{iid}}{\sim}
+N(\theta,\sigma^2),
+\]</div>
+<p>with <span class="arithmatex">\(\sigma^2\)</span> known.</p>
+<p>Use the improper flat prior</p>
+<div class="arithmatex">\[
+\pi(\theta)\propto1.
 \]</div>
 <p>Then</p>
 <div class="arithmatex">\[
-\frac{S_n-n\mu}{\sigma\sqrt n}
-\xrightarrow{d}N(0,1).
+\theta\mid X
+\sim
+N\left(
+\bar X,
+\frac{\sigma^2}{n}
+\right).
 \]</div>
+<p>Therefore, under squared-error loss,</p>
+<div class="arithmatex">\[
+\boxed{
+\delta(X)=\bar X
+}
+\]</div>
+<p>is a generalized Bayes estimator.</p>
+<h3 id="103-why-is-bar-x-not-proper-bayes">10.3 Why is <span class="arithmatex">\(\bar X\)</span> not proper Bayes?</h3>
+<div class="admonition success">
+<p class="admonition-title">Proposition 10.2 (<span class="arithmatex">\(\bar X\)</span> is not proper Bayes)</p>
+<p>In the unrestricted normal location model, <span class="arithmatex">\(\bar X\)</span> cannot be the posterior mean under any proper prior on <span class="arithmatex">\(\mathbb R\)</span>, although it is generalized Bayes under Lebesgue measure.</p>
 </div>
 <details class="proof">
-<summary>Characteristic Function Proof (click to expand)</summary>
+<summary>Proof of Proposition 10.2 (click to expand)</summary>
 <p>Let</p>
 <div class="arithmatex">\[
-Y_i=\frac{X_i-\mu}{\sigma},
+s^2=\frac{\sigma^2}{n},
 \]</div>
-<p>then <span class="arithmatex">\(EY_i=0\)</span> and <span class="arithmatex">\(EY_i^2=1\)</span>. Denote the characteristic function of <span class="arithmatex">\(Y_i\)</span> by <span class="arithmatex">\(\varphi_Y\)</span>. From the second-order expansion near the origin,</p>
+<p>and suppose <span class="arithmatex">\(\pi\)</span> is a proper prior. The marginal density of <span class="arithmatex">\(\bar X\)</span> is</p>
 <div class="arithmatex">\[
-\varphi_Y(t)
-=1-\frac{t^2}{2}+o(t^2),
-\qquad t\to0.
+m_\pi(x)
+=
+\int
+\phi_s(x-\theta)\,\pi(d\theta),
 \]</div>
-<p>By independence, the characteristic function of the standardized sum is</p>
+<p>where <span class="arithmatex">\(\phi_s\)</span> is the normal density with variance <span class="arithmatex">\(s^2\)</span>.</p>
+<p>Differentiating with respect to <span class="arithmatex">\(x\)</span> gives Tweedie's identity:</p>
 <div class="arithmatex">\[
-\varphi_{n}(t)
-=\left[\varphi_Y\left(\frac{t}{\sqrt n}\right)\right]^n.
+E_\pi(\theta\mid\bar X=x)
+=
+x
++
+s^2
+\frac{m_\pi'(x)}{m_\pi(x)}.
+\]</div>
+<p>If</p>
+<div class="arithmatex">\[
+E_\pi(\theta\mid\bar X=x)=x
+\]</div>
+<p>for every <span class="arithmatex">\(x\)</span>, then necessarily</p>
+<div class="arithmatex">\[
+m_\pi'(x)=0
+\]</div>
+<p>for every <span class="arithmatex">\(x\)</span>.</p>
+<p>Thus <span class="arithmatex">\(m_\pi(x)\)</span> must be a positive constant on <span class="arithmatex">\(\mathbb R\)</span>. But a positive constant cannot integrate to <span class="arithmatex">\(1\)</span> over <span class="arithmatex">\(\mathbb R\)</span>.</p>
+<p>Therefore no proper prior can have posterior mean identically equal to <span class="arithmatex">\(x\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Proper Bayes and generalized Bayes are different</p>
+<p>The estimator</p>
+<div class="arithmatex">\[
+\bar X
+\]</div>
+<p>is generalized Bayes because a flat measure produces a proper posterior;</p>
+<p>but it is not proper Bayes because no genuine probability prior produces it as the posterior mean.</p>
+<p>Moreover, an improper prior generally does not define a finite prior-averaged Bayes risk, so being generalized Bayes does not mean minimizing a finite Bayes risk under some proper prior.</p>
+</div>
+<hr />
+<h2 id="11-jeffreys-prior-and-reference-priors">11. Jeffreys prior and reference priors</h2>
+<p>A so-called “non-informative prior” should not be interpreted as literally containing no information. A density that is flat in one parameterization will generally not remain flat after reparameterization.</p>
+<p>A common invariant default in one-dimensional problems is Jeffreys prior.</p>
+<div class="admonition info">
+<p class="admonition-title">Definition 11.1 (Jeffreys prior)</p>
+<p>If <span class="arithmatex">\(I(\theta)\)</span> is the Fisher information, define</p>
+<div class="arithmatex">\[
+\boxed{
+\pi_J(\theta)
+\propto
+\sqrt{I(\theta)}
+}.
+\]</div>
+</div>
+<p>Its main motivation is reparameterization invariance. If</p>
+<div class="arithmatex">\[
+\phi=h(\theta)
+\]</div>
+<p>is a smooth one-to-one transformation, then Jeffreys prior satisfies</p>
+<div class="arithmatex">\[
+\pi_J(\theta)d\theta
+=
+\pi_J(\phi)d\phi.
+\]</div>
+<h3 id="111-bernoulli-parameter">11.1 Bernoulli parameter</h3>
+<p>For <span class="arithmatex">\(n\)</span> Bernoulli observations,</p>
+<div class="arithmatex">\[
+I_n(p)
+=
+\frac{n}{p(1-p)}.
 \]</div>
 <p>Therefore</p>
 <div class="arithmatex">\[
+\pi_J(p)
+\propto
+\{p(1-p)\}^{-1/2}.
+\]</div>
+<p>This is exactly the</p>
+<div class="arithmatex">\[
+\operatorname{Beta}\left(\frac12,\frac12\right)
+\]</div>
+<p>prior.</p>
+<p>If</p>
+<div class="arithmatex">\[
+T=\sum_{i=1}^nX_i,
+\]</div>
+<p>then the posterior is</p>
+<div class="arithmatex">\[
+p\mid X
+\sim
+\operatorname{Beta}
+\left(
+T+\frac12,
+n-T+\frac12
+\right).
+\]</div>
+<h3 id="112-location-family">11.2 Location family</h3>
+<p>For</p>
+<div class="arithmatex">\[
+p(x\mid\theta)
+=
+f(x-\theta),
+\]</div>
+<p>the Fisher information is constant in <span class="arithmatex">\(\theta\)</span>, so</p>
+<div class="arithmatex">\[
+\boxed{
+\pi_J(\theta)\propto1
+}.
+\]</div>
+<h3 id="113-scale-family">11.3 Scale family</h3>
+<p>For</p>
+<div class="arithmatex">\[
+p(x\mid\sigma)
+=
+\frac1\sigma
+f\left(\frac x\sigma\right),
+\]</div>
+<p>the Fisher information is proportional to <span class="arithmatex">\(1/\sigma^2\)</span>, so</p>
+<div class="arithmatex">\[
+\boxed{
+\pi_J(\sigma)\propto\frac1\sigma
+}.
+\]</div>
+<p>This prior is usually improper but is invariant under scale transformations.</p>
+<h3 id="114-multivariate-parameter">11.4 Multivariate parameter</h3>
+<p>If</p>
+<div class="arithmatex">\[
+\theta\in\mathbb R^d,
+\]</div>
+<p>then Jeffreys prior takes the form</p>
+<div class="arithmatex">\[
+\pi_J(\theta)
+\propto
+\sqrt{\det I(\theta)},
+\]</div>
+<p>where <span class="arithmatex">\(I(\theta)\)</span> is the Fisher information matrix.</p>
+<h3 id="115-reference-priors">11.5 Reference priors</h3>
+<p>The motivation of reference priors is related to Jeffreys priors: one seeks a prior that asymptotically maximizes the amount of information gained from prior to posterior, commonly measured through Kullback–Leibler divergence.</p>
+<p>In regular one-parameter problems, the reference prior often agrees with Jeffreys prior.</p>
+<p>In multiparameter problems, especially with nuisance parameters, the resulting reference prior may depend on</p>
+<ul>
+<li>which component is the parameter of interest;</li>
+<li>the ordering used in the construction.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Required caution</p>
+<p>Invariance alone does not guarantee</p>
+<ul>
+<li>posterior propriety;</li>
+<li>good finite-sample risk;</li>
+<li>consistency in models with many nuisance parameters.</li>
+</ul>
+<p>In applications one should still check posterior propriety, prior sensitivity, and robustness.</p>
+</div>
+<hr />
+<h2 id="12-map-and-regularization-optional-enrichment">12. MAP and regularization (optional enrichment)</h2>
+<p>Consider the Gaussian linear model</p>
+<div class="arithmatex">\[
+y=A\beta+\sigma Z,
+\qquad
+Z\sim N(0,I_n).
+\]</div>
+<p>Suppose the prior density has the form</p>
+<div class="arithmatex">\[
+\pi(\beta)
+\propto
+\exp\{-\lambda P(\beta)\}.
+\]</div>
+<p>The log posterior satisfies</p>
+<div class="arithmatex">\[
+\log\pi(\beta\mid y)
+=
+-\frac1{2\sigma^2}
+\|y-A\beta\|^2
+-\lambda P(\beta)
++\text{constant}.
+\]</div>
+<p>Hence the MAP estimator is equivalent to minimizing</p>
+<div class="arithmatex">\[
+\boxed{
+\frac1{2\sigma^2}
+\|y-A\beta\|^2
++
+\lambda P(\beta)
+}.
+\]</div>
+<p>Therefore:</p>
+<ul>
+<li>
+<p>if
+  [
+  P(\beta)=\frac12|\beta|_2^2,
+  ]
+  we obtain ridge regression;</p>
+</li>
+<li>
+<p>if
+  [
+  P(\beta)=|\beta|_1,
+  ]
+  we obtain lasso-type soft thresholding;</p>
+</li>
+<li>
+<p>an <span class="arithmatex">\(\ell_0\)</span> penalty yields hard thresholding but is computationally harder.</p>
+</li>
+</ul>
+<h3 id="121-spike-and-slab-prior">12.1 Spike-and-slab prior</h3>
+<p>In a Gaussian sequence model,</p>
+<div class="arithmatex">\[
+X_i\mid\mu_i
+\sim
+N(\mu_i,1),
+\]</div>
+<p>one may use</p>
+<div class="arithmatex">\[
+\mu_i
+\sim
+(1-w)\delta_0+w\gamma,
+\]</div>
+<p>where <span class="arithmatex">\(\delta_0\)</span> is a point mass at zero and <span class="arithmatex">\(\gamma\)</span> is a continuous distribution.</p>
+<p>Such a spike-and-slab prior explicitly encodes sparsity and can produce shrinkage or thresholding through the posterior median or MAP.</p>
+<hr />
+<h2 id="13-empirical-bayes-learning-a-prior-from-an-ensemble">13. Empirical Bayes: learning a prior from an ensemble</h2>
+<p>In ordinary Bayesian analysis, the prior <span class="arithmatex">\(\nu\)</span> is specified before using the data for the current decision.</p>
+<p>In empirical Bayes (EB), an ensemble of related observations is used to estimate</p>
+<ul>
+<li>the prior distribution <span class="arithmatex">\(\nu\)</span>;</li>
+<li>its hyperparameters;</li>
+<li>or the marginal distribution required by the Bayes rule.</li>
+</ul>
+<p>The estimated object is then plugged into the oracle Bayes rule.</p>
+<p>Suppose</p>
+<div class="arithmatex">\[
+(\theta_i,X_i),
+\qquad
+i=1,\ldots,n,
+\]</div>
+<p>are i.i.d. from the hierarchical model</p>
+<div class="arithmatex">\[
+\theta_i\sim\nu,
+\qquad
+X_i\mid\theta_i\sim P_{\theta_i}.
+\]</div>
+<h3 id="131-historical-data-eb">13.1 Historical-data EB</h3>
+<p>Use historical observations</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_m
+\]</div>
+<p>to estimate <span class="arithmatex">\(\nu\)</span>, and then apply the fitted Bayes rule to a new observation <span class="arithmatex">\(X_{m+1}\)</span>.</p>
+<p>Conditional on the historical sample, this resembles an ordinary Bayes analysis using a fitted prior.</p>
+<h3 id="132-compound-parallel-eb">13.2 Compound / parallel EB</h3>
+<p>Observe many current units</p>
+<div class="arithmatex">\[
+X_1,\ldots,X_m,
+\]</div>
+<p>estimate the common mixing distribution from the entire ensemble, and then estimate all of</p>
+<div class="arithmatex">\[
+\theta_1,\ldots,\theta_m
+\]</div>
+<p>using that fitted distribution.</p>
+<p>This is the large-scale setting behind many modern shrinkage and multiple-testing methods.</p>
+<h3 id="133-parametric-and-nonparametric-eb">13.3 Parametric and nonparametric EB</h3>
+<p>Empirical Bayes may be</p>
+<ul>
+<li><strong>parametric EB</strong>: for example, assume a normal prior and estimate only its mean and variance;</li>
+<li><strong>nonparametric EB</strong>: estimate an unrestricted mixing distribution.</li>
+</ul>
+<p>An important idea is that estimating the entire prior <span class="arithmatex">\(\nu\)</span> may be unnecessary. If the oracle Bayes rule depends only on the marginal distribution <span class="arithmatex">\(f_\nu\)</span>, one may estimate <span class="arithmatex">\(f_\nu\)</span> directly.</p>
+<h3 id="134-poisson-empirical-bayes">13.4 Poisson empirical Bayes</h3>
+<p>Suppose</p>
+<div class="arithmatex">\[
+X\mid\theta
+\sim
+\operatorname{Poisson}(\theta),
+\qquad
+\theta\sim\nu.
+\]</div>
+<p>The marginal mass function is</p>
+<div class="arithmatex">\[
+f_\nu(x)
+=
+\int_0^\infty
+e^{-\theta}
+\frac{\theta^x}{x!}
+\nu(d\theta).
+\]</div>
+<p>The posterior mean is</p>
+<div class="arithmatex">\[
+\delta_\nu(x)
+=
+E(\theta\mid X=x).
+\]</div>
+<p>Since</p>
+<div class="arithmatex">\[
 \begin{aligned}
-\varphi_n(t)
-&amp;=\left[
-1-\frac{t^2}{2n}+o\left(\frac1n\right)
-\right]^n\\
-&amp;\to e^{-t^2/2}.
+(x+1)f_\nu(x+1)
+&amp;=
+(x+1)
+\int_0^\infty
+e^{-\theta}
+\frac{\theta^{x+1}}{(x+1)!}
+\nu(d\theta)\\
+&amp;=
+\int_0^\infty
+\theta
+e^{-\theta}
+\frac{\theta^x}{x!}
+\nu(d\theta),
 \end{aligned}
 \]</div>
-<p>The function <span class="arithmatex">\(e^{-t^2/2}\)</span> is the characteristic function of the standard normal distribution. By the Lévy continuity theorem,</p>
+<p>we obtain Robbins' identity:</p>
 <div class="arithmatex">\[
-\frac{S_n-n\mu}{\sigma\sqrt n}
-\xrightarrow{d}N(0,1).
+\boxed{
+\delta_\nu(x)
+=
+\frac{(x+1)f_\nu(x+1)}
+{f_\nu(x)}
+}.
 \]</div>
-<p>This completes the proof. <span class="arithmatex">\(\square\)</span></p>
-</details>
+<p>Thus empirical Bayes can estimate</p>
+<div class="arithmatex">\[
+f_\nu(x)
+\quad\text{and}\quad
+f_\nu(x+1)
+\]</div>
+<p>directly from a large ensemble and plug them into this ratio.</p>
+<div class="admonition note">
+<p class="admonition-title">What does empirical Bayes change?</p>
+<p>Because</p>
+<div class="arithmatex">\[
+\widehat\nu
+\]</div>
+<p>is itself data-dependent,</p>
+<div class="arithmatex">\[
+\delta_{\widehat\nu}
+\]</div>
+<p>is generally not a Bayes rule with respect to any fixed prior.</p>
+<p>Reusing the same data both to learn the prior and to estimate the current parameters can introduce</p>
+<ul>
+<li>hyperparameter uncertainty;</li>
+<li>overconfidence;</li>
+<li>additional risk-analysis issues.</li>
+</ul>
+<p>Possible responses include sample splitting, cross-fitting, explicit risk analysis, or full hierarchical Bayes.</p>
+</div>
+<p>The benefit is equally important: EB can learn the degree of pooling or shrinkage adaptively from the observed population.</p>
 <hr />
-<h2 id="8-summary-of-this-chapter">8. Summary of This Chapter</h2>
-<p>The main conclusions of this chapter are as follows:</p>
+<h2 id="14-why-does-bayes-enter-naturally-here">14. Why does Bayes enter naturally here?</h2>
+<p>The logic of the preceding lectures can be summarized as</p>
+<div class="arithmatex">\[
+\boxed{
+\text{UMVU compares only unbiased estimators}
+}
+\]</div>
+<div class="arithmatex">\[
+\Downarrow
+\]</div>
+<div class="arithmatex">\[
+\boxed{
+\text{Admissibility compares full risk functions}
+}
+\]</div>
+<div class="arithmatex">\[
+\Downarrow
+\]</div>
+<div class="arithmatex">\[
+\boxed{
+\text{risk curves of different procedures often cross}
+}
+\]</div>
+<div class="arithmatex">\[
+\Downarrow
+\]</div>
+<div class="arithmatex">\[
+\boxed{
+\text{weight the parameter space by a prior }\pi
+}
+\]</div>
+<div class="arithmatex">\[
+\Downarrow
+\]</div>
+<div class="arithmatex">\[
+\boxed{
+\text{minimize Bayes risk / posterior risk}
+}.
+\]</div>
+<p>Admissibility removes only rules that are uniformly dominated, but it usually does not identify a unique procedure among the many remaining admissible rules.</p>
+<p>A prior <span class="arithmatex">\(\pi\)</span> assigns weights to the parameter space and converts the function-valued comparison</p>
+<div class="arithmatex">\[
+\theta\mapsto R(\theta,\delta)
+\]</div>
+<p>into the scalar criterion</p>
+<div class="arithmatex">\[
+r(\pi,\delta)
+=
+\int_\Theta
+R(\theta,\delta)\pi(d\theta).
+\]</div>
+<h3 id="141-two-viewpoints-on-bayes">14.1 Two viewpoints on Bayes</h3>
+<h4 id="decision-theoretic-viewpoint">Decision-theoretic viewpoint</h4>
+<p>The prior need not initially be interpreted as a subjective belief. It may instead be regarded as a weighting distribution over the parameter space.</p>
+<p>From this viewpoint, Bayesian procedures</p>
+<ul>
+<li>turn a partial ordering of risk functions into scalar optimization;</li>
+<li>generate candidates for admissible and complete classes;</li>
+<li>provide lower bounds for minimax risk and connect to least-favorable priors;</li>
+<li>explain why shrinkage and regularization arise naturally.</li>
+</ul>
+<h4 id="statistical-inference-viewpoint">Statistical-inference viewpoint</h4>
+<p>The prior represents information available before the current experiment:</p>
+<div class="arithmatex">\[
+\theta\sim\pi,
+\qquad
+X\mid\theta\sim P_\theta.
+\]</div>
+<p>The likelihood supplies information from the current data, and Bayes' formula combines the two into the posterior</p>
+<div class="arithmatex">\[
+\pi(d\theta\mid x).
+\]</div>
+<p>The posterior may then be used for</p>
+<ul>
+<li>point estimation;</li>
+<li>uncertainty quantification;</li>
+<li>prediction;</li>
+<li>subsequent scientific decision making.</li>
+</ul>
+<h3 id="142-why-does-weighted-risk-become-posterior-risk">14.2 Why does weighted risk become posterior risk?</h3>
+<p>By the tower property,</p>
+<div class="arithmatex">\[
+\begin{aligned}
+r(\pi,\delta)
+&amp;=
+\int_\Theta
+R(\theta,\delta)\pi(d\theta)\\
+&amp;=
+E_{\theta,X}
+L\{\theta,\delta(X)\}\\
+&amp;=
+E_X
+\left[
+E\{L(\theta,\delta(X))\mid X\}
+\right].
+\end{aligned}
+\]</div>
+<p>Therefore,</p>
+<div class="arithmatex">\[
+\boxed{
+\text{weighted frequentist risk}
+\Longleftrightarrow
+\text{posterior expected loss}
+}.
+\]</div>
+<p>This is the bridge between the decision-theoretic and Bayesian-inference viewpoints.</p>
+<hr />
+<h2 id="15-what-bayesian-methods-contribute-to-statistics">15. What Bayesian methods contribute to statistics</h2>
+<p>Bayesian ideas play several distinct roles in statistics:</p>
 <ol>
-<li>The independence of random variables can be characterized by the product form of the joint distribution function, probability mass function, or joint density, and is preserved after applying measurable transformations separately.</li>
-<li>Expectation can be uniformly represented as a Lebesgue-Stieltjes integral with respect to the distribution; integrability is equivalent to <span class="arithmatex">\(E|X|&lt;\infty\)</span>.</li>
-<li>Variance, covariance, and moments characterize the numerical characteristics of random variables, and Chebyshev's inequality converts variance into an upper bound for tail probabilities.</li>
-<li>Characteristic functions always exist and uniquely determine the distribution; the characteristic function of a sum of independent random variables equals the product of their respective characteristic functions.</li>
-<li>The Lévy continuity theorem connects pointwise convergence of characteristic functions with convergence in distribution.</li>
-<li>The Bernoulli weak law of large numbers, the Poisson limit theorem, the De Moivre-Laplace theorem, and the Lindeberg-Lévy central limit theorem describe, respectively, the limiting behavior of frequency stabilization, rare events, and standardized sums.</li>
+<li><strong>Prior information</strong>: incorporate previous studies, expert knowledge, physical restrictions, or external data.</li>
+<li><strong>Regularization and pooling</strong>: priors naturally produce shrinkage and allow related parameters to share information.</li>
+<li><strong>Prediction and uncertainty</strong>: posterior and posterior-predictive distributions propagate parameter uncertainty.</li>
+<li><strong>Hierarchical and latent-variable models</strong>: random effects, mixtures, missing data, and latent states can be handled in a unified probability model.</li>
+<li><strong>Scientific decision making</strong>: the posterior may be combined with asymmetric medical, economic, or scientific losses.</li>
+<li><strong>Frequentist theory</strong>: Bayes and generalized-Bayes constructions are useful for proving admissibility, minimaxity, and complete-class results.</li>
+<li><strong>Empirical Bayes</strong>: an ensemble of related problems can be used to learn prior structure and adapt the amount of pooling.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Bayesian analysis is not automatically correct</p>
+<p>Conclusions may be sensitive to</p>
+<ul>
+<li>the prior;</li>
+<li>the likelihood;</li>
+<li>hierarchical modeling assumptions.</li>
+</ul>
+<p>Posterior propriety, prior sensitivity, calibration, and robustness should therefore be checked.</p>
+</div>
+<hr />
+<h2 id="16-chapter-summary">16. Chapter summary</h2>
+<p>The main conclusions of this chapter are:</p>
+<ol>
+<li>Bayes risk is the frequentist risk averaged over a prior distribution.</li>
+<li>A Bayes rule can be obtained by minimizing posterior expected loss pointwise.</li>
+<li>Squared-error, absolute-error, and 0–1 losses lead respectively to the posterior mean, median, and mode/MAP.</li>
+<li>Conjugate priors preserve functional form from prior to posterior and can be interpreted in terms of pseudo-observations.</li>
+<li>The Beta–Binomial, Gamma–Poisson, and Normal–Normal models all illustrate the shrinkage structure of posterior means.</li>
+<li>The Gamma–Exponential example clearly distinguishes plug-in, MRU/UMVU, and Bayes optimization principles.</li>
+<li>Improper priors can generate generalized Bayes rules but must not be confused with proper Bayes procedures.</li>
+<li>In the normal location model, <span class="arithmatex">\(\bar X\)</span> is generalized Bayes under a flat prior but is not Bayes under any proper prior.</li>
+<li>Jeffreys prior is constructed from Fisher information and is motivated primarily by invariance under reparameterization.</li>
+<li>MAP is closely connected to penalized optimization, and ridge, lasso, and sparse priors all admit Bayesian interpretations.</li>
+<li>Empirical Bayes learns a prior or marginal distribution from an ensemble of related observations and thereby adapts the amount of shrinkage.</li>
+<li>Bayesian decision theory is not a replacement for frequentist risk analysis; it is a natural extension when risk curves cannot be uniformly ordered.</li>
 </ol>
 
 

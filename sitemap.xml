@@ -78,6 +78,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/5Admissibility/"/>
     </url>
     <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/Advanced_Stat/6Bayes/</loc>
+        <lastmod>2026-09-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/6Bayes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/6Bayes/"/>
+    </url>
+    <url>
         <loc>https://jiahaotian-stat.github.io/Notes/Advanced_Stat/sol_1/</loc>
         <lastmod>2026-09-30</lastmod>
         <changefreq>daily</changefreq>
@@ -874,6 +881,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/5Admissibility/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/5Admissibility/"/>
+    </url>
+    <url>
+        <loc>https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/6Bayes/</loc>
+        <lastmod>2026-09-30</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/6Bayes/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://jiahaotian-stat.github.io/Notes/Advanced_Stat/6Bayes/"/>
     </url>
     <url>
         <loc>https://jiahaotian-stat.github.io/Notes/en/Advanced_Stat/sol_1/</loc>
