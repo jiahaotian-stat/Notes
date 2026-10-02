@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-09-30
+> 更新于: 2026-10-02
 
 ---
+### Adaptive Conformal Prediction for Image Regression Models with Application to an Inertial Confinement Fusion Emulator 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-30
+- **链接**: [PDF](http://arxiv.org/abs/2610.00535v1)
+
+!!! note "AI 核心解读"
+
+    提出基于最近邻的自适应保形预测框架ACPNN，利用高斯过程ARD核学习缩放距离度量以构造输入自适应的非一致性评分函数，从而在图像回归中实现局部自适应且计算低耗的不确定性量化。理论上在保持保形覆盖有效性的同时，该评分函数借助邻域信息使预测区间宽度随输入空间局部难度变化。
+
+### CHOIR: heterogeneity-aware conformal prediction for crash injury severity across driver safety strata 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-10
+- **链接**: [PDF](http://arxiv.org/abs/2609.11592v2)
+
+!!! note "AI 核心解读"
+
+    该论文将分组与加权保形预测同保形风险控制相耦合，构造了在预设安全分层内具有有限样本、分布无关覆盖保证的连续KABCO区间评分函数，并给出医学评估伤情与致命遗漏的敏感性界。其理论性质在于按层校准而非汇合阈值即可将所有模型-层组合的覆盖率约束至目标水平，从而以统计推导证明有效性由校准而非模型复杂度决定。
+
+
 ### Byzantine-Robust Federated RAG via Aligned Calibration and Fixed-Membership Conformal Prediction 
 
 - [ ] **分类**: Conformal | **日期**: 2026-09-27

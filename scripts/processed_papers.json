@@ -1294,5 +1294,17 @@
         "date": "2026-09-26",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.00535v1": {
+        "title": "Adaptive Conformal Prediction for Image Regression Models with Application to an Inertial Confinement Fusion Emulator",
+        "date": "2026-09-30",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.11592v2": {
+        "title": "CHOIR: heterogeneity-aware conformal prediction for crash injury severity across driver safety strata",
+        "date": "2026-09-10",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
