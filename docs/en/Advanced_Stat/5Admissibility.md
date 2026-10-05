@@ -417,7 +417,7 @@ Its risk is
 
 \[
 R(\theta,aX+\beta)
-=a^2\sigma^2+igl\{(a-1)\theta+\beta\bigr\}^2.
+=a^2\sigma^2+\bigl\{(a-1)\theta+\beta\bigr\}^2.
 \]
 
 For example, when $a=1$ and $\beta\neq0$, $X+\beta$ is dominated by $X$.

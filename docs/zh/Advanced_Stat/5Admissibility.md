@@ -417,7 +417,7 @@ X\sim N(\theta,\sigma^2),
 
 \[
 R(\theta,aX+\beta)
-=a^2\sigma^2+igl\{(a-1)\theta+\beta\bigr\}^2.
+=a^2\sigma^2+\bigl\{(a-1)\theta+\beta\bigr\}^2.
 \]
 
 例如当 $a=1$ 且 $\beta\neq0$ 时，$X+\beta$ 被 $X$ 支配。
