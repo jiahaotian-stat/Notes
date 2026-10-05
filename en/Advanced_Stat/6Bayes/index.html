@@ -6706,9 +6706,7 @@
 
 <h1 id="chapter-6-bayes-rules-generalized-bayes-and-empirical-bayes">Chapter 6: Bayes Rules, Generalized Bayes, and Empirical Bayes</h1>
 <p>This chapter moves from frequentist risk to Bayesian decision theory. In the previous chapter, admissibility compared the entire risk function
-[
-\theta\longmapsto R(\theta,\delta),
-]
+<span class="arithmatex">\(\theta\longmapsto R(\theta,\delta),\)</span>
 but risk curves of two estimators often cross, so they cannot be uniformly ordered. Bayesian decision theory introduces a prior distribution on the parameter space, averages the risk function into a scalar Bayes risk, and turns the global optimization problem into pointwise minimization of posterior expected loss.</p>
 <p>We will study Bayes risk and posterior risk, Bayes estimators under common loss functions, conjugate priors, generalized Bayes procedures, Jeffreys priors, MAP and regularization, and the basic ideas of empirical Bayes.</p>
 <hr />
@@ -7771,17 +7769,11 @@ Z\sim N(0,I_n).
 <p>Therefore:</p>
 <ul>
 <li>
-<p>if
-  [
-  P(\beta)=\frac12|\beta|_2^2,
-  ]
+<p>if <span class="arithmatex">\(P(\beta)=\frac12\|\beta\|_2^2,\)</span>
   we obtain ridge regression;</p>
 </li>
 <li>
-<p>if
-  [
-  P(\beta)=|\beta|_1,
-  ]
+<p>if <span class="arithmatex">\(P(\beta)=\|\beta\|_1,\)</span>
   we obtain lasso-type soft thresholding;</p>
 </li>
 <li>
@@ -7910,15 +7902,8 @@ f_\nu(x+1)
 <p>directly from a large ensemble and plug them into this ratio.</p>
 <div class="admonition note">
 <p class="admonition-title">What does empirical Bayes change?</p>
-<p>Because</p>
-<div class="arithmatex">\[
-\widehat\nu
-\]</div>
-<p>is itself data-dependent,</p>
-<div class="arithmatex">\[
-\delta_{\widehat\nu}
-\]</div>
-<p>is generally not a Bayes rule with respect to any fixed prior.</p>
+<p>Because <span class="arithmatex">\(\widehat\nu\)</span> is itself data-dependent, <span class="arithmatex">\(\delta_{\widehat\nu}\)</span>
+is generally not a Bayes rule with respect to any fixed prior.</p>
 <p>Reusing the same data both to learn the prior and to estimate the current parameters can introduce</p>
 <ul>
 <li>hyperparameter uncertainty;</li>

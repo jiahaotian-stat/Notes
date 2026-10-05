@@ -6706,9 +6706,7 @@
 
 <h1 id="bayes-bayes-bayes">第六章：Bayes 规则、广义 Bayes 与经验 Bayes</h1>
 <p>本章从频率学派的风险函数进一步走向 Bayes 决策论。前一章讨论可容许性时，我们比较整个风险函数
-[
-\theta\longmapsto R(\theta,\delta),
-]
+<span class="arithmatex">\(\theta\longmapsto R(\theta,\delta),\)</span>
 但两个估计量的风险曲线常常会交叉，因此无法给出统一排序。Bayes 方法通过在参数空间上引入先验分布，将风险函数加权平均为一个标量的 Bayes 风险，并把全局优化问题转化为逐点最小化后验期望损失。</p>
 <p>本章将依次介绍 Bayes 风险与后验风险、常见损失下的 Bayes 估计量、共轭先验、广义 Bayes、Jeffreys 先验、MAP 与正则化，以及经验 Bayes 的基本思想。</p>
 <hr />
@@ -7771,17 +7769,11 @@ Z\sim N(0,I_n).
 <p>所以：</p>
 <ul>
 <li>
-<p>若
-  [
-  P(\beta)=\frac12|\beta|_2^2,
-  ]
+<p>若 <span class="arithmatex">\(P(\beta)=\frac12\|\beta\|_2^2,\)</span>
   则得到 ridge regression；</p>
 </li>
 <li>
-<p>若
-  [
-  P(\beta)=|\beta|_1,
-  ]
+<p>若 <span class="arithmatex">\(P(\beta)=\|\beta\|_1,\)</span>
   则得到 lasso 型软阈值；</p>
 </li>
 <li>
@@ -7909,15 +7901,8 @@ f_\nu(x+1),
 <p>再代入上述比例。</p>
 <div class="admonition note">
 <p class="admonition-title">Empirical Bayes 改变了什么？</p>
-<p>因为</p>
-<div class="arithmatex">\[
-\widehat\nu
-\]</div>
-<p>本身是数据依赖的，所以</p>
-<div class="arithmatex">\[
-\delta_{\widehat\nu}
-\]</div>
-<p>一般不再是关于某个固定先验的严格 Bayes rule。</p>
+<p>因为 <span class="arithmatex">\(\widehat\nu\)</span> 本身是数据依赖的，所以 <span class="arithmatex">\(\delta_{\widehat\nu}\)</span>
+一般不再是关于某个固定先验的严格 Bayes rule。</p>
 <p>同一批数据既用于学习先验，又用于当前估计，可能带来：</p>
 <ul>
 <li>hyperparameter uncertainty；</li>
