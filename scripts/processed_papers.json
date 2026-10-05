@@ -1306,5 +1306,17 @@
         "date": "2026-09-10",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.02777v1": {
+        "title": "Efficient conformal prediction intervals for time series: Online PID-Expert aggregation",
+        "date": "2026-10-02",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.02357v1": {
+        "title": "Conformal Prediction for Time Series with Deep Sequence Models",
+        "date": "2026-10-01",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

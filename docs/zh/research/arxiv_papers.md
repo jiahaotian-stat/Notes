@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-02
+> 更新于: 2026-10-05
 
 ---
+### Efficient conformal prediction intervals for time series: Online PID-Expert aggregation 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-02
+- **链接**: [PDF](http://arxiv.org/abs/2610.02777v1)
+
+!!! note "AI 核心解读"
+
+    该论文将PID校准器的阈值选择建模为在线专家聚合问题，构造了依赖归一化区间宽度与错覆盖率反馈的动态权重及共享错覆盖惩罚乘子，并推导了在实现乘子序列下加权专家损失的局部遗憾界。理论上还建立了时间平均聚合错覆盖率的逐路径上界，在稳定性条件下给出期望与几乎必然的控制。
+
+### Conformal Prediction for Time Series with Deep Sequence Models 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-01
+- **链接**: [PDF](http://arxiv.org/abs/2610.02357v1)
+
+!!! note "AI 核心解读"
+
+    该论文在非可交换时间序列下系统构建了基于深度序列模型的三种保形预测方法，并通过统计推导证明了条件分位数回归、条件分位数函数估计与局部化保形预测在适当假设下均具有渐近条件覆盖保证。其核心创新在于将深度序列模型分别嵌入分位数评分构造与局部化评分机制中，从理论上刻画了这些评分函数的渐近条件有效性。
+
+
 ### Adaptive Conformal Prediction for Image Regression Models with Application to an Inertial Confinement Fusion Emulator 
 
 - [ ] **分类**: Conformal | **日期**: 2026-09-30
