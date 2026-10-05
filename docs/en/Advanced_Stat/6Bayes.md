@@ -1,9 +1,7 @@
 # Chapter 6: Bayes Rules, Generalized Bayes, and Empirical Bayes
 
 This chapter moves from frequentist risk to Bayesian decision theory. In the previous chapter, admissibility compared the entire risk function
-\[
-\theta\longmapsto R(\theta,\delta),
-\]
+$\theta\longmapsto R(\theta,\delta),$
 but risk curves of two estimators often cross, so they cannot be uniformly ordered. Bayesian decision theory introduces a prior distribution on the parameter space, averages the risk function into a scalar Bayes risk, and turns the global optimization problem into pointwise minimization of posterior expected loss.
 
 We will study Bayes risk and posterior risk, Bayes estimators under common loss functions, conjugate priors, generalized Bayes procedures, Jeffreys priors, MAP and regularization, and the basic ideas of empirical Bayes.
@@ -1393,16 +1391,10 @@ Hence the MAP estimator is equivalent to minimizing
 
 Therefore:
 
-- if
-  \[
-  P(\beta)=\frac12\|\beta\|_2^2,
-  \]
+- if $P(\beta)=\frac12\|\beta\|_2^2,$
   we obtain ridge regression;
 
-- if
-  \[
-  P(\beta)=\|\beta\|_1,
-  \]
+- if $P(\beta)=\|\beta\|_1,$
   we obtain lasso-type soft thresholding;
 
 - an $\ell_0$ penalty yields hard thresholding but is computationally harder.
@@ -1572,18 +1564,7 @@ directly from a large ensemble and plug them into this ratio.
 
 !!! note "What does empirical Bayes change?"
 
-    Because
-
-    \[
-    \widehat\nu
-    \]
-
-    is itself data-dependent,
-
-    \[
-    \delta_{\widehat\nu}
-    \]
-
+    Because $\widehat\nu$ is itself data-dependent, $\delta_{\widehat\nu}$
     is generally not a Bayes rule with respect to any fixed prior.
 
     Reusing the same data both to learn the prior and to estimate the current parameters can introduce

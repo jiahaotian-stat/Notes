@@ -1,9 +1,7 @@
 # 第六章：Bayes 规则、广义 Bayes 与经验 Bayes
 
 本章从频率学派的风险函数进一步走向 Bayes 决策论。前一章讨论可容许性时，我们比较整个风险函数
-\[
-\theta\longmapsto R(\theta,\delta),
-\]
+$\theta\longmapsto R(\theta,\delta),$
 但两个估计量的风险曲线常常会交叉，因此无法给出统一排序。Bayes 方法通过在参数空间上引入先验分布，将风险函数加权平均为一个标量的 Bayes 风险，并把全局优化问题转化为逐点最小化后验期望损失。
 
 本章将依次介绍 Bayes 风险与后验风险、常见损失下的 Bayes 估计量、共轭先验、广义 Bayes、Jeffreys 先验、MAP 与正则化，以及经验 Bayes 的基本思想。
@@ -1393,16 +1391,10 @@ Z\sim N(0,I_n).
 
 所以：
 
-- 若
-  \[
-  P(\beta)=\frac12\|\beta\|_2^2,
-  \]
+- 若 $P(\beta)=\frac12\|\beta\|_2^2,$
   则得到 ridge regression；
 
-- 若
-  \[
-  P(\beta)=\|\beta\|_1,
-  \]
+- 若 $P(\beta)=\|\beta\|_1,$
   则得到 lasso 型软阈值；
 
 - 若使用 $\ell_0$ penalty，则对应 hard thresholding，但优化更困难。
@@ -1570,18 +1562,7 @@ f_\nu(x+1),
 
 !!! note "Empirical Bayes 改变了什么？"
 
-    因为
-
-    \[
-    \widehat\nu
-    \]
-
-    本身是数据依赖的，所以
-
-    \[
-    \delta_{\widehat\nu}
-    \]
-
+    因为 $\widehat\nu$ 本身是数据依赖的，所以 $\delta_{\widehat\nu}$
     一般不再是关于某个固定先验的严格 Bayes rule。
 
     同一批数据既用于学习先验，又用于当前估计，可能带来：
