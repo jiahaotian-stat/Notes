@@ -1318,5 +1318,11 @@
         "date": "2026-10-01",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.06317v1": {
+        "title": "Watermarking: from Impossibility to Auditable Compliance",
+        "date": "2026-10-05",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-05
+> 更新于: 2026-10-06
 
 ---
+### Watermarking: from Impossibility to Auditable Compliance 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-05
+- **链接**: [PDF](http://arxiv.org/abs/2610.06317v1)
+
+!!! note "AI 核心解读"
+
+    该文首先构造了基于描述长度的稳健性剖面，用碰撞熵替代不可辨识的香农熵常数，并给出有限样本界，证明可检测偏差随样本量按衰减率平方反比增长而衰减。其次，它构造了标签条件共形预测集，分别控制误归因与误排除水平，在可交换性下获得类条件有限样本覆盖保证，并输出“支持水印”“不支持”或“不确定”的三分判定。
+
+
 ### Efficient conformal prediction intervals for time series: Online PID-Expert aggregation 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-02
