@@ -1324,5 +1324,11 @@
         "date": "2026-10-05",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.08602v1": {
+        "title": "When does conformal calibration need censoring weights? Cause-of-failure prediction sets under competing risks",
+        "date": "2026-10-06",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

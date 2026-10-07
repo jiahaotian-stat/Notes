@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-06
+> 更新于: 2026-10-07
 
 ---
+### When does conformal calibration need censoring weights? Cause-of-failure prediction sets under competing risks 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-06
+- **链接**: [PDF](http://arxiv.org/abs/2610.08602v1)
+
+!!! note "AI 核心解读"
+
+    该论文在竞争风险下将Yi等（2025）的论证推广至原因标签，建立了有限样本覆盖下界，并显式给出删失模型误差的惩罚项。其核心统计构造是以原因别Nelson-Aalen累积风险导出的删失权重校正评分分布，证明正确指定删失模型可使覆盖接近名义水平，而误指定则可能导致覆盖不足。
+
+
 ### Watermarking: from Impossibility to Auditable Compliance 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-05
