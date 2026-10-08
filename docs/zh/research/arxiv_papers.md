@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-07
+> 更新于: 2026-10-08
 
 ---
+### Conformal Prediction for Spatially Dependent Data via Sequential Whitening 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-07
+- **链接**: [PDF](http://arxiv.org/abs/2610.10168v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过序贯条件化校准残差构造评分函数，在正确工作协方差与椭圆残差律下实现了任意空间设计下的精确有限样本覆盖，并进一步给出渐近Oracle效率。作者还推导了协方差误设下的覆盖损失上界，并据此构建了识别欠覆盖风险区域的诊断统计量。
+
+### Sketched Calibration for Conformal Prediction under Covariate Shift 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-06
+- **链接**: [PDF](http://arxiv.org/abs/2610.09208v1)
+
+!!! note "AI 核心解读"
+
+    该论文将加权共形预测的校准权重改为压缩协变量 \(Z=T(X)\) 的似然比，证明压缩不会增加依赖偏移的校准成本，并给出目标覆盖率至少为 \(1-\alpha-\Delta_T\) 的理论下界，其中泄漏项 \(\Delta_T\) 刻画被丢弃的偏移在给定 \(Z\) 时重新表现为响应或评分函数条件分布变化的协方差。作者进一步证明该泄漏在草图充分或保留偏移时为零，并通过极小极大构造表明固定评分函数的任何阈值规则都无法避免该泄漏。
+
+### COINS: Any-Stage-Valid and Utility-Oriented Sequential Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-07
+- **链接**: [PDF](http://arxiv.org/abs/2609.07112v2)
+
+!!! note "AI 核心解读"
+
+    该论文建立了刻画所有嵌套、校准对称且任意阶段有效的预测序列之共同排除结构的普适性定理，并据此构造了以过程级效用最大化为目标、在任意阶段有效性约束下可数据驱动优化评分序列的共形框架。其进一步提出的分支与局部化扩展在保持任意阶段有效性的同时实现了面向个体的采集与校准。
+
+
 ### When does conformal calibration need censoring weights? Cause-of-failure prediction sets under competing risks 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-06
