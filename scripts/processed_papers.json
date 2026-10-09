@@ -1348,5 +1348,17 @@
         "date": "2026-09-07",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.11349v1": {
+        "title": "Sample-Efficient Generative Conformal Prediction",
+        "date": "2026-10-08",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.10829v1": {
+        "title": "Conformal Prediction under Partial Verification",
+        "date": "2026-10-07",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

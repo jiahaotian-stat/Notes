@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-08
+> 更新于: 2026-10-09
 
 ---
+### Sample-Efficient Generative Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-08
+- **链接**: [PDF](http://arxiv.org/abs/2610.11349v1)
+
+!!! note "AI 核心解读"
+
+    CASA通过刻画每增加一个生成样本对条件分位数半径的边际缩减价值，将采样预算在输入间自适应分配以最小化期望集合大小，其理论分析证明在相同平均预算下自适应分配严格优于固定采样数——遗漏一个模态会使半径被迫跨越模态间隙，即使使用最优半径也无法弥补。
+
+### Conformal Prediction under Partial Verification 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-07
+- **链接**: [PDF](http://arxiv.org/abs/2610.10829v1)
+
+!!! note "AI 核心解读"
+
+    该论文刻画了决定共形阈值的充分验证信息（校准证书），并据此构造协调多个校准样本验证过程的程序，在有限阈值高覆盖下其验证代价不超过按序检查时最小证书代价的两倍。由此在保证与完全验证产生完全相同预测集的前提下，将验证代价较逐个验证降低15–82%。
+
+
 ### Conformal Prediction for Spatially Dependent Data via Sequential Whitening 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-07
