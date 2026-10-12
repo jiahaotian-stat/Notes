@@ -1360,5 +1360,17 @@
         "date": "2026-10-07",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.13588v1": {
+        "title": "Probabilistic Forecasting of Electric Vehicle Charging in a Time-varying Hierarchical Infrastructure",
+        "date": "2026-10-09",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.12937v1": {
+        "title": "Sequential Conformal Calibration under Recursive Selection",
+        "date": "2026-10-09",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

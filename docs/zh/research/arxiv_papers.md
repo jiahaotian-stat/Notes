@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-09
+> 更新于: 2026-10-12
 
 ---
+### Probabilistic Forecasting of Electric Vehicle Charging in a Time-varying Hierarchical Infrastructure 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-09
+- **链接**: [PDF](http://arxiv.org/abs/2610.13588v1)
+
+!!! note "AI 核心解读"
+
+    该论文将分层预测与含缺失数据的共形预测相结合，构造了在层级各节点均具有有效覆盖率的预测区间，并证明CP-MNR-Nested算法能够处理时变层级结构下的缺失节点问题。其核心创新在于通过嵌套式共形评分机制，在层级结构动态增删时仍保证预测区间的有限样本有效性。
+
+### Sequential Conformal Calibration under Recursive Selection 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-09
+- **链接**: [PDF](http://arxiv.org/abs/2610.12937v1)
+
+!!! note "AI 核心解读"
+
+    该论文在每阶段使用独立新折的条件下，证明了条件于先前折时被选折分数与存活测试分数仍可交换，从而给出决策序列任意前缀的有限样本覆盖保证；对无原子存活分数分布，进一步推导出实现覆盖过程的普适二项稀疏 Beta 链，其分布仅依赖折大小与目标水平，并精确刻画覆盖松弛、弃权概率及校准条件保证。针对自适应重拟合分数，论文还刻画了新鲜度与数据复用之间的权衡：严格存活者复用在固定分数下精确有效，而自适应分数复用存活者可能产生最坏情形秩损失，分块设计则提供介于完全复用与逐阶段新折之间的中间方案。
+
+
 ### Sample-Efficient Generative Conformal Prediction 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-08
