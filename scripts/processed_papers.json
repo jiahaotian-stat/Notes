@@ -1372,5 +1372,53 @@
         "date": "2026-10-09",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.21950v1": {
+        "title": "SelectPFN: Amortized Bayesian Variable Selection for Sparse Nonlinear Regression with Prior-Data Fitted Networks",
+        "date": "2026-10-15",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2610.21360v1": {
+        "title": "Controlling the False Discovery Rate via Model-Agnostic Importance Measures",
+        "date": "2026-10-15",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2610.20411v1": {
+        "title": "Compound p-values for competition-based testing",
+        "date": "2026-10-14",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2610.21648v1": {
+        "title": "conformalForecast: An R package for sequential conformal prediction in time series",
+        "date": "2026-10-15",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.20773v1": {
+        "title": "Selection-Safe Conformal Early Exit: Distribution-Free Coverage under Adaptive Depth",
+        "date": "2026-10-14",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.19484v1": {
+        "title": "State-Matched Sequence Conformal Prediction",
+        "date": "2026-10-14",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.19058v1": {
+        "title": "Conformalized Physics-Informed Weak Regression for Parameter Estimation in Epidemic Models",
+        "date": "2026-10-13",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.18077v1": {
+        "title": "Rational Quadratic Kriging",
+        "date": "2026-10-13",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

@@ -3,9 +3,82 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-12
+> 更新于: 2026-10-16
 
 ---
+### SelectPFN: Amortized Bayesian Variable Selection for Sparse Nonlinear Regression with Prior-Data Fitted Networks 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-10-15
+- **链接**: [PDF](http://arxiv.org/abs/2610.21950v1)
+
+!!! note "AI 核心解读"
+
+    SelectPFN 将组 spike-and-slab 稀疏输入神经网络嵌入 PFN 元先验，通过列置换等变性与原始/knockoff 列随机交织构造出具有精确有限样本 FDR 控制的 knockoff 统计量，即使元先验设定错误该性质仍成立。理论方面，作者建立了摊销中位概率模型的 Bayes-regret 界，刻画了检测某变量所需信息量随其可用结构先验权重 ω 以 (2/λ)log(1/ω) 增长的规律（λ≤1 为效率因子），并给出平均情形训练无法迁移为固定真值下频率派保证的否定性结论。
+
+### Controlling the False Discovery Rate via Model-Agnostic Importance Measures 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-10-15
+- **链接**: [PDF](http://arxiv.org/abs/2610.21360v1)
+
+!!! note "AI 核心解读"
+
+    该论文在总体层面将agent-X重要性定义为原始分布与引入agent变量后分布上oracle预测性能之差，并通过将agent变量取常数与cross-fitting策略实现高效估计。基于该重要性度量，作者结合样本分割、逐协变量重拆分与数据聚合构造MAS评分与选择流程，并在温和条件下建立了渐近FDR控制的理论保证。
+
+### Compound p-values for competition-based testing 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-10-14
+- **链接**: [PDF](http://arxiv.org/abs/2610.20411v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出“复合p值”这一仅在聚合层面满足超均匀性的统计量，并基于Bonferroni与Benjamini-Hochberg程序构造了适用于异构竞争结构的多重检验方法，其中Bonferroni型方法实现了族错误率的精确控制，而BH型方法则推导出错误发现率膨胀因子的上界。
+
+### conformalForecast: An R package for sequential conformal prediction in time series 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-15
+- **链接**: [PDF](http://arxiv.org/abs/2610.21648v1)
+
+!!! note "AI 核心解读"
+
+    该包将点预测与校准解耦，通过保留各预测原点与预测步长下的校准状态及历史区间，实现了在不重算早期结果的前提下对新观测进行增量式共形校准更新。其构造的评分与校准机制涵盖经验分位数、反馈驱动和依赖性感知三类方案，并支持跨预测步长的覆盖率、区间宽度与区间评分评估。
+
+### Selection-Safe Conformal Early Exit: Distribution-Free Coverage under Adaptive Depth 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-14
+- **链接**: [PDF](http://arxiv.org/abs/2610.20773v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过前缀最大值构造单一终端路径评分，并仅校准一个分裂共形分位数，从而在不需 α/L 校正的情况下实现选择安全的分布无关覆盖，且该保证对所有保持终端集包含关系的无标签停止策略同时成立。作者进一步用早退与终端评分超额的经验尾部界定了路径最大值带来的效率损失，给出了该构造的理论性质与效率代价刻画。
+
+### State-Matched Sequence Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-14
+- **链接**: [PDF](http://arxiv.org/abs/2610.19484v1)
+
+!!! note "AI 核心解读"
+
+    该论文构造了基于目标前信息的单侧局部线性状态，并以状态相似度筛选历史校准分数形成匹配参考集，再施加普通无权共形顺序统计量，从而将校准集选择转化为对目标分数分位数的状态匹配问题。理论分析在时间相依下建立了所得共形截断的控制，并刻画了所选状态未能捕获的预测信息。
+
+### Conformalized Physics-Informed Weak Regression for Parameter Estimation in Epidemic Models 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-13
+- **链接**: [PDF](http://arxiv.org/abs/2610.19058v1)
+
+!!! note "AI 核心解读"
+
+    该论文将系数线性的传染病仓室模型转化为闭式最小二乘估计，并构造物理信息弱回归（PIWR）：通过对模型在时间上积分而非对数据做有限差分，避免使用数据导数、可联合估计初始状态且具有高阶精度。其进一步用分裂保形预测包裹PIR与PIWR，以物理模型自身生成校准总体，给出所有参数的有限样本同时覆盖区间，并引入无需真值的残差自适应因子按数据集缩放区间。
+
+### Rational Quadratic Kriging 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-13
+- **链接**: [PDF](http://arxiv.org/abs/2610.18077v1)
+
+!!! note "AI 核心解读"
+
+    该论文基于有理二次核将有理二次克里金与核回归建立等价联系，并由此推导出估计量的理论性质及利用核回归因子权重的新估计流程。其还给出高效留一估计与共形预测的解析表达式，从而在预测与不确定性量化上改进现有方法。
+
+
 ### Probabilistic Forecasting of Electric Vehicle Charging in a Time-varying Hierarchical Infrastructure 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-09
