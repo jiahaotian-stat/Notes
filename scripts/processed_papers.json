@@ -1420,5 +1420,35 @@
         "date": "2026-10-13",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.16048v1": {
+        "title": "Backward Conformal Prediction under Covariate Shift",
+        "date": "2026-10-12",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.15268v1": {
+        "title": "Moment-Calibrated Conformal Prediction with Side Information",
+        "date": "2026-10-11",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.14907v1": {
+        "title": "Minimum Volume Optimal Transport for Multivariate Conformal Prediction",
+        "date": "2026-10-10",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.12937v2": {
+        "title": "Sequential Conformal Calibration under Recursive Selection",
+        "date": "2026-10-09",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2609.25388v2": {
+        "title": "PICPIs: Prediction-Interval-Conditional Prediction Intervals",
+        "date": "2026-09-21",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

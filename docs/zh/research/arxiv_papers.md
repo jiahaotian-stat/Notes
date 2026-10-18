@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-16
+> 更新于: 2026-10-18
 
 ---
+### Backward Conformal Prediction under Covariate Shift 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-12
+- **链接**: [PDF](http://arxiv.org/abs/2610.16048v1)
+
+!!! note "AI 核心解读"
+
+    该论文将BCP推广至协变量偏移场景，通过重要性加权在密度比已知时保持误覆盖率保证，并证明BCP的紧致误覆盖率报告仅依赖于分配给被漏检校准样本的相对权重，从而解释了更优域分类器有时反而导致更差估计的现象。进一步地，论文提出在排序后的非一致性得分向量上估计密度比而非高维输入，并在可解释条件下证明该做法渐近恢复相同报告，同时刻画了非此情形下的偏差。
+
+### Moment-Calibrated Conformal Prediction with Side Information 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-11
+- **链接**: [PDF](http://arxiv.org/abs/2610.15268v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过经验似然权重将协变量、响应或其联合的矩约束嵌入校准分数的加权经验分布，在不改变评分函数的前提下构造矩校准分位数，并推导出训练条件覆盖与边际覆盖的有限样本界及渐近分布，证明其渐近方差严格不大于标准分裂共形预测且刻画了严格缩减的条件。在半监督设定下，论文识别出给定协变量表示下的最优矩函数，并量化未标记样本量对覆盖与预测集大小的影响，同时通过加权分位数回归将方法推广至以协变量函数类索引的覆盖条件。
+
+### Minimum Volume Optimal Transport for Multivariate Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-10
+- **链接**: [PDF](http://arxiv.org/abs/2610.14907v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过度量Brenier表示将预测区域体积显式表达为Mahalanobis代价矩阵的函数，并联合优化该代价矩阵与传输映射以直接最小化预测集体积，同时建立了有限样本边际覆盖保证与体积度量最优性。其个体化扩展进一步学习依赖于协变量的传输度量以适配异质条件分布，并给出了该方法的渐近条件覆盖理论保证。
+
+### Sequential Conformal Calibration under Recursive Selection 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-09
+- **链接**: [PDF](http://arxiv.org/abs/2610.12937v2)
+
+!!! note "AI 核心解读"
+
+    该论文在每阶段使用独立新折的条件下，证明了条件于先前折时被选折分数与幸存测试分数仍可交换，从而给出决策序列任意前缀的有限样本覆盖保证；并针对无原子幸存分数分布推导出覆盖过程的普适二项稀疏Beta链，其分布仅依赖折大小与目标水平，精确刻画了覆盖松弛、弃权概率及校准条件保证。论文进一步从理论上区分了新鲜折与数据复用的权衡：固定分数下严格幸存者复用精确有效，而基于历史校准数据重拟合的自适应分数复用会产生最坏情形秩损失，分块设计则提供介于完全复用与逐阶段新鲜折之间的中间方案。
+
+### PICPIs: Prediction-Interval-Conditional Prediction Intervals 
+
+- [ ] **分类**: Conformal | **日期**: 2026-09-21
+- **链接**: [PDF](http://arxiv.org/abs/2609.25388v2)
+
+!!! note "AI 核心解读"
+
+    提出以预测值为条件的自洽区间准则 E[Y | p(X)∈I]∈I，将区间同时作为预测值分层与均值认证，在不改变原预测的前提下构造数据自适应分层；在预测分布正则性下证明所构区间覆盖除任意小比例外的预测值，宽度以 n^{-1/3} 速率收缩（至对数因子与预测误差），并给出概率预测与多分类下的推断程序及理论保证。
+
+
 ### SelectPFN: Amortized Bayesian Variable Selection for Sparse Nonlinear Regression with Prior-Data Fitted Networks 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-10-15
