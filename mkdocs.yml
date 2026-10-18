@@ -300,7 +300,7 @@ nav:
               - 第一章：概率空间与随机变量: zh/Advanced_Prob/1Random_var.md
               - 第二章：数字特征: zh/Advanced_Prob/2Moments.md
               - 第三章：极限定理: zh/Advanced_Prob/3LimitTheorems.md
-              - 第四章：CLT: 4InfiniteDivisibilityAndCLT.md
+              - 第四章：CLT: zh/Advanced_Prob/4InfiniteDivisibilityAndCLT.md
       - ⏳ 高等数理统计:
           - 高等数理统计课程概览: zh/Advanced_Stat/0Intro.md  
           - 📖 笔记:
