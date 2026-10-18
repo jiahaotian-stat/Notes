@@ -1,0 +1,6723 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jiahaotian-stat.github.io/Notes/en/Matrix_Comp/4SpecialLinearSystems/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../../Matrix_Comp/4SpecialLinearSystems/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 4: Special Linear Systems and Structured Factorizations - Jiahao's Academic Space</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-MPD6ZGWYW1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-MPD6ZGWYW1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-MPD6ZGWYW1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-4-special-linear-systems-and-structured-factorizations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-header__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jiahao's Academic Space
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 4: Special Linear Systems and Structured Factorizations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="grey"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../Matrix_Comp/4SpecialLinearSystems/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jiahaotian-stat/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jiahaotian-stat/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏠 Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-tabs__link">
+          
+  
+  
+  📚 Course Notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  🛠️ Quick Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../research/arxiv_papers/" class="md-tabs__link">
+          
+  
+  
+  🛰️ Research Updates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Lectures/" class="md-tabs__link">
+          
+  
+  
+  🎙️ Lectures & Talks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Jiahao&#39;s Academic Space" class="md-nav__button md-logo" aria-label="Jiahao's Academic Space" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jiahao's Academic Space
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jiahaotian-stat/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jiahaotian-stat/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Course Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Course Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 Stochastic Differential Equations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📈 Stochastic Differential Equations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/1conditional_expectation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Conditional Expectation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/2Brown_Motion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Brownian Motion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/3stochastic_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Stochastic Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/4Ito_integrate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Itô Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/5SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Multivariate Itô Calculus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/6SDEs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Existence & Uniqueness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/7Option_Pricing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Option Pricing and Stopping Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_3" id="__nav_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap1_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap3_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap5_6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stochastic-Differential-Equation/sol_chap7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDE Chapter 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Asymptotic Statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📊 Asymptotic Statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Asymptotic Statistics Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/1Stochastic_convergence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Stochastic Convergence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/2Characteristic_Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Characteristic Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/3CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Central Limit Theorem I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/4CLT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Central Limit Theorem II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/5Weakly_Dep/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Weakly Dependent Data I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/6Stantionary_process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Weakly Dependent Data II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/7Delta_Method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Delta Method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/12ME/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Method of Moments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/8MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Maximum Likelihood Estimation I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/9MLE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Maximum Likelihood Estimation II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/10M%26Z1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: M-Estimation and Z-Estimation I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/11M%26Z2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: M-Estimation and Z-Estimation II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/13U/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 13: U-Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/14Bootstrap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 14: Bootstrap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Asymptotic-statistics/sol_4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AS Homework 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌌 Functional Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🌌 Functional Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Analysis Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/1distance_space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Distance Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/2completeness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Topology and Completeness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/3compactness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Compactness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/4CMT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Contraction Mapping Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/5Linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Normed Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/6Banach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Banach Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/7Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Hilbert Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/8Hilbert/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Hilbert Space Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/9Linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Linear Operators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/10Open_Closed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Open Mapping and Closed Graph Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/11dual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: Dual Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Functional_Analysis/12Hahn-Banach/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: Extension of Bounded Linear Functionals and Hahn-Banach Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🍩 Point Set Topology
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🍩 Point Set Topology
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Point Set Topology Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_2" id="__nav_2_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Set Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Functions and Relations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Countable Sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Open Sets and Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Induced Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Continuity and Homeomorphisms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Connectedness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Compactness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Compactness in Euclidean Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Sequential Compactness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: One-Point Compactification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: Countability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 13: Separation Axioms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_3" id="__nav_2_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 1-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 3-4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_56/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 5-6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Topology/sol_789/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 7-9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧱 Real Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧱 Real Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real Analysis Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/1_sigma_algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Sigma-Algebras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/2_outer_measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Outer Measure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/3_ls_measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Lebesgue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/4_measurable_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Measurable Functions I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/5_limits_decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Measurable Functions II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/6_integration_construction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Construction of the Integral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/7_convergence_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: Convergence Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/8_fubini_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Fubini's Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/9_hahn_jordan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Hahn-Jordan Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/10_radon_nikodym/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Radon-Nikodym Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/11_differentiation_ir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 11: Fundamental Theorem of Calculus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Real_analysis/12_lp_spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 12: L^p Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 Advanced Probability Theory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎯 Advanced Probability Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Probability Theory Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/1Random_var/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Probability Spaces and Random Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/2Moments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Numerical Characteristics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Prob/3LimitTheorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Limit Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⏳ Advanced Mathematical Statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⏳ Advanced Mathematical Statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Stat/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Mathematical Statistics Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_2" id="__nav_2_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Stat/1_Gaussian_Geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Gaussian Geometry and Classical Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Stat/2Sufficiency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Sufficiency and Exponential Families
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Stat/3completeness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Completeness and UMVU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Stat/4Ustatistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: U-Statistics and Information Lower Bounds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Stat/5Admissibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Admissibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Stat/6Bayes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Bayes' Rule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_3" id="__nav_2_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Advanced_Stat/sol_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔲 Matrix Computation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🔲 Matrix Computation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matrix Computation Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_2" id="__nav_2_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1Matrix_norm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: Matrix Norms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2SVD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Singular Value Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3GaussianEliminationAndLU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Gaussian Elimination and LU Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🤖 Statistical Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🤖 Statistical Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/0Intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistical Learning Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9_2" id="__nav_2_9_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📖 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/1KNN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 1: K-Nearest Neighbors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/2Linear_Regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 2: Linear Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/3Penalized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 3: Penalized Linear Regression I
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/4Penalized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 4: Penalized Linear Regression II
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/5Classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 5: Classification Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/6SVM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 6: Support Vector Machines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/7RKHS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 7: RKHS and Kernel Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/8Kernel_Density/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 8: Kernel Density Estimation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/9Tree_Model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 9: Tree Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Statistical_Learning/10Causal_Inference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ch 10: Causal Inference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ Quick Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ Quick Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Mathematical Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/prob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎲 Probability Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/measure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📏 Measure Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/linalg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔢 Linear Algebra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/stochastic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌊 Stochastic Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎯 Convex Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📈 Regression Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ♾️ Mathematical Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛰️ Research Updates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛰️ Research Updates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../research/arxiv_papers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Latest Papers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🎙️ Lectures & Talks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🎙️ Lectures & Talks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏛️ Fundamental Theory
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🏛️ Fundamental Theory
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 Fall Advanced Probability Seminar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025 Fall Advanced Probability Seminar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Course_Lectures/LDP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Large Deviation Principle (LDP)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📑 Paper Discussions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📑 Paper Discussions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3_1" id="__nav_5_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2025 Fall Group Meetings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2025 Fall Group Meetings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lectures/Group_Seminars/derandomized_knockoffs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Derandomized Knockoffs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-diagonally-dominant-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Diagonally Dominant Matrices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Diagonally Dominant Matrices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-row-and-column-diagonal-dominance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Row and Column Diagonal Dominance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-invertibility-of-strictly-diagonally-dominant-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Invertibility of Strictly Diagonally Dominant Matrices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-norm-bounds-for-the-inverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Norm Bounds for the Inverse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-lu-factorization-of-column-diagonally-dominant-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 LU Factorization of Column Diagonally Dominant Matrices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-symmetric-matrices-and-the-ldlmathsf-t-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Symmetric Matrices and the \(LDL^{\mathsf T}\) Factorization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Symmetric Matrices and the \(LDL^{\mathsf T}\) Factorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-from-ldmmathsf-t-to-ldlmathsf-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 From \(LDM^{\mathsf T}\) to \(LDL^{\mathsf T}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-computational-and-storage-advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Computational and Storage Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-positive-definite-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Positive Definite Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Positive Definite Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-positive-definiteness-and-positive-semidefiniteness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Positive Definiteness and Positive Semidefiniteness
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-principal-submatrices-preserve-positive-definiteness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Principal Submatrices Preserve Positive Definiteness
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-lu-factorization-of-a-positive-definite-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 LU Factorization of a Positive Definite Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-symmetric-and-skew-symmetric-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Symmetric and Skew-Symmetric Parts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cholesky-factorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cholesky Factorization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Cholesky Factorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-existence-and-uniqueness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Existence and Uniqueness
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-the-cholesky-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 The Cholesky Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-solving-linear-systems-with-cholesky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Solving Linear Systems with Cholesky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-the-symmetric-positive-definite-square-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 The Symmetric Positive Definite Square Root
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-positive-semidefinite-matrices-and-polar-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Positive Semidefinite Matrices and Polar Decomposition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Positive Semidefinite Matrices and Polar Decomposition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-entrywise-properties-of-symmetric-positive-semidefinite-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Entrywise Properties of Symmetric Positive Semidefinite Matrices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-polar-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Polar Decomposition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-best-orthogonal-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Best Orthogonal Approximation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-banded-linear-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Banded Linear Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Banded Linear Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-upper-and-lower-bandwidths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Upper and Lower Bandwidths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-banded-triangular-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Banded Triangular Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-banded-gaussian-elimination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Banded Gaussian Elimination
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-the-effect-of-pivoting-on-bandwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 The Effect of Pivoting on Bandwidth
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-total-computational-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Total Computational Complexity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-4-special-linear-systems-and-structured-factorizations">Chapter 4: Special Linear Systems and Structured Factorizations</h1>
+<p>This chapter studies linear systems with special structure. Compared with general dense systems, these matrices often require no pivoting or permit substantial reductions in computational cost. We discuss diagonally dominant matrices, the <span class="arithmatex">\(LDL^{\mathsf T}\)</span> factorization of symmetric matrices, positive definite systems, Cholesky factorization, polar decomposition, and banded linear systems.</p>
+<hr />
+<h2 id="1-diagonally-dominant-matrices">1. Diagonally Dominant Matrices</h2>
+<h3 id="11-row-and-column-diagonal-dominance">1.1 Row and Column Diagonal Dominance</h3>
+<p>Let</p>
+<div class="arithmatex">\[
+A=(a_{ij})\in\mathbb{R}^{n\times n}.
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Definition 1.1 (Diagonal Dominance)</p>
+<p>If, for every <span class="arithmatex">\(i=1,\ldots,n\)</span>,</p>
+<div class="arithmatex">\[
+|a_{ii}|\geq\sum_{j\neq i}|a_{ij}|,
+\]</div>
+<p>then <span class="arithmatex">\(A\)</span> is called row diagonally dominant.</p>
+<p>If, for every <span class="arithmatex">\(j=1,\ldots,n\)</span>,</p>
+<div class="arithmatex">\[
+|a_{jj}|\geq\sum_{i\neq j}|a_{ij}|,
+\]</div>
+<p>then <span class="arithmatex">\(A\)</span> is called column diagonally dominant.</p>
+<p>If the corresponding inequality is strict for every row or every column, then <span class="arithmatex">\(A\)</span> is called strictly row diagonally dominant or strictly column diagonally dominant, respectively.</p>
+</div>
+<p>A diagonally dominant matrix need not be invertible. For example, the zero matrix is both row and column diagonally dominant but is clearly singular. Strict diagonal dominance, however, guarantees invertibility.</p>
+<h3 id="12-invertibility-of-strictly-diagonally-dominant-matrices">1.2 Invertibility of Strictly Diagonally Dominant Matrices</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.2 (Invertibility under Strict Diagonal Dominance)</p>
+<p>Every strictly row diagonally dominant matrix and every strictly column diagonally dominant matrix is nonsingular.</p>
+</div>
+<details class="proof">
+<summary>Proof for the strictly row diagonally dominant case (click to expand)</summary>
+<p>Suppose, to the contrary, that <span class="arithmatex">\(A\)</span> is singular. Then there exists <span class="arithmatex">\(x\neq0\)</span> such that</p>
+<div class="arithmatex">\[
+Ax=0.
+\]</div>
+<p>Choose</p>
+<div class="arithmatex">\[
+k\in\operatorname*{arg\,max}_{1\leq i\leq n}|x_i|.
+\]</div>
+<p>Since <span class="arithmatex">\(x\neq0\)</span>, we have <span class="arithmatex">\(|x_k|&gt;0\)</span>. The <span class="arithmatex">\(k\)</span>th equation gives</p>
+<div class="arithmatex">\[
+a_{kk}x_k=-\sum_{j\neq k}a_{kj}x_j.
+\]</div>
+<p>Hence</p>
+<div class="arithmatex">\[
+\begin{aligned}
+|a_{kk}||x_k|
+&amp;\leq\sum_{j\neq k}|a_{kj}||x_j|\\
+&amp;\leq\left(\sum_{j\neq k}|a_{kj}|\right)|x_k|.
+\end{aligned}
+\]</div>
+<p>Cancelling <span class="arithmatex">\(|x_k|\)</span> yields</p>
+<div class="arithmatex">\[
+|a_{kk}|\leq\sum_{j\neq k}|a_{kj}|,
+\]</div>
+<p>contradicting strict row diagonal dominance. Thus <span class="arithmatex">\(A\)</span> is nonsingular. The strictly column diagonally dominant case follows by applying the same result to <span class="arithmatex">\(A^{\mathsf T}\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="13-norm-bounds-for-the-inverse">1.3 Norm Bounds for the Inverse</h3>
+<p>Define the row dominance factor</p>
+<div class="arithmatex">\[
+\delta
+=\min_{1\leq i\leq n}
+\left(
+|a_{ii}|-\sum_{j\neq i}|a_{ij}|
+\right),
+\]</div>
+<p>and the column dominance factor</p>
+<div class="arithmatex">\[
+\mu
+=\min_{1\leq j\leq n}
+\left(
+|a_{jj}|-\sum_{i\neq j}|a_{ij}|
+\right).
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.3 (Inverse Norm Bounds)</p>
+<p>If <span class="arithmatex">\(A\)</span> is strictly row diagonally dominant, then</p>
+<div class="arithmatex">\[
+\|A^{-1}\|_{\infty}\leq\frac{1}{\delta}.
+\]</div>
+<p>If <span class="arithmatex">\(A\)</span> is strictly column diagonally dominant, then</p>
+<div class="arithmatex">\[
+\|A^{-1}\|_1\leq\frac{1}{\mu}.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of the infinity-norm bound (click to expand)</summary>
+<p>For any <span class="arithmatex">\(x\in\mathbb{R}^n\)</span>, choose <span class="arithmatex">\(k\)</span> such that</p>
+<div class="arithmatex">\[
+|x_k|=\|x\|_{\infty}.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\|Ax\|_{\infty}
+&amp;\geq |(Ax)_k|\\
+&amp;\geq |a_{kk}||x_k|-\sum_{j\neq k}|a_{kj}||x_j|\\
+&amp;\geq
+\left(
+|a_{kk}|-\sum_{j\neq k}|a_{kj}|
+\right)\|x\|_{\infty}\\
+&amp;\geq\delta\|x\|_{\infty}.
+\end{aligned}
+\]</div>
+<p>Setting <span class="arithmatex">\(x=A^{-1}y\)</span> gives</p>
+<div class="arithmatex">\[
+\|A^{-1}y\|_{\infty}
+\leq\frac{1}{\delta}\|y\|_{\infty}.
+\]</div>
+<p>Taking the supremum over all <span class="arithmatex">\(y\neq0\)</span> proves the claim. The column diagonally dominant case follows from</p>
+<div class="arithmatex">\[
+\|A^{-1}\|_1
+=\|A^{-\mathsf T}\|_{\infty}
+\]</div>
+<p>and the strict row diagonal dominance of <span class="arithmatex">\(A^{\mathsf T}\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="14-lu-factorization-of-column-diagonally-dominant-matrices">1.4 LU Factorization of Column Diagonally Dominant Matrices</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 1.4 (Column Diagonal Dominance and LU)</p>
+<p>If <span class="arithmatex">\(A\)</span> is nonsingular and column diagonally dominant, then it has a unique LU factorization</p>
+<div class="arithmatex">\[
+A=LU,
+\]</div>
+<p>where <span class="arithmatex">\(L\)</span> is unit lower triangular and</p>
+<div class="arithmatex">\[
+|l_{ij}|\leq1,
+\qquad i&gt;j.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof sketch for Theorem 1.4 (click to expand)</summary>
+<p>We use induction on the order of the matrix. Partition <span class="arithmatex">\(A\)</span> as</p>
+<div class="arithmatex">\[
+A=
+\begin{bmatrix}
+\alpha &amp; w^{\mathsf T}\\
+v &amp; C
+\end{bmatrix}.
+\]</div>
+<p>Nonsingularity and column diagonal dominance guarantee <span class="arithmatex">\(\alpha\neq0\)</span>, and the first-step multipliers satisfy</p>
+<div class="arithmatex">\[
+\left|\frac{v_i}{\alpha}\right|\leq1.
+\]</div>
+<p>The Schur complement after the first elimination step is</p>
+<div class="arithmatex">\[
+B=C-\frac{vw^{\mathsf T}}{\alpha}.
+\]</div>
+<p>A columnwise verification shows that <span class="arithmatex">\(B\)</span> remains nonsingular and column diagonally dominant. By the induction hypothesis, <span class="arithmatex">\(B\)</span> has an LU factorization satisfying the same multiplier bound. Combining the first-step multipliers with this factorization gives <span class="arithmatex">\(A=LU\)</span> with every <span class="arithmatex">\(|l_{ij}|\leq1\)</span>. Uniqueness follows from the unit lower triangular normalization. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Numerical Meaning</p>
+<p>Thus, when Gaussian elimination without pivoting is applied to a nonsingular column diagonally dominant matrix, the elimination multipliers are automatically controlled, so additional pivoting is usually unnecessary.</p>
+</div>
+<hr />
+<h2 id="2-symmetric-matrices-and-the-ldlmathsf-t-factorization">2. Symmetric Matrices and the <span class="arithmatex">\(LDL^{\mathsf T}\)</span> Factorization</h2>
+<h3 id="21-from-ldmmathsf-t-to-ldlmathsf-t">2.1 From <span class="arithmatex">\(LDM^{\mathsf T}\)</span> to <span class="arithmatex">\(LDL^{\mathsf T}\)</span></h3>
+<p>Suppose a nonsingular matrix <span class="arithmatex">\(A\)</span> has a factorization</p>
+<div class="arithmatex">\[
+A=LDM^{\mathsf T},
+\]</div>
+<p>where <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(M\)</span> are unit lower triangular and <span class="arithmatex">\(D\)</span> is nonsingular and diagonal.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 2.1 (The <span class="arithmatex">\(LDL^{\mathsf T}\)</span> Factorization of a Symmetric Matrix)</p>
+<p>If <span class="arithmatex">\(A\)</span> is symmetric, then</p>
+<div class="arithmatex">\[
+M=L,
+\]</div>
+<p>and therefore</p>
+<div class="arithmatex">\[
+A=LDL^{\mathsf T}.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 2.1 (click to expand)</summary>
+<p>Since <span class="arithmatex">\(A=A^{\mathsf T}\)</span>,</p>
+<div class="arithmatex">\[
+LDM^{\mathsf T}=MDL^{\mathsf T}.
+\]</div>
+<p>Multiplying on the left by <span class="arithmatex">\(M^{-1}\)</span> and on the right by <span class="arithmatex">\(L^{-\mathsf T}\)</span> gives</p>
+<div class="arithmatex">\[
+M^{-1}LD=D(M^{-1}L)^{\mathsf T}.
+\]</div>
+<p>The left-hand side is lower triangular and the right-hand side is upper triangular, so both must be diagonal. Moreover, <span class="arithmatex">\(M^{-1}L\)</span> is unit lower triangular, and hence</p>
+<div class="arithmatex">\[
+M^{-1}L=I.
+\]</div>
+<p>Therefore <span class="arithmatex">\(M=L\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="22-computational-and-storage-advantages">2.2 Computational and Storage Advantages</h3>
+<p>Only half of a symmetric matrix needs to be stored. During elimination, the upper triangular part can be recovered from the lower triangular part by symmetry, so an <span class="arithmatex">\(LDL^{\mathsf T}\)</span> factorization requires roughly half the work and storage of a general LU factorization.</p>
+<p>If pivoting is required, the corresponding rows and columns must be interchanged simultaneously to preserve symmetry, giving</p>
+<div class="arithmatex">\[
+PAP^{\mathsf T}=LDL^{\mathsf T}.
+\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Symmetry and Pivoting</p>
+<p>Interchanging rows alone destroys the symmetric structure. Symmetric indefinite systems usually require a symmetric pivoting strategy and may use <span class="arithmatex">\(1\times1\)</span> or <span class="arithmatex">\(2\times2\)</span> diagonal blocks.</p>
+</div>
+<hr />
+<h2 id="3-positive-definite-systems">3. Positive Definite Systems</h2>
+<h3 id="31-positive-definiteness-and-positive-semidefiniteness">3.1 Positive Definiteness and Positive Semidefiniteness</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 3.1 (Definiteness)</p>
+<p>If, for every <span class="arithmatex">\(x\neq0\)</span>,</p>
+<div class="arithmatex">\[
+x^{\mathsf T}Ax&gt;0,
+\]</div>
+<p>then <span class="arithmatex">\(A\)</span> is called positive definite.</p>
+<p>If, for every <span class="arithmatex">\(x\)</span>,</p>
+<div class="arithmatex">\[
+x^{\mathsf T}Ax\geq0,
+\]</div>
+<p>then <span class="arithmatex">\(A\)</span> is called positive semidefinite.</p>
+</div>
+<p>Symmetry is not initially assumed here. A quadratic form depends only on the symmetric part of <span class="arithmatex">\(A\)</span>, as shown below.</p>
+<h3 id="32-principal-submatrices-preserve-positive-definiteness">3.2 Principal Submatrices Preserve Positive Definiteness</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.2 (Principal Submatrices of a Positive Definite Matrix)</p>
+<p>Every principal submatrix of a positive definite matrix is positive definite.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 3.2 (click to expand)</summary>
+<p>Choose indices</p>
+<div class="arithmatex">\[
+1\leq i_1&lt;\cdots&lt;i_k\leq n,
+\]</div>
+<p>and let</p>
+<div class="arithmatex">\[
+X=
+\begin{bmatrix}
+e_{i_1} &amp; \cdots &amp; e_{i_k}
+\end{bmatrix}.
+\]</div>
+<p>The corresponding principal submatrix is</p>
+<div class="arithmatex">\[
+B=X^{\mathsf T}AX.
+\]</div>
+<p>For every <span class="arithmatex">\(z\neq0\)</span>, the full column rank of <span class="arithmatex">\(X\)</span> implies <span class="arithmatex">\(Xz\neq0\)</span>, and hence</p>
+<div class="arithmatex">\[
+z^{\mathsf T}Bz
+=(Xz)^{\mathsf T}A(Xz)&gt;0.
+\]</div>
+<p>Thus <span class="arithmatex">\(B\)</span> is positive definite. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>A direct consequence is that all leading principal minors of a positive definite matrix are positive.</p>
+<h3 id="33-lu-factorization-of-a-positive-definite-matrix">3.3 LU Factorization of a Positive Definite Matrix</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 3.3 (LU Factorization of a Positive Definite Matrix)</p>
+<p>If <span class="arithmatex">\(A\in\mathbb{R}^{n\times n}\)</span> is positive definite, then it has a unique LU factorization</p>
+<div class="arithmatex">\[
+A=LU,
+\]</div>
+<p>and every diagonal entry of <span class="arithmatex">\(U\)</span> is positive.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 3.3 (click to expand)</summary>
+<p>By Theorem 3.2, every leading principal submatrix of <span class="arithmatex">\(A\)</span> is positive definite, so every leading principal minor is positive. The existence and uniqueness theorem for LU factorization therefore gives a unique LU factorization of <span class="arithmatex">\(A\)</span>.</p>
+<p>Moreover,</p>
+<div class="arithmatex">\[
+UL^{-\mathsf T}
+=L^{-1}AL^{-\mathsf T}.
+\]</div>
+<p>The right-hand side remains positive definite under the congruence transformation, so <span class="arithmatex">\(UL^{-\mathsf T}\)</span> is positive definite. Since both <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(L^{-\mathsf T}\)</span> are upper triangular,</p>
+<div class="arithmatex">\[
+(UL^{-\mathsf T})_{ii}
+=u_{ii}&gt;0.
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="34-symmetric-and-skew-symmetric-parts">3.4 Symmetric and Skew-Symmetric Parts</h3>
+<p>Every real matrix has the unique decomposition</p>
+<div class="arithmatex">\[
+A=T+S,
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+T=\frac{A+A^{\mathsf T}}{2},
+\qquad
+S=\frac{A-A^{\mathsf T}}{2}.
+\]</div>
+<p>The matrix <span class="arithmatex">\(T\)</span> is symmetric, while <span class="arithmatex">\(S\)</span> is skew-symmetric.</p>
+<div class="admonition success">
+<p class="admonition-title">Proposition 3.4 (A Quadratic Form Depends Only on the Symmetric Part)</p>
+<p>For every <span class="arithmatex">\(x\in\mathbb{R}^n\)</span>,</p>
+<div class="arithmatex">\[
+x^{\mathsf T}Sx=0,
+\qquad
+x^{\mathsf T}Ax=x^{\mathsf T}Tx.
+\]</div>
+<p>Therefore <span class="arithmatex">\(A\)</span> is positive definite if and only if its symmetric part <span class="arithmatex">\(T\)</span> is positive definite.</p>
+</div>
+<details class="proof">
+<summary>Proof of Proposition 3.4 (click to expand)</summary>
+<p>Since <span class="arithmatex">\(S^{\mathsf T}=-S\)</span>, the scalar <span class="arithmatex">\(x^{\mathsf T}Sx\)</span> satisfies</p>
+<div class="arithmatex">\[
+x^{\mathsf T}Sx
+=(x^{\mathsf T}Sx)^{\mathsf T}
+=x^{\mathsf T}S^{\mathsf T}x
+=-x^{\mathsf T}Sx.
+\]</div>
+<p>Thus <span class="arithmatex">\(x^{\mathsf T}Sx=0\)</span>, and consequently</p>
+<div class="arithmatex">\[
+x^{\mathsf T}Ax
+=x^{\mathsf T}(T+S)x
+=x^{\mathsf T}Tx.
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Stability Remark</p>
+<p>The skew-symmetric part of a symmetric positive definite matrix vanishes, so its factorization without pivoting usually has excellent numerical stability. For a general nonsymmetric positive definite matrix, stability also depends on the size of the skew-symmetric part relative to the symmetric part.</p>
+</div>
+<hr />
+<h2 id="4-cholesky-factorization">4. Cholesky Factorization</h2>
+<h3 id="41-existence-and-uniqueness">4.1 Existence and Uniqueness</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.1 (Cholesky Factorization)</p>
+<p>If <span class="arithmatex">\(A\in\mathbb{R}^{n\times n}\)</span> is symmetric positive definite, then there exists a unique lower triangular matrix <span class="arithmatex">\(G\)</span> such that</p>
+<div class="arithmatex">\[
+A=GG^{\mathsf T},
+\]</div>
+<p>and every diagonal entry of <span class="arithmatex">\(G\)</span> is positive.</p>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 4.1 (click to expand)</summary>
+<p>A symmetric positive definite matrix has a unique factorization</p>
+<div class="arithmatex">\[
+A=LDL^{\mathsf T},
+\]</div>
+<p>where <span class="arithmatex">\(L\)</span> is unit lower triangular and the diagonal entries <span class="arithmatex">\(d_i\)</span> of <span class="arithmatex">\(D\)</span> are positive. Define</p>
+<div class="arithmatex">\[
+D^{1/2}
+=\operatorname{diag}(\sqrt{d_1},\ldots,\sqrt{d_n}),
+\qquad
+G=LD^{1/2}.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+GG^{\mathsf T}
+=LD^{1/2}D^{1/2}L^{\mathsf T}
+=LDL^{\mathsf T}
+=A.
+\]</div>
+<p>Requiring positive diagonal entries removes the sign ambiguity. Together with uniqueness of the <span class="arithmatex">\(LDL^{\mathsf T}\)</span> factorization, this proves uniqueness of <span class="arithmatex">\(G\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="42-the-cholesky-algorithm">4.2 The Cholesky Algorithm</h3>
+<p>Let <span class="arithmatex">\(G=(g_{ij})\)</span> be lower triangular. From</p>
+<div class="arithmatex">\[
+a_{ij}
+=\sum_{s=1}^{\min(i,j)}g_{is}g_{js},
+\]</div>
+<p>we can compute <span class="arithmatex">\(G\)</span> one column at a time.</p>
+<p>The diagonal entry is</p>
+<div class="arithmatex">\[
+g_{kk}
+=\sqrt{
+a_{kk}-\sum_{j=1}^{k-1}g_{kj}^2
+},
+\]</div>
+<p>and the off-diagonal entries in column <span class="arithmatex">\(k\)</span> are</p>
+<div class="arithmatex">\[
+g_{ik}
+=\frac{
+a_{ik}-\sum_{j=1}^{k-1}g_{ij}g_{kj}
+}{g_{kk}},
+\qquad
+i=k+1,\ldots,n.
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Algorithm 4.2 (Columnwise Cholesky Factorization)</p>
+<p>For <span class="arithmatex">\(k=1,\ldots,n\)</span>, first compute</p>
+<div class="arithmatex">\[
+g_{kk}
+=\sqrt{
+a_{kk}-\sum_{j=1}^{k-1}g_{kj}^2
+},
+\]</div>
+<p>and then, for <span class="arithmatex">\(i=k+1,\ldots,n\)</span>, compute</p>
+<div class="arithmatex">\[
+g_{ik}
+=\frac{
+a_{ik}-\sum_{j=1}^{k-1}g_{ij}g_{kj}
+}{g_{kk}}.
+\]</div>
+</div>
+<p>The Cholesky factorization requires approximately</p>
+<div class="arithmatex">\[
+\frac{1}{3}n^3+O(n^2)
+\]</div>
+<p>floating-point operations, roughly half the work of a general LU factorization.</p>
+<h3 id="43-solving-linear-systems-with-cholesky">4.3 Solving Linear Systems with Cholesky</h3>
+<p>From</p>
+<div class="arithmatex">\[
+Ax=b
+\quad\Longleftrightarrow\quad
+GG^{\mathsf T}x=b,
+\]</div>
+<p>first solve by forward substitution</p>
+<div class="arithmatex">\[
+Gy=b,
+\]</div>
+<p>and then solve by backward substitution</p>
+<div class="arithmatex">\[
+G^{\mathsf T}x=y.
+\]</div>
+<p>Under the standard floating-point model, the computed solution <span class="arithmatex">\(\widehat{x}\)</span> satisfies</p>
+<div class="arithmatex">\[
+(A+E)\widehat{x}=b,
+\qquad
+\|E\|_2\leq c_nu\|A\|_2,
+\]</div>
+<p>where <span class="arithmatex">\(u\)</span> is the unit roundoff and <span class="arithmatex">\(c_n\)</span> is a modest dimension-dependent constant.</p>
+<div class="admonition info">
+<p class="admonition-title">Conclusion</p>
+<p>Cholesky factorization should be preferred for symmetric positive definite systems: it requires no pivoting, uses less computation and storage, and has good backward stability.</p>
+</div>
+<h3 id="44-the-symmetric-positive-definite-square-root">4.4 The Symmetric Positive Definite Square Root</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 4.3 (Matrix Square Root)</p>
+<p>If a matrix <span class="arithmatex">\(X\)</span> satisfies</p>
+<div class="arithmatex">\[
+X^2=A,
+\]</div>
+<p>then <span class="arithmatex">\(X\)</span> is called a square root of <span class="arithmatex">\(A\)</span>.</p>
+</div>
+<p>Matrix square roots are generally not unique, but the symmetric positive definite square root is unique.</p>
+<div class="admonition success">
+<p class="admonition-title">Theorem 4.4 (Unique Symmetric Positive Definite Square Root)</p>
+<p>If <span class="arithmatex">\(A\)</span> is symmetric positive definite, then there exists a unique symmetric positive definite matrix <span class="arithmatex">\(A^{1/2}\)</span> such that</p>
+<div class="arithmatex">\[
+(A^{1/2})^2=A.
+\]</div>
+</div>
+<p>From the spectral decomposition</p>
+<div class="arithmatex">\[
+A=Q\Lambda Q^{\mathsf T},
+\qquad
+\Lambda=\operatorname{diag}(\lambda_1,\ldots,\lambda_n),
+\]</div>
+<p>where every <span class="arithmatex">\(\lambda_i&gt;0\)</span>, we obtain</p>
+<div class="arithmatex">\[
+A^{1/2}
+=Q\Lambda^{1/2}Q^{\mathsf T}.
+\]</div>
+<hr />
+<h2 id="5-positive-semidefinite-matrices-and-polar-decomposition">5. Positive Semidefinite Matrices and Polar Decomposition</h2>
+<h3 id="51-entrywise-properties-of-symmetric-positive-semidefinite-matrices">5.1 Entrywise Properties of Symmetric Positive Semidefinite Matrices</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 5.1 (Entrywise Bounds for a Positive Semidefinite Matrix)</p>
+<p>If <span class="arithmatex">\(A\)</span> is symmetric positive semidefinite, then</p>
+<div class="arithmatex">\[
+|a_{ij}|
+\leq\frac{a_{ii}+a_{jj}}{2},
+\]</div>
+<div class="arithmatex">\[
+|a_{ij}|
+\leq\sqrt{a_{ii}a_{jj}},
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\max_{i,j}|a_{ij}|=\max_i a_{ii}.
+\]</div>
+<p>In particular, if <span class="arithmatex">\(a_{ii}=0\)</span>, then</p>
+<div class="arithmatex">\[
+A[i,:]=A[:,i]=0.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 5.1 (click to expand)</summary>
+<p>Applying <span class="arithmatex">\(x^{\mathsf T}Ax\geq0\)</span> to <span class="arithmatex">\(x=e_i+e_j\)</span> and <span class="arithmatex">\(x=e_i-e_j\)</span> gives</p>
+<div class="arithmatex">\[
+-\frac{a_{ii}+a_{jj}}{2}
+\leq a_{ij}
+\leq\frac{a_{ii}+a_{jj}}{2}.
+\]</div>
+<p>Next, for arbitrary <span class="arithmatex">\(\tau\in\mathbb{R}\)</span>, take <span class="arithmatex">\(x=\tau e_i+e_j\)</span>. Then</p>
+<div class="arithmatex">\[
+a_{ii}\tau^2+2a_{ij}\tau+a_{jj}\geq0.
+\]</div>
+<p>The discriminant of this quadratic polynomial must be nonpositive, so</p>
+<div class="arithmatex">\[
+a_{ij}^2\leq a_{ii}a_{jj}.
+\]</div>
+<p>The remaining statements follow immediately. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="52-polar-decomposition">5.2 Polar Decomposition</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 5.2 (Polar Decomposition)</p>
+<p>For every <span class="arithmatex">\(A\in\mathbb{R}^{n\times n}\)</span>, there exist an orthogonal matrix <span class="arithmatex">\(Q\)</span> and a symmetric positive semidefinite matrix <span class="arithmatex">\(P\)</span> such that</p>
+<div class="arithmatex">\[
+A=QP.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof of Theorem 5.2 (click to expand)</summary>
+<p>Take a singular value decomposition</p>
+<div class="arithmatex">\[
+A=U\Sigma V^{\mathsf T}.
+\]</div>
+<p>Define</p>
+<div class="arithmatex">\[
+Q=UV^{\mathsf T},
+\qquad
+P=V\Sigma V^{\mathsf T}.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+Q^{\mathsf T}Q=I,
+\qquad
+P=P^{\mathsf T}\succeq0,
+\qquad
+QP=A.
+\]</div>
+<p><span class="arithmatex">\(\square\)</span></p>
+</details>
+<p>Since</p>
+<div class="arithmatex">\[
+P^2=A^{\mathsf T}A,
+\]</div>
+<p>we have</p>
+<div class="arithmatex">\[
+P=(A^{\mathsf T}A)^{1/2}.
+\]</div>
+<p>Thus the polar decomposition can be interpreted as a nonnegative scaling by <span class="arithmatex">\(P\)</span>, followed by an orthogonal rotation or reflection by <span class="arithmatex">\(Q\)</span>.</p>
+<h3 id="53-best-orthogonal-approximation">5.3 Best Orthogonal Approximation</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 5.3 (Best Orthogonal Approximation)</p>
+<p>If <span class="arithmatex">\(A=QP\)</span> is a polar decomposition, then</p>
+<div class="arithmatex">\[
+\|A-Q\|_F
+=\min_{R^{\mathsf T}R=I}\|A-R\|_F.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof sketch for Theorem 5.3 (click to expand)</summary>
+<p>For any orthogonal matrix <span class="arithmatex">\(R\)</span>,</p>
+<div class="arithmatex">\[
+\|A-R\|_F^2
+=\operatorname{tr}(A^{\mathsf T}A)+n
+-2\operatorname{tr}(R^{\mathsf T}A).
+\]</div>
+<p>Thus the problem is equivalent to maximizing <span class="arithmatex">\(\operatorname{tr}(R^{\mathsf T}A)\)</span>. If</p>
+<div class="arithmatex">\[
+A=U\Sigma V^{\mathsf T},
+\]</div>
+<p>let <span class="arithmatex">\(Z=U^{\mathsf T}RV\)</span>. Then <span class="arithmatex">\(Z\)</span> is orthogonal, and</p>
+<div class="arithmatex">\[
+\operatorname{tr}(R^{\mathsf T}A)
+=\operatorname{tr}(Z^{\mathsf T}\Sigma)
+\leq\sum_{i=1}^n\sigma_i.
+\]</div>
+<p>Equality holds when <span class="arithmatex">\(Z=I\)</span>, or equivalently when <span class="arithmatex">\(R=UV^{\mathsf T}=Q\)</span>. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">The Orthogonal Procrustes Problem</p>
+<p>For <span class="arithmatex">\(A,B\in\mathbb{R}^{m\times n}\)</span>, consider</p>
+<div class="arithmatex">\[
+\min_{Q^{\mathsf T}Q=I}\|A-BQ\|_F.
+\]</div>
+<p>This problem is equivalent to</p>
+<div class="arithmatex">\[
+\max_{Q^{\mathsf T}Q=I}
+\operatorname{tr}(Q^{\mathsf T}B^{\mathsf T}A).
+\]</div>
+<p>If</p>
+<div class="arithmatex">\[
+B^{\mathsf T}A=U\Sigma V^{\mathsf T},
+\]</div>
+<p>then one optimal solution is</p>
+<div class="arithmatex">\[
+Q=UV^{\mathsf T}.
+\]</div>
+</div>
+<hr />
+<h2 id="6-banded-linear-systems">6. Banded Linear Systems</h2>
+<h3 id="61-upper-and-lower-bandwidths">6.1 Upper and Lower Bandwidths</h3>
+<div class="admonition info">
+<p class="admonition-title">Definition 6.1 (Matrix Bandwidth)</p>
+<p>If</p>
+<div class="arithmatex">\[
+a_{ij}=0
+\qquad\text{whenever}\qquad
+j&gt;i+q,
+\]</div>
+<p>then <span class="arithmatex">\(q\)</span> is called the upper bandwidth of <span class="arithmatex">\(A\)</span>, denoted by</p>
+<div class="arithmatex">\[
+\operatorname{ub}(A)=q.
+\]</div>
+<p>If</p>
+<div class="arithmatex">\[
+a_{ij}=0
+\qquad\text{whenever}\qquad
+i&gt;j+p,
+\]</div>
+<p>then <span class="arithmatex">\(p\)</span> is called the lower bandwidth of <span class="arithmatex">\(A\)</span>, denoted by</p>
+<div class="arithmatex">\[
+\operatorname{lb}(A)=p.
+\]</div>
+</div>
+<p>A diagonal matrix has upper and lower bandwidth <span class="arithmatex">\(0\)</span>, a tridiagonal matrix has upper and lower bandwidth <span class="arithmatex">\(1\)</span>, and a general dense <span class="arithmatex">\(n\times n\)</span> matrix can have both bandwidths as large as <span class="arithmatex">\(n-1\)</span>.</p>
+<h3 id="62-banded-triangular-systems">6.2 Banded Triangular Systems</h3>
+<p>If a lower triangular matrix <span class="arithmatex">\(L\)</span> has lower bandwidth <span class="arithmatex">\(p\)</span>, each row of forward substitution accesses at most the preceding <span class="arithmatex">\(p\)</span> unknowns, so the complexity is</p>
+<div class="arithmatex">\[
+O(np).
+\]</div>
+<p>If an upper triangular matrix <span class="arithmatex">\(U\)</span> has upper bandwidth <span class="arithmatex">\(q\)</span>, the complexity of backward substitution is</p>
+<div class="arithmatex">\[
+O(nq).
+\]</div>
+<h3 id="63-banded-gaussian-elimination">6.3 Banded Gaussian Elimination</h3>
+<p>For a matrix with upper bandwidth <span class="arithmatex">\(q\)</span> and lower bandwidth <span class="arithmatex">\(p\)</span>, Gaussian elimination without pivoting updates only entries in the band, so the factorization complexity is</p>
+<div class="arithmatex">\[
+O(npq).
+\]</div>
+<div class="admonition success">
+<p class="admonition-title">Theorem 6.2 (Banded LU Factorization Preserves Bandwidth)</p>
+<p>Suppose <span class="arithmatex">\(A\)</span> has an LU factorization <span class="arithmatex">\(A=LU\)</span>, and</p>
+<div class="arithmatex">\[
+\operatorname{ub}(A)=q,
+\qquad
+\operatorname{lb}(A)=p.
+\]</div>
+<p>Then</p>
+<div class="arithmatex">\[
+\operatorname{ub}(U)=q,
+\qquad
+\operatorname{lb}(L)=p.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof sketch for Theorem 6.2 (click to expand)</summary>
+<p>We use induction on the matrix order. Partition <span class="arithmatex">\(A\)</span> as</p>
+<div class="arithmatex">\[
+A=
+\begin{bmatrix}
+\alpha &amp; w^{\mathsf T}\\
+v &amp; B
+\end{bmatrix}.
+\]</div>
+<p>The Schur complement after eliminating the first column is</p>
+<div class="arithmatex">\[
+B-\frac{vw^{\mathsf T}}{\alpha}.
+\]</div>
+<p>Since only the first <span class="arithmatex">\(p\)</span> entries of <span class="arithmatex">\(v\)</span> and the first <span class="arithmatex">\(q\)</span> entries of <span class="arithmatex">\(w\)</span> can be nonzero, the rank-one correction does not enlarge the corresponding bandwidths. Applying the induction hypothesis to the Schur complement shows that <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(U\)</span> inherit the lower and upper bandwidths of the original matrix. <span class="arithmatex">\(\square\)</span></p>
+</details>
+<h3 id="64-the-effect-of-pivoting-on-bandwidth">6.4 The Effect of Pivoting on Bandwidth</h3>
+<div class="admonition success">
+<p class="admonition-title">Theorem 6.3 (Upper Bandwidth after Partial Pivoting)</p>
+<p>Suppose <span class="arithmatex">\(A\)</span> is nonsingular and</p>
+<div class="arithmatex">\[
+\operatorname{ub}(A)=q,
+\qquad
+\operatorname{lb}(A)=p.
+\]</div>
+<p>After columnwise partial pivoting, the resulting upper triangular factor satisfies</p>
+<div class="arithmatex">\[
+\operatorname{ub}(U)\leq p+q.
+\]</div>
+</div>
+<p>Row interchanges may move entries from the lower band above the main diagonal, so the upper bandwidth can grow from <span class="arithmatex">\(q\)</span> to <span class="arithmatex">\(p+q\)</span>, but it remains much smaller than the bandwidth of a general dense matrix.</p>
+<h3 id="65-total-computational-complexity">6.5 Total Computational Complexity</h3>
+<p>For a system that requires no pivoting and preserves its bandwidth,</p>
+<div class="arithmatex">\[
+\text{LU factorization: }O(npq),
+\]</div>
+<div class="arithmatex">\[
+\text{solve }Ly=b\text{: }O(np),
+\]</div>
+<div class="arithmatex">\[
+\text{solve }Ux=y\text{: }O(nq).
+\]</div>
+<p>Therefore, the total complexity is</p>
+<div class="arithmatex">\[
+O\bigl(n(pq+p+q)\bigr).
+\]</div>
+<p>In particular, for a tridiagonal matrix,</p>
+<div class="arithmatex">\[
+p=q=1,
+\]</div>
+<p>so factorization and solution together require only</p>
+<div class="arithmatex">\[
+O(n)
+\]</div>
+<p>operations.</p>
+<div class="admonition info">
+<p class="admonition-title">Benefits of Structure</p>
+<p>When <span class="arithmatex">\(p,q\ll n\)</span>, banded LU, <span class="arithmatex">\(LDL^{\mathsf T}\)</span>, and Cholesky factorizations are much more efficient in both time and storage than their dense counterparts.</p>
+</div>
+<hr />
+<h2 id="7-chapter-summary">7. Chapter Summary</h2>
+<div class="admonition success">
+<p class="admonition-title">Key Conclusions</p>
+<ol>
+<li>
+<p>Strict diagonal dominance guarantees invertibility and gives a direct upper bound for the norm of the inverse.</p>
+</li>
+<li>
+<p>A nonsingular column diagonally dominant matrix admits LU factorization without pivoting, with elimination multipliers bounded in absolute value by <span class="arithmatex">\(1\)</span>.</p>
+</li>
+<li>
+<p>The <span class="arithmatex">\(LDM^{\mathsf T}\)</span> factorization of a symmetric matrix reduces to an <span class="arithmatex">\(LDL^{\mathsf T}\)</span> factorization.</p>
+</li>
+<li>
+<p>A symmetric positive definite matrix has a unique Cholesky factorization <span class="arithmatex">\(A=GG^{\mathsf T}\)</span>, requiring roughly half the work of a general LU factorization.</p>
+</li>
+<li>
+<p>The polar decomposition <span class="arithmatex">\(A=QP\)</span> separates a matrix into orthogonal and symmetric positive semidefinite factors and yields the best orthogonal approximation.</p>
+</li>
+<li>
+<p>Banded structure reduces factorization complexity from <span class="arithmatex">\(O(n^3)\)</span> to <span class="arithmatex">\(O(npq)\)</span>; a tridiagonal system can even be solved in linear time.</p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+
+  <h2 id="__comments">💬 Comments</h2>
+    <script src="https://giscus.app/client.js"
+        data-repo="jiahaotian-stat/Notes"
+        data-repo-id="R_kgDORuXyyw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORuXyy84C6uAS"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/security.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+        <script src="../../../javascripts/starry_map.js"></script>
+      
+    
+  </body>
+</html>
