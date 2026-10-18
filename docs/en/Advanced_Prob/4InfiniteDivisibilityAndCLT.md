@@ -380,12 +380,19 @@ then $p_n\to0$, the array is infinitesimal, and
 The characteristic-function proof is
 
 \[
-\begin{aligned}
-E\exp\left\{it\sum_{k=1}^n\xi_{n,k}\right}
-&=\left(1+p_n(e^{it}-1)\right)^n\\
-&\longrightarrow
-\exp\left\{\lambda(e^{it}-1)\right\}.
-\end{aligned}
+\mathbb{E}\left[
+\exp\left\{
+it\sum_{k=1}^{n}\xi_{n,k}
+\right\}
+\right]
+=
+\left(
+1+p_n\left(e^{it}-1\right)
+\right)^n
+\longrightarrow
+\exp\left\{
+\lambda\left(e^{it}-1\right)
+\right\}.
 \]
 
 ---

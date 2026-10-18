@@ -358,7 +358,7 @@ Blyth's method is useful when the target rule is generalized Bayes for an improp
     R(\theta,\delta_0)-R(\theta,\delta_1)
     \geq\epsilon
     \qquad
-\text{on the set }B(\theta_0,\eta)\text{ itself}.
+    \text{on the set }B(\theta_0,\eta)\text{ itself}.
     \]
 
     Therefore,

@@ -358,7 +358,7 @@ R(\theta,\delta_{c,d})
     R(\theta,\delta_0)-R(\theta,\delta_1)
     \geq\epsilon
     \qquad
-\text{在集合 }B(\theta_0,\eta)\text{ 上}.
+    \text{在集合 }B(\theta_0,\eta)\text{ 上}.
     \]
 
     因而

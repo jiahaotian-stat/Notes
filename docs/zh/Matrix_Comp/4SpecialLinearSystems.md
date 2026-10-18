@@ -874,7 +874,7 @@ O(npq).
     \[
     \operatorname{ub}(A)=q,
     \qquad
-\operatorname{lb}(A)=p.
+    \operatorname{lb}(A)=p.
     \]
 
     则采用按列部分选主元后，所得上三角因子满足

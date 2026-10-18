@@ -189,7 +189,7 @@ Z_n\overset{p}{\longrightarrow}Z.
     \[
     P_{\theta_1}=P_{\theta_2}
     \quad\Longrightarrow\quad
-\theta_1=\theta_2.
+    \theta_1=\theta_2.
     \]
 
     则称模型可识别。

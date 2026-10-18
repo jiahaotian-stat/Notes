@@ -382,12 +382,19 @@ np_n\longrightarrow\lambda\in(0,\infty),
 其特征函数证明为
 
 \[
-\begin{aligned}
-E\exp\left{it\sum_{k=1}^n\xi_{n,k}\right}
-&=\left(1+p_n(e^{it}-1)\right)^n\\
-&\longrightarrow
-\exp\left\{\lambda(e^{it}-1)\right\}.
-\end{aligned}
+\mathbb{E}\left[
+\exp\left\{
+it\sum_{k=1}^{n}\xi_{n,k}
+\right\}
+\right]
+=
+\left(
+1+p_n\left(e^{it}-1\right)
+\right)^n
+\longrightarrow
+\exp\left\{
+\lambda\left(e^{it}-1\right)
+\right\}.
 \]
 
 ---
