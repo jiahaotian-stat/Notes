@@ -1450,5 +1450,35 @@
         "date": "2026-09-21",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.25405v1": {
+        "title": "DR-Learners for Generalizing CATEs from a Randomized Controlled Trial",
+        "date": "2026-10-18",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.24911v1": {
+        "title": "Conformal prediction regions for dependent censored lifetimes",
+        "date": "2026-10-17",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.24813v1": {
+        "title": "Tilted Mondrian: Triage and Mitigation of Fine-grained Disparities in Conformal Prediction",
+        "date": "2026-10-17",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.24246v1": {
+        "title": "CoCoNet: Convex Conformal Network for Multi-Dimensional Uncertainty Regions",
+        "date": "2026-10-16",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.23508v1": {
+        "title": "Adaptive conformal prediction on the Grassmannian",
+        "date": "2026-10-16",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

@@ -3,9 +3,55 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-18
+> 更新于: 2026-10-20
 
 ---
+### DR-Learners for Generalizing CATEs from a Randomized Controlled Trial 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-18
+- **链接**: [PDF](http://arxiv.org/abs/2610.25405v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出gDR-Learner，通过交叉拟合机器学习 nuisance 估计构造广义CATE评分函数，并推导出 nuisance 误差仅以乘积形式进入的 excess-risk 界，证明在个体 nuisance 收敛较慢时仍可达 oracle 收敛速率。针对协变量不完整情形，论文进一步构造加权保形预测区间以校正试验与目标人群间的协变量偏移，并给出相应的理论保证。
+
+### Conformal prediction regions for dependent censored lifetimes 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-17
+- **链接**: [PDF](http://arxiv.org/abs/2610.24911v1)
+
+!!! note "AI 核心解读"
+
+    该论文刻画了使分量删失转化为普通右删失的约简映射类（坐标非减变换的极小值，以上象限为预测区域），并证明对约简结果施加单变量加权split-conformal校准可在条件独立删失下获得有限样本边际覆盖与已知保留概率。论文进一步通过删失copula量化保留概率，并在权重或分位数估计一致的条件下建立渐近有效性。
+
+### Tilted Mondrian: Triage and Mitigation of Fine-grained Disparities in Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-17
+- **链接**: [PDF](http://arxiv.org/abs/2610.24813v1)
+
+!!! note "AI 核心解读"
+
+    提出倾向性标准化以剥离群体构成对聚合差异的混杂影响，并推导出与具体方法无关的界，量化细分层覆盖差异的可缩减幅度。构造Tilted Mondrian评分函数，在保留群体覆盖保证的同时缓解细分层内覆盖与预测集大小的差异。
+
+### CoCoNet: Convex Conformal Network for Multi-Dimensional Uncertainty Regions 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-16
+- **链接**: [PDF](http://arxiv.org/abs/2610.24246v1)
+
+!!! note "AI 核心解读"
+
+    该论文将共形预测的评分函数学习转化为在残差上施加凸性约束的效率优化问题，并证明该构造经分裂共形校准后仍保持有限样本覆盖保证。论文提出基于分段线性样条与输入凸神经网络的两种凸评分函数实现，从理论上刻画了凸性约束下预测区域的几何结构与统计有效性。
+
+### Adaptive conformal prediction on the Grassmannian 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-16
+- **链接**: [PDF](http://arxiv.org/abs/2610.23508v1)
+
+!!! note "AI 核心解读"
+
+    该论文以基不变的Grassmann流形几何距离构造非一致性评分，并通过学习到的预测难度估计器对评分进行缩放，从而在流形上直接构建随输入局部自适应的度量球预测区域。理论证明该构造在可交换性下保持split conformal的有限样本边际覆盖保证，且局部自适应机制能改善不同难度水平下的经验覆盖均匀性。
+
+
 ### Backward Conformal Prediction under Covariate Shift 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-12
