@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-20
+> 更新于: 2026-10-23
 
 ---
+### Metric Conformal Prediction via the Conditional Expected Local Radius 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-22
+- **链接**: [PDF](http://arxiv.org/abs/2610.31336v1)
+
+!!! note "AI 核心解读"
+
+    该论文提出条件期望局部半径（CELR）以刻画度量空间中响应的局部条件概率集中程度，并由此构造可在不同协变量取值间比较的非一致性评分函数，无需密度或向量空间结构且避免了距离剖面间的昂贵传输比较。论文进一步给出估计量的一致收敛性与渐近条件有效性等理论保证，并在可交换性下建立有限样本边际覆盖。
+
+### Auditing Conformal Prediction for Language Models Under Inference-Time Model Shift 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-20
+- **链接**: [PDF](http://arxiv.org/abs/2610.28937v1)
+
+!!! note "AI 核心解读"
+
+    该论文将推理配置变化导致的一致性分数分布偏移形式化为“推理时模型偏移”，并从理论上刻画了即使在任务分布与训练模型不变时，该偏移如何破坏split-conformal的可交换性假设。基于此，论文构造了以推理配置为轴的评估框架，系统量化了匹配协议下部署覆盖率被高估的程度及其跨模型、跨数据集的异质性。
+
+### Practical Advantages of Online Conformal Prediction for Data Streams 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-20
+- **链接**: [PDF](http://arxiv.org/abs/2610.27740v1)
+
+!!! note "AI 核心解读"
+
+    该论文通过构造结合普通/遗忘因子最小二乘与均匀/指数加权经验残差分位数或在线梯度分位数跟踪的四种序贯保形回归流程，在分布漂移下从统计上推导并比较其经验覆盖率与区间宽度的权衡。其核心理论性质在于分位数跟踪流程每观测仅需O(p²)时间与内存且不随流长度增长，但 abrupt change 后覆盖率可能退化。
+
+
 ### DR-Learners for Generalizing CATEs from a Randomized Controlled Trial 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-18

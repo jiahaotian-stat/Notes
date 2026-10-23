@@ -1480,5 +1480,23 @@
         "date": "2026-10-16",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.31336v1": {
+        "title": "Metric Conformal Prediction via the Conditional Expected Local Radius",
+        "date": "2026-10-22",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.28937v1": {
+        "title": "Auditing Conformal Prediction for Language Models Under Inference-Time Model Shift",
+        "date": "2026-10-20",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.27740v1": {
+        "title": "Practical Advantages of Online Conformal Prediction for Data Streams",
+        "date": "2026-10-20",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
