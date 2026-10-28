@@ -1498,5 +1498,29 @@
         "date": "2026-10-20",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.35605v1": {
+        "title": "Distribution-free predictive inference with instrumental variables",
+        "date": "2026-10-26",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.35035v1": {
+        "title": "Macro Mondrian Conformal Risk Control",
+        "date": "2026-10-26",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.34204v1": {
+        "title": "Conformal Prediction with Stable Measurement Mechanisms",
+        "date": "2026-10-25",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.31336v2": {
+        "title": "Metric Conformal Prediction via the Conditional Expected Local Radius",
+        "date": "2026-10-22",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

@@ -3,9 +3,46 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-23
+> 更新于: 2026-10-28
 
 ---
+### Distribution-free predictive inference with instrumental variables 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-26
+- **链接**: [PDF](http://arxiv.org/abs/2610.35605v1)
+
+!!! note "AI 核心解读"
+
+    该论文在无分布框架下引入工具变量，提出以识别指数刻画IV预测推断的理论可行性，并证明识别指数不足时任何无分布方法均无法给出有信息量的推断。对于识别指数充分的情形，作者推导缺失结果分位数sharp IV界的识别泛函的有效影响函数，构造基于半参数效率理论的评分函数，使所提预测推断的覆盖保证具备双稳健性。
+
+### Macro Mondrian Conformal Risk Control 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-26
+- **链接**: [PDF](http://arxiv.org/abs/2610.35035v1)
+
+!!! note "AI 核心解读"
+
+    该论文将Mondrian共形预测与宏平均思想引入共形风险控制，通过对每个样本的风险按其所属组别概率的倒数进行加权，构造出组别加权的评分函数，使稀有组样本在经验风险中贡献更大。理论上证明了该加权构造在用户定义的域分组上实现宏平均意义下的风险控制，即各组风险的平均值而非样本边际风险被控制在目标水平。
+
+### Conformal Prediction with Stable Measurement Mechanisms 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-25
+- **链接**: [PDF](http://arxiv.org/abs/2610.34204v1)
+
+!!! note "AI 核心解读"
+
+    该论文在测量机制稳定的稀疏联合偏移假设下，推导了高斯模型中大校准极限下保持目标无标签样本有限时的精确覆盖公式，刻画了测量稳定性对结果变化识别与区间长度的影响。其构造的加权保形校准与预测调整方案通过理论分析揭示了跨上下文共享校正优于分别拟合的条件，并解释了结果变异性估计对弱信息测量的敏感性。
+
+### Metric Conformal Prediction via the Conditional Expected Local Radius 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-22
+- **链接**: [PDF](http://arxiv.org/abs/2610.31336v2)
+
+!!! note "AI 核心解读"
+
+    该论文提出条件期望局部半径（CELR）以刻画度量空间中响应的局部条件概率集中程度，并基于其条件分布构造了跨协变量值可比较的非一致性评分函数，无需密度估计或向量空间结构且避免了距离剖面间的昂贵传输比较。理论层面建立了估计量的一致相合性与正则条件下的渐近条件有效性，并在可交换性下给出有限样本边际覆盖保证。
+
+
 ### Metric Conformal Prediction via the Conditional Expected Local Radius 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-22
