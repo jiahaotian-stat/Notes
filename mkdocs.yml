@@ -152,6 +152,8 @@ plugins:
             "第二章：奇异值分解": "Ch 2: Singular Value Decomposition"
             "第三章：高斯消去与LU分解": "Ch 3: Gaussian Elimination and LU Decomposition"
             "第四章：特殊线性系统": "Ch 4: Special Linear Systems"
+            "第五章：正定矩阵": "Ch 5: Positive Definite Matrices"
+            "第六章：快速傅里叶变换": "Ch 6: Fast Fourier Transform"
             "🤖 统计学习": "🤖 Statistical Learning"
             "统计学习课程概览": "Statistical Learning Course Overview"
             "第一章：KNN": "Ch 1: K-Nearest Neighbors"
@@ -323,6 +325,8 @@ nav:
               - 第二章：奇异值分解: zh/Matrix_Comp/2SVD.md
               - 第三章：高斯消去与LU分解: zh/Matrix_Comp/3GaussianEliminationAndLU.md
               - 第四章：特殊线性系统: zh/Matrix_Comp/4SpecialLinearSystems.md
+              - 第五章：正定矩阵: zh/Matrix_Comp/5PositiveDefiniteAndBandedSystems.md
+              - 第六章：快速傅里叶变换: zh/Matrix_Comp/6FastFourierTransformAndPoissonEquation.md
       - 🤖 统计学习:
           - 统计学习课程概览: zh/Statistical_Learning/0Intro.md
           - 📖 笔记:
