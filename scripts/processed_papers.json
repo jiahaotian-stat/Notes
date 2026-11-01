@@ -1522,5 +1522,29 @@
         "date": "2026-10-22",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.40340v1": {
+        "title": "Conformal ordering: Distribution-free predictive inference for orders and rank",
+        "date": "2026-10-29",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.38046v1": {
+        "title": "Conformal Predictive Distributions for Contextual Order Fulfillment Optimization",
+        "date": "2026-10-27",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.37866v1": {
+        "title": "Finite-Sample Optimal Conformal Prediction Sets under Covariate Shift",
+        "date": "2026-10-27",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.24246v2": {
+        "title": "CoCoNet: Convex Conformal Network for Multi-Dimensional Uncertainty Regions",
+        "date": "2026-10-16",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

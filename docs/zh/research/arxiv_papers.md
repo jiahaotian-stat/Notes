@@ -3,9 +3,46 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-10-28
+> 更新于: 2026-11-01
 
 ---
+### Conformal ordering: Distribution-free predictive inference for orders and rank 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-29
+- **链接**: [PDF](http://arxiv.org/abs/2610.40340v1)
+
+!!! note "AI 核心解读"
+
+    该论文将多对象排序问题重构为图推断问题，基于多重检验思想构造不确定性图，每条边表示一个置信的成对顺序，并给出无分布假设下控制FWER或FDR的一致性图构造程序。进一步证明所得图自然产生对结果秩的風險控制预测区间，实现了排序推断的可解释统计保证。
+
+### Conformal Predictive Distributions for Contextual Order Fulfillment Optimization 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-27
+- **链接**: [PDF](http://arxiv.org/abs/2610.38046v1)
+
+!!! note "AI 核心解读"
+
+    该论文基于共形预测系统与交叉Venn-Abers预测器构造订单履约的共形预测分布，并推导出决策遗憾由预测误差、情景评估误差与候选生成差距三项共同界定，其中预测项显式依赖于校准残差或类概率对当前订单的刻画程度。其构造的分位数加权切分共形预测评分函数对延迟误差赋予更高权重，使点估计的延迟交付检出率大幅提升，同时基于残差的共形分布达到或略超名义区间覆盖目标。
+
+### Finite-Sample Optimal Conformal Prediction Sets under Covariate Shift 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-27
+- **链接**: [PDF](http://arxiv.org/abs/2610.37866v1)
+
+!!! note "AI 核心解读"
+
+    该论文在已知协变量密度比下证明，将逆条件密度评分与随机加权保形校准相结合的规则，在任意校准样本量下于整个加权可交换类中一致最小化目标分布的期望预测集长度。作者进一步用分位数与核直方图（含森林加权估计）逼近该oracle，并在有界响应域上以固定校准量将超额长度线性界定于密度的L¹误差，无需真实密度的一致正下界。
+
+### CoCoNet: Convex Conformal Network for Multi-Dimensional Uncertainty Regions 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-16
+- **链接**: [PDF](http://arxiv.org/abs/2610.24246v2)
+
+!!! note "AI 核心解读"
+
+    提出以残差为变量的凸一致性评分函数学习框架，通过样条分段线性与输入凸神经网络两种参数化构造，在保持split-conformal有限样本覆盖保证的同时优化预测区域效率。理论推导表明凸性约束使评分诱导的预测区域为凸集且校准后仍满足边际覆盖下界，并给出效率最优性随输出维度增长的统计刻画。
+
+
 ### Distribution-free predictive inference with instrumental variables 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-26
