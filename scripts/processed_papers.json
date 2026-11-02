@@ -1546,5 +1546,11 @@
         "date": "2026-10-16",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.40340v2": {
+        "title": "Conformal ordering: Distribution-free predictive inference for orders and ranks",
+        "date": "2026-10-29",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-11-01
+> 更新于: 2026-11-02
 
 ---
+### Conformal ordering: Distribution-free predictive inference for orders and ranks 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-29
+- **链接**: [PDF](http://arxiv.org/abs/2610.40340v2)
+
+!!! note "AI 核心解读"
+
+    该论文将多对象排序问题重构为图推断问题，基于多重检验思想构造不确定性图，每条边表示一个置信的成对次序关系，并发展了在控制族错误率或错误发现率下构建相合不确定性图的无分布程序。论文进一步证明所构造的图自然产生对结果秩次的风险控制预测区间，从而为预测排序提供具有可解释保证的无分布不确定性量化。
+
+
 ### Conformal ordering: Distribution-free predictive inference for orders and rank 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-29
