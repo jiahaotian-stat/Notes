@@ -1552,5 +1552,23 @@
         "date": "2026-10-29",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2611.04066v1": {
+        "title": "Graph-Localized Coverage for Conformal Prediction on Inductive Graphs",
+        "date": "2026-11-02",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.01724v1": {
+        "title": "Beyond Imputation: Mask-Adaptive Conformal Prediction via Tree Embeddings on General Missing Data Mechanisms",
+        "date": "2026-11-01",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.24911v2": {
+        "title": "Conformal prediction regions for dependent censored lifetimes",
+        "date": "2026-10-17",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

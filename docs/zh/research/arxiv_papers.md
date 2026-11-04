@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-11-02
+> 更新于: 2026-11-04
 
 ---
+### Graph-Localized Coverage for Conformal Prediction on Inductive Graphs 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-02
+- **链接**: [PDF](http://arxiv.org/abs/2611.04066v1)
+
+!!! note "AI 核心解读"
+
+    GLocalCP提出了一种基于MC-dropout互信息的不确定性自适应非一致性评分函数，将全局在线阈值与核化局部校正相结合，在相似图查询间传播覆盖反馈以实现图局部化校准。理论上在无需可交换性或平稳性假设下建立了路径式O(N^{-1/2})边际校准误差界，并对精确核形式给出了显式的O(N^{-1/2})图局部化校准保证。
+
+### Beyond Imputation: Mask-Adaptive Conformal Prediction via Tree Embeddings on General Missing Data Mechanisms 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-01
+- **链接**: [PDF](http://arxiv.org/abs/2611.01724v1)
+
+!!! note "AI 核心解读"
+
+    该论文将缺失掩码与树嵌入联合构造为增广表示，并学习带正则项的分位数评分函数，从而在不插补协变量的前提下实现缺失模式自适应的共形预测。理论上刻画了坐标级精确有效性、观测掩码上的精确有效性以及一般缺失机制（MCAR/MAR/MNAR）下的近似缺失条件覆盖三层保证。
+
+### Conformal prediction regions for dependent censored lifetimes 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-17
+- **链接**: [PDF](http://arxiv.org/abs/2610.24911v2)
+
+!!! note "AI 核心解读"
+
+    该论文通过刻画可实现从多元到一元有效投影的函数类，将联合生存下界构造转化为单变量保形预测问题，并证明在个体可不同时删失的情形下，仅“每条生命均超过各自下界”的联合陈述可精确实现，而共同删失时间才允许对第二死亡时间给出界。其基于逆观测概率对至少存活固定期限的合同加权校准，在给定协变量下删失独立于寿命时，已知权重下对任意样本量保证覆盖，权重或条件分位数相合估计下大样本近似成立。
+
+
 ### Conformal ordering: Distribution-free predictive inference for orders and ranks 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-29
