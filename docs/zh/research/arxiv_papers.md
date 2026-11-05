@@ -3,9 +3,28 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-11-04
+> 更新于: 2026-11-05
 
 ---
+### From Type to Token: Petri Nets, Individual Token Philosophy, and Individualized Causal Effects 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-03
+- **链接**: [PDF](http://arxiv.org/abs/2611.05703v1)
+
+!!! note "AI 核心解读"
+
+    该论文将贝叶斯网络形式化翻译为个体令牌哲学下的Petri网，把因果机制从分布层面的类型级估计量重构为不依赖分布假设的令牌级结构表示。其构造的共形预测层为个体因果效应提供有限样本覆盖保证，从而在结构表示与效应量化之间建立两层个体化因果推断框架。
+
+### Generalized Hyperrectangular Prediction Sets in Multivariate Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-03
+- **链接**: [PDF](http://arxiv.org/abs/2611.05543v1)
+
+!!! note "AI 核心解读"
+
+    提出矩形化框架，将任意连续多元非一致性评分或条件密度转化为可构造广义超矩形预测集的评分函数，并证明其满足有限样本覆盖保证；建立表示定理，证明基于最大聚合坐标评分的一大类超矩形共形方法可解释为隐式条件密度的矩形化，同时刻画该框架的关键几何性质。
+
+
 ### Graph-Localized Coverage for Conformal Prediction on Inductive Graphs 
 
 - [ ] **分类**: Conformal | **日期**: 2026-11-02
