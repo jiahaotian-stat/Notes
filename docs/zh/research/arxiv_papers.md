@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-11-05
+> 更新于: 2026-11-06
 
 ---
+### Conformal Prediction for Time-Dependent PDEs 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-05
+- **链接**: [PDF](http://arxiv.org/abs/2611.08409v1)
+
+!!! note "AI 核心解读"
+
+    该论文在函数空间框架下证明了任意接近时刻的分布可相互奇异，从而严格揭示了时变PDE代理模型中精确覆盖保证的不可能性，并进一步推导出离散化下总变差距离随网格分辨率指数饱和的速率，给出了保证覆盖所需的空间离散约束。针对特定情形，论文构造了基于加权共形预测的评分机制，在增长的时间horizon上建立了有限样本覆盖保证。
+
+
 ### From Type to Token: Petri Nets, Individual Token Philosophy, and Individualized Causal Effects 
 
 - [ ] **分类**: Conformal | **日期**: 2026-11-03

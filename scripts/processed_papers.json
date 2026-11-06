@@ -1582,5 +1582,11 @@
         "date": "2026-11-03",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2611.08409v1": {
+        "title": "Conformal Prediction for Time-Dependent PDEs",
+        "date": "2026-11-05",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
