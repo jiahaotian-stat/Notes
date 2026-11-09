@@ -1588,5 +1588,23 @@
         "date": "2026-11-05",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2608.29083v2": {
+        "title": "Response-guided knockoffs for prespecified directional FDR control in linear models",
+        "date": "2026-08-29",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2611.09579v1": {
+        "title": "Locally Adaptive Conformal Prediction for Polynomial Chaos Expansions",
+        "date": "2026-11-06",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.08409v2": {
+        "title": "Conformal Prediction for Time-Dependent PDEs",
+        "date": "2026-11-05",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

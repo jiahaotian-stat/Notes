@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-11-06
+> 更新于: 2026-11-09
 
 ---
+### Response-guided knockoffs for prespecified directional FDR control in linear models 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-08-29
+- **链接**: [PDF](http://arxiv.org/abs/2608.29083v2)
+
+!!! note "AI 核心解读"
+
+    该论文在固定设计高斯线性模型（噪声方差未知）下严格定义了预指定方向FDR，并证明直接改造knockoff滤波即可实现有限样本控制；进而构造响应引导的knockoff评分机制，利用噪声扰动响应指导knockoff变量生成以偏向目标符号特征，在保持有限样本预指定方向FDR保证的同时将样本量要求从n≥2p放宽至n>p+2。
+
+### Locally Adaptive Conformal Prediction for Polynomial Chaos Expansions 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-06
+- **链接**: [PDF](http://arxiv.org/abs/2611.09579v1)
+
+!!! note "AI 核心解读"
+
+    该论文将jackknife+保形预测的非一致性得分用辅助多项式混沌展开归一化，该辅助模型在基模型留一残差的对数变换上训练，并证明当辅助模型基于嵌套留一残差训练时，jackknife+的覆盖保证可推广至自适应区间。对于最小二乘拟合的固定基多项式混沌展开，所有量均以闭式导出且仅需单次模型拟合即可获得保持覆盖保证的自适应区间，同时针对稀疏情形提出以放弃形式化覆盖保证为代价限制自适应计算开销的启发式简化。
+
+### Conformal Prediction for Time-Dependent PDEs 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-05
+- **链接**: [PDF](http://arxiv.org/abs/2611.08409v2)
+
+!!! note "AI 核心解读"
+
+    该论文在函数空间框架下证明了任意接近时刻的分布可互奇异，从而揭示时变PDE代理模型中精确覆盖保证的不可能性，并刻画了离散化下总变差距离随网格分辨率指数饱和的现象，给出了保证覆盖所需的空间离散限制。针对特定情形，论文构造了基于加权共形预测的评分机制，推导出在增长时间域上的有限样本覆盖保证。
+
+
 ### Conformal Prediction for Time-Dependent PDEs 
 
 - [ ] **分类**: Conformal | **日期**: 2026-11-05
