@@ -3,9 +3,64 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-11-09
+> 更新于: 2026-11-11
 
 ---
+### Beyond Interaction Scores: Selecting Feature Interactions via Independent Replication 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-11-10
+- **链接**: [PDF](http://arxiv.org/abs/2611.13765v1)
+
+!!! note "AI 核心解读"
+
+    LENS通过在同一学习算法下对不相交数据训练的两个模型仅用预测值进行独立复制检验，对每个特征对先从联合效应曲面剔除主效应以分离交互模式，再以强度排序并检验第二模型是否在有效强度下复现，最终用单次多重检验校正确定保留对，且仅需两次模型拟合。理论上证明了仅用复制比率会保留任意微弱的共享模式，而引入强度下限可恢复选择一致性，并刻画了Friedman H²中归一化导致交互排序反转的条件。
+
+### Prediction Inference for Hybrid Models on Realized Volatility Forecasting 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-09
+- **链接**: [PDF](http://arxiv.org/abs/2611.13212v1)
+
+!!! note "AI 核心解读"
+
+    该论文将GARCH-LSTM混合模型的条件均值扩展为ARMA结构，并基于前向bootstrap构造多步预测区间，通过从经验残差分布抽取新息以刻画金融序列的厚尾性。其进一步引入保形预测原则系统性地扩展区间长度，以纠正预测区间的欠覆盖问题，并在重尾与时变GARCH过程的模拟中验证了所提区间最接近名义置信水平。
+
+### A Black-Box Reduction from Regret to Multi-Level Coverage 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-09
+- **链接**: [PDF](http://arxiv.org/abs/2611.12059v1)
+
+!!! note "AI 核心解读"
+
+    该论文将等渗投影推广至任意在线学习算法，并通过Fenchel对偶建立黑盒归约，证明算法自身的线性化遗憾可同时控制逐层覆盖与多层预测的分布一致性。基于加权区间评分（WIS）的评分函数分析进一步证明该投影能同时缩小区间集尺寸并降低欠覆盖，且所构造的p-范数在线镜像下降与逐坐标通用投资组合实例将层数依赖从√d改进至√log d。
+
+### Conformal Prediction for Multi-Step Forecasting: Conditional Coverage and Sharp Score Calibration Rates 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-09
+- **链接**: [PDF](http://arxiv.org/abs/2611.12004v1)
+
+!!! note "AI 核心解读"
+
+    该论文在时间序列共形预测中引入基于核的残差条件分位数估计框架TRACK，针对滚动窗口预测器推导了显式刻画时间依赖与重叠评分窗口影响的有限样本校准与覆盖界，并进一步给出条件分位数估计及逐点条件覆盖偏差的理论界。论文还针对已知评分函数类建立了匹配的极小极大下界，从理论上阐明了重叠评分窗口如何影响校准精度，且允许预测器记忆与预测步长随样本量增长。
+
+### Matchability-Aware Conformal Prediction for Open-Ended Language Model Generation 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-07
+- **链接**: [PDF](http://arxiv.org/abs/2611.10738v1)
+
+!!! note "AI 核心解读"
+
+    该论文将非一致性评分构造为经分裂保形校准的实例加权形式 w_λ(x)=1+U_ale(x)+λU_epi(x)，其中基于核的von Neumann熵分别估计偶然与认知不确定性分量，并通过最小化预测集大小拟合λ*，从而在评分函数层面显式分离两类不确定性。理论上证明了保形覆盖率受“可匹配性”（参考答案落入任一采样簇的比例）上界约束，并据此用轻量分类器预测可匹配性划分分层，推导出分层内的保形覆盖界。
+
+### Selected-Risk Calibration for Feasibility at Returned Decisions 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-05
+- **链接**: [PDF](http://arxiv.org/abs/2611.10050v1)
+
+!!! note "AI 核心解读"
+
+    SRC通过将校准对象从随机输入覆盖转为优化器返回决策的选中风险，构造了在留出目标上以至少1−δ概率保证选中风险不超过γ的评分函数与校准程序，并严格证明了split conformal的随机输入覆盖保证无法界定选中风险、似然比重加权在学习约束于返回决策处活跃时失效。该框架给出了选中风险的可证明有限样本上界这一理论性质，且其校准修正不增加成本。
+
+
 ### Response-guided knockoffs for prespecified directional FDR control in linear models 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-08-29

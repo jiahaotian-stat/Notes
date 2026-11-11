@@ -1606,5 +1606,41 @@
         "date": "2026-11-05",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2611.13765v1": {
+        "title": "Beyond Interaction Scores: Selecting Feature Interactions via Independent Replication",
+        "date": "2026-11-10",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2611.13212v1": {
+        "title": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting",
+        "date": "2026-11-09",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.12059v1": {
+        "title": "A Black-Box Reduction from Regret to Multi-Level Coverage",
+        "date": "2026-11-09",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.12004v1": {
+        "title": "Conformal Prediction for Multi-Step Forecasting: Conditional Coverage and Sharp Score Calibration Rates",
+        "date": "2026-11-09",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.10738v1": {
+        "title": "Matchability-Aware Conformal Prediction for Open-Ended Language Model Generation",
+        "date": "2026-11-07",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.10050v1": {
+        "title": "Selected-Risk Calibration for Feasibility at Returned Decisions",
+        "date": "2026-11-05",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
