@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-11-11
+> 更新于: 2026-11-13
 
 ---
+### Conformal prediction for censored life history data 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-11
+- **链接**: [PDF](http://arxiv.org/abs/2611.15724v1)
+
+!!! note "AI 核心解读"
+
+    该论文将删失指示的逆概率加权与未解历史的条件覆盖概率相结合，构造出对删失模型和条件覆盖模型均双重稳健、且在两者按合适速率一致时达到半参数效率界的覆盖估计量。针对校准后的预测区域，论文进一步给出有限样本覆盖概率下界，并证明只要任一模型正确即具有渐近有效性。
+
+
 ### Beyond Interaction Scores: Selecting Feature Interactions via Independent Replication 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-11-10

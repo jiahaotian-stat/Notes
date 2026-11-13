@@ -1642,5 +1642,11 @@
         "date": "2026-11-05",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2611.15724v1": {
+        "title": "Conformal prediction for censored life history data",
+        "date": "2026-11-11",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
