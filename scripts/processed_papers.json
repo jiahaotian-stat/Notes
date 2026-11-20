@@ -1648,5 +1648,47 @@
         "date": "2026-11-11",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2611.19585v1": {
+        "title": "The stable false discovery rate",
+        "date": "2026-11-14",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2511.20851v4": {
+        "title": "When Features Beat Noise: A Noise-Driven Hypothesis Testing Method for Feature Selection",
+        "date": "2025-11-25",
+        "tag": "Knockoff",
+        "status": "todo"
+    },
+    "2611.24031v1": {
+        "title": "Is It Worth Collecting Additional Covariates?",
+        "date": "2026-11-18",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.22646v1": {
+        "title": "The Price of Hard Coverage Constraints in Online Conformal Prediction",
+        "date": "2026-11-17",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.21542v1": {
+        "title": "The cost of enforcing long-run coverage: a phase transition in online conformal prediction",
+        "date": "2026-11-16",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.20905v1": {
+        "title": "Anytime Valid Conformal Prediction on Streaming Time Series",
+        "date": "2026-11-16",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.20052v1": {
+        "title": "Weighted conformal prediction under covariate shift: process limits, estimated weights and efficiency",
+        "date": "2026-11-15",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

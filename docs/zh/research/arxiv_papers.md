@@ -3,9 +3,73 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-11-13
+> 更新于: 2026-11-20
 
 ---
+### The stable false discovery rate 
+
+- [ ] **分类**: Knockoff | **日期**: 2026-11-14
+- **链接**: [PDF](http://arxiv.org/abs/2611.19585v1)
+
+!!! note "AI 核心解读"
+
+    该论文将FDR连续化为sFDR，通过为每个假设分配0到1的配额并以零假设配额期望占比定义误差率，证明在多次依赖分析下sFDR恰等于各次普通FDR的均值，从而在原有FDR控制假设下保持控制。进一步基于e-value表示刻画了可控制误差的配额规则，并直接从p值、e值或knockoff统计量构造stable-BH、stable e-BH与stable knockoff程序以优化配额分配。
+
+### When Features Beat Noise: A Noise-Driven Hypothesis Testing Method for Feature Selection 
+
+- [ ] **分类**: Knockoff | **日期**: 2025-11-25
+- **链接**: [PDF](http://arxiv.org/abs/2511.20851v4)
+
+!!! note "AI 核心解读"
+
+    该论文引入多个随机噪声特征并以噪声特征重要性的最大值作为参照阈值，构造了基于非参数自助法的假设检验框架，通过统计推导确立了算法的设计原理与理论合理性。其核心创新在于建立了具有明确统计决策准则的特征重要性评分与检验机制，使特征选择具备可量化的显著性判断依据而非依赖启发式停止规则。
+
+### Is It Worth Collecting Additional Covariates? 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-18
+- **链接**: [PDF](http://arxiv.org/abs/2611.24031v1)
+
+!!! note "AI 核心解读"
+
+    该论文以预测区间宽度的缩减量为准则，分别在边际与给定可观测特征的条件层面构造并检验新增协变量带来的增益，其中条件形式刻画子群体异质性并支撑个体化数据采集决策。作者在无模型框架下提出基于有效影响函数的估计与检验方法，证明其在宽松的 nuisance 收敛速率下具有理论性质，并揭示基于 conformal prediction 的自然方法在边际情形失效且对 nuisance 估计提出更严苛甚至不可行的要求。
+
+### The Price of Hard Coverage Constraints in Online Conformal Prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-17
+- **链接**: [PDF](http://arxiv.org/abs/2611.22646v1)
+
+!!! note "AI 核心解读"
+
+    该论文在覆盖与预测集大小的正则条件下，推导出满足硬覆盖约束的任意在线方法所需的最小累积超额预测集大小，分别达到Θ(log T)、Θ(T^{1/3})与Θ(√T)的下界。作者进一步构造仅依赖历史分数的在线算法达到这些速率，从而证明即使已知分数分布与总体最优预测集，序贯可靠性仍须付出不可避免的效率代价。
+
+### The cost of enforcing long-run coverage: a phase transition in online conformal prediction 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-16
+- **链接**: [PDF](http://arxiv.org/abs/2611.21542v1)
+
+!!! note "AI 核心解读"
+
+    该论文在理论上刻画了长程经验覆盖率约束强度与瞬时条件覆盖率最优性之间的相变现象：当约束偏差阶数为O(T^{-β})且β∈[0,1/2]时，可构造同时满足对抗场景下长程覆盖约束与i.i.d.场景下split conformal瞬时覆盖最优性的算法，而β∈(1/2,1]时该约束必然导致最优性损失。其核心贡献在于通过统计推导严格证明了这一相变边界，揭示了长程覆盖约束的代价存在明确的理论阈值。
+
+### Anytime Valid Conformal Prediction on Streaming Time Series 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-16
+- **链接**: [PDF](http://arxiv.org/abs/2611.20905v1)
+
+!!! note "AI 核心解读"
+
+    该论文将ACI的自适应更新与任意时间有效置信序列相结合，构造出能在任意停时上以高概率一致控制真实运行平均误覆盖率不超过目标水平的评分函数，并进一步证明真实滚动平均误覆盖率对任意窗口规则同样成立。理论分析还刻画了滚动平均的效率损失在窗口增长足够快时趋于消失、而对固定窗口则不然的相变性质。
+
+### Weighted conformal prediction under covariate shift: process limits, estimated weights and efficiency 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-15
+- **链接**: [PDF](http://arxiv.org/abs/2611.20052v1)
+
+!!! note "AI 核心解读"
+
+    该论文在χ²(Q‖P)<∞的充要条件下建立了自归一化加权经验过程√m(F̂_m−F_Q)在ℓ^∞中收敛到高斯过程W(G(t))−F_Q(t)W(K²)的完整极限理论，并给出跨水平覆盖率的联合分布、相合bootstrap及Berry–Esseen型速率；在估计权重时证明校准协变量上的均匀展开仍成立、估计误差经协方差项可降低方差并由pairs bootstrap复现，同时刻画了已知比值下加权保形阈值的半参数有效性充要条件（比值与覆盖指示在检验分布下不相关）及显式有效修正，并在χ²(Q‖P)=∞时给出比值的正则变尾指数p∈(1,2)下有限维极限为m^{1−1/p}速率的p-稳定分布。
+
+
 ### Conformal prediction for censored life history data 
 
 - [ ] **分类**: Conformal | **日期**: 2026-11-11
