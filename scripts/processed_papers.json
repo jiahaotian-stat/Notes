@@ -1690,5 +1690,11 @@
         "date": "2026-11-15",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2610.24246v3": {
+        "title": "CoCoNet: Convex Conformal Network for Multi-Dimensional Uncertainty Regions",
+        "date": "2026-10-16",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }

@@ -3,9 +3,19 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-11-20
+> 更新于: 2026-11-23
 
 ---
+### CoCoNet: Convex Conformal Network for Multi-Dimensional Uncertainty Regions 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-16
+- **链接**: [PDF](http://arxiv.org/abs/2610.24246v3)
+
+!!! note "AI 核心解读"
+
+    该论文提出以输入为条件、对残差保持凸性的评分函数，并通过在留出数据上直接最小化其下水平集体积进行端到端学习，使预测区域天然为凸且数据自适应。基于此构造的CoCoNet-Spline（分段线性分数经ℓ∞或ℓ1范数聚合，分别诱导超矩形与多面体区域）与CoCoNet-ICNN（基于输入凸神经网络诱导更灵活的凸区域）在分裂共形校准下保持有限样本覆盖保证。
+
+
 ### The stable false discovery rate 
 
 - [ ] **分类**: Knockoff | **日期**: 2026-11-14
