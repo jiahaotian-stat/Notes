@@ -3,9 +3,37 @@
 这是我通过脚本制作的论文速递版面，它将在北京时间每天早上八点调用 GitHub 机器人自动扫描 [arXiv](https://arxiv.org/) 上的关于 Knockoff 与 Conformal Prediction 的统计学论文。
 
 
-> 更新于: 2026-11-23
+> 更新于: 2026-11-25
 
 ---
+### probly: Uncertainty-Aware Machine Learning 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-22
+- **链接**: [PDF](http://arxiv.org/abs/2611.29762v1)
+
+!!! note "AI 核心解读"
+
+    该论文构建了统一的模块化不确定性表示框架，将二阶分布、可信集与保形预测纳入同一体系，并给出对应的量化测度与可任意组合的评估协议。其创新在于引入一阶数据（目标本身为结果分布）上的基准评估，使不同不确定性建模方法可在统计上可比较的推导与评分体系下系统检验。
+
+### Is It Worth Collecting Additional Covariates? 
+
+- [ ] **分类**: Conformal | **日期**: 2026-11-18
+- **链接**: [PDF](http://arxiv.org/abs/2611.24031v2)
+
+!!! note "AI 核心解读"
+
+    该论文以预测区间宽度的缩减量为准则，分别在边际与给定可观测特征的条件层面构造并检验额外协变量带来的增益，条件形式可刻画亚组异质性并支持个体化数据采集决策。作者在无模型框架下提出基于有效影响函数的估计与检验方法，证明其在较宽松的 nuisance 收敛速率下具有理论性质，并揭示基于 conformal prediction 的自然方法在边际情形失效且对 nuisance 估计提出更严苛甚至不可行的要求。
+
+### Distribution-free predictive inference with instrumental variables 
+
+- [ ] **分类**: Conformal | **日期**: 2026-10-26
+- **链接**: [PDF](http://arxiv.org/abs/2610.35605v2)
+
+!!! note "AI 核心解读"
+
+    该论文在无分布框架下引入工具变量，提出以“识别指数”刻画IV预测推断可行性的理论边界，并证明识别指数不足时任何无分布方法均无法给出有信息量的推断。对于识别指数充分大的情形，作者推导缺失结果分位数sharp IV界的识别泛函的有效影响函数，构造出具有双重稳健覆盖保证的半参数预测推断方法。
+
+
 ### CoCoNet: Convex Conformal Network for Multi-Dimensional Uncertainty Regions 
 
 - [ ] **分类**: Conformal | **日期**: 2026-10-16

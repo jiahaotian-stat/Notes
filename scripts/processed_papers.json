@@ -1696,5 +1696,23 @@
         "date": "2026-10-16",
         "tag": "Conformal",
         "status": "todo"
+    },
+    "2611.29762v1": {
+        "title": "probly: Uncertainty-Aware Machine Learning",
+        "date": "2026-11-22",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2611.24031v2": {
+        "title": "Is It Worth Collecting Additional Covariates?",
+        "date": "2026-11-18",
+        "tag": "Conformal",
+        "status": "todo"
+    },
+    "2610.35605v2": {
+        "title": "Distribution-free predictive inference with instrumental variables",
+        "date": "2026-10-26",
+        "tag": "Conformal",
+        "status": "todo"
     }
 }
